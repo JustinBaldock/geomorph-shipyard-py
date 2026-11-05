@@ -1148,3 +1148,115 @@ def test_the_compass_is_not_in_exports(window):
     plain = window.render_image()
     window.turn_bow(1)
     assert window.render_image() == plain
+
+
+def test_the_compass_minimises_and_comes_back(window):
+    overlay = window.orientation
+    full = overlay.size()
+    assert not overlay.compact
+    assert overlay.size_button.text() == "−"
+
+    overlay.size_button.click()
+    assert overlay.compact
+    assert overlay.width() < full.width() and overlay.height() < full.height()
+    assert overlay.size_button.text() == "□"
+
+    overlay.size_button.click()
+    assert not overlay.compact
+    assert overlay.size() == full
+    assert overlay.size_button.text() == "−"
+
+
+def test_the_size_button_is_in_the_top_left_corner(window):
+    overlay = window.orientation
+    for compact in (False, True):
+        overlay.set_compact(compact)
+        assert overlay.size_button.pos() == QPoint(6, 6)
+
+
+def test_the_compass_stays_in_its_corner_when_minimised(window):
+    before = window.orientation.pos()
+    window.orientation.set_compact(True)
+    assert window.orientation.pos() == before
+
+
+def test_rotate_buttons_stay_inside_the_minimised_compass(window):
+    overlay = window.orientation
+    overlay.set_compact(True)
+    area = overlay.rect()
+    for button in (overlay.left_button, overlay.right_button, overlay.size_button):
+        assert button.isVisible()
+        assert area.contains(button.geometry())
+    assert not overlay.left_button.geometry().intersects(
+        overlay.right_button.geometry()
+    )
+
+
+def test_buttons_miss_the_hull_in_every_direction(window):
+    overlay = window.orientation
+    overlay.set_compact(True)
+    centre = overlay.rect().center()
+    reach = 24
+    hull = overlay.rect().adjusted(
+        centre.x() - reach, centre.y() - reach,
+        reach - centre.x(), reach - centre.y(),
+    )
+    side = 11
+    upright = hull.adjusted(reach - side, 0, side - reach, 0)
+    sideways = hull.adjusted(0, reach - side, 0, side - reach)
+    for button in (overlay.left_button, overlay.right_button, overlay.size_button):
+        assert not upright.intersects(button.geometry())
+        assert not sideways.intersects(button.geometry())
+
+
+def test_the_minimised_compass_still_turns_the_bow(window):
+    overlay = window.orientation
+    overlay.set_compact(True)
+    overlay.right_button.click()
+    assert window.ship.bow == "up"
+    assert overlay.compact
+
+
+def test_the_red_bow_still_shows_when_minimised(window):
+    overlay = window.orientation
+    overlay.set_compact(True)
+    overlay.set_bow("up")
+    picture = overlay.grab().toImage()
+    middle = overlay.rect().center()
+    tip = picture.pixelColor(middle.x(), middle.y() - 16)
+    assert tip.red() > 150 and tip.green() < 80
+
+
+def test_the_text_is_only_drawn_at_full_size(window):
+    def has_dark_text(picture, middle):
+        return any(
+            picture.pixelColor(x, y).red() < 120
+            for x in range(middle - 12, middle + 12)
+            for y in range(9, 21)
+        )
+
+    overlay = window.orientation
+    overlay.set_bow("down")  # puts the dark Stern label on the top edge
+    assert has_dark_text(overlay.grab().toImage(), overlay.width() // 2)
+
+    overlay.set_compact(True)
+    assert not has_dark_text(overlay.grab().toImage(), overlay.width() // 2)
+
+
+def test_minimising_is_not_a_change_to_the_ship(window):
+    window.orientation.set_compact(True)
+    assert not window.dirty
+    assert "compact" not in json.dumps(window.ship.to_json())
+
+
+def test_the_compass_stays_minimised_when_another_ship_opens(window):
+    window.orientation.set_compact(True)
+    window._set_ship(Ship.empty(), None)
+    assert window.orientation.compact
+
+
+def test_hiding_and_showing_keeps_the_minimised_size(window):
+    window.orientation.set_compact(True)
+    window.show_orientation_action.setChecked(False)
+    window.show_orientation_action.setChecked(True)
+    assert window.orientation.compact

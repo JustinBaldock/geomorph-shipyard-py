@@ -48,7 +48,7 @@ Each deck is a tab above the map, with its own parts.
 
 ### Orientation
 
-The compass in the corner of the map shows which way the ship faces, with Bow/Front, Stern/Back, Port/Left and Starboard/Right on its edges. The ↺ and ↻ buttons turn it, as do the `[` and `]` keys, and the Ship menu can hide it. Turning it only changes the labels, the parts stay where they are.
+The compass in the corner of the map shows which way the ship faces, with Bow/Front, Stern/Back, Port/Left and Starboard/Right on its edges. The ↺ and ↻ buttons turn it, as do the `[` and `]` keys. The − button in its top left corner shrinks it to the hull and rotate buttons, the □ button brings the labels back, and the Ship menu can hide it completely. Turning it only changes the labels, the parts stay where they are.
 
 The direction is saved in the ship file as `bow`, which is `up`, `right`, `down` or `left`. Ships from the original don't have it, and open with the bow to the left, which is how its generated ships are laid out.
 

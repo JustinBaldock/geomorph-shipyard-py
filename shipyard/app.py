@@ -87,7 +87,10 @@ EXPORT_CREDIT_PIXELS = 28
 TRACE_OPACITY = 0.35
 TRACE_Z = -1
 ORIENTATION_SIZE = 196
+ORIENTATION_COMPACT_SIZE = 104
 ORIENTATION_MARGIN = 10
+ORIENTATION_BUTTON_SIZE = 26
+ORIENTATION_BUTTON_INSET = 6
 SIDE_LABELS = {
     "Bow": "Front",
     "Stern": "Back",
@@ -363,21 +366,44 @@ class OrientationOverlay(QWidget):
     def __init__(self, parent: QWidget):
         super().__init__(parent)
         self.bow = model.DEFAULT_BOW
-        self.setFixedSize(ORIENTATION_SIZE, ORIENTATION_SIZE)
+        self.compact = False
         self.setToolTip("Which way the ship faces. Turning this leaves the ship as it is.")
         self.left_button = self._button("↺", "Turn the bow to the left", -1)
         self.right_button = self._button("↻", "Turn the bow to the right", 1)
-        self.left_button.move(6, ORIENTATION_SIZE - 32)
-        self.right_button.move(ORIENTATION_SIZE - 32, ORIENTATION_SIZE - 32)
+        self.size_button = QToolButton(self)
+        self.size_button.setFixedSize(
+            ORIENTATION_BUTTON_SIZE, ORIENTATION_BUTTON_SIZE
+        )
+        self.size_button.move(ORIENTATION_BUTTON_INSET, ORIENTATION_BUTTON_INSET)
+        self.size_button.clicked.connect(lambda: self.set_compact(not self.compact))
         self.move(ORIENTATION_MARGIN, ORIENTATION_MARGIN)
+        self._apply_size()
 
     def _button(self, text: str, tip: str, turn: int) -> QToolButton:
         button = QToolButton(self)
         button.setText(text)
         button.setToolTip(tip)
-        button.setFixedSize(26, 26)
+        button.setFixedSize(ORIENTATION_BUTTON_SIZE, ORIENTATION_BUTTON_SIZE)
         button.clicked.connect(lambda: self.turn_requested.emit(turn))
         return button
+
+    def _apply_size(self) -> None:
+        size = ORIENTATION_COMPACT_SIZE if self.compact else ORIENTATION_SIZE
+        self.setFixedSize(size, size)
+        far = size - ORIENTATION_BUTTON_SIZE - ORIENTATION_BUTTON_INSET
+        self.left_button.move(ORIENTATION_BUTTON_INSET, far)
+        self.right_button.move(far, far)
+        self.size_button.setText("□" if self.compact else "−")
+        self.size_button.setToolTip(
+            "Show the compass with its labels"
+            if self.compact
+            else "Shrink the compass"
+        )
+
+    def set_compact(self, compact: bool) -> None:
+        self.compact = compact
+        self._apply_size()
+        self.update()
 
     def set_bow(self, bow: str) -> None:
         self.bow = bow
@@ -391,7 +417,7 @@ class OrientationOverlay(QWidget):
         }
 
     def _text_rect(self, direction: str, width: int, height: int) -> QRectF:
-        size = float(ORIENTATION_SIZE)
+        size = float(self.width())
         middle = size / 2
         spots = {
             "up": (middle - width / 2, 8),
@@ -415,7 +441,7 @@ class OrientationOverlay(QWidget):
         bold.setBold(True)
         small = QFont()
         small.setPixelSize(10)
-        sides = model.sides_for_bow(self.bow)
+        sides = {} if self.compact else model.sides_for_bow(self.bow)
         for direction, side in sides.items():
             colour = QColor("#b3261e") if side == "Bow" else QColor("#22303c")
             width = max(
@@ -433,7 +459,7 @@ class OrientationOverlay(QWidget):
 
         # A small hull shape pointing at the bow.
         turn = model.BOW_DIRECTIONS.index(self.bow) * 90
-        painter.translate(ORIENTATION_SIZE / 2, ORIENTATION_SIZE / 2)
+        painter.translate(self.width() / 2, self.height() / 2)
         painter.rotate(turn)
         painter.setPen(QPen(QColor("#22303c"), 1.2))
         painter.setBrush(QColor("#dbe3ea"))
