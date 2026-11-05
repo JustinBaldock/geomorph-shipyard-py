@@ -10,7 +10,7 @@ from __future__ import annotations
 import math
 from pathlib import Path
 
-from PySide6.QtCore import QLineF, QMimeData, QPointF, QRectF, QSize, Qt, Signal
+from PySide6.QtCore import QEvent, QLineF, QMimeData, QPointF, QRectF, QSize, Qt, Signal
 from PySide6.QtGui import (
     QAction,
     QColor,
@@ -797,11 +797,13 @@ class ComponentEditor(QMainWindow):
         )
 
     def _custom_entries(self) -> dict:
-        try:
-            return custom.load_entries(self.custom_folder)
-        except custom.CustomFileError as error:
-            self.statusBar().showMessage(str(error))
-            return {}
+        problems: list[str] = []
+        entries = custom.load_entries(self.custom_folder, problems)
+        if problems:
+            self.statusBar().showMessage(
+                "Could not read: " + ", ".join(problems)
+            )
+        return entries
 
     def _refresh_saved_parts(self) -> None:
         self.saved_combo.clear()
@@ -1098,7 +1100,10 @@ class ComponentEditor(QMainWindow):
             QMessageBox.warning(self, title, "Add at least one subpart first.")
             return None
         entries = self._custom_entries()
-        if code in self.library and code not in entries:
+        built_in = code in self.library and (
+            self.library[code].shape != model.CUSTOM_SHAPE
+        )
+        if built_in:
             QMessageBox.warning(
                 self, title, f"{code} is already a part in the library."
             )
@@ -1148,6 +1153,12 @@ class ComponentEditor(QMainWindow):
         self.statusBar().showMessage(f"Saved {code}", 5000)
         self.saved.emit(code)
         return code
+
+    def changeEvent(self, event) -> None:
+        # Parts may have been deleted or changed in Finder in the meantime.
+        if event.type() == QEvent.ActivationChange and self.isActiveWindow():
+            self._refresh_saved_parts()
+        super().changeEvent(event)
 
     def closeEvent(self, event) -> None:
         if self._ok_to_discard():

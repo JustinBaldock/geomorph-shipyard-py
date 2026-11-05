@@ -7,7 +7,16 @@ from pathlib import Path
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
 import pytest
-from PySide6.QtCore import QMimeData, QPoint, QPointF, QRect, QRectF, QSize, Qt
+from PySide6.QtCore import (
+    QEvent,
+    QMimeData,
+    QPoint,
+    QPointF,
+    QRect,
+    QRectF,
+    QSize,
+    Qt,
+)
 from PySide6.QtGui import QColor, QDropEvent, QImage, QPainter, QPixmap
 from PySide6.QtTest import QTest
 from PySide6.QtWidgets import QApplication, QMessageBox, QToolBar
@@ -561,11 +570,11 @@ def test_reopening_names_missing_subparts(editor, monkeypatch, folders):
     assert "Room" in shown[0]
 
 
-def test_a_broken_custom_file_does_not_stop_the_editor(editor, folders):
-    (folders[2]).mkdir(exist_ok=True)
-    (folders[2] / custom.CUSTOM_FILE_NAME).write_text("not json")
-    assert editor._custom_entries() == {}
-    assert custom.CUSTOM_FILE_NAME in editor.statusBar().currentMessage()
+def test_a_broken_part_file_is_named_and_loses_only_itself(editor, folders):
+    save_part(editor, "CU-050")
+    (folders[2] / "CU-051.json").write_text("not json")
+    assert list(editor._custom_entries()) == ["CU-050"]
+    assert "CU-051.json" in editor.statusBar().currentMessage()
 
 
 def test_closing_with_unsaved_work_asks(editor, monkeypatch):
@@ -750,6 +759,129 @@ def test_dragging_a_group_keeps_it_together(editor):
     QApplication.processEvents()
     assert room.pos() != QPointF(600, 600)
     assert wall.pos() - room.pos() == gap
+
+
+# One JSON file per part
+
+
+def entry(url="A.png", **changes):
+    return {
+        "url": url, "sizeX": 10, "sizeY": 10, "tons": 50, "uses": {},
+        "facilities": {}, **changes,
+    }
+
+
+def part_on_disk(folder, code):
+    solid(folder / f"{code}.png", 20, 20, "red")
+    custom.save_entry(code, entry(f"{code}.png"), folder)
+
+
+def test_each_saved_part_gets_its_own_json_file(editor, folders):
+    save_part(editor, "CU-060")
+    editor.new_component()
+    save_part(editor, "CU-061")
+    names = sorted(path.name for path in folders[2].glob("*.json"))
+    assert names == ["CU-060.json", "CU-061.json"]
+    saved = json.loads((folders[2] / "CU-060.json").read_text())
+    assert saved["url"] == "CU-060.png"
+    assert saved["uses"] == {"Bridge": 30}
+
+
+def test_a_part_with_spaces_in_its_code_saves_and_reopens(editor, folders):
+    save_part(editor, "CU-002-20x10-Cargo Bay-6xHalf Containers")
+    assert (folders[2] / "CU-002-20x10-Cargo Bay-6xHalf Containers.json").exists()
+    editor.new_component()
+    assert editor.open_component("CU-002-20x10-Cargo Bay-6xHalf Containers")
+    assert editor.items()[0].name == "Room"
+
+
+def test_editing_a_part_changes_only_its_own_file(editor, folders, monkeypatch):
+    save_part(editor, "CU-062")
+    editor.new_component()
+    save_part(editor, "CU-063")
+    untouched = (folders[2] / "CU-063.json").read_bytes()
+
+    assert editor.open_component("CU-062")
+    editor.use_spins["Bridge"].setValue(40)
+    monkeypatch.setattr(QMessageBox, "question", lambda *a: QMessageBox.Yes)
+    assert editor.save_component() == "CU-062"
+
+    assert json.loads((folders[2] / "CU-062.json").read_text())["tons"] == 40
+    assert (folders[2] / "CU-063.json").read_bytes() == untouched
+
+
+def test_deleting_a_parts_files_removes_only_that_part(tmp_path):
+    part_on_disk(tmp_path, "CU-001")
+    part_on_disk(tmp_path, "CU-002")
+    (tmp_path / "CU-001.png").unlink()
+    (tmp_path / "CU-001.json").unlink()
+    assert list(custom.load_entries(tmp_path)) == ["CU-002"]
+
+
+def test_a_json_with_no_high_res_image_is_ignored(tmp_path):
+    part_on_disk(tmp_path, "CU-001")
+    (tmp_path / "CU-001.png").unlink()
+    assert custom.load_entries(tmp_path) == {}
+
+
+def test_a_leftover_low_res_image_does_not_keep_a_part(tmp_path):
+    part_on_disk(tmp_path, "CU-001")
+    solid(tmp_path / "lowres" / "CU-001.png", 20, 20, "red")
+    (tmp_path / "CU-001.png").unlink()
+    assert custom.load_entries(tmp_path) == {}
+
+
+def test_the_old_shared_file_is_ignored(tmp_path):
+    part_on_disk(tmp_path, "CU-001")
+    (tmp_path / custom.OLD_PARTS_FILE_NAME).write_text(
+        json.dumps({"CU-OLD": entry("gone.png")})
+    )
+    problems = []
+    assert list(custom.load_entries(tmp_path, problems)) == ["CU-001"]
+    assert problems == []
+
+
+@pytest.mark.parametrize("text", ["not json", "[]", '"text"', '{"url": "A.png"}'])
+def test_a_damaged_file_is_reported_and_skipped(tmp_path, text):
+    part_on_disk(tmp_path, "CU-001")
+    (tmp_path / "CU-002.json").write_text(text)
+    problems = []
+    assert list(custom.load_entries(tmp_path, problems)) == ["CU-001"]
+    assert problems == ["CU-002.json"]
+
+
+def test_no_folder_means_no_parts(tmp_path):
+    assert custom.load_entries(tmp_path / "missing") == {}
+
+
+def test_a_saved_part_does_not_block_reusing_its_code_after_deletion(editor, folders):
+    save_part(editor, "CU-070")
+    editor.library["CU-070"] = model.part_from_entry(
+        "CU-070", "Custom", custom.load_entries(folders[2])["CU-070"]
+    )
+    (folders[2] / "CU-070.png").unlink()
+    (folders[2] / "CU-070.json").unlink()
+    editor.new_component()
+    save_part(editor, "CU-070")
+    assert (folders[2] / "CU-070.json").exists()
+    del editor.library["CU-070"]
+
+
+def test_a_built_in_code_is_still_refused(editor, monkeypatch):
+    shown = []
+    monkeypatch.setattr(QMessageBox, "warning", lambda *a: shown.append(a[2]))
+    drop(editor, "Room", 900, 900)
+    editor.code_edit.setText("SS-001")
+    assert editor.save_component() is None
+    assert shown
+
+
+def test_the_saved_list_catches_up_with_deleted_files(editor, folders):
+    save_part(editor, "CU-071")
+    assert editor.saved_combo.findText("CU-071") > 0
+    (folders[2] / "CU-071.png").unlink()
+    editor._refresh_saved_parts()
+    assert editor.saved_combo.findText("CU-071") < 0
 
 
 def only(editor, kind):
@@ -1140,6 +1272,7 @@ def test_a_reopened_part_border_still_follows_the_size(editor):
 
 
 def test_parts_saved_before_borders_existed_still_open(editor, folders):
+    solid(folders[2] / "CU-OLD.png", 4200, 4200, "white")
     custom.save_entry(
         "CU-OLD",
         {
@@ -1362,3 +1495,41 @@ def test_a_ship_with_a_custom_part_round_trips(window, folders, tmp_path):
     assert window.save_to(path)
     assert window.open_path(path)
     assert window.ship.parts[0].code == "CU-014"
+
+
+def test_deleted_files_leave_the_library_on_reload(window, folders):
+    part_on_disk(folders[2], "CU-080")
+    part_on_disk(folders[2], "CU-081")
+    window.reload_custom_parts()
+    assert "CU-080" in window.library and "CU-081" in window.library
+
+    (folders[2] / "CU-080.png").unlink()
+    window.reload_custom_parts()
+    assert "CU-080" not in window.library
+    assert "CU-081" in window.library
+
+
+def test_a_part_on_the_open_ship_survives_its_files_going(window, folders):
+    part_on_disk(folders[2], "CU-082")
+    window.reload_custom_parts()
+    window.add_part("CU-082")
+
+    (folders[2] / "CU-082.png").unlink()
+    window.reload_custom_parts()
+
+    assert "CU-082" in window.library
+    window.rotate_cw()
+    assert window.tonnage_table.rowCount() >= 1
+
+
+def test_switching_back_to_the_app_updates_the_library(window, folders):
+    part_on_disk(folders[2], "CU-083")
+    window.reload_custom_parts()
+    window._refresh_library()
+    (folders[2] / "CU-083.png").unlink()
+
+    window.isActiveWindow = lambda: True
+    QApplication.sendEvent(window, QEvent(QEvent.ActivationChange))
+
+    assert "CU-083" not in window.library
+    assert "CU-083" not in [part.code for part in window.library_model.parts]

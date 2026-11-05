@@ -10,6 +10,7 @@ from pathlib import Path
 
 from PySide6.QtCore import (
     QAbstractListModel,
+    QEvent,
     QItemSelectionModel,
     QModelIndex,
     QObject,
@@ -1500,21 +1501,41 @@ class MainWindow(QMainWindow):
         self._show_preview()
 
     def reload_custom_parts(self) -> None:
-        try:
-            entries = custom.load_entries(self.custom_folder)
-        except custom.CustomFileError as error:
-            self.statusBar().showMessage(str(error))
-            return
+        """Match the library to the files in the custom parts folder."""
+        problems: list[str] = []
+        entries = custom.load_entries(self.custom_folder, problems)
+        if problems:
+            self.statusBar().showMessage("Could not read: " + ", ".join(problems))
+        # A part on the open ship stays until the ship closes, even if its
+        # files have gone, so the map and tonnage keep working.
+        in_use = {part.code for part in self.ship.parts}
         for code in [
             code
             for code, info in self.library.items()
-            if info.shape == model.CUSTOM_SHAPE and code not in entries
+            if info.shape == model.CUSTOM_SHAPE
+            and code not in entries
+            and code not in in_use
         ]:
             del self.library[code]
         for code, entry in entries.items():
             self.library[code] = model.part_from_entry(
                 code, model.CUSTOM_SHAPE, entry
             )
+
+    def changeEvent(self, event) -> None:
+        # Pick up parts added, changed or deleted while the app was in the
+        # background. Skipped during setup, before the library list exists.
+        if (
+            event.type() == QEvent.ActivationChange
+            and self.isActiveWindow()
+            and hasattr(self, "library_model")
+        ):
+            before = set(self.library)
+            self.reload_custom_parts()
+            if set(self.library) != before:
+                self._refresh_size_choices()
+                self._refresh_library()
+        super().changeEvent(event)
 
     # Files
 
@@ -1711,11 +1732,10 @@ class MainWindow(QMainWindow):
 def main() -> int:
     app = QApplication(sys.argv)
     app.setApplicationName(APP_NAME)
-    try:
-        entries = custom.load_entries()
-    except custom.CustomFileError as error:
-        print(error, file=sys.stderr)
-        entries = {}
+    problems: list[str] = []
+    entries = custom.load_entries(problems=problems)
     window = MainWindow(model.load_library(DATA_DIR, entries))
+    if problems:
+        window.statusBar().showMessage("Could not read: " + ", ".join(problems))
     window.show()
     return app.exec()

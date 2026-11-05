@@ -8,9 +8,13 @@ from the geomorphs is still under their CC BY-NC licence.
         <name>.json             where it was cut from
     assets/geomorphs-highres-custom/
         <code>.png              a finished part at high resolution
+        <code>.json             its library entry, in the same layout as the
+                                original project's parts data
         lowres/<code>.png       the same part at the size the map uses
-        custom-parts.json       the library entries, in the same layout as
-                                the original project's parts data
+
+Each part has its own JSON file, and the app finds parts by looking in the
+folder. Deleting a part's high-res PNG removes it from the library, and a JSON
+file with no matching image is ignored.
 """
 
 from __future__ import annotations
@@ -22,7 +26,9 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SUBPART_FOLDER = REPO_ROOT / "assets" / "geomorph-hires-subpart"
 CUSTOM_FOLDER = REPO_ROOT / "assets" / "geomorphs-highres-custom"
-CUSTOM_FILE_NAME = "custom-parts.json"
+# Parts used to share this one file. It is ignored if it is still there.
+OLD_PARTS_FILE_NAME = "custom-parts.json"
+REQUIRED_FIELDS = ("url", "sizeX", "sizeY", "tons", "uses", "facilities")
 LOW_RES_FOLDER_NAME = "lowres"
 
 # The high-res tiles hold 300 pixels per square, and the low-res ones 60.
@@ -32,27 +38,41 @@ GUTTER_SQUARES = 2
 SQUARES_PER_DTON = 2
 
 
-class CustomFileError(ValueError):
-    """The custom parts file can't be used. The message is for the user."""
-
-
 def safe_name(text: str) -> str:
     """Reduce text to something that is safe as a file name."""
     cleaned = re.sub(r"[^\w\- ]+", "-", text.strip())
     return re.sub(r"[\s-]*-[\s-]*", "-", cleaned).strip(" -")
 
 
-def load_entries(folder: Path = CUSTOM_FOLDER) -> dict:
-    """The custom library entries, by code. No file yet means no entries."""
-    path = Path(folder) / CUSTOM_FILE_NAME
-    if not path.exists():
-        return {}
-    try:
-        entries = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, UnicodeDecodeError, json.JSONDecodeError) as error:
-        raise CustomFileError(f"Could not read {path.name}: {error}") from error
-    if not isinstance(entries, dict):
-        raise CustomFileError(f"{path.name} is not a list of parts.")
+def entry_path(code: str, folder: Path = CUSTOM_FOLDER) -> Path:
+    return Path(folder) / f"{code}.json"
+
+
+def load_entries(
+    folder: Path = CUSTOM_FOLDER, problems: list[str] | None = None
+) -> dict:
+    """The custom library entries, by code, from the files in the folder.
+
+    A damaged file only loses its own part. Its name is added to `problems`,
+    so the app can say which file needs attention.
+    """
+    folder = Path(folder)
+    entries: dict = {}
+    if not folder.is_dir():
+        return entries
+    for path in sorted(folder.glob("*.json")):
+        if path.name == OLD_PARTS_FILE_NAME:
+            continue
+        try:
+            entry = json.loads(path.read_text(encoding="utf-8"))
+            if not all(field in entry for field in REQUIRED_FIELDS):
+                raise ValueError
+        except (OSError, TypeError, ValueError):
+            if problems is not None:
+                problems.append(path.name)
+            continue
+        if (folder / entry["url"]).is_file():
+            entries[path.stem] = entry
     return entries
 
 
@@ -66,10 +86,9 @@ def _write_json(path: Path, data: dict) -> None:
 
 
 def save_entry(code: str, entry: dict, folder: Path = CUSTOM_FOLDER) -> None:
-    entries = load_entries(folder)
-    entries[code] = entry
+    """Write one part's JSON file, leaving every other part alone."""
     Path(folder).mkdir(parents=True, exist_ok=True)
-    _write_json(Path(folder) / CUSTOM_FILE_NAME, entries)
+    _write_json(entry_path(code, folder), entry)
 
 
 def next_code(taken) -> str:
