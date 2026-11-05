@@ -10,7 +10,7 @@ import pytest
 from PySide6.QtCore import QPoint, QPointF, Qt
 from PySide6.QtGui import QColor, QImage, QPainter, QWheelEvent
 from PySide6.QtTest import QTest
-from PySide6.QtWidgets import QApplication, QMessageBox
+from PySide6.QtWidgets import QApplication, QMessageBox, QToolBar
 
 from shipyard.app import DATA_DIR, MainWindow
 from shipyard.images import HighResStore, ImageStore
@@ -1029,3 +1029,35 @@ def test_a_dragged_image_is_drawn_in_its_new_place(app, library, tmp_path):
     assert picture.pixelColor(inside).green() == 0
     window.dirty = False
     window.close()
+
+
+def test_copy_and_paste_are_on_the_top_bar(window):
+    bar = window.findChild(QToolBar)
+    assert window.copy_action in bar.actions()
+    assert window.paste_action in bar.actions()
+    assert window.cut_action not in bar.actions()
+
+
+def test_cut_stays_on_its_keyboard_shortcut(window):
+    window.add_part("SS-001")
+    assert window.cut_action.isEnabled()
+    key(window, Qt.Key_X, Qt.ControlModifier)
+    assert window.deck.parts == []
+    assert window.paste_action.isEnabled()
+
+
+def test_top_bar_buttons_follow_the_selection_and_clipboard(window):
+    assert not window.cut_action.isEnabled()
+    assert not window.copy_action.isEnabled()
+    assert not window.paste_action.isEnabled()
+
+    window.add_part("SS-001")
+    assert window.cut_action.isEnabled() and window.copy_action.isEnabled()
+    assert not window.paste_action.isEnabled()
+
+    window.copy_action.trigger()
+    assert window.paste_action.isEnabled()
+    window.paste_action.trigger()
+    assert len(window.deck.parts) == 2
+    window.cut_action.trigger()
+    assert len(window.deck.parts) == 1

@@ -598,6 +598,9 @@ class MainWindow(QMainWindow):
             self.delete_action,
         ):
             bar.addAction(action)
+        bar.addSeparator()
+        for action in (self.copy_action, self.paste_action):
+            bar.addAction(action)
 
     def _build_map_area(self) -> QWidget:
         self.deck_tabs = QTabBar()
