@@ -1494,7 +1494,15 @@ class MainWindow(QMainWindow):
     def custom_part_saved(self, code: str) -> None:
         """Bring a part from the editor into the library and onto the map."""
         self.reload_custom_parts()
-        self.images.forget(self.library[code].url)
+        info = self.library[code]
+        for url in (
+            info.url,
+            info.mirror_url,
+            info.overlay_url,
+            info.overlay_mirror_url,
+        ):
+            if url:
+                self.images.forget(url)
         self._rebuild_items(select=self.selected_indices())
         self._refresh_size_choices()
         self._refresh_library()

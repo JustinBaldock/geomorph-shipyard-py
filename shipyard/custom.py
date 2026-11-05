@@ -8,9 +8,12 @@ from the geomorphs is still under their CC BY-NC licence.
         <name>.json             where it was cut from
     assets/geomorphs-highres-custom/
         <code>.png              a finished part at high resolution
+        <code>-flipped.png      optional, what Flip shows
+        <code>-cargo.png        optional, what Show cargo adds
+        <code>-flipped-cargo.png  optional, Show cargo on a flipped part
         <code>.json             its library entry, in the same layout as the
                                 original project's parts data
-        lowres/<code>.png       the same part at the size the map uses
+        lowres/                 the same images at the size the map uses
 
 Each part has its own JSON file, and the app finds parts by looking in the
 folder. Deleting a part's high-res PNG removes it from the library, and a JSON
@@ -99,10 +102,16 @@ def next_code(taken) -> str:
     return f"CU-{number:03d}"
 
 
-def image_paths(code: str, folder: Path = CUSTOM_FOLDER) -> tuple[Path, Path]:
-    """Where a part's high-res and low-res images go."""
+def image_paths(
+    code: str, folder: Path = CUSTOM_FOLDER, suffix: str = ""
+) -> tuple[Path, Path]:
+    """Where a part's high-res and low-res images go.
+
+    `suffix` picks one of its extra images, such as `-flipped`.
+    """
     folder = Path(folder)
-    return folder / f"{code}.png", folder / LOW_RES_FOLDER_NAME / f"{code}.png"
+    name = f"{code}{suffix}.png"
+    return folder / name, folder / LOW_RES_FOLDER_NAME / name
 
 
 def subpart_names(folder: Path = SUBPART_FOLDER) -> list[str]:

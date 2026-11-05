@@ -761,6 +761,350 @@ def test_dragging_a_group_keeps_it_together(editor):
     assert wall.pos() - room.pos() == gap
 
 
+# Layers
+
+
+def part_with_layers(editor):
+    drop(editor, "Room", 1500, 1500)
+    editor.draw_border()
+    editor.build_flipped()
+    editor.switch_layer("cargo")
+    drop(editor, "Wall", 1200, 1200)
+    editor.switch_layer("flipped_cargo")
+    drop(editor, "Wall", 1800, 1800)
+    editor.switch_layer("normal")
+
+
+def test_a_new_component_starts_on_the_normal_layer(editor):
+    assert editor.layer == "normal"
+    labels = [
+        editor.layer_combo.itemText(row) for row in range(editor.layer_combo.count())
+    ]
+    assert labels == ["Normal", "Flipped", "Cargo", "Flipped cargo"]
+
+
+def test_each_layer_keeps_its_own_pieces(editor):
+    drop(editor, "Room", 900, 900)
+    editor.switch_layer("cargo")
+    assert editor.items() == []
+    drop(editor, "Wall", 1500, 1500)
+    assert [item.name for item in editor.items()] == ["Wall"]
+
+    editor.switch_layer("normal")
+    assert [item.name for item in editor.items()] == ["Room"]
+    editor.switch_layer("cargo")
+    assert [item.name for item in editor.items()] == ["Wall"]
+
+
+def test_switching_layers_is_not_a_change(editor):
+    drop(editor, "Room", 900, 900)
+    editor.dirty = False
+    editor.switch_layer("cargo")
+    editor.switch_layer("normal")
+    assert not editor.dirty
+
+
+def test_switching_layers_keeps_pose_and_position(editor):
+    drop(editor, "Room", 900, 900)
+    item = editor.items()[0]
+    item.set_pose(3, True)
+    before = composed(editor)
+    editor.switch_layer("cargo")
+    editor.switch_layer("normal")
+    assert composed(editor) == before
+
+
+def test_the_cargo_layer_shows_the_part_faintly(editor):
+    drop(editor, "Room", 900, 900)
+    assert editor.reference_item is None
+    editor.switch_layer("cargo")
+    reference = editor.reference_item
+    assert reference is not None
+    assert reference.opacity() < 1
+    assert reference not in editor.items()
+    assert reference.pixmap().width() * reference.scale() == 14 * SQUARE
+    editor.switch_layer("normal")
+    assert editor.reference_item is None
+
+
+def test_the_flipped_cargo_layer_shows_the_flipped_part(editor):
+    drop(editor, "Room", 900, 900)
+    editor.build_flipped()
+    editor.switch_layer("flipped_cargo")
+    assert editor.reference_item is not None
+
+
+def test_the_faint_part_cannot_be_clicked(editor):
+    drop(editor, "Room", 1500, 1500)
+    editor.switch_layer("cargo")
+    scene_click(editor, 1500, 1500)
+    assert editor.selected() == []
+
+
+def test_the_faint_part_is_not_in_the_saved_cargo_image(editor, folders):
+    drop(editor, "Room", 1500, 1500)
+    editor.switch_layer("cargo")
+    drop(editor, "Wall", 2400, 2400)
+    editor.code_edit.setText("CU-090")
+    assert editor.save_component() == "CU-090"
+    cargo = QImage(str(custom.image_paths("CU-090", folders[2], "-cargo")[0]))
+    assert cargo.pixelColor(1320, 1320).alpha() == 0  # where Room sits
+    assert cargo.pixelColor(2400, 2400).alpha() == 255
+
+
+def test_build_flipped_is_an_exact_left_right_mirror(editor):
+    drop(editor, "Room", 1200, 900)
+    editor.items()[0].set_pose(1, False)
+    drop(editor, "Wall", 2250, 1800)
+    wall = next(item for item in editor.items() if item.name == "Wall")
+    wall.set_pose(1, True)
+    normal = composed(editor)
+
+    editor.build_flipped()
+    assert editor.layer == "flipped"
+    assert composed(editor) == normal.flipped(Qt.Horizontal)
+
+
+@pytest.mark.parametrize("turns", [0, 1, 2, 3])
+@pytest.mark.parametrize("mirror", [False, True])
+def test_mirroring_is_exact_for_every_pose(editor, turns, mirror):
+    drop(editor, "Wall", 1500, 1500)
+    editor.items()[0].set_pose(turns, mirror)
+    normal = composed(editor)
+    editor.build_flipped()
+    assert composed(editor) == normal.flipped(Qt.Horizontal)
+
+
+def test_building_twice_returns_the_original(editor):
+    drop(editor, "Room", 1200, 900)
+    editor.items()[0].set_pose(1, True)
+    editor.build_flipped()
+    mirrored_back = [editor._mirrored(data) for data in editor.layouts["flipped"]]
+    assert mirrored_back == editor.layouts["normal"]
+
+
+def test_a_mirrored_door_and_border_land_on_the_other_side(editor):
+    editor.draw_border()
+    door = editor._add_door(1050, 600, False)
+    editor.scene.clearSelection()
+    editor.build_flipped()
+    doors = only(editor, DoorItem)
+    assert door not in doors
+    assert doors[0].pos() == QPointF(14 * SQUARE - 1050, 600)
+    assert only(editor, BorderItem)[0].area() == editor.scene.part_rect()
+
+
+def test_cargo_is_mirrored_into_flipped_cargo(editor):
+    drop(editor, "Room", 900, 900)
+    editor.switch_layer("cargo")
+    drop(editor, "Wall", 1200, 1500)
+    cargo = composed(editor)
+    editor.build_flipped()
+    editor.switch_layer("flipped_cargo")
+    assert composed(editor) == cargo.flipped(Qt.Horizontal)
+
+
+def test_rebuilding_asks_before_replacing_flipped_work(editor, monkeypatch):
+    drop(editor, "Room", 900, 900)
+    editor.build_flipped()
+    drop(editor, "Wall", 1500, 1500)
+    pieces = len(editor.items())
+    monkeypatch.setattr(QMessageBox, "question", lambda *a: QMessageBox.Cancel)
+    editor.build_flipped()
+    assert len(editor.items()) == pieces
+
+
+def test_build_flipped_needs_a_normal_layer(editor, monkeypatch):
+    shown = []
+    monkeypatch.setattr(QMessageBox, "warning", lambda *a: shown.append(a[2]))
+    editor.build_flipped()
+    assert "Normal" in shown[0]
+    assert editor.layer == "normal"
+
+
+def test_build_flipped_warns_about_text(editor):
+    drop(editor, "Room", 900, 900)
+    editor.build_flipped()
+    assert "backwards" in editor.statusBar().currentMessage()
+
+
+def test_a_flipped_layer_can_be_edited_by_hand(editor, folders):
+    drop(editor, "Room", 1500, 1500)
+    editor.build_flipped()
+    editor.items()[0].set_pose(0, False)
+    editor.code_edit.setText("CU-091")
+    assert editor.save_component() == "CU-091"
+    flipped = QImage(str(custom.image_paths("CU-091", folders[2], "-flipped")[0]))
+    normal = QImage(str(custom.image_paths("CU-091", folders[2])[0]))
+    assert flipped != normal.flipped(Qt.Horizontal)
+
+
+def test_a_part_with_only_a_normal_layer_saves_as_before(editor, folders):
+    drop(editor, "Room", 1500, 1500)
+    editor.code_edit.setText("CU-092")
+    editor.save_component()
+    entry = custom.load_entries(folders[2])["CU-092"]
+    assert "mirrorUrl" not in entry and "overlayUrl" not in entry
+    info = model.part_from_entry("CU-092", "Custom", entry)
+    assert not info.has_mirror
+    assert info.overlay_image(False) is None
+
+
+def test_every_layer_saves_both_image_sizes(editor, folders):
+    part_with_layers(editor)
+    editor.code_edit.setText("CU-093")
+    assert editor.save_component() == "CU-093"
+    entry = custom.load_entries(folders[2])["CU-093"]
+    assert entry["url"] == "CU-093.png"
+    assert entry["mirrorUrl"] == "CU-093-flipped.png"
+    assert entry["overlayUrl"] == "CU-093-cargo.png"
+    assert entry["overlayMirrorUrl"] == "CU-093-flipped-cargo.png"
+    for suffix in ("", "-flipped", "-cargo", "-flipped-cargo"):
+        high, low = custom.image_paths("CU-093", folders[2], suffix)
+        assert QImage(str(high)).width() == 14 * SQUARE
+        assert QImage(str(low)).width() == 840
+
+
+def test_saving_from_any_layer_keeps_them_all(editor, folders):
+    part_with_layers(editor)
+    editor.switch_layer("cargo")
+    drop(editor, "Room", 2400, 2400)
+    editor.code_edit.setText("CU-094")
+    assert editor.save_component() == "CU-094"
+    entry = custom.load_entries(folders[2])["CU-094"]
+    assert len(entry["layouts"]["cargo"]) == 2
+    assert entry["layout"]
+
+
+def test_all_layers_reopen_exactly(editor):
+    part_with_layers(editor)
+    editor.code_edit.setText("CU-095")
+    pictures = {}
+    assert editor.save_component() == "CU-095"
+    for key in ("normal", "flipped", "cargo", "flipped_cargo"):
+        editor.switch_layer(key)
+        pictures[key] = composed(editor)
+
+    editor.switch_layer("normal")
+    editor.new_component()
+    assert editor.open_component("CU-095")
+    assert editor.layer == "normal"
+    assert editor.layer_combo.currentData() == "normal"
+    for key, picture in pictures.items():
+        editor.switch_layer(key)
+        assert composed(editor) == picture, key
+    assert not editor.dirty
+
+
+def test_emptying_a_layer_removes_its_images(editor, folders, monkeypatch):
+    part_with_layers(editor)
+    editor.code_edit.setText("CU-096")
+    editor.save_component()
+    high, low = custom.image_paths("CU-096", folders[2], "-cargo")
+    assert high.exists() and low.exists()
+
+    editor.switch_layer("cargo")
+    editor.select_all()
+    editor.delete_selected()
+    monkeypatch.setattr(QMessageBox, "question", lambda *a: QMessageBox.Yes)
+    assert editor.save_component() == "CU-096"
+    assert not high.exists() and not low.exists()
+    entry = custom.load_entries(folders[2])["CU-096"]
+    assert "overlayUrl" not in entry
+    assert "cargo" not in entry["layouts"]
+    assert custom.image_paths("CU-096", folders[2], "-flipped")[0].exists()
+
+
+def test_a_normal_layer_is_required_to_save(editor, monkeypatch):
+    shown = []
+    monkeypatch.setattr(QMessageBox, "warning", lambda *a: shown.append(a[2]))
+    editor.switch_layer("cargo")
+    drop(editor, "Wall", 1500, 1500)
+    assert editor.save_component() is None
+    assert "Normal" in shown[0]
+
+
+def test_new_component_clears_every_layer(editor):
+    part_with_layers(editor)
+    editor.dirty = False
+    editor.new_component()
+    assert not any(editor.layouts.values())
+    assert editor.layer == "normal"
+
+
+def test_unsaved_work_on_another_layer_still_asks(editor, monkeypatch):
+    editor.switch_layer("cargo")
+    drop(editor, "Wall", 1500, 1500)
+    editor.switch_layer("normal")
+    monkeypatch.setattr(QMessageBox, "question", lambda *a: QMessageBox.Cancel)
+    assert not editor.close()
+
+
+def test_copy_and_paste_work_across_layers(editor):
+    drop(editor, "Room", 900, 900)
+    editor.copy_selected()
+    editor.switch_layer("cargo")
+    editor.paste()
+    assert [item.name for item in editor.items()] == ["Room"]
+
+
+def test_a_whole_part_border_fits_every_layer_after_a_resize(editor):
+    drop(editor, "Room", 1500, 1500)
+    editor.scene.clearSelection()
+    editor.draw_border()
+    editor.build_flipped()
+    editor.switch_layer("normal")
+    editor.width_spin.setValue(16)
+    editor.switch_layer("flipped")
+    assert only(editor, BorderItem)[0].area() == editor.scene.part_rect()
+
+
+def test_half_square_pieces_reopen_where_they_were_put(editor):
+    editor.snap_combo.setCurrentIndex(1)
+    drop(editor, "Wall", 1250, 1200)
+    piece = editor.items()[0]
+    piece.setPos(750, 1050)
+    border_area = QRectF(750, 750, 450, 450)
+    editor._add_border(border_area, 19, False)
+    before = composed(editor)
+    editor.code_edit.setText("CU-097")
+    assert editor.save_component() == "CU-097"
+
+    editor.snap_combo.setCurrentIndex(0)  # back to whole squares
+    editor.new_component()
+    assert editor.open_component("CU-097")
+    assert composed(editor) == before
+    assert not editor.dirty
+
+
+def test_a_piece_keeps_snapping_after_it_reopens(editor):
+    drop(editor, "Room", 900, 900)
+    editor.code_edit.setText("CU-098")
+    editor.save_component()
+    editor.new_component()
+    editor.open_component("CU-098")
+    item = editor.items()[0]
+    item.setPos(1240, 1240)
+    assert item.pos() == QPointF(1200, 1200)
+
+
+def test_parts_saved_before_layers_existed_still_open(editor, folders):
+    solid(folders[2] / "CU-OLD2.png", 4200, 4200, "white")
+    custom.save_entry(
+        "CU-OLD2",
+        {
+            "url": "CU-OLD2.png", "sizeX": 10, "sizeY": 10, "tons": 50, "uses": {},
+            "facilities": {},
+            "layout": [{"subpart": "Room", "x": 600, "y": 600, "turns": 0, "mirror": False}],
+        },
+        folders[2],
+    )
+    assert editor.open_component("CU-OLD2")
+    assert [item.name for item in editor.items()] == ["Room"]
+    editor.switch_layer("flipped")
+    assert editor.items() == []
+
+
 # One JSON file per part
 
 
@@ -1533,3 +1877,96 @@ def test_switching_back_to_the_app_updates_the_library(window, folders):
 
     assert "CU-083" not in window.library
     assert "CU-083" not in [part.code for part in window.library_model.parts]
+
+
+def saved_layered_part(window, folders, code):
+    _, subparts, _ = folders
+    quarters(subparts / "Room.png", 600)
+    solid(subparts / "Wall.png", 300, 150, "blue")
+    editor = window.open_editor()
+    editor.subpart_folder = subparts
+    part_with_layers(editor)
+    editor.code_edit.setText(code)
+    assert editor.save_component() == code
+    return editor
+
+
+def test_flip_and_cargo_turn_on_for_a_layered_part(window, folders):
+    saved_layered_part(window, folders, "CU-100")
+    window.add_part("CU-100")
+    assert window.flip_action.isEnabled()
+    assert window.overlay_action.isEnabled()
+
+
+def test_a_plain_custom_part_leaves_them_off(window, folders):
+    _, subparts, _ = folders
+    quarters(subparts / "Room.png", 600)
+    editor = window.open_editor()
+    editor.subpart_folder = subparts
+    save_part(editor, "CU-101")
+    window.add_part("CU-101")
+    assert not window.flip_action.isEnabled()
+    assert not window.overlay_action.isEnabled()
+
+
+def test_flip_swaps_in_the_flipped_image(window, folders):
+    saved_layered_part(window, folders, "CU-102")
+    window.add_part("CU-102")
+    item = window.items[0]
+    info = item.info
+    assert info.image(False) == "CU-102.png"
+    assert info.image(True) == "CU-102-flipped.png"
+    window.toggle_mirror()
+    assert window.deck.parts[0].mirror
+    assert window.images.pixmap(item.info.image(True)) is not None
+
+
+def test_cargo_shows_in_both_directions(window, folders):
+    saved_layered_part(window, folders, "CU-103")
+    window.add_part("CU-103")
+    window.toggle_overlay()
+    assert window.deck.parts[0].overlay
+    info = window.items[0].info
+    assert window.images.pixmap(info.overlay_image(False)) is not None
+    window.toggle_mirror()
+    assert window.overlay_action.isEnabled()
+    assert window.images.pixmap(info.overlay_image(True)) is not None
+
+
+def test_cargo_greys_out_when_a_flipped_part_has_none(window, folders):
+    _, subparts, _ = folders
+    quarters(subparts / "Room.png", 600)
+    editor = window.open_editor()
+    editor.subpart_folder = subparts
+    drop(editor, "Room", 1500, 1500)
+    editor.build_flipped()
+    editor.switch_layer("cargo")
+    drop(editor, "Room", 1500, 1500)
+    editor.code_edit.setText("CU-104")
+    assert editor.save_component() == "CU-104"
+    window.add_part("CU-104")
+    assert window.overlay_action.isEnabled()
+    window.toggle_mirror()
+    assert not window.overlay_action.isEnabled()
+
+
+def test_exports_use_high_res_for_every_layer(window, folders):
+    saved_layered_part(window, folders, "CU-105")
+    window.add_part("CU-105")
+    url = window.items[0].info
+    assert window.high_res.pixmap(url.image(True)).width() == 14 * SQUARE
+    assert window.high_res.pixmap(url.overlay_image(True)).width() == 14 * SQUARE
+
+
+def test_resaving_refreshes_flipped_and_cargo_images_on_the_map(window, folders, monkeypatch):
+    editor = saved_layered_part(window, folders, "CU-106")
+    window.add_part("CU-106")
+    url = window.items[0].info.image(True)
+    before = window.images.pixmap(url).toImage()
+
+    editor.switch_layer("flipped")
+    room = next(item for item in editor.items() if item.name == "Room")
+    room.set_pose(1, False)
+    monkeypatch.setattr(QMessageBox, "question", lambda *a: QMessageBox.Yes)
+    assert editor.save_component() == "CU-106"
+    assert window.images.pixmap(url).toImage() != before

@@ -80,6 +80,22 @@ BORDER_CHOICES = (("Hull wall", HULL_WALL), ("Interior wall", INTERIOR_WALL))
 BORDER_LAYER = 100_000
 DOOR_LAYER = 200_000
 BRUSH_STEP_PIXELS = 40
+
+# Each layer is one image of the part: (key, label, file suffix, JSON field).
+NORMAL = "normal"
+FLIPPED = "flipped"
+CARGO = "cargo"
+FLIPPED_CARGO = "flipped_cargo"
+LAYERS = (
+    (NORMAL, "Normal", "", "url"),
+    (FLIPPED, "Flipped", "-flipped", "mirrorUrl"),
+    (CARGO, "Cargo", "-cargo", "overlayUrl"),
+    (FLIPPED_CARGO, "Flipped cargo", "-flipped-cargo", "overlayMirrorUrl"),
+)
+# Cargo sits on top of a part, so that part is shown faintly while editing it.
+REFERENCE_LAYERS = {CARGO: NORMAL, FLIPPED_CARGO: FLIPPED}
+REFERENCE_OPACITY = 0.35
+REFERENCE_SCALE = 5
 THUMBNAIL_PIXELS = 96
 DEFAULT_SIZE_SQUARES = 10
 MAX_SIZE_SQUARES = 100
@@ -526,6 +542,9 @@ class ComponentEditor(QMainWindow):
         self.next_z = 0.0
         self.clipboard: list[dict] = []
         self.paste_count = 0
+        self.layer = NORMAL
+        self.layouts: dict[str, list[dict]] = {key: [] for key, *_ in LAYERS}
+        self.reference_item: QGraphicsPixmapItem | None = None
         self.setWindowTitle("Component Editor")
 
         self.scene = CanvasScene()
@@ -582,6 +601,7 @@ class ComponentEditor(QMainWindow):
             "Select all", self.select_all, [QKeySequence.SelectAll]
         )
         self.border_action = a("Draw border", self.draw_border, ["B"])
+        self.build_flipped_action = a("Build flipped", self.build_flipped)
         self.door_action = QAction("Door brush", self)
         self.door_action.setCheckable(True)
         self.door_action.setShortcut("D")
@@ -616,6 +636,8 @@ class ComponentEditor(QMainWindow):
         bar.addSeparator()
         bar.addAction(self.border_action)
         bar.addAction(self.door_action)
+        bar.addSeparator()
+        bar.addAction(self.build_flipped_action)
 
     def _build_subpart_panel(self) -> QWidget:
         self.search = QLineEdit()
@@ -652,8 +674,16 @@ class ComponentEditor(QMainWindow):
             self.snap_combo.addItem(label, step)
         self.snap_combo.currentIndexChanged.connect(self._snap_chosen)
 
+        self.layer_combo = QComboBox()
+        for key, label, *_ in LAYERS:
+            self.layer_combo.addItem(label, key)
+        self.layer_combo.activated.connect(
+            lambda index: self.switch_layer(self.layer_combo.itemData(index))
+        )
+
         form = QFormLayout()
         form.addRow("Open saved part", self.saved_combo)
+        form.addRow("Layer", self.layer_combo)
         form.addRow("Code", self.code_edit)
         form.addRow("Width (squares)", self.width_spin)
         form.addRow("Height (squares)", self.height_spin)
@@ -736,6 +766,7 @@ class ComponentEditor(QMainWindow):
         for item in self.items():
             if isinstance(item, BorderItem) and item.follows_part:
                 item.set_area(self.scene.part_rect())
+        self._show_reference()
         self._mark_changed()
         self._refresh_tons()
 
@@ -886,11 +917,14 @@ class ComponentEditor(QMainWindow):
             self.step, int(area.width()), int(area.height()), thickness, follows_part
         )
         item.moved = self._mark_changed
-        item.setZValue(BORDER_LAYER + self.next_z)
-        self.next_z += 1
-        self.scene.addItem(item)
+        self._add_to_canvas(item, BORDER_LAYER)
         item.setPos(area.topLeft())
         return item
+
+    def _add_to_canvas(self, item, base_layer: int = 0) -> None:
+        item.setZValue(base_layer + self.next_z)
+        self.next_z += 1
+        self.scene.addItem(item)
 
     def draw_border(self) -> BorderItem:
         area, whole_part = self._border_area()
@@ -923,9 +957,7 @@ class ComponentEditor(QMainWindow):
     ) -> DoorItem:
         item = DoorItem(self.step, vertical, wall or self._wall_at(x, y, vertical))
         item.setPos(x, y)
-        item.setZValue(DOOR_LAYER + self.next_z)
-        self.next_z += 1
-        self.scene.addItem(item)
+        self._add_to_canvas(item, DOOR_LAYER)
         return item
 
     def brush_door(self, point: QPointF, first: bool, erase: bool) -> None:
@@ -1007,8 +1039,12 @@ class ComponentEditor(QMainWindow):
         self.view.setFocus()
         self._mark_changed()
 
+    def _any_work(self) -> bool:
+        self._store_layer()
+        return any(self.layouts.values())
+
     def _ok_to_discard(self) -> bool:
-        if not self.dirty or not self.items():
+        if not self.dirty or not self._any_work():
             return True
         answer = QMessageBox.question(
             self,
@@ -1019,12 +1055,133 @@ class ComponentEditor(QMainWindow):
         )
         return answer == QMessageBox.Discard
 
-    def _clear(self) -> None:
+    def _clear_canvas(self) -> None:
         for item in self.items():
             self.scene.removeItem(item)
+        self.next_z = 0.0
+
+    def _clear(self) -> None:
+        self._clear_canvas()
         for spin in self.use_spins.values():
             spin.setValue(0)
-        self.next_z = 0.0
+        self.layouts = {key: [] for key, *_ in LAYERS}
+        self._set_layer(NORMAL)
+
+    def _set_layer(self, key: str) -> None:
+        self.layer = key
+        self.layer_combo.setCurrentIndex(self.layer_combo.findData(key))
+        self._show_reference()
+
+    def _store_layer(self) -> None:
+        """Keep what's on the canvas in the current layer's layout."""
+        ordered = sorted(self.items(), key=lambda item: item.zValue())
+        self.layouts[self.layer] = [item.to_json() for item in ordered]
+
+    def _load_layer(self, key: str) -> list[str]:
+        """Put a layer on the canvas. Returns any subparts that are missing."""
+        self._clear_canvas()
+        missing = []
+        was_dirty = self.dirty
+        for data in self.layouts[key]:
+            if self._restore(data) is None:
+                missing.append(data["subpart"])
+        self.dirty = was_dirty
+        self._set_layer(key)
+        self._refresh_actions()
+        return missing
+
+    def _warn_missing(self, missing: list[str]) -> None:
+        if missing:
+            QMessageBox.warning(
+                self,
+                "Component Editor",
+                "These subparts are missing, so they were left out:\n"
+                + "\n".join(sorted(set(missing))),
+            )
+
+    def switch_layer(self, key: str) -> None:
+        if key != self.layer:
+            self._store_layer()
+            self._warn_missing(self._load_layer(key))
+
+    def _show_reference(self) -> None:
+        """Show the part faintly while its cargo layer is being edited."""
+        if self.reference_item is not None:
+            self.scene.removeItem(self.reference_item)
+            self.reference_item = None
+        below = REFERENCE_LAYERS.get(self.layer)
+        if below is None or not self.layouts[below]:
+            return
+        image = self._flatten(self.layouts[below]).scaled(
+            self._canvas_size() / REFERENCE_SCALE,
+            Qt.IgnoreAspectRatio,
+            Qt.SmoothTransformation,
+        )
+        item = QGraphicsPixmapItem(QPixmap.fromImage(image))
+        item.setScale(REFERENCE_SCALE)
+        item.setOpacity(REFERENCE_OPACITY)
+        item.setZValue(-BORDER_LAYER)
+        item.setAcceptedMouseButtons(Qt.NoButton)
+        self.scene.addItem(item)
+        self.reference_item = item
+
+    def _canvas_size(self) -> QSize:
+        return canvas_size(self.width_spin.value(), self.height_spin.value())
+
+    def _flatten(self, layout: list[dict]) -> QImage:
+        items = []
+        for z, data in enumerate(layout):
+            item = self._make_item(data)
+            if item is not None:
+                item.setZValue(z)
+                items.append(item)
+        return compose(items, self._canvas_size())
+
+    def _mirrored(self, data: dict) -> dict:
+        """The same thing on the other side of a left-right mirror."""
+        width = self.scene.full_rect().width()
+        kind = data.get("kind")
+        if kind == "door":
+            return {**data, "x": width - data["x"]}
+        if kind == "border":
+            return {**data, "x": int(width - data["x"] - data["width"])}
+        item = self._make_item(data)
+        if item is None:
+            return data
+        return {
+            **data,
+            "x": int(width - item.visible_rect().right()),
+            "turns": -data["turns"] % 4,
+            "mirror": not data["mirror"],
+        }
+
+    def build_flipped(self) -> None:
+        """Mirror Normal and Cargo into the two flipped layers."""
+        self._store_layer()
+        if not self.layouts[NORMAL]:
+            QMessageBox.warning(
+                self, "Component Editor", "Add something to the Normal layer first."
+            )
+            return
+        if self.layouts[FLIPPED] or self.layouts[FLIPPED_CARGO]:
+            answer = QMessageBox.question(
+                self,
+                "Component Editor",
+                "Replace the flipped layers with a new mirror of Normal and Cargo?",
+                QMessageBox.Yes | QMessageBox.Cancel,
+                QMessageBox.Cancel,
+            )
+            if answer != QMessageBox.Yes:
+                return
+        self.layouts[FLIPPED] = [self._mirrored(d) for d in self.layouts[NORMAL]]
+        self.layouts[FLIPPED_CARGO] = [
+            self._mirrored(d) for d in self.layouts[CARGO]
+        ]
+        self._warn_missing(self._load_layer(FLIPPED))
+        self._mark_changed()
+        self.statusBar().showMessage(
+            "Built. Any text inside mirrored pieces now reads backwards.", 8000
+        )
 
     def new_component(self) -> None:
         if not self._ok_to_discard():
@@ -1045,17 +1202,48 @@ class ComponentEditor(QMainWindow):
         if code and self._ok_to_discard():
             self.open_component(code)
 
-    def _restore(self, data: dict, pixmap: QPixmap | None):
-        """Rebuild something on the canvas from its saved form."""
+    def _make_item(self, data: dict, pixmap: QPixmap | None = None):
+        """Build something from its saved form, away from the canvas.
+
+        It's placed exactly where it was saved, however fine the snapping was
+        then. Returns None if its subpart has gone.
+        """
         kind = data.get("kind")
         if kind == "border":
             area = QRectF(data["x"], data["y"], data["width"], data["height"])
-            return self._add_border(area, data["thickness"], data["follows_part"])
-        if kind == "door":
-            return self._add_door(data["x"], data["y"], data["vertical"], data["wall"])
-        item = self._place(data["subpart"], pixmap)
-        item.set_pose(data["turns"], data["mirror"])
-        item.setPos(data["x"], data["y"])
+            if data["follows_part"]:
+                area = self.scene.part_rect()
+            item = BorderItem(
+                1,
+                int(area.width()),
+                int(area.height()),
+                data["thickness"],
+                data["follows_part"],
+            )
+            item.setPos(area.topLeft())
+            item.moved = self._mark_changed
+        elif kind == "door":
+            item = DoorItem(1, data["vertical"], data["wall"])
+            item.setPos(data["x"], data["y"])
+        else:
+            name = data["subpart"]
+            if pixmap is None:
+                pixmap = QPixmap(str(custom.subpart_path(name, self.subpart_folder)))
+            if pixmap.isNull():
+                return None
+            item = SubpartItem(name, pixmap, 1, lambda: None)
+            item.set_pose(data["turns"], data["mirror"])
+            item.setPos(data["x"], data["y"])
+            item._moved = self._mark_changed
+        item.step = self.step
+        return item
+
+    def _restore(self, data: dict, pixmap: QPixmap | None = None):
+        """Rebuild something on the canvas from its saved form."""
+        item = self._make_item(data, pixmap)
+        if item is not None:
+            layer = {"border": BORDER_LAYER, "door": DOOR_LAYER}.get(data.get("kind"), 0)
+            self._add_to_canvas(item, layer)
         return item
 
     def open_component(self, code: str) -> bool:
@@ -1070,24 +1258,13 @@ class ComponentEditor(QMainWindow):
             if use in self.use_spins:
                 self.use_spins[use].setValue(tons)
 
-        missing = []
-        for placed in entry.get("layout", []):
-            pixmap = None
-            if "subpart" in placed:
-                name = placed["subpart"]
-                pixmap = QPixmap(str(custom.subpart_path(name, self.subpart_folder)))
-                if pixmap.isNull():
-                    missing.append(name)
-                    continue
-            self._restore(placed, pixmap)
+        self.layouts[NORMAL] = list(entry.get("layout", []))
+        for key, layout in entry.get("layouts", {}).items():
+            if key in self.layouts:
+                self.layouts[key] = list(layout)
+        missing = self._load_layer(NORMAL)
         self._set_clean()
-        if missing:
-            QMessageBox.warning(
-                self,
-                "Component Editor",
-                "These subparts are missing, so they were left out:\n"
-                + "\n".join(sorted(set(missing))),
-            )
+        self._warn_missing(missing)
         return True
 
     def save_component(self) -> str | None:
@@ -1096,8 +1273,11 @@ class ComponentEditor(QMainWindow):
         if not code:
             QMessageBox.warning(self, title, "Give the component a code.")
             return None
-        if not self.items():
-            QMessageBox.warning(self, title, "Add at least one subpart first.")
+        self._store_layer()
+        if not self.layouts[NORMAL]:
+            QMessageBox.warning(
+                self, title, "Add at least one subpart to the Normal layer first."
+            )
             return None
         entries = self._custom_entries()
         built_in = code in self.library and (
@@ -1119,40 +1299,47 @@ class ComponentEditor(QMainWindow):
             if answer != QMessageBox.Yes:
                 return None
 
-        size = canvas_size(self.width_spin.value(), self.height_spin.value())
-        image = compose(self.items(), size)
-        high, low = custom.image_paths(code, self.custom_folder)
-        low.parent.mkdir(parents=True, exist_ok=True)
-        smaller = image.scaled(
-            round(size.width() * custom.LOW_RES_SCALE),
-            round(size.height() * custom.LOW_RES_SCALE),
-            Qt.IgnoreAspectRatio,
-            Qt.SmoothTransformation,
-        )
-        if not image.save(str(high), "PNG") or not smaller.save(str(low), "PNG"):
+        entry = {
+            "sizeX": self.width_spin.value(),
+            "sizeY": self.height_spin.value(),
+            "tons": self._tons(),
+            "uses": self._uses(),
+            "facilities": {},
+            "layout": self.layouts[NORMAL],
+            "layouts": {
+                key: self.layouts[key] for key, *_ in LAYERS[1:] if self.layouts[key]
+            },
+        }
+        if not self._save_images(code, entry):
             QMessageBox.warning(self, title, "Could not save the images.")
             return None
-
-        ordered = sorted(self.items(), key=lambda entry: entry.zValue())
-        custom.save_entry(
-            code,
-            {
-                "url": f"{code}.png",
-                "sizeX": self.width_spin.value(),
-                "sizeY": self.height_spin.value(),
-                "tons": self._tons(),
-                "uses": self._uses(),
-                "facilities": {},
-                "layout": [item.to_json() for item in ordered],
-            },
-            self.custom_folder,
-        )
+        custom.save_entry(code, entry, self.custom_folder)
         self.code_edit.setText(code)
         self._refresh_saved_parts()
         self._set_clean()
         self.statusBar().showMessage(f"Saved {code}", 5000)
         self.saved.emit(code)
         return code
+
+    def _save_images(self, code: str, entry: dict) -> bool:
+        """Write each layer's images, and clear out any layer now empty."""
+        size = self._canvas_size()
+        low_size = size * custom.LOW_RES_SCALE
+        for key, _label, suffix, field in LAYERS:
+            high, low = custom.image_paths(code, self.custom_folder, suffix)
+            if not self.layouts[key]:
+                high.unlink(missing_ok=True)
+                low.unlink(missing_ok=True)
+                continue
+            low.parent.mkdir(parents=True, exist_ok=True)
+            image = self._flatten(self.layouts[key])
+            smaller = image.scaled(
+                low_size, Qt.IgnoreAspectRatio, Qt.SmoothTransformation
+            )
+            if not image.save(str(high), "PNG") or not smaller.save(str(low), "PNG"):
+                return False
+            entry[field] = high.name
+        return True
 
     def changeEvent(self, event) -> None:
         # Parts may have been deleted or changed in Finder in the meantime.
