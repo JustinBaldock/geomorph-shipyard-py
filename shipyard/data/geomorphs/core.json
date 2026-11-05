@@ -1,0 +1,2446 @@
+{
+	"101": {
+		"url": "core/101 [100x100] Multipurpose (Offices, Fuel, Engineering, Medical, Escape Pod, Staterooms, Galley & Mess).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 40,
+			"Engineering": 48,
+			"Medical": 8,
+			"Staterooms": 20,
+			"Lounge": 78,
+			"Docking": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 1,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/101 [100x100] [Overlay] Escape Pod.png"
+	},
+	"102": {
+		"url": "core/102 [100x100] Research Deck (Engineering, Labs, Office, Research Launch, Stellar Cartography, Lounge, Animal Pens).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Labs": 100,
+			"Lounge": 46,
+			"Stables": 4,
+			"Engineering": 42,
+			"Docking": 8
+		},
+		"facilities": {},
+		"overlayUrl": "core/102 [100x100] [Overlay] Research Launch.png"
+	},
+	"103": {
+		"url": "core/103 [100x100] Cargo Bay - Full (Air-Raft).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Cargo": 176,
+			"Stables": 16,
+			"Docking": 8
+		},
+		"facilities": {},
+		"overlayUrl": "core/103 [100x100] [Overlay] Air-Raft (Small Cargo).png"
+	},
+	"104": {
+		"url": "core/104 [100x100] Cargo Bay - Empty (Air-Raft).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Cargo": 176,
+			"Stables": 16,
+			"Docking": 8
+		},
+		"facilities": {},
+		"overlayUrl": "core/104 [100x100] [Overlay] Air-Raft (Small Cargo).png"
+	},
+	"105": {
+		"url": "core/105 [100x100] Engineering & Sensor Ops (Offices, Stateroom, Medical, Lab).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 4,
+			"Barracks": 8,
+			"Staterooms": 16,
+			"Labs": 12,
+			"Engineering": 88,
+			"Sensors": 50,
+			"Lounge": 22
+		},
+		"facilities": {
+			"RoomSingle": 4,
+			"Seats": 12
+		}
+	},
+	"106-1": {
+		"url": "core/106 [100x100] (1) Fighter Hangar & Crew Area - Lower Deck (Staterooms, Lounge, Galley & Mess, Flight Control, Fuel, Valkyrie Fighters, Repair Shop).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 6,
+			"Hangar": 100,
+			"Workshop": 6,
+			"Staterooms": 32,
+			"Lounge": 56
+		},
+		"facilities": {
+			"RoomSingle": 2,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "core/106 [100x100] [Overlay] (1) Lower Deck (Valkyrie Fighters x2).png"
+	},
+	"106-2": {
+		"url": "core/106 [100x50] (2) Fighter Hangar - Upper Deck (Office, Fuel, Valkyrie Fighters, Repair Shop).png",
+		"sizeX": 20,
+		"sizeY": 10,
+		"tons": 100,
+		"uses": {
+			"Hangar": 100
+		},
+		"facilities": {
+			"RoomSingle": 2,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "core/106 [100x100] [Overlay] (2) Upper Deck (Valkyrie Fighters).png"
+	},
+	"106-3": {
+		"url": "core/106 [100x100] (3) Fighter Hangar & Crew Area - Upper Deck (Staterooms, Galley & Mess, Office, Fuel, Valkyrie Fighters, Repair Shop).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 6,
+			"Hangar": 100,
+			"Workshop": 6,
+			"Staterooms": 32,
+			"Lounge": 56
+		},
+		"facilities": {
+			"RoomSingle": 2,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "core/106 [100x100] [Overlay] (1) Lower Deck (Valkyrie Fighters x2).png"
+	},
+	"107": {
+		"url": "core/107 [100x100] Robotics Lab (Airlocks, Classroom, Offices, Lounge, Control Room).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Lounge": 20,
+			"Training": 8,
+			"Workshop": 6,
+			"Labs": 150,
+			"Airlock": 16
+		},
+		"facilities": {
+			"Airlocks": 8
+		}
+	},
+	"108": {
+		"url": "core/108 [100x100] Barracks (Staterooms, Galley & Mess).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 32,
+			"Lounge": 68,
+			"Barracks": 100
+		},
+		"facilities": {
+			"RoomSingle": 4,
+			"RoomDouble": 4,
+			"Seats": 120
+		}
+	},
+	"109": {
+		"url": "core/109 [100x100] Brig & Prison (Medical, Security, Galley).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 4,
+			"Medical": 8,
+			"Brig": 100,
+			"Lounge": 50,
+			"Military": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"110": {
+		"url": "core/110 [100x100] (2) Fuel Deck.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": { "Fuel": 200 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"111": {
+		"url": "core/111 [100x100] Arboretum - Lower (Waterfall, Pool, Spas, Snack Bar).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": { "Biosphere": 200 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"112": {
+		"url": "core/112 [100x100] Arboretum - Upper (Walk-Under Waterfall, Skydome).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": { "Biosphere": 200 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"113": {
+		"url": "core/113 [100x100] Multipurpose (5 Station Bridge, Engineering, Fuel, Lab, Medical, Office, Briefing Room, Staterooms, Lounge, Air-Raft).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Bridge": 20,
+			"Briefing": 6,
+			"Engineering": 40,
+			"Fuel": 20,
+			"Medical": 8,
+			"Labs": 12,
+			"Vehicle": 8,
+			"Staterooms": 20,
+			"Lounge": 68
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 5,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/113 [100x100] [Overlay] Air-Raft.png"
+	},
+	"114": {
+		"url": "core/114 [100x100] Engineering (Offices, Medical, Lab, Lounge, Repair Shop).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 4,
+			"Labs": 6,
+			"Fuel": 4,
+			"Lounge": 44,
+			"Workshop": 16,
+			"Engineering": 126
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"115": {
+		"url": "core/115 [100x100] Hangar - Lower (Airlocks).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": { "Hangar": 284, "Airlock": 16 },
+		"facilities": {
+			"Airlocks": 8
+		}
+	},
+	"116": {
+		"url": "core/116 [100x100] Hangar - Upper (Airlocks, Control Room, Staterooms, Briefing Room).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Hangar": 152,
+			"Staterooms": 8,
+			"Briefing": 8,
+			"Lounge": 16,
+			"Airlock": 16
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"117": {
+		"url": "core/117 [100x100] Battery Deck (Engineering, Office, Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"118": {
+		"url": "core/118 [100x100] Multipurpose (Engineering, Fuel, Office, Staterooms, Air-Raft, Cargo).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 25,
+			"Medical": 4,
+			"Vehicle": 4,
+			"Cargo": 12,
+			"Staterooms": 36,
+			"Engineering": 75,
+			"Lounge": 43
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 9,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/118 [100x100] [Overlay] Air-Raft.png"
+	},
+	"119": {
+		"url": "core/119 [100x100] Hydroponics Bay.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": { "Biosphere": 200 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"120": {
+		"url": "core/120 [100x100] Agricultural Bay.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": { "Biosphere": 200 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"121": {
+		"url": "core/121 [100x100] Multipurpose (Engineering, Fuel, Gunnery, Staterooms, Office, Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 50,
+			"Weapons": 12,
+			"Staterooms": 8,
+			"Engineering": 100,
+			"Lounge": 27
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"Turrets": 3,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"122": {
+		"url": "core/122 [100x100] Medical Research (Lab, Surgery, Animal Pens, 10 Low Berths, Briefing Room, Library, Offices).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Low Berths": 10,
+			"Medical": 20,
+			"Briefing": 12,
+			"Staterooms": 4,
+			"Lounge": 4,
+			"Stables": 20,
+			"Labs": 130
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 1
+		}
+	},
+	"123": {
+		"url": "core/123 [100x100] Multipurpose (Engineering, Fuel, Sensor Ops, Lab, Medical, Staterooms, 3 Escape Pods).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 50,
+			"Medical": 12,
+			"Labs": 12,
+			"Staterooms": 16,
+			"Docking": 25,
+			"Airlock": 4,
+			"Engineering": 25,
+			"Sensors": 50,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 4,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/123 [100x100] [Overlay] 3 Escape Pods.png"
+	},
+	"124": {
+		"url": "core/124 [100x100] Engineering (Offices, Lounge, Repair Shop).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Lounge": 12,
+			"Workshop": 8,
+			"Fuel": 40,
+			"Engineering": 140
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"125": {
+		"url": "core/125 [100x100] Cargo Bay - Full (Airlock).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Airlock": 16,
+			"Stables": 28,
+			"Cargo": 156
+		},
+		"facilities": {
+			"Airlocks": 8
+		}
+	},
+	"126": {
+		"url": "core/126 [100x100] Cargo Bay - Empty (Airlock).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Airlock": 16,
+			"Stables": 28,
+			"Cargo": 156
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/126 [100x100] [Overlay] Cargo.png"
+	},
+	"127": {
+		"url": "core/127 [100x100] (2) 50-dTon Bays & Launches - External Bay Door (Cargo Hold, Security, Staterooms, Lounge, Briefing Room, Office, Fuel, Repair Shop, Airlock).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 0,
+			"Fuel": 4,
+			"Workshop": 4,
+			"Military": 25,
+			"Docking": 110
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/127 [100x100] [Overlay] 50-dTon Launch (Passenger & Cargo).png"
+	},
+	"128": {
+		"url": "core/128 [100x100] Fuel Refinery (Office).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 125,
+			"Engineering": 75
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"129": {
+		"url": "core/129 [100x100] Multipurpose (Engineering, Lab, Medical, Galley & Mess, Offices, Briefing Room, Staterooms, Transporter).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 12,
+			"Staterooms": 28,
+			"Engineering": 50,
+			"Labs": 25,
+			"Briefing": 12,
+			"Lounge": 73
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 7,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"130": {
+		"url": "core/130 [100x100] Multipurpose (Engineering, Lab, Medical, Galley & Mess, Office, Staterooms, Gunnery, Airlocks).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 8,
+			"Staterooms": 48,
+			"Barracks": 25,
+			"Airlock": 8,
+			"Engineering": 50,
+			"Labs": 12,
+			"Weapons": 25,
+			"Lounge": 24
+		},
+		"facilities": {
+			"Airlocks": 4,
+			"RoomSingle": 12,
+			"Seats": 18,
+			"Turrets": 8
+		}
+	},
+	"131": {
+		"url": "core/131 [100x100] Multipurpose (Air-Raft, Cargo Hold, Engineering, Fuel, Medical, Staterooms, Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 12,
+			"Engineering": 50,
+			"Fuel": 37,
+			"Cargo": 25,
+			"Vehicle": 12,
+			"Staterooms": 48,
+			"Lounge": 16
+		},
+		"facilities": {
+			"RoomSingle": 12
+		},
+		"overlayUrl": "core/131 [100x100] [Overlay] Air-Raft.png"
+	},
+	"132": {
+		"url": "core/132 [100x100] Low Berth Deck (160 Low Berths Chambers, Medical).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 25,
+			"Engineering": 15,
+			"Low Berths": 160
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"133": {
+		"url": "core/133 [100x100] Scrap & Recycling (Trash Compactor, Incinerator, Office, Lounge, Repair Shop, Engineering).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Cargo": 50,
+			"Engineering": 100,
+			"Workshop": 20,
+			"Lounge": 30
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"134": {
+		"url": "core/134 [100x100] Engineering (Staterooms, Lounge, Medical, Briefing Room, Office).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 12,
+			"Medical": 12,
+			"Briefing": 4,
+			"Workshop": 6,
+			"Lounge": 166
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 3
+		}
+	},
+	"135": {
+		"url": "core/135 [100x100] Starship Cradle (Wraith-Class Starship, Cargo, Security, Repair Shop, Engineering, Fuel, Staterooms, Lounge, Medical).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Docking": 110,
+			"Engineering": 4,
+			"Military": 12,
+			"Cargo": 20,
+			"Fuel": 16,
+			"Staterooms": 8,
+			"Lounge": 20,
+			"Medical": 2,
+			"Workshop": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/135 [100x100] [Overlay] Wraith-Class Starship.png"
+	},
+	"136": {
+		"url": "core/136 [100x100] (2) Starship Cradle (Ursus-Class Starship, Cargo, Lounge, Office, Briefing, Engineering, External Bay Door).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Docking": 110,
+			"Cargo": 50,
+			"Lounge": 20,
+			"Briefing": 5,
+			"Engineering": 25,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/136 [100x100] [Overlay] Ursus-Class Starship.png"
+	},
+	"137": {
+		"url": "core/137 [100x100] Command Center (Office, Briefing, Lounge, Security).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Bridge": 30,
+			"Briefing": 12,
+			"Engineering": 12,
+			"Comms": 70,
+			"Military": 12,
+			"Lounge": 64
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"138": {
+		"url": "core/138 [100x100] Crew Quarters (Staterooms, Galley & Mess, Lounge, Medical, Briefing, Library).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 92,
+			"Lounge": 96,
+			"Medical": 4,
+			"Briefing": 4,
+			"Training": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 15,
+			"RoomDouble": 2,
+			"RoomHigh": 4
+		}
+	},
+	"139": {
+		"url": "core/139 [100x100] (2) Construction Deck - Lower (Shop, Office, Lift, External Bay Door).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Hangar": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"140": {
+		"url": "core/140 [100x100] (2) Construction Deck - Upper (Lift, External Bay Door).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Hangar": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"141": {
+		"url": "core/141 [100x100] 50-dTon Saucer Launch Cradle - Multipurpose (Air-Raft, Engineering, Repair Shop, Lab, Medical, Office, Security, Staterooms, Lounge, Cargo Hold).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Docking": 55,
+			"Engineering": 16,
+			"Medical": 4,
+			"Labs": 10,
+			"Cargo": 25,
+			"Fuel": 6,
+			"Military": 12,
+			"Staterooms": 28,
+			"Vehicle": 8,
+			"Workshop": 8,
+			"Lounge": 28,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 5,
+			"RoomDouble": 2,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/141 [100x100] [Overlay] Air-Raft.png"
+	},
+	"142": {
+		"url": "core/142 [100x100] 50-dTon Saucer Launch Cradle & Assault Troops (Lounge, Staterooms, Medical, Armory, Galley, Office).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Docking": 55,
+			"Workshop": 8,
+			"Barracks": 25,
+			"Medical": 6,
+			"Staterooms": 28,
+			"Armory": 4,
+			"Lounge": 50,
+			"Military": 24
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 6,
+			"Seats": 12,
+			"RoomLuxury": 0
+		}
+	},
+	"143": {
+		"url": "core/143 [100x100] 50-dTon Saucer Launch Cradle & Crew Quarters (Staterooms, Lounge, Medical, Office, Fuel, Cargo Hold).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Docking": 55,
+			"Medical": 4,
+			"Fuel": 10,
+			"Staterooms": 48,
+			"Cargo": 50,
+			"Lounge": 33
+		},
+		"facilities": {
+			"RoomSingle": 11,
+			"RoomDouble": 1
+		}
+	},
+	"144": {
+		"url": "core/144 [100x100] Engineering & Passenger Deck (Shop, Lab, Fuel, Staterooms, Office, Medical, Control Room).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 10,
+			"Staterooms": 32,
+			"Medical": 4,
+			"Engineering": 100,
+			"Labs": 12,
+			"Cargo": 12,
+			"Lounge": 30
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 8,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"145": {
+		"url": "core/145 [100x100] Engineering - Lower (Office, Repair Shop, Lift).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 188,
+			"Workshop": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"146": {
+		"url": "core/146 [100x100] Engineering - Upper (Shop, Lift).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 196,
+			"Workshop": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"147": {
+		"url": "core/147 [100x100] Fighter Hangar & Engineering (Lab, Office, Flight Control, Lounge, Security, Stateroom).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Hangar": 50,
+			"Labs": 16,
+			"Engineering": 75,
+			"Fuel": 4,
+			"Lounge": 55
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 1
+		},
+		"overlayUrl": "core/147 [100x100] [Overlay] Manta Fighter.png"
+	},
+	"148": {
+		"url": "core/148 [100x100] (2) Fighter Hangar (8x Rampart Fighters or 4x 20-dTon Gunboat, Flight Control, Repair Shop, Staterooms, Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Workshop": 16,
+			"Staterooms": 8,
+			"Lounge": 0,
+			"Hangar": 176
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "core/148 [100x100] (2) [Overlay] (5) 4x 20-dTon Gunboats.png"
+	},
+	"149": {
+		"url": "core/149 [100x100] Fighter Hangar (10 Dragonfly Fighter, Repair Shop, Stateroom, Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Workshop": 25,
+			"Staterooms": 8,
+			"Lounge": 17,
+			"Hangar": 150
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/149 [100x100] [Overlay] 10 Dragonfly Fighters (Exterior).png"
+	},
+	"150": {
+		"url": "core/150 [100x100] Barracks (96 Pod Beds, Staterooms, 6 Low Berths, Galley & Mess, Shuttle).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 20,
+			"Barracks": 150,
+			"Docking": 8,
+			"Low Berths": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"Seats": 96
+		},
+		"overlayUrl": "core/150 [100x100] [Overlay] Cargo Shuttle.png"
+	},
+	"151": {
+		"url": "core/151 [100x100] Multipurpose (Engineering, Fuel, Lab, 15 Low Berths, Medical, Security, Staterooms, Lounge, Briefing, Office, Repair Shop).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 40,
+			"Medical": 8,
+			"Staterooms": 16,
+			"Briefing": 4,
+			"Engineering": 50,
+			"Lounge": 51,
+			"Low Berths": 15,
+			"Workshop": 4,
+			"Labs": 12
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"152": {
+		"url": "core/152 [100x100] Passenger Staterooms (Steerage, Staterooms, Lounge, Medical, 7 Low Berths).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 60,
+			"Lounge": 65,
+			"Medical": 4,
+			"Barracks": 75
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 11,
+			"RoomDouble": 4,
+			"Seats": 36
+		}
+	},
+	"153": {
+		"url": "core/153 [100x100] (2) Starship Hangar (Hammer-Class Starship, Airlock, Staterooms, Lounge, External Bay Door).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Airlock": 8,
+			"Staterooms": 8,
+			"Cargo": 6,
+			"Hangar": 178
+		},
+		"facilities": {
+			"Airlocks": 4,
+			"RoomSingle": 2
+		}
+	},
+	"154": {
+		"url": "core/154 [100x100] Starship Cradle (Legacy-Class Starship, Flight Office, Lounge, Cargo).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Docking": 110,
+			"Cargo": 25,
+			"Lounge": 65
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"155": {
+		"url": "core/155 [100x100] 30-dTon Shuttle - Multipurpose (30-dTon Cargo Shuttle, Office, Fuel, Engineering, Repair Shop, Cargo Hold, Avionics).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 50,
+			"Docking": 33,
+			"Engineering": 82,
+			"Workshop": 10,
+			"Lounge": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/155 [100x100] [Overlay] 30-dTon Cargo Shuttle.png"
+	},
+	"156": {
+		"url": "core/156 [100x100] Multipurpose (Control Room, Engineering, Air-Raft, Repair Shop, Lab, Office, Security, Sensor Ops, Staterooms, Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 35,
+			"Vehicle": 8,
+			"Staterooms": 32,
+			"Lounge": 71,
+			"Workshop": 6,
+			"Military": 8,
+			"Labs": 8,
+			"Sensors": 20,
+			"Bridge": 12
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 8,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/156 [100x100] [Overlay] Air-Raft.png"
+	},
+	"157": {
+		"url": "core/157 [100x100] Engineering & Crew Quarters (Security, Staterooms, Lounge, Briefing, Medical, Lab, Office).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 100,
+			"Staterooms": 44,
+			"Lounge": 12,
+			"Briefing": 12,
+			"Medical": 12,
+			"Labs": 8,
+			"Military": 12
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 11,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"158": {
+		"url": "core/158 [100x100] Fuel Deck & Crew Quarters (Staterooms, Lounge, Lab, Engineering, 2 Escape Pods).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Labs": 10,
+			"Engineering": 10,
+			"Docking": 10,
+			"Lounge": 46,
+			"Fuel": 100,
+			"Staterooms": 24
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 6
+		},
+		"overlayUrl": "core/158 [100x100] [Overlay] Escape Pods.png"
+	},
+	"159": {
+		"url": "core/159 [100x100] Cargo Bay - Full.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Cargo": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"160": {
+		"url": "core/160 [100x100] Cargo Bay - Empty.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Cargo": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/160 [100x100] [Overlay] Cargo.png"
+	},
+	"161": {
+		"url": "core/161 [100x100] Engineering (Lounge, Staterooms, Lab, Medical, Office).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 16,
+			"Medical": 8,
+			"Low Berths": 4,
+			"Labs": 12,
+			"Engineering": 125,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"162": {
+		"url": "core/162 [100x100] Multipurpose (Engineering, Lab, Office, Sensor Ops, Staterooms, Transporter).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Labs": 15,
+			"Staterooms": 24,
+			"Engineering": 60,
+			"Sensors": 20,
+			"Lounge": 81
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 6,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"163": {
+		"url": "core/163 [100x100] Drop Capsule & Troop Deck (48 Pod Beds, 36 Drop Capsules, Armory, Lounge, Classroom, Galley & Mess, 10-dTon Ship's Boat).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Training": 25,
+			"Barracks": 75,
+			"Docking": 11,
+			"Armory": 12,
+			"Cargo": 12,
+			"Military": 50,
+			"Lounge": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/163 [100x100] [Overlay] 10-dTon Ship's Boat.png"
+	},
+	"164": {
+		"url": "core/164 [100x100] (2) Dropship Bay (40-dTon Nirvana-Class Dropship, Cargo Hold, Flight Control, Repair Shop, External Bay Door).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Hangar": 80,
+			"Workshop": 6,
+			"Cargo": 114
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/164 [100x100] [Overlay] Cargo.png"
+	},
+	"165": {
+		"url": "core/165 [100x100] Multipurpose (Air-Raft, Cargo Hold, Engineering, Lab, Office, Library, Steerage Staterooms, Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Vehicle": 8,
+			"Engineering": 50,
+			"Cargo": 12,
+			"Labs": 12,
+			"Barracks": 25,
+			"Training": 12,
+			"Workshop": 0,
+			"Lounge": 81
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 24
+		},
+		"overlayUrl": "core/165 [100x100] [Overlay] Air-Raft.png"
+	},
+	"166": {
+		"url": "core/166 [100x100] Engineering & Fuel Deck (Office, Repair Shop, Security, Briefing).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 40,
+			"Workshop": 8,
+			"Briefing": 4,
+			"Military": 2,
+			"Lounge": 15,
+			"Engineering": 131
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"167": {
+		"url": "core/167 [100x100] (2) 50-dTon Hangar & Shuttle (50-dTon Shuttle, Stateroom, Lounge, Security, Repair Shop, Fuel, Engineering, Cargo Hold, External Bay Door).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Lounge": 34,
+			"Fuel": 6,
+			"Engineering": 24,
+			"Hangar": 100,
+			"Cargo": 16,
+			"Workshop": 6,
+			"Military": 6,
+			"Staterooms": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 8
+		},
+		"overlayUrl": "core/167 [100x100] [Overlay] 50-dTon Shuttle.png"
+	},
+	"168": {
+		"url": "core/168 [100x100] Steerage & Engineering (Steerage Staterooms, Lounge, Fuel).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Barracks": 70,
+			"Engineering": 70,
+			"Fuel": 10,
+			"Workshop": 4,
+			"Lounge": 46
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"169": {
+		"url": "core/169 [100x100] Sports Complex (Sports Court, Shooting Range, Dojo, Medical, Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 4,
+			"Training": 98,
+			"Lounge": 98
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"170": {
+		"url": "core/170 [100x100] Auditorium (194 Seat, Shacks, Galley, Office, Stage).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Training": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"171": {
+		"url": "core/171 [100x100] Engineering & Crew Quarters (Staterooms, Lounge, Classroom).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Training": 12,
+			"Medical": 12,
+			"Lounge": 52,
+			"Staterooms": 60,
+			"Engineering": 60,
+			"Labs": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 15
+		}
+	},
+	"172": {
+		"url": "core/172 [100x100] Engineering & Crew Quarters (Staterooms, Lounge, Office, Lab).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 60,
+			"Labs": 12,
+			"Staterooms": 104,
+			"Lounge": 24
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 22,
+			"RoomDouble": 4
+		}
+	},
+	"173": {
+		"url": "core/173 [100x100] Fighter Hangar (4 Manta Fighters, Airlocks, Repair Shop, Flight Control).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Hangar": 180,
+			"Airlock": 16,
+			"Weapons": 8
+		},
+		"facilities": {
+			"Airlocks": 8
+		},
+		"overlayUrl": "core/173 [100x100] [Overlay] 4 Manta Fighters.png"
+	},
+	"174": {
+		"url": "core/174 [100x100] Fuel Deck (Staterooms, Lounge, Office, Engineering, Lab).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 75,
+			"Staterooms": 16,
+			"Labs": 8,
+			"Engineering": 75,
+			"Lounge": 26
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"175": {
+		"url": "core/175 [100x100] Engineering (2 Work Pods, Office, Lounge, Medical, 4 Low Berths, Lab, Office, Staterooms).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 150,
+			"Staterooms": 16,
+			"Lounge": 26,
+			"Medical": 4,
+			"Low Berths": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 4,
+			"Labs": 4
+		}
+	},
+	"176": {
+		"url": "core/176 [100x100] Engineering (Staterooms, Lounge, Office, Briefing, Lab, Medical, 2 Low Berths, Transporter).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 39,
+			"Engineering": 100,
+			"Briefing": 4,
+			"Medical": 6,
+			"Low Berths": 2,
+			"Labs": 25
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 6
+		}
+	},
+	"177": {
+		"url": "core/177 [100x100] Arboretum (Waterfall, Stream).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Biosphere": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"178": {
+		"url": "core/178 [100x100] Arboretum & Multipurpose (10-dTon Ship's Boat, Security, Engineering, Staterooms, Office, Lounge, Medical, Low Berths).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Biosphere": 50,
+			"Engineering": 50,
+			"Docking": 25,
+			"Staterooms": 24,
+			"Military": 12,
+			"Lounge": 27,
+			"Medical": 12,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 2,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/178 [100x100] [Overlay] 10-dTon Ship's Boat.png"
+	},
+	"179": {
+		"url": "core/179 [100x100] Multipurpose (Engineering, Office, Lounge, Staterooms, Medical, Low Berths, Lab).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 28,
+			"Lounge": 91,
+			"Medical": 12,
+			"Labs": 12,
+			"Low Berths": 2,
+			"Engineering": 35,
+			"Sensors": 20
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 5,
+			"RoomDouble": 2
+		}
+	},
+	"180": {
+		"url": "core/180 [100x100] Engineering (Fuel, Repair Shop, Lab, Staterooms).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 16,
+			"Labs": 10,
+			"Fuel": 60,
+			"Engineering": 114
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4
+		}
+	},
+	"181": {
+		"url": "core/181 [100x100] Engineering (Airlocks, Office).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Airlock": 16,
+			"Engineering": 184
+		},
+		"facilities": {
+			"Airlocks": 8
+		}
+	},
+	"182": {
+		"url": "core/182 [100x100] Multipurpose (Air-Raft, Cargo Hold, Lab, Medical, Office, Security, Repair Shop, Lounge, Fuel).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Fuel": 27,
+			"Military": 12,
+			"Labs": 5,
+			"Vehicle": 6,
+			"Cargo": 6,
+			"Medical": 5,
+			"Engineering": 35,
+			"Lounge": 104
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/182 [100x100] [Overlay] Air-Raft.png"
+	},
+	"183": {
+		"url": "core/183 [100x100] Gig Hangar (2x 20-dTon Gig, Office, Flight Control).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Hangar": 88,
+			"Lounge": 112
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/183 [100x100] [Overlay] 2x 20-dTon Gig.png"
+	},
+	"184": {
+		"url": "core/184 [100x100] Multipurpose (Air-Raft, 20 Escape Pods, Engineering, Fuel, Medical, Office, Staterooms, 12 Pod Beds, Lounge, Transporter).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Military": 25,
+			"Engineering": 75,
+			"Fuel": 37,
+			"Medical": 4,
+			"Low Berths": 2,
+			"Vehicle": 8,
+			"Staterooms": 12,
+			"Barracks": 25,
+			"Lounge": 12,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 1,
+			"RoomHigh": 0,
+			"Capsules": 20
+		},
+		"overlayUrl": "core/184 [100x100] [Overlay] Air-Raft.png"
+	},
+	"185": {
+		"url": "core/185 [100x100] Multipurpose (Air-Raft, Cargo Hold, Engineering, Office, Transporter, Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Cargo": 30,
+			"Vehicle": 8,
+			"Engineering": 140,
+			"Lounge": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/185 [100x100] [Overlay] Air-Raft.png"
+	},
+	"186": {
+		"url": "core/186 [100x100] Medical Bay (4x Surgeries, 6x Exam Rooms, Lab, Morgue, Pharmacy, 7x Low Berths, Office).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Low Berths": 7,
+			"Labs": 12,
+			"Lounge": 25,
+			"Medical": 156
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"187": {
+		"url": "core/187 [100x100] High Passage Deck (4x Escape Pods, 6x Executive Suites, 2x Executive Staterooms, Galley, Lounge, Dining Area).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Docking": 16,
+			"Staterooms": 88,
+			"Lounge": 96
+		},
+		"facilities": {
+			"RoomSingle": 2,
+			"RoomDouble": 2,
+			"RoomHigh": 2,
+			"RoomLuxury": 6
+		},
+		"overlayUrl": "core/187 [100x100] [Overlay] 4 Escape Pods.png"
+	},
+	"188": {
+		"url": "core/188 [100x100] (2) Escape Pods (24 Escape Pods).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Docking": 120,
+			"Lounge": 80
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/188 [100x100] [Overlay] 24 Escape Pods.png"
+	},
+	"189": {
+		"url": "core/189 [100x100] Multipurpose (Cargo Hold, Cargo Shuttle, Control Room, Engineering, Fuel, Hydroponics, Lab, Medical, Office, Staterooms).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 50,
+			"Fuel": 25,
+			"Biosphere": 25,
+			"Medical": 4,
+			"Low Berths": 2,
+			"Labs": 12,
+			"Docking": 5,
+			"Cargo": 20,
+			"Bridge": 12,
+			"Lounge": 45
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 3
+		},
+		"overlayUrl": "core/189 [100x100] [Overlay] Cargo Shuttle, Cargo.png"
+	},
+	"190": {
+		"url": "core/190 [100x100] Multipurpose (Cargo Hold, Cargo Shuttle, 2 Escape Pods, Engineering, Fuel, Lab, Staterooms).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 80,
+			"Fuel": 30,
+			"Docking": 10,
+			"Cargo": 16,
+			"Labs": 4,
+			"Barracks": 15,
+			"Lounge": 37
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 12,
+			"RoomSingle": 1,
+			"RoomDouble": 1
+		},
+		"overlayUrl": "core/190 [100x100] [Overlay] Cargo Shuttle, 2 Escape Pods.png"
+	},
+	"191": {
+		"url": "core/191 [100x100] Vehicle Bay (24 Pod Beds, Staterooms, Lounge, Mission Briefing, 2x Wheeled ATVs, 2x Grav Tanks, 16x Grav Bikes, Air-Raft).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Vehicle": 140,
+			"Staterooms": 16,
+			"Barracks": 25,
+			"Training": 12,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2,
+			"Seats": 24
+		},
+		"overlayUrl": "core/191 [100x100] [Overlay] 2x Wheeled ATVs, 2x Grav Tanks, 16x Grav Bikes, Air-Raft.png"
+	},
+	"192": {
+		"url": "core/192 [100x100] Holodeck (Lounge, Engineering).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 25,
+			"Lounge": 25,
+			"Training": 150
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"193": {
+		"url": "core/193 [100x100] Multipurpose (Brig, Engineering, Staterooms, Gunnery, Office, Medical).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 55,
+			"Staterooms": 44,
+			"Lounge": 65,
+			"Workshop": 0,
+			"Brig": 12,
+			"Medical": 4,
+			"Weapons": 20
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 3,
+			"RoomDouble": 8,
+			"Prisoners": 4,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"194": {
+		"url": "core/194 [100x100] Multipurpose (Staterooms, Lounge, Hydroponics, Cargo Hold, Engineering, Medical, 3 Low Berths, Lab, Office, Library).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Cargo": 30,
+			"Lounge": 47,
+			"Biosphere": 16,
+			"Engineering": 50,
+			"Labs": 10,
+			"Medical": 4,
+			"Low Berths": 3,
+			"Staterooms": 32,
+			"Training": 8,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 8
+		},
+		"overlayUrl": "core/194 [100x100] [Overlay] Cargo.png"
+	},
+	"195": {
+		"url": "core/195 [100x100] Multipurpose (Security, Brig, Engineering, Cargo Hold, Classroom, Office, Fuel, Lounge, 36 Pod Beds, Staterooms).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Brig": 12,
+			"Engineering": 25,
+			"Military": 12,
+			"Fuel": 25,
+			"Barracks": 50,
+			"Cargo": 30,
+			"Training": 25,
+			"Lounge": 21,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Prisoners": 2,
+			"RoomDouble": 2,
+			"Seats": 36
+		}
+	},
+	"196": {
+		"url": "core/196 [100x100] Multipurpose (Engineering, Medical, 4 Low Berth, Air Lock, Office, Lounge, Control Room, Transporter, Security, Steerage Room, Lab).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 100,
+			"Medical": 6,
+			"Low Berths": 4,
+			"Labs": 12,
+			"Military": 12,
+			"Barracks": 16,
+			"Airlock": 4,
+			"Lounge": 46
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"Seats": 12
+		}
+	},
+	"197": {
+		"url": "core/197 [100x100] Multipurpose (Security, Medical, 2 Low Berth, Staterooms, Lounge, Engineering, Cargo Hold, Cargo Shuttle, 3 Work Pods).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 4,
+			"Low Berths": 2,
+			"Military": 12,
+			"Staterooms": 32,
+			"Engineering": 60,
+			"Docking": 5,
+			"Cargo": 10,
+			"Lounge": 75,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "core/197 [100x100] [Overlay] Cargo Shuttle & Cargo.png"
+	},
+	"198": {
+		"url": "core/198 [100x100] Multipurpose (Engineering, 12 Pod Beds, Staterooms, Lounge, Lab, 7 Low Berths, Office, Repair Shop, Briefing, Medical).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Low Berths": 7,
+			"Briefing": 4,
+			"Engineering": 100,
+			"Staterooms": 8,
+			"Barracks": 16,
+			"Labs": 32,
+			"Medical": 12,
+			"Lounge": 21
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"RoomHigh": 0,
+			"Seats": 12
+		}
+	},
+	"199": {
+		"url": "core/199 [100x100] Engineering (Control Room, Staterooms, Lounge, Lab, Office, Airlocks).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 24,
+			"Airlock": 6,
+			"Labs": 10,
+			"Engineering": 140,
+			"Lounge": 20
+		},
+		"facilities": {
+			"Airlocks": 3,
+			"RoomSingle": 4,
+			"RoomDouble": 2,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"199-1": {
+		"url": "core/199 [100x100] (1) Engineering (Level 1 Staterooms, Engineering, Lab, Office, Airlocks).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 76,
+		"uses": {
+			"Staterooms": 8,
+			"Lounge": 26,
+			"Labs": 10,
+			"Engineering": 32
+		},
+		"facilities": {
+			"Airlocks": 3,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"199-2": {
+		"url": "core/199 [100x100] (2) Engineering (Level 2 Staterooms, Lounge, Engineering).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 108,
+		"uses": {
+			"Staterooms": 16,
+			"Airlock": 6,
+			"Labs": 10,
+			"Engineering": 64,
+			"Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 3,
+			"RoomSingle": 4
+		}
+	},
+	"199-3": {
+		"url": "core/199 [100x100] (3) Engineering (Level 3 Control Room).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 16,
+		"uses": {
+			"Engineering": 16
+		},
+		"facilities": {
+		}
+	},
+	"200": {
+		"url": "core/200 [100x100] Engineering (Clean Lab, Lab, Office, Medical, Staterooms, Air-Raft).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 4,
+			"Staterooms": 24,
+			"Engineering": 100,
+			"Labs": 25,
+			"Vehicle": 8,
+			"Lounge": 39
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 3,
+			"RoomDouble": 3,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/200 [100x100] [Overlay] Air-Raft.png"
+	},
+	"201": {
+		"url": "core/201 [100x100] Multipurpose (Cargo Hold, Cargo Shuttle, Engineering, Lab, Medical, Staterooms, Lounge, Briefing, Office).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 112,
+			"Briefing": 6,
+			"Labs": 6,
+			"Medical": 4,
+			"Engineering": 50,
+			"Docking": 5,
+			"Cargo": 10,
+			"Lounge": 7,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 14,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "core/201 [100x100] [Overlay] Cargo Shuttle.png"
+	},
+	"202": {
+		"url": "core/202 [100x100] Engineering (Lab, Office, Staterooms, Lounge, Lab, Briefing).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 36,
+			"Engineering": 100,
+			"Briefing": 12,
+			"Labs": 25,
+			"Lounge": 27
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 6,
+			"RoomDouble": 3
+		}
+	},
+	"203": {
+		"url": "core/203 [100x100] Elevator Core (14 Elevators, 2 Cargo Elevators, Medical, Security).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Cargo": 50,
+			"Medical": 4,
+			"Military": 12,
+			"Engineering": 4,
+			"Lounge": 130
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"204": {
+		"url": "core/204 [100x100] Elevator Core (18 Elevators, 2 Cargo Elevators, 2 Staris, Lounge, Security).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Cargo": 50,
+			"Military": 5,
+			"Engineering": 8,
+			"Lounge": 137
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"205": {
+		"url": "core/205 [100x100] Elevator Core (10 Elevators, Cargo Elevator, 2 Stairs, Lounge, Bar).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 175,
+		"uses": {
+			"Cargo": 12,
+			"Engineering": 8,
+			"Vehicle": 25,
+			"Lounge": 130
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/205 [100x100] [Overlay] Emergency Vehicles.png"
+	},
+	"206": {
+		"url": "core/206 [100x100] Multipurpose (Brig, Control Room, Engineering, Lab, Medical, Office, Staterooms, Lounge, 12 Pod Beds).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Barracks": 25,
+			"Brig": 12,
+			"Bridge": 20,
+			"Labs": 10,
+			"Staterooms": 20,
+			"Medical": 4,
+			"Low Berths": 3,
+			"Lounge": 12,
+			"Engineering": 94,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Prisoners": 4,
+			"RoomSingle": 3,
+			"RoomDouble": 2,
+			"Seats": 15
+		}
+	},
+	"207": {
+		"url": "core/207 [100x100] Passenger Deck (2 Executive Staterooms, 23 Staterooms, Lounge, 7 Low Berths).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 152,
+			"Lounge": 41,
+			"Low Berths": 7
+		},
+		"facilities": {
+			"RoomSingle": 8,
+			"RoomDouble": 1,
+			"RoomHigh": 16,
+			"RoomLuxury": 2
+		}
+	},
+	"208": {
+		"url": "core/208 [100x100] Drop Capsule Deck (Mission Briefing, Armory, Battledress Suit Up Area, Classroom).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Armory": 25,
+			"Engineering": 12,
+			"Briefing": 12,
+			"Training": 12,
+			"Staterooms": 4,
+			"Lounge": 8,
+			"Military": 127
+		},
+		"facilities": {
+			"RoomSingle": 1,
+			"Capsules": 16
+		}
+	},
+	"209": {
+		"url": "core/209 [100x100] Passenger Deck (Airlocks, Galley & Mess, Medical).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Airlock": 12,
+			"Medical": 4,
+			"Staterooms": 172,
+			"Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 8,
+			"RoomSingle": 22,
+			"RoomDouble": 21
+		}
+	},
+	"210": {
+		"url": "core/210 [100x100] Auditorium (66 Seat Auditorium, 20 Seat Conference Room, Office, Lounge, Medical, 2 Escape Pods).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Lounge": 76,
+			"Medical": 4,
+			"Training": 50,
+			"Briefing": 62,
+			"Docking": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/210 [100x100] [Overlay] 2 Escape Pods.png"
+	},
+	"211": {
+		"url": "core/211 [100x100] Waste Processing (Lounge, Lab, Repair Shop, Carniculture).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Biosphere": 12,
+			"Labs": 4,
+			"Engineering": 96,
+			"Liquid": 50,
+			"Workshop": 4,
+			"Lounge": 34
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"212": {
+		"url": "core/212 [100x100] Scout & Survey Deck (2x IISS Survey G-Carriers, 10-dTon Recon Drone, Lab, Office, Staterooms, Lounge, Briefing, Fuel).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Hangar": 60,
+			"Fuel": 4,
+			"Labs": 4,
+			"Briefing": 4,
+			"Drones": 37,
+			"Staterooms": 16,
+			"Sensors": 12,
+			"Lounge": 63
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "core/212 [100x100] [Overlay] 2x IISS Survey G-Carriers.png"
+	},
+	"213": {
+		"url": "core/213 [100x100] Promenade - Retail, Food, & Bar.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Lounge": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"214": {
+		"url": "core/214 [100x100] Promenade - Casino (Bar, Slot Machines, Private Gaming, Stage or Dance Floor).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Lounge": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"215": {
+		"url": "core/215 [100x100] Security Checkpoint (Engineering, Office, Brig, Medical, Surgery, Lab, Security Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 8,
+			"Brig": 12,
+			"Medical": 30,
+			"Cargo": 12,
+			"Engineering": 32,
+			"Labs": 30,
+			"Military": 20,
+			"Lounge": 56
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Prisoners": 2
+		}
+	},
+	"216": {
+		"url": "core/216 [100x100] Engineering & Sensor Ops (Sensor Probes, Office, Engineering, Lounge, Briefing, Repair Shop).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Sensors": 20,
+			"Drones": 25,
+			"Workshop": 12,
+			"Briefing": 12,
+			"Engineering": 75,
+			"Lounge": 56,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"217": {
+		"url": "core/217 [100x100] Cargo Bay & 20-dTon Launch (Fuel, Office).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Docking": 44,
+			"Fuel": 4,
+			"Lounge": 40,
+			"Cargo": 112
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "core/217 [100x100] [Overlay] 20-dTon Launch (Cargo).png"
+	},
+	"218": {
+		"url": "core/218 [100x100] Drop Capsules & Troop Deck (28 Drop Capsules, 24 Pod Beds, Staterooms, Lounge, Galley & Mess, Control Center, Armory).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Staterooms": 32,
+			"Barracks": 50,
+			"Armory": 8,
+			"Military": 62,
+			"Lounge": 48
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 8,
+			"RoomDouble": 0,
+			"Seats": 24,
+			"RoomLuxury": 0
+		}
+	},
+	"219": {
+		"url": "core/219 [100x100] Hydroponics & Carniculture (Medical, 2 Low Berth, Lounge, Office, Repair Shop).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Biosphere": 120,
+			"Labs": 12,
+			"Medical": 4,
+			"Low Berths": 2,
+			"Workshop": 4,
+			"Lounge": 58
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"220-1": {
+		"url": "core/220 [100x100] (1) Xboat Retrieval & Repair Deck - Lower Deck (Shop).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Hangar": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"220-2": {
+		"url": "core/220 [100x100] (2) Xboat Retrieval & Repair Deck - Upper Deck.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Hangar": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"221": {
+		"url": "core/221 [100x100] Medical Isolation Ward (2 Exam Rooms, 28 Isolation Beds, 2 Treatment Beds, Morgue, Lab, Pharmacy, 3 Low Berths, Airlocks, Office, Lounge).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Labs": 12,
+			"Airlock": 16,
+			"Lounge": 50,
+			"Engineering": 4,
+			"Medical": 115,
+			"Low Berths": 3
+		},
+		"facilities": {
+			"Airlocks": 8
+		}
+	},
+	"222": {
+		"url": "core/222 [100x100] Manufacturing Bay (Control Room, Robotic Production Line).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Mining": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"223": {
+		"url": "core/223 [100x100] Office Space (Lounge, Briefing, Cubicles).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Briefing": 12,
+			"Lounge": 188
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"224": {
+		"url": "core/224 [100x100] Office Space (Lounge, Briefing, Library, Gym, Classroom).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Briefing": 25,
+			"Training": 50,
+			"Lounge": 125
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"225": {
+		"url": "core/225 [100x100] Lobby - Lower (Bar, Retail).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Lounge": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"226": {
+		"url": "core/226 [100x100] Lobby - Upper (Lounge, Briefing).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Lounge": 188,
+			"Briefing": 8,
+			"Engineering": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"E108": {
+		"url": "core/E108 [100x100] Large Retail Store with Offices.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Cargo": 30,
+			"Lounge": 170
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"IS01": {
+		"url": "core/IS01 [100x100] Interstitial Space.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 200
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"IS02": {
+		"url": "core/IS02 [100x100] Interstitial Space (Fuel).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 190,
+			"Fuel": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"IS03": {
+		"url": "core/IS03 [100x100] Interstitial Space (Fuel).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 160,
+			"Fuel": 40
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"IS04": {
+		"url": "core/IS04 [100x100] Interstitial Space (Computer).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Engineering": 170,
+			"Fuel": 10,
+			"Comms": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"VC01": {
+		"url": "core/VC01 [100x100] Vertical Core (4x Elevators, Cargo Elevator, Staterooms, Lounge, Cargo Hold, Classroom, Air-Raft, Escape Pod).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Vehicle": 8,
+			"Training": 12,
+			"Staterooms": 64,
+			"Briefing": 4,
+			"Cargo": 50,
+			"Docking": 5,
+			"Lounge": 57
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 12
+		},
+		"overlayUrl": "core/VC01 [100x100] [Overlay] Air-Raft & Escape Pod.png"
+	},
+	"VC02": {
+		"url": "core/VC02 [100x100] Vertical Core (4x Elevators, 1x Manta Fighter Bay, Lab, Staterooms, Lounge, Security, Fuel, Engineering).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Workshop": 12,
+			"Weapons": 4,
+			"Staterooms": 28,
+			"Labs": 12,
+			"Fuel": 10,
+			"Engineering": 40,
+			"Hangar": 40,
+			"Lounge": 54
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 7
+		},
+		"overlayUrl": "core/VC02 [100x100] [Overlay] Manta Fighter.png"
+	},
+	"VC03": {
+		"url": "core/VC03 [100x100] Vertical Core (4x Elevators, Barracks, Staterooms, Galley & Mess, Medical, Armory, 30x Drop Capsules).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 12,
+			"Staterooms": 32,
+			"Armory": 12,
+			"Barracks": 50,
+			"Military": 40,
+			"Lounge": 54
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 6,
+			"Seats": 60
+		}
+	},
+	"VC04": {
+		"url": "core/VC04 [100x100] Vertical Core (4x Elevators, Staterooms, Lounge, Galley & Mess, Library, Briefing, Medical).png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 200,
+		"uses": {
+			"Medical": 4,
+			"Training": 5,
+			"Briefing": 5,
+			"Staterooms": 76,
+			"Lounge": 110
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 8,
+			"RoomDouble": 2,
+			"RoomHigh": 6,
+			"RoomLuxury": 0
+		}
+	}
+}

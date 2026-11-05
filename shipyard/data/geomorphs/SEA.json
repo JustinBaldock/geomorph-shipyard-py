@@ -1,0 +1,4581 @@
+{
+	"SE-383": {
+		"url": "SEA/SE-383 [Aft] [50x50] [42-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Cargo": 20,
+			"Docking": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-384": {
+		"url": "SEA/SE-384 [Aft] [50x50] [26-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Cargo": 19,
+			"Fuel": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-384 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-385": {
+		"url": "SEA/SE-385 [Aft] [50x50] [41-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Cargo": 26,
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-385 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-386": {
+		"url": "SEA/SE-386 [Aft] [70x50] [53-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Cargo": 36,
+			"Fuel": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-386 [Aft] [70x50] [Overlay] Cargo.png"
+	},
+	"SE-387": {
+		"url": "SEA/SE-387 [Aft] [50x50] [39-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Cargo": 20,
+			"Fuel": 19
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-387 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-388": {
+		"url": "SEA/SE-388 [Aft] [50x50] [40-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Cargo": 17,
+			"Fuel": 23
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-388 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-389": {
+		"url": "SEA/SE-389 [Aft] [50x50] [37-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Cargo": 18,
+			"Fuel": 19
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-389 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-390": {
+		"url": "SEA/SE-390 [Aft] [50x50] [22-dTons] Cargo Bay, Drives.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 22,
+		"uses": {
+			"Cargo": 18,
+			"Engineering": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-390 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-391": {
+		"url": "SEA/SE-391 [Aft] [50x50] [48-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Cargo": 30,
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-391 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-392": {
+		"url": "SEA/SE-392 [Aft] [70x50] [51-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 51,
+		"uses": {
+			"Cargo": 23,
+			"Fuel": 28
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-392 [Aft] [70x50] [Overlay] Cargo.png"
+	},
+	"SE-393": {
+		"url": "SEA/SE-393 [Aft] [70x100] [75-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 75,
+		"uses": {
+			"Cargo": 55,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-393 [Aft] [70x100] [Overlay] Cargo.png"
+	},
+	"SE-394": {
+		"url": "SEA/SE-394 [Aft] [50x50] [15-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 15,
+		"uses": {
+			"Cargo": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-394 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-395": {
+		"url": "SEA/SE-395 [Aft] [50x100] [39-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 39,
+		"uses": {
+			"Cargo": 31,
+			"Fuel": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-395 [Aft] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-396": {
+		"url": "SEA/SE-396 [Aft] [50x50] [34-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Cargo": 25,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-396 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-397": {
+		"url": "SEA/SE-397 [Aft] [50x50] [28-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Cargo": 19,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-397 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-398": {
+		"url": "SEA/SE-398 [Aft] [50x50] [41-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Cargo": 41
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-398 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-399": {
+		"url": "SEA/SE-399 [Aft] [90x50] [65-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 65,
+		"uses": {
+			"Cargo": 52,
+			"Fuel": 13
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-399 [Aft] [90x50] [Overlay] Cargo.png"
+	},
+	"SE-400": {
+		"url": "SEA/SE-400 [Aft] [90x50] [61-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 61,
+		"uses": {
+			"Cargo": 41,
+			"Fuel": 15,
+			"Engineering": 5
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-400 [Aft] [90x50] [Overlay] Cargo.png"
+	},
+	"SE-401": {
+		"url": "SEA/SE-401 [Aft] [90x50] [70-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 70,
+		"uses": {
+			"Cargo": 35,
+			"Fuel": 35
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-401 [Aft] [90x50] [Overlay] Cargo.png"
+	},
+	"SE-402": {
+		"url": "SEA/SE-402 [Aft] [50x50] [26+16-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Cargo": 26,
+			"Aerofin": 16
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-402 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-403": {
+		"url": "SEA/SE-403 [Aft] [70x50] [68-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 68,
+		"uses": {
+			"Cargo": 40,
+			"Engineering": 3,
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"SE-405": {
+		"url": "SEA/SE-405 [Aft] [70x50] [62-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 62,
+		"uses": {
+			"Cargo": 30,
+			"Fuel": 22,
+			"Stable": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-405 [Aft] [70x50] [Overlay] Cargo.png"
+	},
+	"SE-406": {
+		"url": "SEA/SE-406 [Aft] [50x100] [64+17-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 81,
+		"uses": {
+			"Cargo": 64,
+			"Aerofin": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-406 [Aft] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-407": {
+		"url": "SEA/SE-407 [Aft] [50x50] [34-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Cargo": 34
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-407 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-408": {
+		"url": "SEA/SE-408 [Aft] [70x50] [58-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 58,
+		"uses": {
+			"Cargo": 38,
+			"Fuel": 13,
+			"Engineering": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-408 [Aft] [70x50] [Overlay] Cargo.png"
+	},
+	"SE-409": {
+		"url": "SEA/SE-409 [Aft] [110x50] [80-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 22,
+		"sizeY": 10,
+		"tons": 80,
+		"uses": {
+			"Cargo": 48,
+			"Fuel": 32
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-409 [Aft] [110x50] [Overlay] Cargo.png"
+	},
+
+	"SE-411": {
+		"url": "SEA/SE-411 [Aft] [90x50] [57+17-dTons] Cargo Bay, Staterooms, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 74,
+		"uses": {
+			"Cargo": 21,
+			"Staterooms": 16,
+			"Fuel": 20,
+			"Aerofin": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-411 [Aft] [90x50] [Overlay] Cargo.png"
+	},
+	"SE-412": {
+		"url": "SEA/SE-412 [Aft] [90x50] [61+36-dTons] Cargo Bay - Empty.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 97,
+		"uses": {
+			"Cargo": 61,
+			"Aerofin": 36
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-412 [Aft] [90x50] [Overlay] Cargo.png"
+	},
+	"SE-413": {
+		"url": "SEA/SE-413 [Aft] [110x100] [101+33-dTons] Cargo Bay, Staterooms, Fuel.png",
+		"sizeX": 22,
+		"sizeY": 20,
+		"tons": 134,
+		"uses": {
+			"Cargo": 55,
+			"Staterooms": 16,
+			"Lounge": 4,
+			"Aerofin": 33,
+			"Fuel": 26
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-413 [Aft] [110x100] [Overlay] Cargo.png"
+	},
+	"SE-414": {
+		"url": "SEA/SE-414 [Aft] [50x100] [42-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 42,
+		"uses": {
+			"Cargo": 20,
+			"Docking": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-415": {
+		"url": "SEA/SE-415 [Aft] [50x50] [26-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Cargo": 19,
+			"Fuel": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-416": {
+		"url": "SEA/SE-416 [Aft] [50x50] [41-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Cargo": 26,
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-417": {
+		"url": "SEA/SE-417 [Aft] [70x50] [53-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Cargo": 36,
+			"Fuel": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-418": {
+		"url": "SEA/SE-418 [Aft] [50x50] [39-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Cargo": 20,
+			"Fuel": 19
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-419": {
+		"url": "SEA/SE-419 [Aft] [50x50] [40-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Cargo": 17,
+			"Fuel": 23
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-420": {
+		"url": "SEA/SE-420 [Aft] [50x50] [37-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Cargo": 18,
+			"Fuel": 19
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-421": {
+		"url": "SEA/SE-421 [Aft] [50x50] [22-dTons] Cargo Bay - Full, Drives.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 22,
+		"uses": {
+			"Cargo": 18,
+			"Engineering": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-422": {
+		"url": "SEA/SE-422 [Aft] [50x50] [48-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Cargo": 30,
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-423": {
+		"url": "SEA/SE-423 [Aft] [70x50] [51-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 51,
+		"uses": {
+			"Cargo": 23,
+			"Fuel": 28
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-424": {
+		"url": "SEA/SE-424 [Aft] [70x100] [75-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 75,
+		"uses": {
+			"Cargo": 55,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-425": {
+		"url": "SEA/SE-425 [Aft] [50x50] [15-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 15,
+		"uses": {
+			"Cargo": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-426": {
+		"url": "SEA/SE-426 [Aft] [50x100] [39-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 39,
+		"uses": {
+			"Cargo": 31,
+			"Fuel": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-427": {
+		"url": "SEA/SE-427 [Aft] [50x50] [34-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Cargo": 25,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-428": {
+		"url": "SEA/SE-428 [Aft] [50x50] [28-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Cargo": 19,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-429": {
+		"url": "SEA/SE-429 [Aft] [90x50] [41-dTons] Cargo Bay - Full.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Cargo": 41
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-430": {
+		"url": "SEA/SE-430 [Aft] [90x50] [65-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 65,
+		"uses": {
+			"Cargo": 52,
+			"Fuel": 13
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-431": {
+		"url": "SEA/SE-431 [Aft] [90x50] [61-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 61,
+		"uses": {
+			"Cargo": 41,
+			"Fuel": 15,
+			"Engineering": 5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-432": {
+		"url": "SEA/SE-432 [Aft] [50x50] [70-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 70,
+		"uses": {
+			"Cargo": 35,
+			"Fuel": 35
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-433": {
+		"url": "SEA/SE-433 [Aft] [50x50] [26+16-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Cargo": 26,
+			"Aerofin": 16
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-434": {
+		"url": "SEA/SE-434 [Aft] [70x100] [68-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 68,
+		"uses": {
+			"Cargo": 40,
+			"Engineering": 3,
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-434 [Aft] [70x100] [Overlay] 20-dTon Launch and Cargo.png"
+	},
+
+	"SE-436": {
+		"url": "SEA/SE-436 [Aft] [70x50] [62-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 62,
+		"uses": {
+			"Cargo": 30,
+			"Fuel": 22,
+			"Stable": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-437": {
+		"url": "SEA/SE-437 [Aft] [50x100] [64+17-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 81,
+		"uses": {
+			"Cargo": 64,
+			"Aerofin": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-438": {
+		"url": "SEA/SE-438 [Aft] [50x50] [34-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Cargo": 34
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-439": {
+		"url": "SEA/SE-439 [Aft] [70x50] [58-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 58,
+		"uses": {
+			"Cargo": 38,
+			"Fuel": 13,
+			"Engineering": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-440": {
+		"url": "SEA/SE-440 [Aft] [110x50] [80-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 22,
+		"sizeY": 10,
+		"tons": 80,
+		"uses": {
+			"Cargo": 48,
+			"Fuel": 32
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"SE-442": {
+		"url": "SEA/SE-442 [Aft] [90x50] [57+17-dTons] Cargo Bay - Full, Staterooms.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 74,
+		"uses": {
+			"Cargo": 21,
+			"Staterooms": 16,
+			"Fuel": 20,
+			"Aerofin": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-443": {
+		"url": "SEA/SE-443 [Aft] [90x50] [51+33-dTons] Cargo Bay - Full.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 97,
+		"uses": {
+			"Cargo": 61,
+			"Aerofin": 36
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-444": {
+		"url": "SEA/SE-444 [Aft] [110x100] [101+36-dTons] Cargo Bay - Full, Staterooms.png",
+		"sizeX": 22,
+		"sizeY": 20,
+		"tons": 134,
+		"uses": {
+			"Cargo": 55,
+			"Staterooms": 16,
+			"Lounge": 4,
+			"Aerofin": 33,
+			"Fuel": 26
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-445": {
+		"url": "SEA/SE-445 [Aft] [50x100] [42-dTons] Staterooms, Launch.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 42,
+		"uses": {
+			"Staterooms": 12,
+			"Docking": 22,
+			"Lounge": 0,
+			"Cargo": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "SEA/SE-445 [Aft] [50x100] [Overlay] 20-dTon Launch and Cargo.png"
+	},
+	"SE-446": {
+		"url": "SEA/SE-446 [Aft] [50x50] [26-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Staterooms": 13,
+			"Lounge": 11,
+			"Fuel": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 3
+		}
+	},
+	"SE-447": {
+		"url": "SEA/SE-447 [Aft] [50x50] [41-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Staterooms": 25,
+			"Fuel": 14,
+			"Lounge": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 6,
+			"RoomDouble": 2
+		}
+	},
+	"SE-448": {
+		"url": "SEA/SE-448 [Aft] [70x50] [53-dTons] Staterooms, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Staterooms": 24,
+			"Fuel": 17,
+			"Lounge": 10,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"SE-449": {
+		"url": "SEA/SE-449 [Aft] [50x50] [39-dTons] Low Berths, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Low Berths": 16,
+			"Fuel": 14,
+			"Medical": 4,
+			"Airlock": 2,
+			"Engineering": 3
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-450": {
+		"url": "SEA/SE-450 [Aft] [50x50] [40-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Staterooms": 28,
+			"Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"RoomHigh": 2
+		}
+	},
+	"SE-451": {
+		"url": "SEA/SE-451 [Aft] [50x50] [37-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Staterooms": 28,
+			"Lounge": 9
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"RoomHigh": 2
+		}
+	},
+	"SE-452": {
+		"url": "SEA/SE-452 [Aft] [50x50] [22-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 22,
+		"uses": {
+			"Staterooms": 22,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 2
+		}
+	},
+	"SE-453": {
+		"url": "SEA/SE-453 [Aft] [50x50] [48-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Staterooms": 24,
+			"Fuel": 17,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"SE-454": {
+		"url": "SEA/SE-454 [Aft] [70x50] [51-dTons] Staterooms.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 51,
+		"uses": {
+			"Staterooms": 32,
+			"Lounge": 6,
+			"Airlock": 2,
+			"Fuel": 11
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 5,
+			"RoomHigh": 2
+		}
+	},
+	"SE-455": {
+		"url": "SEA/SE-455 [Aft] [70x100] [75-dTons] Staterooms.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 75,
+		"uses": {
+			"Staterooms": 36,
+			"Lounge": 2,
+			"Low Berths": 16,
+			"Fuel": 21
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6,
+			"RoomHigh": 2
+		}
+	},
+	"SE-456": {
+		"url": "SEA/SE-456 [Aft] [50x50] [15-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 15,
+		"uses": {
+			"Staterooms": 8,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-457": {
+		"url": "SEA/SE-457 [Aft] [50x100] [39-dTons] Staterooms, Escape Pod.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 39,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 8,
+			"Airlock": 2,
+			"Docking": 5,
+			"Fuel": 8
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "SEA/SE-457 [Aft] [50x100] [Overlay] Escape Pod.png"
+	},
+	"SE-458": {
+		"url": "SEA/SE-458 [Aft] [50x50] [34-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"SE-459": {
+		"url": "SEA/SE-459 [Aft] [50x50] [28-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-460": {
+		"url": "SEA/SE-460 [Aft] [90x50] [65-dTons] Staterooms, Eng., Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 65,
+		"uses": {
+			"Staterooms": 24,
+			"Fuel": 20,
+			"Lounge": 6,
+			"Engineering": 15
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 4
+		}
+	},
+	"SE-461": {
+		"url": "SEA/SE-461 [Aft] [90x50] [61-dTons] Staterooms, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 61,
+		"uses": {
+			"Staterooms": 24,
+			"Fuel": 21,
+			"Lounge": 7,
+			"Medical": 4,
+			"Airlock": 2,
+			"Low Berths": 3
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"SE-462": {
+		"url": "SEA/SE-462 [Aft] [90x50] [70-dTons] Staterooms, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 70,
+		"uses": {
+			"Staterooms": 16,
+			"Fuel": 38,
+			"Lounge": 10,
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "SEA/SE-462 [Aft] [90x50] [Overlay] Air-Raft.png"
+	},
+	"SE-463": {
+		"url": "SEA/SE-463 [Aft] [50x50] [41-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Staterooms": 40,
+			"Lounge": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 0,
+			"RoomHigh": 4
+		}
+	},
+	"SE-464": {
+		"url": "SEA/SE-464 [Aft] [50x50] [26+16-dTons] Staterooms, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Staterooms": 16,
+			"Vehicle": 10,
+			"Aerofin": 16
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-464 [Aft] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-465": {
+		"url": "SEA/SE-465 [Aft] [70x100] [68-dTons] Staterooms, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 68,
+		"uses": {
+			"Staterooms": 32,
+			"Fuel": 18,
+			"Lounge": 12,
+			"Cargo": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"RoomHigh": 4
+		}
+	},
+
+	"SE-467": {
+		"url": "SEA/SE-467 [Aft] [70x50] [62-dTons] Staterooms, Fuel, Vehicle.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 62,
+		"uses": {
+			"Staterooms": 20,
+			"Fuel": 26,
+			"Vehicle": 6,
+			"Lounge": 8,
+			"Cargo": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 3
+		},
+		"overlayUrl": "SEA/SE-467 [Aft] [70x50] [Overlay] Air-Raft.png"
+	},
+	"SE-468": {
+		"url": "SEA/SE-468 [Aft] [50x100] [64+17-dTons] Staterooms, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 81,
+		"uses": {
+			"Staterooms": 32,
+			"Vehicle": 8,
+			"Aerofin": 17,
+			"Medical": 4,
+			"Low Berths": 4,
+			"Airlock": 2,
+			"Lounge": 14
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 4,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "SEA/SE-468 [Aft] [50x100] [Overlay] Escape Pod.png"
+	},
+	"SE-469": {
+		"url": "SEA/SE-469 [Aft] [50x50] [34-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 8,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 4
+		}
+	},
+	"SE-470": {
+		"url": "SEA/SE-470 [Aft] [70x100] [60-dTons] Staterooms, Multi purpose.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 60,
+		"uses": {
+			"Staterooms": 20,
+			"Lounge": 5,
+			"Docking": 22,
+			"Cargo": 9,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "SEA/SE-470 [Aft] [70x100] [Overlay] 20-dTon Launch and Cargo.png"
+	},
+	"SE-471": {
+		"url": "SEA/SE-471 [Aft] [110x50] [80-dTons] Staterooms, Fuel.png",
+		"sizeX": 22,
+		"sizeY": 10,
+		"tons": 80,
+		"uses": {
+			"Staterooms": 32,
+			"Fuel": 44,
+			"Lounge": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 4
+		}
+	},
+
+	"SE-473": {
+		"url": "SEA/SE-473 [Aft] [90x50] [57+17-dTons] Staterooms, Engineering, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 74,
+		"uses": {
+			"Staterooms": 32,
+			"Engineering": 9,
+			"Fuel": 16
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 4
+		}
+	},
+	"SE-474": {
+		"url": "SEA/SE-474 [Aft] [90x50] [51+33-dTons] Steerage.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 84,
+		"uses": {
+			"Barracks": 38,
+			"Airlock": 2,
+			"Fuel": 11,
+			"Aerofin": 33
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Seats": 30
+		}
+	},
+	"SE-475": {
+		"url": "SEA/SE-475 [Aft] [110x80] [101+36-dTons] Staterooms, Fuel.png",
+		"sizeX": 22,
+		"sizeY": 16,
+		"tons": 137,
+		"uses": {
+			"Staterooms": 40,
+			"Fuel": 24,
+			"Airlock": 2,
+			"Fuel": 35,
+			"Aerofin": 36
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 4,
+			"RoomDouble": 0,
+			"RoomHigh": 4
+		}
+	},
+	"SE-476": {
+		"url": "SEA/SE-476 [Aft] [50x100] [53+11-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 64,
+		"uses": {
+			"Staterooms": 32,
+			"Airlock": 2,
+			"Lounge": 19,
+			"Aerofin": 11
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 6
+		}
+	},
+	"SE-477": {
+		"url": "SEA/SE-477 [Aft] [50x50] [28-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+
+	"SE-479": {
+		"url": "SEA/SE-479 [Aft] [50x100] [59-dTons] Staterooms with Vault.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 59,
+		"uses": {
+			"Staterooms": 30,
+			"Lounge": 17,
+			"Cargo": 12
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6,
+			"RoomHigh": 1
+		}
+	},
+	"SE-480": {
+		"url": "SEA/SE-480 [Aft] [50x100] [59-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 59,
+		"uses": {
+			"Bridge": 9,
+			"Staterooms": 24,
+			"Lounge": 5,
+			"Fuel": 21
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 2
+		}
+	},
+	"SE-481": {
+		"url": "SEA/SE-481 [Aft] [50x50] [38-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Staterooms": 16,
+			"Fuel": 18,
+			"Docking": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2,
+			"Barbettes": 2
+		},
+		"overlayUrl": "SEA/SE-481 [Aft] [50x50] [Overlay] Escape Pod.png"
+	},
+	"SE-482": {
+		"url": "SEA/SE-482 [Aft] [50x50] [42-dTons] Fuel, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Fuel": 33,
+			"Staterooms": 8,
+			"Lounge": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-483": {
+		"url": "SEA/SE-483 [Aft] [50x50] [26-dTons] Fuel, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Fuel": 17,
+			"Engineering": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-484": {
+		"url": "SEA/SE-484 [Aft] [50x50] [41-dTons] Fuel, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Fuel": 29,
+			"Vehicle": 10,
+			"Cargo": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-484 [Aft] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-485": {
+		"url": "SEA/SE-485 [Aft] [70x50] [53-dTons] Fuel, Cargo, Launch.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Fuel": 23,
+			"Cargo": 8,
+			"Docking": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-485 [Aft] [70x50] [Overlay] 10-dTon Launch and Cargo.png"
+	},
+	"SE-486": {
+		"url": "SEA/SE-486 [Aft] [50x50] [40-dTons] Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Fuel": 38,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+	"SE-487": {
+		"url": "SEA/SE-487 [Aft] [50x50] [40-dTons] Fuel, Sensor Ops.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Fuel": 24,
+			"Sensors": 14,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 1
+		}
+	},
+	"SE-488": {
+		"url": "SEA/SE-488 [Aft] [50x50] [37-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Fuel": 30,
+			"Engineering": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-489": {
+		"url": "SEA/SE-489 [Aft] [50x50] [22-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 22,
+		"uses": {
+			"Fuel": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-490": {
+		"url": "SEA/SE-490 [Aft] [50x50] [48-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Fuel": 40,
+			"Engineering": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-491": {
+		"url": "SEA/SE-491 [Aft] [70x50] [51-dTons] Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 51,
+		"uses": {
+			"Fuel": 49,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-492": {
+		"url": "SEA/SE-492 [Aft] [70x100] [75-dTons] Fuel, Staterooms, Vehicles.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 75,
+		"uses": {
+			"Fuel": 45,
+			"Staterooms": 16,
+			"Lounge": 4,
+			"Docking": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "SEA/SE-492 [Aft] [70x100] [Overlay] Escape Pods.png"
+	},
+	"SE-493": {
+		"url": "SEA/SE-493 [Aft] [50x50] [15-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 15,
+		"uses": {
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-494": {
+		"url": "SEA/SE-494 [Aft] [50x100] [39-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 39,
+		"uses": {
+			"Fuel": 35,
+			"Airlock": 2,
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-495": {
+		"url": "SEA/SE-495 [Aft] [50x50] [35-dTons] Fuel, Vehicle, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Fuel": 25,
+			"Vehicle": 8,
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0
+		},
+		"overlayUrl": "SEA/SE-495 [Aft] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-496": {
+		"url": "SEA/SE-496 [Aft] [50x50] [28-dTons] Fuel, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Fuel": 18,
+			"Vehicle": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-496 [Aft] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-497": {
+		"url": "SEA/SE-497 [Aft] [90x50] [65-dTons] Fuel, Cargo, Turrets.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 65,
+		"uses": {
+			"Fuel": 47,
+			"Cargo": 18
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0
+		},
+		"overlayUrl": "SEA/SE-497 [Aft] [90x50] [Overlay] Cargo.png"
+	},
+	"SE-498": {
+		"url": "SEA/SE-498 [Aft] [90x50] [61-dTons] Fuel, Engineering.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 61,
+		"uses": {
+			"Fuel": 45,
+			"Engineering": 16,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-499": {
+		"url": "SEA/SE-499 [Aft] [90x50] [70-dTons] Fuel, Cargo.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 70,
+		"uses": {
+			"Fuel": 58,
+			"Cargo": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-499 [Aft] [90x50] [Overlay] Cargo.png"
+	},
+	"SE-500": {
+		"url": "SEA/SE-500 [Aft] [50x50] [41-dTons] Fuel, Ship's Boat.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Fuel": 29,
+			"Docking": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-500 [Aft] [50x50] [Overlay] Ship's Boat.png"
+	},
+	"SE-501": {
+		"url": "SEA/SE-501 [Aft] [50x50] [26+16-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Engineering": 18,
+			"Fuel": 8,
+			"Aerofin": 16
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-502": {
+		"url": "SEA/SE-502 [Aft] [70x100] [68-dTons] Fuel, Staterooms.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 68,
+		"uses": {
+			"Fuel": 38,
+			"Staterooms": 16,
+			"Lounge": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+
+	"SE-504": {
+		"url": "SEA/SE-504 [Aft] [70x50] [62-dTons] Fuel, Staterooms.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 62,
+		"uses": {
+			"Fuel": 38,
+			"Staterooms": 24,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 6
+		}
+	},
+	"SE-505": {
+		"url": "SEA/SE-505 [Aft] [50x100] [64+17-dTons] Fuel, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 81,
+		"uses": {
+			"Fuel": 25,
+			"Engineering": 20,
+			"Airlock": 2,
+			"Aerofin": 17
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-506": {
+		"url": "SEA/SE-506 [Aft] [50x50] [35-dTons] Fuel, Turret.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Fuel": 29,
+			"Military": 4,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 1,
+			"Barbettes": 0,
+			"Capsules": 4
+		}
+	},
+	"SE-507": {
+		"url": "SEA/SE-507 [Aft] [70x50] [58-dTons] Fuel, Sensor.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 58,
+		"uses": {
+			"Fuel": 42,
+			"Drones": 6,
+			"Sensors": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-508": {
+		"url": "SEA/SE-508 [Aft] [110x50] [81-dTons] Fuel, Engineering.png",
+		"sizeX": 22,
+		"sizeY": 10,
+		"tons": 81,
+		"uses": {
+			"Fuel": 66,
+			"Engineering": 15,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"SE-510": {
+		"url": "SEA/SE-510 [Aft] [90x50] [57+17-dTons] Fuel, Cargo.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 74,
+		"uses": {
+			"Fuel": 47,
+			"Cargo": 10,
+			"Aerofin": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-511": {
+		"url": "SEA/SE-511 [Aft] [90x50] [51+31-dTons] Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 82,
+		"uses": {
+			"Fuel": 49,
+			"Aerofin": 31,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-512": {
+		"url": "SEA/SE-512 [Aft] [110x100] [102+36-dTons] Fuel, Engineering.png",
+		"sizeX": 22,
+		"sizeY": 20,
+		"tons": 137,
+		"uses": {
+			"Fuel": 66,
+			"Engineering": 18,
+			"Docking": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-513": {
+		"url": "SEA/SE-513 [Aft] [50x100] [60-dTons] Fuel, Fuel Ops.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 60,
+		"uses": {
+			"Fuel": 52,
+			"Engineering": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-514": {
+		"url": "SEA/SE-514 [Aft] [50x50] [26-dTons] Fuel, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Fuel": 20,
+			"Engineering": 6,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-515": {
+		"url": "SEA/SE-515 [Aft] [70x50] [40+23-dTons] Fuel, Engineering.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 63,
+		"uses": {
+			"Fuel": 32,
+			"Engineering": 8,
+			"Aerofin": 23
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Barbettes": 2
+		}
+	},
+	"SE-516": {
+		"url": "SEA/SE-516 [Aft] [50x100] [79-dTons] Fuel, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 79,
+		"uses": {
+			"Fuel": 63,
+			"Staterooms": 16,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-517": {
+		"url": "SEA/SE-517 [Aft] [50x50] [28-dTons] Fuel, Cargo.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Fuel": 16,
+			"Cargo": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-517 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-518": {
+		"url": "SEA/SE-518 [Aft] [50x50] [18-dTons] Fuel, Unrep.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Fuel": 14,
+			"Engineering": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-519": {
+		"url": "SEA/SE-519 [Aft] [50x50] [14-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 14,
+		"uses": {
+			"Fuel": 14
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-520": {
+		"url": "SEA/SE-520 [Aft] [50x50] [55-dTons] Fuel, Various.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 117,
+		"uses": {
+			"Liquid": 117
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-521": {
+		"url": "SEA/SE-521 [Aft] [50x50] [21-dTons] Fuel, Turret.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Fuel": 20,
+			"Weapons": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 1,
+			"Barbettes": 0
+		}
+	},
+	"SE-522": {
+		"url": "SEA/SE-522 [Aft] [50x50] [60-dTons] Fuel, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 60,
+		"uses": {
+			"Fuel": 25,
+			"Engineering": 33,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-523": {
+		"url": "SEA/SE-523 [Aft] [70x100] [63+29-dTons] Fuel, Engineering.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 92,
+		"uses": {
+			"Fuel": 45,
+			"Engineering": 18,
+			"Aerofin": 29
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-524": {
+		"url": "SEA/SE-524 [Aft] [70x50] [55-dTons] Fuel, Launch.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 55,
+		"uses": {
+			"Fuel": 29,
+			"Docking": 22,
+			"Staterooms": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 1
+		},
+		"overlayUrl": "SEA/SE-524 [Aft] [70x50] [Overlay] 20-dTon Passenger Launch.png"
+	},
+	"SE-525": {
+		"url": "SEA/SE-525 [Aft] [50x50] [35-dTons] Fuel, Eng., Tow Cable.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Fuel": 25,
+			"Engineering": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-526": {
+		"url": "SEA/SE-526 [Aft] [50x50] [40-dTons] Engineering, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Engineering": 12,
+			"Workshop": 6,
+			"Staterooms": 8,
+			"Lounge": 4,
+			"Airlock": 2,
+			"Fuel": 8
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 0
+		}
+	},
+	"SE-527": {
+		"url": "SEA/SE-527 [Aft] [50x50] [26-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Engineering": 18,
+			"Fuel": 8,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-528": {
+		"url": "SEA/SE-528 [Aft] [50x50] [41-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Engineering": 27,
+			"Fuel": 12,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-529": {
+		"url": "SEA/SE-529 [Aft] [70x50] [55-dTons] Engineering.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 55,
+		"uses": {
+			"Engineering": 36,
+			"Workshop": 0,
+			"Fuel": 19
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-530": {
+		"url": "SEA/SE-530 [Aft] [50x50] [39-dTons] Engineering, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Engineering": 19,
+			"Workshop": 6,
+			"Staterooms": 8,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": null,
+			"RoomDouble": null,
+			"RoomHigh": null,
+			"RoomLuxury": null
+		}
+	},
+	"SE-531": {
+		"url": "SEA/SE-531 [Aft] [50x50] [40-dTons] Engineering, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Engineering": 30,
+			"Workshop": 6,
+			"Weapons": 2,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+	"SE-532": {
+		"url": "SEA/SE-532 [Aft] [50x50] [37-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Engineering": 35,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-533": {
+		"url": "SEA/SE-533 [Aft] [50x50] [23-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 23,
+		"uses": {
+			"Engineering": 18,
+			"Fuel": 5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-534": {
+		"url": "SEA/SE-534 [Aft] [50x50] [49-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Engineering": 30,
+			"Fuel": 19,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-535": {
+		"url": "SEA/SE-535 [Aft] [70x50] [53-dTons] Engineering.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 9,
+		"uses": {
+			"Engineering": 42,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-536": {
+		"url": "SEA/SE-536 [Aft] [70x100] [77-dTons] Engineering.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 77,
+		"uses": {
+			"Engineering": 46,
+			"Workshop": 6,
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-537": {
+		"url": "SEA/SE-537 [Aft] [50x50] [15-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 15,
+		"uses": {
+			"Engineering": 15,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-538": {
+		"url": "SEA/SE-538 [Aft] [50x100] [39-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 39,
+		"uses": {
+			"Engineering": 28,
+			"Fuel": 9,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-539": {
+		"url": "SEA/SE-539 [Aft] [50x50] [34-dTons] Engineering, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Engineering": 26,
+			"Vehicle": 8,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-539 [Aft] [50x50] [Overlay] Air-Raft and Cargo.png"
+	},
+	"SE-540": {
+		"url": "SEA/SE-540 [Aft] [50x50] [28-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Engineering": 17,
+			"Fuel": 11,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-541": {
+		"url": "SEA/SE-541 [Aft] [90x50] [65-dTons] Engineering, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 65,
+		"uses": {
+			"Engineering": 30,
+			"Fuel": 25,
+			"Workshop": 4,
+			"Staterooms": 4,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 1
+		}
+	},
+	"SE-542": {
+		"url": "SEA/SE-542 [Aft] [90x50] [64-dTons] Engineering, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 64,
+		"uses": {
+			"Engineering": 24,
+			"Fuel": 24,
+			"Vehicle": 16
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-542 [Aft] [90x50] [Overlay] ATV.png"
+	},
+	"SE-543": {
+		"url": "SEA/SE-543 [Aft] [90x50] [70-dTons] Engineering, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 70,
+		"uses": {
+			"Engineering": 35,
+			"Fuel": 35,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-544": {
+		"url": "SEA/SE-544 [Aft] [50x50] [41-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Engineering": 20,
+			"Fuel": 15,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-545": {
+		"url": "SEA/SE-545 [Aft] [50x50] [23-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 23,
+		"uses": {
+			"Engineering": 17,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-546": {
+		"url": "SEA/SE-546 [Aft] [70x100] [70-dTons] Engineering, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 70,
+		"uses": {
+			"Engineering": 32,
+			"Fuel": 36,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"SE-548": {
+		"url": "SEA/SE-548 [Aft] [70x50] [62-dTons] Engineering, Multi purpose.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 62,
+		"uses": {
+			"Engineering": 25,
+			"Fuel": 22,
+			"Staterooms": 4,
+			"Lounge": 11
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 1
+		}
+	},
+	"SE-549": {
+		"url": "SEA/SE-549 [Aft] [50x100] [66+17-dTons] Engineering, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 83,
+		"uses": {
+			"Engineering": 25,
+			"Staterooms": 24,
+			"Lounge": 6,
+			"Aerofin": 17,
+			"Airlock": 4,
+			"Fuel": 7
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 2,
+			"Turrets": 2
+		}
+	},
+	"SE-550": {
+		"url": "SEA/SE-550 [Aft] [50x50] [34-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Engineering": 23,
+			"Fuel": 9,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-551": {
+		"url": "SEA/SE-551 [Aft] [70x50] [61-dTons] Engineering, Fuel, Cargo.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 61,
+		"uses": {
+			"Engineering": 17,
+			"Fuel": 20,
+			"Cargo": 24,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-552": {
+		"url": "SEA/SE-552 [Aft] [110x100] [86-dTons] Engineering, Fuel.png",
+		"sizeX": 22,
+		"sizeY": 20,
+		"tons": 86,
+		"uses": {
+			"Engineering": 49,
+			"Workshop": 6,
+			"Fuel": 26
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"SE-554": {
+		"url": "SEA/SE-554 [Aft] [90x50] [57+17-dTons] Engineering.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 74,
+		"uses": {
+			"Engineering": 49,
+			"Workshop": 6,
+			"Airlock": 2,
+			"Aerofin": 17
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-555": {
+		"url": "SEA/SE-555 [Aft] [90x50] [54+29-dTons] Engineering, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 83,
+		"uses": {
+			"Engineering": 32,
+			"Fuel": 20,
+			"Sensors": 2,
+			"Aerofin": 29
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-556": {
+		"url": "SEA/SE-556 [Aft] [110x100] [102+36-dTons] Engineering, Multi purpose.png",
+		"sizeX": 22,
+		"sizeY": 20,
+		"tons": 137,
+		"uses": {
+			"Engineering": 58,
+			"Staterooms": 8,
+			"Vehicle": 8,
+			"Workshop": 6,
+			"Fuel": 24,
+			"Aerofin": 36
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-557": {
+		"url": "SEA/SE-557 [Aft] [50x50] [41-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Engineering": 25,
+			"Fuel": 14,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-558": {
+		"url": "SEA/SE-558 [Aft] [50x150] [132-dTons] Engineering, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 132,
+		"uses": {
+			"Engineering": 30,
+			"Workshop": 6,
+			"Fuel": 27,
+			"Staterooms": 32,
+			"Lounge": 8,
+			"Low Berths": 1,
+			"Medical": 4,
+			"Weapons": 2,
+			"Airlock": 2,
+			"Docking": 20
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 8
+		},
+		"overlayUrl": "SEA/SE-558 [Aft] [50x150] [Overlay] Multi-Use Shuttle.png"
+	},
+	"SE-559": {
+		"url": "SEA/SE-559 [Aft] [50x100] [61-dTons] Engineering, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 61,
+		"uses": {
+			"Engineering": 30,
+			"Workshop": 6,
+			"Staterooms": 8,
+			"Lounge": 5,
+			"Airlock": 2,
+			"Fuel": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2
+		}
+	},
+	"SE-560": {
+		"url": "SEA/SE-560 [Aft] [50x100] [47-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Engineering": 18,
+			"Fuel": 29,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-561": {
+		"url": "SEA/SE-561 [Aft] [50x50] [49-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Engineering": 28,
+			"Workshop": 6,
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-562": {
+		"url": "SEA/SE-562 [Aft] [50x50] [59-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 59,
+		"uses": {
+			"Engineering": 27,
+			"Fuel": 22,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-563": {
+		"url": "SEA/SE-563 [Aft] [70x50] [58-dTons] Engineering, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 58,
+		"uses": {
+			"Engineering": 39,
+			"Fuel": 13,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-564": {
+		"url": "SEA/SE-564 [Aft] [70x50] [53-dTons] Engineering.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Engineering": 29,
+			"Airlock": 2,
+			"Fuel": 22
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-565": {
+		"url": "SEA/SE-565 [Aft] [50x50] [41-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Engineering": 25,
+			"Fuel": 14,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-566": {
+		"url": "SEA/SE-566 [Aft] [50x50] [35-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Engineering": 35,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-567": {
+		"url": "SEA/SE-567 [Aft] [50x100] [53+11-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 64,
+		"uses": {
+			"Engineering": 20,
+			"Fuel": 29,
+			"Airlock": 4,
+			"Aerofin": 11
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+	"SE-568": {
+		"url": "SEA/SE-568 [Aft] [70x50] [30+14-dTons] Engineering, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 44,
+		"uses": {
+			"Engineering": 15,
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-569": {
+		"url": "SEA/SE-569 [Aft] [70x50] [70-dTons] Engineering, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 70,
+		"uses": {
+			"Engineering": 19,
+			"Fuel": 35,
+			"Staterooms": 8,
+			"Airlock": 2,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2
+		}
+	},
+	"SE-570": {
+		"url": "SEA/SE-570 [Aft] [70x100] [77-dTons] Engineering, Multi purpose.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 77,
+		"uses": {
+			"Engineering": 24,
+			"Workshop": 6,
+			"Docking": 11,
+			"Staterooms": 8,
+			"Lounge": 6,
+			"Fuel": 22
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "SEA/SE-570 [Aft] [70x100] [Overlay] 10-dTon Utility Shuttle.png"
+	},
+	"SE-571": {
+		"url": "SEA/SE-571 [Aft] [50x50] [30-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Engineering": 12,
+			"Fuel": 16,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-572": {
+		"url": "SEA/SE-572 [Aft] [50x50] [40-dTons] Engineering, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Engineering": 32,
+			"Vehicle": 8,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-572 [Aft] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-573": {
+		"url": "SEA/SE-573 [Aft] [50x50] [50-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 20,
+			"Fuel": 20,
+			"Workshop": 6,
+			"Staterooms": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 1
+		}
+	},
+	"SE-574": {
+		"url": "SEA/SE-574 [Aft] [90x50] [65-dTons] Engineering, Cargo.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 65,
+		"uses": {
+			"Engineering": 10,
+			"Cargo": 24,
+			"Barracks": 4,
+			"Lounge": 6,
+			"Fuel": 21
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 1
+		}
+	},
+	"SE-575": {
+		"url": "SEA/SE-575 [Aft] [70x50] [32+14-dTons] Engineering.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+			"Engineering": 20,
+			"Fuel": 10,
+			"Airlock": 2,
+			"Aerofin": 14
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-576": {
+		"url": "SEA/SE-576 [Aft] [90x100] [97-dTons] Engineering, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 20,
+		"tons": 97,
+		"uses": {
+			"Engineering": 31,
+			"Fuel": 60,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-577": {
+		"url": "SEA/SE-577 [Aft] [50x50] [43-dTons] Bridge, Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+			"Bridge": 8,
+			"Engineering": 24,
+			"Fuel": 11,
+			"Briefing": 0,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-578": {
+		"url": "SEA/SE-578 [Aft] [50x50] [43-dTons] Engineering, Cargo.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+			"Engineering": 18,
+			"Cargo": 19,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-579": {
+		"url": "SEA/SE-579 [Aft] [50x100] [41-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Engineering": 28,
+			"Fuel": 7,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-580": {
+		"url": "SEA/SE-580 [Aft] [50x50] [30-dTons] Engineering, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Engineering": 22,
+			"Vehicle": 8,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-580 [Aft] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-581": {
+		"url": "SEA/SE-581 [Aft] [50x50] [41-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Engineering": 27,
+			"Workshop": 6,
+			"Lounge": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-582": {
+		"url": "SEA/SE-582 [Aft] [50x50] [24-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 24,
+		"uses": {
+			"Engineering": 19,
+			"Workshop": 0,
+			"Fuel": 5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-583": {
+		"url": "SEA/SE-583 [Aft] [50x50] [20-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 20,
+		"uses": {
+			"Engineering": 18,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-584": {
+		"url": "SEA/SE-584 [Aft] [50x50] [20-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 20,
+		"uses": {
+			"Engineering": 14,
+			"Fuel": 6,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-585": {
+		"url": "SEA/SE-585 [Aft] [50x50] [21-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Engineering": 12,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-586": {
+		"url": "SEA/SE-586 [Aft] [50x50] [17-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 17,
+		"uses": {
+			"Engineering": 13,
+			"Fuel": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-587": {
+		"url": "SEA/SE-587 [Aft] [50x50] [17-dTons] Engineering, Pod Craft.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 17,
+		"uses": {
+			"Engineering": 9,
+			"Docking": 4,
+			"Fuel": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-587 [Aft] [50x50] [Overlay] Escape Pod.png"
+	},
+	"SE-588": {
+		"url": "SEA/SE-588 [Aft] [50x50] [48-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Engineering": 28,
+			"Fuel": 14,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-589": {
+		"url": "SEA/SE-589 [Aft] [50x50] [42-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Engineering": 18,
+			"Fuel": 24,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-590": {
+		"url": "SEA/SE-590 [Aft] [50x100] [64-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 64,
+		"uses": {
+			"Engineering": 32,
+			"Fuel": 32,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-591": {
+		"url": "SEA/SE-591 [Aft] [50x100] [55-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 55,
+		"uses": {
+			"Engineering": 30,
+			"Fuel": 25,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-592": {
+		"url": "SEA/SE-592 [Aft] [50x50] [35-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Engineering": 35,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-593": {
+		"url": "SEA/SE-593 [Aft] [50x50] [20-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 20,
+		"uses": {
+			"Engineering": 18,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-594": {
+		"url": "SEA/SE-594 [Aft] [50x50] [30-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Engineering": 28,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-595": {
+		"url": "SEA/SE-595 [Aft] [50x50] [48-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Engineering": 28,
+			"Fuel": 14,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-596": {
+		"url": "SEA/SE-596 [Aft] [50x100] [68-dTons] Engineering, Cargo Bay.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 68,
+		"uses": {
+			"Engineering": 40,
+			"Cargo": 14,
+			"Workshop": 6,
+			"Staterooms": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "SEA/SE-596 [Aft] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-597": {
+		"url": "SEA/SE-597 [Aft] [70x100] [67-dTons] Engineering.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 67,
+		"uses": {
+			"Engineering": 43,
+			"Workshop": 6,
+			"Lounge": 6,
+			"Fuel": 10,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-598": {
+		"url": "SEA/SE-598 [Aft] [70x50] [67-dTons] Engineering, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 67,
+		"uses": {
+			"Engineering": 45,
+			"Fuel": 20,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-599": {
+		"url": "SEA/SE-599 [Aft] [50x100] [60-dTons] Engineering, Fuel, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 60,
+		"uses": {
+			"Engineering": 16,
+			"Fuel": 24,
+			"Staterooms": 16,
+			"Lounge": 4,
+			"Comms": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-600": {
+		"url": "SEA/SE-600 [Aft] [50x100] [61-dTons] Engineering, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 61,
+		"uses": {
+			"Engineering": 27,
+			"Workshop": 0,
+			"Staterooms": 16,
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4
+		}
+	},
+	"SE-601": {
+		"url": "SEA/SE-601 [Aft] [50x50] [37-dTons] Engineering, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Engineering": 10,
+			"Staterooms": 16,
+			"Lounge": 3,
+			"Docking": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4
+		},
+		"overlayUrl": "SEA/SE-601 [Aft] [50x50] [Overlay] Shuttlepod.png"
+	},
+	"SE-602": {
+		"url": "SEA/SE-602 [Aft] [50x50] [13-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 13,
+		"uses": {
+			"Engineering": 13,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-603": {
+		"url": "SEA/SE-603 [Aft] [50x50] [35-dTons] Engineering, Fuel, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Engineering": 15,
+			"Fuel": 14,
+			"Vehicle": 6,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-603 [Aft] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-604": {
+		"url": "SEA/SE-604 [Aft] [50x50] [27-dTons] Engineering, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Engineering": 21,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2
+		}
+	},
+	"SE-605": {
+		"url": "SEA/SE-605 [Aft] [50x50] [38-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Engineering": 17,
+			"Fuel": 11,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-606": {
+		"url": "SEA/SE-606 [Aft] [50x50] [34-dTons] Engineering, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Engineering": 20,
+			"Vehicle": 6,
+			"Workshop": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "SEA/SE-606 [Aft] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-607": {
+		"url": "SEA/SE-607 [Aft] [50x50] [26-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Engineering": 16,
+			"Fuel": 10,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-608": {
+		"url": "SEA/SE-608 [Aft] [50x50] [20-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 20,
+		"uses": {
+			"Engineering": 12,
+			"Fuel": 8,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-608 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-609": {
+		"url": "SEA/SE-609 [Aft] [50x100] [70-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 70,
+		"uses": {
+			"Engineering": 40,
+			"Fuel": 30,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-610": {
+		"url": "SEA/SE-610 [Aft] [70x50] [35+12-dTons] Engineering, Multi purpose.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Engineering": 18,
+			"Aerofin": 12,
+			"Staterooms": 4,
+			"Workshop": 6,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-611": {
+		"url": "SEA/SE-611 [Aft] [50x50] [40-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Engineering": 40,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-612": {
+		"url": "SEA/SE-612 [Aft] [50x50] [25-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Engineering": 21,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+	"SE-613": {
+		"url": "SEA/SE-613 [Aft] [50x50] [22-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 22,
+		"uses": {
+			"Engineering": 22,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-614": {
+		"url": "SEA/SE-614 [Aft] [50x100] [47-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Engineering": 30,
+			"Fuel": 17,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-615": {
+		"url": "SEA/SE-615 [Aft] [50x50] [38-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Engineering": 16,
+			"Fuel": 10,
+			"Workshop": 6,
+			"Airlock": 6
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-616": {
+		"url": "SEA/SE-616 [Aft] [50x50] [14-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 14,
+		"uses": {
+			"Engineering": 12,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-617": {
+		"url": "SEA/SE-617 [Aft] [50x50] [15-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 15,
+		"uses": {
+			"Engineering": 9,
+			"Fuel": 6,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-618": {
+		"url": "SEA/SE-618 [Aft] [50x50] [35-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Engineering": 29,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-619": {
+		"url": "SEA/SE-619 [Aft] [50x50] [34-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Engineering": 32,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-620": {
+		"url": "SEA/SE-620 [Aft] [50x50] [34+7-dTons] Engineering, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+			"Engineering": 26,
+			"Vehicle": 6,
+			"Aerofin": 7,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "SEA/SE-620 [Aft] [50x50] [Overlay] Escape Pod.png"
+	},
+	"SE-621": {
+		"url": "SEA/SE-621 [Aft] [50x100] [56-dTons] Engineering, Fuel, Tow Cable.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 56,
+		"uses": {
+			"Engineering": 42,
+			"Fuel": 13,
+			"Workshop": 0,
+			"Cargo": 1
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-622": {
+		"url": "SEA/SE-622 [Aft] [50x50] [42-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Engineering": 29,
+			"Fuel": 13,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-623": {
+		"url": "SEA/SE-623 [Aft] [50x50] [15-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 15,
+		"uses": {
+			"Engineering": 13,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-624": {
+		"url": "SEA/SE-624 [Aft] [50x50] [43-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+			"Engineering": 29,
+			"Workshop": 6,
+			"Fuel": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-625": {
+		"url": "SEA/SE-625 [Aft] [90x50] [84-dTons] Engineering, Fuel, Cargo.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 84,
+		"uses": {
+			"Engineering": 17,
+			"Fuel": 30,
+			"Cargo": 35,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-626": {
+		"url": "SEA/SE-626 [Aft] [90x100] [56+27-dTons] Engineering.png",
+		"sizeX": 18,
+		"sizeY": 20,
+		"tons": 83,
+		"uses": {
+			"Engineering": 83,
+			"Aerofin": 27
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-627": {
+		"url": "SEA/SE-627 [Aft] [130x100] [63+68-dTons] Engineering.png",
+		"sizeX": 26,
+		"sizeY": 20,
+		"tons": 131,
+		"uses": {
+			"Engineering": 32,
+			"Fuel": 29,
+			"Aerofin": 68,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-628": {
+		"url": "SEA/SE-628 [Aft] [110x50] [58+32-dTons] Engineering, Fuel.png",
+		"sizeX": 22,
+		"sizeY": 10,
+		"tons": 90,
+		"uses": {
+			"Engineering": 35,
+			"Workshop": 6,
+			"Fuel": 15,
+			"Airlock": 2,
+			"Aerofin": 32
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-629": {
+		"url": "SEA/SE-629 [Aft] [50x100] [70-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 70,
+		"uses": {
+			"Engineering": 35,
+			"Fuel": 29,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-630": {
+		"url": "SEA/SE-630 [Aft] [70x50] [64-dTons] Engineering, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 64,
+		"uses": {
+			"Engineering": 35,
+			"Fuel": 19,
+			"Workshop": 6,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+	"SE-631": {
+		"url": "SEA/SE-631 [Aft] [50x100] [55-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 55,
+		"uses": {
+			"Engineering": 33,
+			"Fuel": 14,
+			"Workshop": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-632": {
+		"url": "SEA/SE-632 [Aft] [50x50] [14-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 14,
+		"uses": {
+			"Engineering": 14,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-633": {
+		"url": "SEA/SE-633 [Aft] [90x100] [86-dTons] Engineering, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 20,
+		"tons": 86,
+		"uses": {
+			"Engineering": 48,
+			"Fuel": 26,
+			"Workshop": 0,
+			"Staterooms": 4,
+			"Cargo": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1
+		}
+	},
+	"SE-634": {
+		"url": "SEA/SE-634 [Aft] [50x100] [62-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 62,
+		"uses": {
+			"Engineering": 44,
+			"Fuel": 18,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-635": {
+		"url": "SEA/SE-635 [Aft] [50x100] [44-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 44,
+		"uses": {
+			"Engineering": 32,
+			"Fuel": 10,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-636": {
+		"url": "SEA/SE-636 [Aft] [70x50] [50+4-dTons] Engineering, Cargo Bay.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 54,
+		"uses": {
+			"Engineering": 40,
+			"Cargo": 10,
+			"Aerofin": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-636 [Aft] [70x50] [Overlay] Cargo.png"
+	},
+	"SE-637": {
+		"url": "SEA/SE-637 [Aft] [70x100] [93-dTons] Engineering, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 93,
+		"uses": {
+			"Engineering": 32,
+			"Fuel": 45,
+			"Workshop": 6,
+			"Lounge": 8,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-638": {
+		"url": "SEA/SE-638 [Aft] [70x100] [63+10-dTons] Engineering, Bridge, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 73,
+		"uses": {
+			"Engineering": 22,
+			"Bridge": 6,
+			"Fuel": 27,
+			"Staterooms": 8,
+			"Aerofin": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-639": {
+		"url": "SEA/SE-639 [Aft] [90x50] [28+26-dTons] Engineering, Bridge.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 54,
+		"uses": {
+			"Engineering": 20,
+			"Bridge": 6,
+			"Aerofin": 26,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-640": {
+		"url": "SEA/SE-640 [Aft] [90x100] [104-dTons] Engineering, Bridge, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 20,
+		"tons": 104,
+		"uses": {
+			"Engineering": 32,
+			"Bridge": 10,
+			"Fuel": 46,
+			"Airlock": 2,
+			"Staterooms": 8,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-641": {
+		"url": "SEA/SE-641 [Aft] [70x100] [74-dTons] Engineering, Fuel, Vehicle.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 74,
+		"uses": {
+			"Engineering": 29,
+			"Fuel": 29,
+			"Vehicle": 4,
+			"Workshop": 6,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-641 [Aft] [70x100] [Overlay] Air-Raft.png"
+	},
+	"SE-642": {
+		"url": "SEA/SE-642 [Aft] [90x100] [77-dTons] Engineering, Staterooms.png",
+		"sizeX": 18,
+		"sizeY": 20,
+		"tons": 77,
+		"uses": {
+			"Engineering": 53,
+			"Staterooms": 16,
+			"Lounge": 0,
+			"Workshop": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"SE-643": {
+		"url": "SEA/SE-643 [Aft] [70x100] [72-dTons] Engineering, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 72,
+		"uses": {
+			"Engineering": 54,
+			"Fuel": 16,
+			"Workshop": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-644": {
+		"url": "SEA/SE-644 [Aft] [50x100] [47-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Engineering": 45,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-645": {
+		"url": "SEA/SE-645 [Aft] [90x50] [32+23-dTons] Engineering.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 55,
+		"uses": {
+			"Engineering": 27,
+			"Fuel": 5,
+			"Aerofin": 23
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-646": {
+		"url": "SEA/SE-646 [Aft] [90x50] [27+19-dTons] Engineering.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+			"Engineering": 25,
+			"Aerofin": 19,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-647": {
+		"url": "SEA/SE-647 [Aft] [90x50] [53-dTons] Engineering, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Engineering": 25,
+			"Fuel": 26,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-648": {
+		"url": "SEA/SE-648 [Aft] [90x100] [132-dTons] Engineering, Cargo.png",
+		"sizeX": 18,
+		"sizeY": 20,
+		"tons": 132,
+		"uses": {
+			"Engineering": 84,
+			"Cargo": 24,
+			"Workshop": 0,
+			"Fuel": 20,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2
+		},
+		"overlayUrl": "SEA/SE-648 [Aft] [90x100] [Overlay] Cargo.png"
+	},
+	"SE-649": {
+		"url": "SEA/SE-649 [Aft] [90x50] [66-dTons] Engineering, Multi purpose.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 66,
+		"uses": {
+			"Engineering": 43,
+			"Workshop": 6,
+			"Weapons": 6,
+			"Staterooms": 4,
+			"Lounge": 5,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2
+		}
+	},
+	"SE-650": {
+		"url": "SEA/SE-650 [Aft] [130x100] [134-dTons] Engineering, Multi purpose.png",
+		"sizeX": 26,
+		"sizeY": 20,
+		"tons": 134,
+		"uses": {
+			"Fuel": 65,
+			"Engineering": 37,
+			"Workshop": 0,
+			"Staterooms": 4,
+			"Vehicle": 8,
+			"Lounge": 16,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-651": {
+		"url": "SEA/SE-651 [Aft] [130x100] [142-dTons] Engineering, Multi purpose.png",
+		"sizeX": 26,
+		"sizeY": 20,
+		"tons": 142,
+		"uses": {
+			"Engineering": 40,
+			"Workshop": 6,
+			"Staterooms": 8,
+			"Lounge": 6,
+			"Airlock": 4,
+			"Vehicle": 4,
+			"Cargo": 40,
+			"Fuel": 24
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "SEA/SE-651 [Aft] [130x100] [Overlay] Cargo.png"
+	},
+	"SE-652": {
+		"url": "SEA/SE-652 [Aft] [50x50] [39-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Engineering": 21,
+			"Fuel": 18,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-653": {
+		"url": "SEA/SE-653 [Aft] [50x50] [37-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Engineering": 31,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-654": {
+		"url": "SEA/SE-654 [Aft] [90x50] [36+48-dTons] Engineering, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 84,
+		"uses": {
+			"Engineering": 26,
+			"Fuel": 10,
+			"Aerofin": 48
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-655": {
+		"url": "SEA/SE-655 [Aft] [50x100] [64-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 64,
+		"uses": {
+			"Engineering": 26,
+			"Fuel": 36,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-656": {
+		"url": "SEA/SE-656 [Aft] [50x50] [39-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Engineering": 25,
+			"Fuel": 12,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-657": {
+		"url": "SEA/SE-657 [Aft] [50x50] [44-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 44,
+		"uses": {
+			"Engineering": 28,
+			"Workshop": 6,
+			"Airlock": 2,
+			"Staterooms": 8
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomDouble": 2
+		}
+	},
+	"SE-658": {
+		"url": "SEA/SE-658 [Aft] [50x50] [19-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 19,
+		"uses": {
+			"Engineering": 10,
+			"Fuel": 9,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"SE-660": {
+		"url": "SEA/SE-660 [Aft] [50x50] [37-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Engineering": 37,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-661": {
+		"url": "SEA/SE-661 [Aft] [50x50] [26-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Engineering": 20,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"SE-663": {
+		"url": "SEA/SE-663 [Aft] [50x50] [27-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Engineering": 17,
+			"Fuel": 10,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-664": {
+		"url": "SEA/SE-664 [Aft] [50x50] [28-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Engineering": 17,
+			"Fuel": 11,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"SE-680": {
+		"url": "SEA/SE-680 [Aft] [50x100] [30-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 30,
+		"uses": {
+			"Engineering": 18,
+			"Fuel": 12,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-681": {
+		"url": "SEA/SE-681 [Aft] [50x100] [65-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 65,
+		"uses": {
+			"Engineering": 33,
+			"Fuel": 32,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"SE-683": {
+		"url": "SEA/SE-683 [Aft] [50x50] [27-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Engineering": 27,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-684": {
+		"url": "SEA/SE-684 [Aft] [50x50] [25-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Engineering": 23,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+
+	"SE-687": {
+		"url": "SEA/SE-687 [Aft] [70x50] [49-dTons] Engineering.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Engineering": 45,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+
+	"SE-690": {
+		"url": "SEA/SE-690 [Aft] [50x50] [35-dTons] Survey, Drones.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Drones": 25,
+			"Staterooms": 8,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-691": {
+		"url": "SEA/SE-691 [Aft] [50x50] [39-dTons] Survey, Drones.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Drones": 39
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-692": {
+		"url": "SEA/SE-692 [Aft] [50x50] [15-dTons] Sensor Ops.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 15,
+		"uses": { "Sensors": 15 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-693": {
+		"url": "SEA/SE-693 [Aft] [50x100] [41-dTons] Survey, Launch.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Docking": 22,
+			"Cargo": 5,
+			"Sensors": 7,
+			"Drones": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-693 [Aft] [50x100] [Overlay] 20-dTon Launch and Cargo.png"
+	},
+	"SE-694": {
+		"url": "SEA/SE-694 [Aft] [50x50] [41-dTons] Survey, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Vehicle": 8,
+			"Lounge": 10,
+			"Drones": 23
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-694 [Aft] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-695": {
+		"url": "SEA/SE-695 [Aft] [50x50] [37-dTons] Survey, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Fuel": 15,
+			"Drones": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-696": {
+		"url": "SEA/SE-696 [Aft] [50x100] [42-dTons] Hunting Launch.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 42,
+		"uses": {
+			"Docking": 22,
+			"Stable": 5,
+			"Staterooms": 8,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-696 [Aft] [50x100] [Overlay] 20-dTon Hunting Launch.png"
+	},
+	"SE-697": {
+		"url": "SEA/SE-697 [Aft] [50x100] [42-dTons] Xenofauna Labs.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 42,
+		"uses": {
+			"Docking": 22,
+			"Stable": 8,
+			"Labs": 8,
+			"Cargo": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-697 [Aft] [50x100] [Overlay] 20-dTon Research Launch, Animals, and Cargo.png"
+	},
+	"SE-698": {
+		"url": "SEA/SE-698 [Aft] [50x50] [26-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Labs": 26
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-699": {
+		"url": "SEA/SE-699 [Aft] [50x50] [41-dTons] Labs, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Labs": 26,
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-700": {
+		"url": "SEA/SE-700 [Aft] [70x50] [53-dTons] Labs, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Labs": 32,
+			"Fuel": 21
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-701": {
+		"url": "SEA/SE-701 [Aft] [50x50] [39-dTons] Labs, Fuel, ATV.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Labs": 12,
+			"Fuel": 15,
+			"Vehicle": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-701 [Aft] [50x50] [Overlay] Wheeled ATV.png"
+	},
+	"SE-702": {
+		"url": "SEA/SE-702 [Aft] [50x50] [40-dTons] Labs, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Labs": 8,
+			"Medical": 4,
+			"Low Berths": 6,
+			"Fuel": 20,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-703": {
+		"url": "SEA/SE-703 [Aft] [50x50] [37-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Labs": 37
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-704": {
+		"url": "SEA/SE-704 [Aft] [50x50] [22-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 22,
+		"uses": {
+			"Labs": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-705": {
+		"url": "SEA/SE-705 [Aft] [70x50] [53-dTons] Barracks, ATV, Fuel.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Barracks": 14,
+			"Armory": 4,
+			"Vehicle": 18,
+			"Fuel": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-705 [Aft] [70x50] [Overlay] Wheeled APC-ATV.png"
+	},
+	"SE-706": {
+		"url": "SEA/SE-706 [Aft] [50x50] [26-dTons] Mine Layer.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Weapons": 26
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-707": {
+		"url": "SEA/SE-707 [Aft] [50x50] [25-dTons] Mine Layer.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Weapons": 24,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-708": {
+		"url": "SEA/SE-708 [Aft] [50x50] [21-dTons] Barbettes, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Staterooms": 8,
+			"Weapons": 11,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"Barbettes": 2
+		}
+	},
+	"SE-709": {
+		"url": "SEA/SE-709 [Aft] [50x50] [18-dTons] Barbettes, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Staterooms": 4,
+			"Lounge": 7,
+			"Weapons": 5,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"Barbettes": 1
+		}
+	},
+	"SE-710": {
+		"url": "SEA/SE-710 [Aft] [50x50] [35-dTons] Engineering, Fighter.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Engineering": 24,
+			"Hangar": 11
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-710 [Aft] [50x50] [Overlay] Dragonfly Fighter.png"
+	},
+	"SE-711": {
+		"url": "SEA/SE-711 [Aft] [50x50] [41-dTons] Vehicle Hangar.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Vehicle": 23,
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-712": {
+		"url": "SEA/SE-712 [Aft] [70x100] [101-dTons] Engineering, Multi purpose.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 101,
+		"uses": {
+			"Engineering": 45,
+			"Workshop": 0,
+			"Staterooms": 8,
+			"Vehicle": 6,
+			"Lounge": 22,
+			"Airlock": 2,
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "SEA/SE-712 [Aft] [70x100] [Overlay] Air-Raft.png"
+	},
+	"SE-713": {
+		"url": "SEA/SE-713 [Aft] [50x100] [62-dTons] Mining, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 62,
+		"uses": {
+			"Mining": 29,
+			"Airlock": 2,
+			"Engineering": 15,
+			"Vehicle": 16
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "SEA/SE-713 [Aft] [50x100] [Overlay] Grav Mining Vehicle.png"
+	},
+	"SE-714": {
+		"url": "SEA/SE-714 [Aft] [50x50] [26-dTons] Prospecting.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Mining": 16,
+			"Vehicle": 6,
+			"Drones": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-714 [Aft] [50x50] [Overlay] Prospector's Buggy.png"
+	},
+	"SE-715": {
+		"url": "SEA/SE-715 [Aft] [50x50] [47-dTons] Mining, Processing.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Mining": 47
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-716": {
+		"url": "SEA/SE-716 [Aft] [50x50] [38-dTons] Mining, Processing.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Mining": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-717": {
+		"url": "SEA/SE-717 [Aft] [50x50] [35-dTons] Mining.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Mining": 27,
+			"Drones": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-718": {
+		"url": "SEA/SE-718 [Aft] [50x50] [41-dTons] Mining.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Mining": 31,
+			"Drones": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-719": {
+		"url": "SEA/SE-719 [Aft] [50x50] [11-dTons] Tow Cable.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 11,
+		"uses": { "Engineering": 11 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-720": {
+		"url": "SEA/SE-720 [Aft] [50x100] [46-dTons] Engineering, Tow Cable.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 46,
+		"uses": {
+			"Engineering": 33,
+			"Fuel": 9,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+	"SE-721": {
+		"url": "SEA/SE-721 [Aft] [90x100] [94-dTons] Mining, Engineering, Fuel.png",
+		"sizeX": 18,
+		"sizeY": 20,
+		"tons": 94,
+		"uses": {
+			"Mining": 35,
+			"Engineering": 28,
+			"Drones": 8,
+			"Fuel": 22,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-722": {
+		"url": "SEA/SE-722 [Aft] [50x100] [47-dTons] Medical.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Medical": 43,
+			"Low Berths": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-723": {
+		"url": "SEA/SE-723 [Aft] [50x100] [42-dTons] Luxury Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 42,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 18
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 1,
+			"RoomHigh": 2,
+			"RoomLuxury": 1
+		}
+	},
+	"SE-724": {
+		"url": "SEA/SE-724 [Aft] [50x50] [34-dTons] Fighters, Unrep.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Hangar": 30,
+			"Engineering": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEA/SE-724 [Aft] [50x50] [Overlay] Rampart Fighters.png"
+	},
+	"SE-725": {
+		"url": "SEA/SE-725 [Aft] [70x100] [63+29-dTons] Staterooms, Engineering.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 92,
+		"uses": {
+			"Staterooms": 28,
+			"Engineering": 25,
+			"Lounge": 10,
+			"Aerofin": 29
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 6,
+			"RoomHigh": 2
+		}
+	}
+}

@@ -1,0 +1,287 @@
+{
+	"TG-001": {
+		"url": "TG/TG-001 [100x20] [32-dTons] Engineering, Turrets.png",
+		"sizeX": 20,
+		"sizeY": 4,
+		"tons": 32,
+		"uses": {
+			"Engineering": 28,
+			"Weapons": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2
+		}
+	},
+	"TG-002": {
+		"url": "TG/TG-002 [100x20] [30-dTons] Staterooms.png",
+		"sizeX": 20,
+		"sizeY": 4,
+		"tons": 30,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 4,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"TG-003": {
+		"url": "TG/TG-003 [100x20] [30-dTons] Staterooms.png",
+		"sizeX": 20,
+		"sizeY": 4,
+		"tons": 30,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 8,
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "TG/TG-003 [100x20] [Overlay] Air-Raft.png"
+	},
+	"TG-004": {
+		"url": "TG/TG-004 [100x100] [150-dTons] Staterooms, Cargo.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 150,
+		"uses": {
+			"Staterooms": 44,
+			"Fuel": 34,
+			"Lounge": 20,
+			"Airlock": 4,
+			"Cargo": 48
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 0,
+			"RoomDouble": 8,
+			"RoomHigh": 2,
+			"RoomLuxury": 0
+		}
+	},
+	"TG-005": {
+		"url": "TG/TG-005 [100x20] [30-dTons] Sensors.png",
+		"sizeX": 20,
+		"sizeY": 4,
+		"tons": 30,
+		"uses": {
+			"Sensors": 30
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"TG-006": {
+		"url": "TG/TG-006 [100x50] [70-dTons] Fuel, Pod Craft.png",
+		"sizeX": 20,
+		"sizeY": 10,
+		"tons": 70,
+		"uses": {
+			"Fuel": 50,
+			"Docking": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "TG/TG-006 [100x50] [Overlay] Escape Pods.png"
+	},
+	"TG-007": {
+		"url": "TG/TG-007 [100x50] [73-dTons] Staterooms, Fuel.png",
+		"sizeX": 20,
+		"sizeY": 10,
+		"tons": 73,
+		"uses": {
+			"Staterooms": 36,
+			"Fuel": 15,
+			"Lounge": 15,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 6,
+			"RoomHigh": 2,
+			"RoomLuxury": 0
+		}
+	},
+	"TG-008": {
+		"url": "TG/TG-008 [100x50] [85-dTons] Fuel, Staterooms.png",
+		"sizeX": 20,
+		"sizeY": 10,
+		"tons": 85,
+		"uses": {
+			"Fuel": 43,
+			"Staterooms": 28,
+			"Lounge": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 7,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"TG-009": {
+		"url": "TG/TG-009 [100x50] [77-dTons] Cargo, Staterooms, Vehicle.png",
+		"sizeX": 20,
+		"sizeY": 10,
+		"tons": 77,
+		"uses": {
+			"Cargo": 33,
+			"Staterooms": 16,
+			"Vehicle": 7,
+			"Stable": 7,
+			"Lounge": 10,
+			"Weapons": 4
+		},
+		"facilities": {
+			"Turrets": 2,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "TG/TG-009 [100x50] [Overlay] Air-Raft and Cargo.png"
+	},
+	"TG-010": {
+		"url": "TG/TG-010 [100x55] [32-dTons] Fuel.png",
+		"sizeX": 20,
+		"sizeY": 11,
+		"tons": 32,
+		"uses": {
+			"Fuel": 28,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+	"TG-011": {
+		"url": "TG/TG-011 [100x65] [48-dTons] Fuel, Staterooms, Turrets.png",
+		"sizeX": 20,
+		"sizeY": 13,
+		"tons": 48,
+		"uses": {
+			"Fuel": 28,
+			"Staterooms": 16,
+			"Lounge": 0,
+			"Weapons": 2,
+			"Military": 2
+		},
+		"facilities": {
+			"Capsules": 4,
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0,
+			"RoomSingle": 4
+		}
+	},
+	"TG-012": {
+		"url": "TG/TG-012 [100x30] [46-dTons] Fuel, Sensors.png",
+		"sizeX": 20,
+		"sizeY": 6,
+		"tons": 46,
+		"uses": {
+			"Fuel": 23,
+			"Sensors": 23
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"TG-013": {
+		"url": "TG/TG-013 [100x50] [77-dTons] Labs, Staterooms, Fuel.png",
+		"sizeX": 20,
+		"sizeY": 10,
+		"tons": 77,
+		"uses": {
+			"Labs": 16,
+			"Staterooms": 16,
+			"Fuel": 29,
+			"Engineering": 4,
+			"Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"TG-014": {
+		"url": "TG/TG-014 [100x100] [149-dTons] Multi purpose.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 99,
+		"uses": {
+			"Cargo": 21,
+			"Staterooms": 48,
+			"Fuel": 16,
+			"Lounge": 9,
+			"Low Berths": 6
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomDouble": 6,
+			"RoomHigh": 2
+		},
+		"overlayUrl": "TG/TG-014 [100x100] [Overlay] Cargo.png"
+	},
+	"TG-015": {
+		"url": "TG/TG-015 [100x50] [74-dTons] Fuel.png",
+		"sizeX": 20,
+		"sizeY": 10,
+		"tons": 74,
+		"uses": {
+			"Fuel": 66,
+			"Military": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Capsules": 8
+		}
+	},
+	"TG-016": {
+		"url": "TG/TG-016 [100x60] [56-dTons] Staterooms, Fuel.png",
+		"sizeX": 20,
+		"sizeY": 12,
+		"tons": 56,
+		"uses": {
+			"Staterooms": 20,
+			"Fuel": 18,
+			"Lounge": 13,
+			"Airlock": 2,
+			"Low Berths": 3
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 4
+		}
+	},
+	"TG-017": {
+		"url": "TG/TG-017 [100x70] [55-dTons] Staterooms, Fuel.png",
+		"sizeX": 20,
+		"sizeY": 14,
+		"tons": 55,
+		"uses": {
+			"Staterooms": 16,
+			"Fuel": 33,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	}
+}

@@ -1,0 +1,484 @@
+{
+	"HC-001": {
+		"url": "HC/HC-001 [Fore] [50x50] [48-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 8,
+			"Lounge": 15,
+			"Engineering": 5,
+			"Briefing": 0,
+			"Weapons": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"Turrets": 1
+		}
+	},
+	"HC-002": {
+		"url": "HC/HC-002 [Fore] [50x50] [45-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 45,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 20,
+			"Lounge": 13,
+			"Briefing": 0,
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 5
+		}
+	},
+	"HC-003": {
+		"url": "HC/HC-003 [Fore] [50x50] [36-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 36,
+		"uses": {
+			"Bridge": 8,
+			"Staterooms": 16,
+			"Lounge": 7,
+			"Briefing": 0,
+			"Weapons": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"HC-004": {
+		"url": "HC/HC-004 [Fore] [50x50] [52-dTons] Bridge, Labs, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 52,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 12,
+			"Lounge": 15,
+			"Briefing": 4,
+			"Weapons": 3,
+			"Labs": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"HC-005": {
+		"url": "HC/HC-005 [Fore] [50x100] [52-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 52,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 20,
+			"Lounge": 14,
+			"Briefing": 0,
+			"Weapons": 2,
+			"Low Berths": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 4
+		}
+	},
+	"HC-006": {
+		"url": "HC/HC-006 [Fore] [50x100] [56-dTons] Bridge, Sensors, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 56,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 16,
+			"Lounge": 18,
+			"Briefing": 0,
+			"Weapons": 2,
+			"Sensors": 8,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"HC-007": {
+		"url": "HC/HC-007 [Fore] [50x50] [48-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 20,
+			"Lounge": 18,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"HC-008": {
+		"url": "HC/HC-008 [Fore] [50x50] [53-dTons] Mining.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Mining": 53
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"HC-009": {
+		"url": "HC/HC-009 [Fore] [50x50] [41-dTons] Vehicle Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Vehicle": 39,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "HC/HC-009 [Fore] [50x50] [Overlay] Grav Tanks.png"
+	},
+	"HC-010": {
+		"url": "HC/HC-010 [Fore] [50x50] [45-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 45,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 24,
+			"Sensors": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"HC-011": {
+		"url": "HC/HC-011 [Fore] [50x50] [48-dTons] Sensors.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Sensors": 30,
+			"Lounge": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"HC-012": {
+		"url": "HC/HC-012 [Fore] [50x50] [50-dTons] Missile Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Weapons": 25,
+			"Staterooms": 8,
+			"Workshop": 4,
+			"Lounge": 13
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"HC-013": {
+		"url": "HC/HC-013 [Aft] [50x50] [50-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 36,
+			"Workshop": 0,
+			"Airlock": 2,
+			"Fuel": 6,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"HC-014": {
+		"url": "HC/HC-014 [Aft] [50x50] [53-dTons] Engineering, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Engineering": 20,
+			"Staterooms": 12,
+			"Lounge": 13,
+			"Workshop": 0,
+			"Docking": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 3
+		}
+	},
+	"HC-015": {
+		"url": "HC/HC-015 [Aft] [50x50] [50-dTons] Cargo, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 20,
+			"Engineering": 20,
+			"Workshop": 0,
+			"Docking": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "HC/HC-015 [Aft] [50x50] [Overlay] Cargo and Shuttle.png"
+	},
+	"HC-016": {
+		"url": "HC/HC-016 [Aft] [50x50] [52-dTons] Vehicle Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 52,
+		"uses": {
+			"Vehicle": 35,
+			"Airlock": 2,
+			"Lounge": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "HC/HC-016 [Aft] [50x50] [Overlay] Wheeled ATV.png"
+	},
+	"HC-017": {
+		"url": "HC/HC-017 [Aft] [50x50] [48-dTons] Sensor Deck.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Drones": 35,
+			"Staterooms": 6,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomHigh": 1
+		}
+	},
+	"HC-018": {
+		"url": "HC/HC-018 [Aft] [50x50] [48-dTons] Cargo Bay, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Cargo": 33,
+			"Engineering": 15,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "HC/HC-018 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"HC-019": {
+		"url": "HC/HC-019 [Aft] [50x50] [50-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 30,
+			"Fuel": 8,
+			"Workshop": 0,
+			"Staterooms": 4,
+			"Workshop": 4,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+	"HC-020": {
+		"url": "HC/HC-020 [Aft] [50x50] [47-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Engineering": 33,
+			"Fuel": 14,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"HC-021": {
+		"url": "HC/HC-021 [Aft] [50x50] [50-dTons] Bridge, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Bridge": 10,
+			"Engineering": 30,
+			"Briefing": 0,
+			"Workshop": 0,
+			"Staterooms": 8,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomDouble": 2
+		}
+	},
+	"HC-022": {
+		"url": "HC/HC-022 [Aft] [50x50] [50-dTons] Bridge, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Bridge": 10,
+			"Engineering": 22,
+			"Briefing": 0,
+			"Workshop": 0,
+			"Staterooms": 8,
+			"Fuel": 8,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"HC-023": {
+		"url": "HC/HC-023 [Aft] [50x50] [49-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Staterooms": 36,
+			"Lounge": 13
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6,
+			"RoomHigh": 2
+		}
+	},
+	"HC-024": {
+		"url": "HC/HC-024 [Aft] [50x50] [46-dTons] Mine Layer.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+			"Weapons": 40,
+			"Staterooms": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 1
+		},
+		"overlayUrl": "HC/HC-024 [Aft] [50x50] [Overlay] Shuttle.png"
+	},
+	"HC-025": {
+		"url": "HC/HC-025 [Aft] [50x100] [62-dTons] Cargo Bay, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 62,
+		"uses": {
+			"Cargo": 53,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "HC/HC-025 [Aft] [50x100] [Overlay] Cargo.png"
+	},
+	"HC-026": {
+		"url": "HC/HC-026 [Aft] [50x100] [50-dTons] Launch, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Docking": 22,
+			"Staterooms": 12,
+			"Lounge": 0,
+			"Airlock": 2,
+			"Cargo": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "HC/HC-026 [Aft] [50x100] [Overlay] 20-dTon Launch and Cargo.png"
+	},
+	"HC-027": {
+		"url": "HC/HC-027 [Aft] [50x50] [47-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Cargo": 47
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "HC/HC-027 [Aft] [50x50] [Overlay] Cargo.png"
+	},
+	"HC-028": {
+		"url": "HC/HC-028 [Aft] [50x50] [50-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 48,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"HC-029": {
+		"url": "HC/HC-029 [Aft] [50x50] [48-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Engineering": 27,
+			"Fuel": 21,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"HC-030": {
+		"url": "HC/HC-030 [Aft] [50x50] [40-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Engineering": 16,
+			"Fuel": 10,
+			"Workshop": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	}
+}

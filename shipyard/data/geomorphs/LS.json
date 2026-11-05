@@ -1,0 +1,1274 @@
+{
+	"LS-001": {
+		"mirrorUrl": "LS/LS-001 [Port] [50x100] [42-dTons] Staterooms, Drop Pods.png",
+		"url": "LS/LS-001 [Starboard] [50x100] [42-dTons] Staterooms, Drop Pods.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 42,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 3,
+			"Military": 8,
+			"Medical": 4,
+			"Weapons": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 6
+		}
+	},
+	"LS-002": {
+		"mirrorUrl": "LS/LS-002 [Port] [50x100] [42-dTons] Fuel.png",
+		"url": "LS/LS-002 [Starboard] [50x100] [42-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 42,
+		"uses": {
+			"Cargo": 9,
+			"Fuel": 31,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-003": {
+		"mirrorUrl": "LS/LS-003 [Port] [50x100] [49-dTons] Engineering, Fuel.png",
+		"url": "LS/LS-003 [Starboard] [50x100] [49-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 49,
+		"uses": {
+			"Engineering": 16,
+			"Fuel": 23
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-004": {
+		"mirrorUrl": "LS/LS-004 [Port] [50x100] [33-dTons] Engineering.png",
+		"url": "LS/LS-004 [Starboard] [50x100] [33-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 33,
+		"uses": {
+			"Engineering": 19,
+			"Workshop": 8,
+			"Fuel": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-005": {
+		"mirrorUrl": "LS/LS-005 [Port] [50x100] [31-dTons] Cargo Bay.png",
+		"overlayUrl": "LS/LS-005 [Starboard] [50x100] [Overlay] [31-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-005 [Port] [50x100] [Overlay] [31-dTons] Cargo.png",
+		"url": "LS/LS-005 [Starboard] [50x100] [31-dTons] Cargo Bay.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 31,
+		"uses": {
+			"Cargo": 31,
+			"Fuel": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-006": {
+		"mirrorUrl": "LS/LS-006 [Port] [50x100] [31-dTons] Fuel, Vehicle.png",
+		"overlayUrl": "LS/LS-006 [Starboard] [50x100] [Overlay] [31-dTons] Escape Pod.png",
+		"overlayMirrorUrl": "LS/LS-006 [Port] [50x100] [Overlay] [31-dTons] Escape Pod.png",
+		"url": "LS/LS-006 [Starboard] [50x100] [31-dTons] Fuel, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 31,
+		"uses": {
+			"Fuel": 27,
+			"Vehicle": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-007": {
+		"mirrorUrl": "LS/LS-007 [Port] [50x100] [34-dTons] Engineering, Ortillary.png",
+		"url": "LS/LS-007 [Starboard] [50x100] [34-dTons] Engineering, Ortillary.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 34,
+		"uses": {
+			"Engineering": 20,
+			"Fuel": 4,
+			"Weapons": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-008": {
+		"mirrorUrl": "LS/LS-008 [Port] [50x100] [34-dTons] Fuel, Engineering.png",
+		"url": "LS/LS-008 [Starboard] [50x100] [34-dTons] Fuel, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 34,
+		"uses": {
+			"Fuel": 21,
+			"Engineering": 11,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-009": {
+		"mirrorUrl": "LS/LS-009 [Port] [50x100] [41-dTons] Cargo, Fuel, Tow Cable.png",
+		"overlayUrl": "LS/LS-009 [Starboard] [50x100] [Overlay] [41-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-009 [Port] [50x100] [Overlay] [41-dTons] Cargo.png",
+		"url": "LS/LS-009 [Starboard] [50x100] [41-dTons] Cargo, Fuel, Tow Cable.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Cargo": 20,
+			"Fuel": 21,
+			"Engineering": 6,
+			"Sensors": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-010": {
+		"mirrorUrl": "LS/LS-010 [Port] [50x100] [40-dTons] Fuel, Staterooms, Turrets.png",
+		"url": "LS/LS-010 [Starboard] [50x100] [40-dTons] Fuel, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 40,
+		"uses": {
+			"Fuel": 29,
+			"Military": 2,
+			"Staterooms": 8,
+			"Lounge": 0,
+			"Weapons": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0,
+			"RoomSingle": 1
+		}
+	},
+	"LS-011": {
+		"mirrorUrl": "LS/LS-011 [Port] [50x100] [28-dTons] Fuel, Turret.png",
+		"url": "LS/LS-011 [Starboard] [50x100] [28-dTons] Fuel, Turret.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 28,
+		"uses": {
+			"Fuel": 22,
+			"Cargo": 3,
+			"Airlock": 2,
+			"Sensors": 1
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+	"LS-012": {
+		"mirrorUrl": "LS/LS-012 [Port] [50x100] [32-dTons] Fuel, Sensors.png",
+		"url": "LS/LS-012 [Starboard] [50x100] [32-dTons] Fuel, Sensors.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 32,
+		"uses": {
+			"Fuel": 20,
+			"Sensors": 10,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-013": {
+		"mirrorUrl": "LS/LS-013 [Port] [50x100] [32-dTons] Collapsible Fuel.png",
+		"url": "LS/LS-013 [Starboard] [50x100] [32-dTons] Collapsible Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 32,
+		"uses": {
+			"Cargo": 21,
+			"Airlock": 2,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-014": {
+		"mirrorUrl": "LS/LS-014 [Port] [50x100] [26-dTons] Sensors, Multi purpose.png",
+		"overlayUrl": "LS/LS-014 [Starboard] [50x100] [Overlay] [26-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-014 [Port] [50x100] [Overlay] [26-dTons] Cargo.png",
+		"url": "LS/LS-014 [Starboard] [50x100] [26-dTons] Sensors, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 26,
+		"uses": {
+			"Sensors": 15,
+			"Cargo": 9,
+			"Lounge": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-015": {
+		"mirrorUrl": "LS/LS-015 [Port] [50x120] [63-dTons] Engineering, Staterooms.png",
+		"url": "LS/LS-015 [Starboard] [50x120] [63-dTons] Engineering, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 24,
+		"tons": 63,
+		"uses": {
+			"Engineering": 32,
+			"Staterooms": 12,
+			"Lounge": 4,
+			"Workshop": 0,
+			"Airlock": 2,
+			"Fuel": 13
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 3
+		}
+	},
+	"LS-016": {
+		"mirrorUrl": "LS/LS-016 [Port] [50x100] [41-dTons] Staterooms, Engineering.png",
+		"url": "LS/LS-016 [Starboard] [50x100] [41-dTons] Staterooms, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Staterooms": 24,
+			"Engineering": 7,
+			"Lounge": 8,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 3,
+			"RoomDouble": 3
+		}
+	},
+	"LS-017": {
+		"mirrorUrl": "LS/LS-017 [Port] [50x110] [36-dTons] Engineering, Fuel.png",
+		"url": "LS/LS-017 [Starboard] [50x110] [36-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 22,
+		"tons": 36,
+		"uses": {
+			"Engineering": 18,
+			"Fuel": 18,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-018": {
+		"mirrorUrl": "LS/LS-018 [Port] [50x120] [63-dTons] Engineering, Fuel.png",
+		"overlayUrl": "LS/LS-018 [Starboard] [50x120] [Overlay] [63-dTons] Air-Raft.png",
+		"overlayMirrorUrl": "LS/LS-018 [Port] [50x120] [Overlay] [63-dTons] Air-Raft.png",
+		"url": "LS/LS-018 [Starboard] [50x120] [63-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 24,
+		"tons": 63,
+		"uses": {
+			"Engineering": 32,
+			"Fuel": 25,
+			"Airlock": 2,
+			"Vehicle": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-019": {
+		"mirrorUrl": "LS/LS-019 [Port] [50x100] [33+22-dTons] Multi purpose.png",
+		"overlayUrl": "LS/LS-019 [Starboard] [50x100] [Overlay] [33+22-dTons] Shuttle and Cargo.png",
+		"overlayMirrorUrl": "LS/LS-019 [Port] [50x100] [Overlay] [33+22-dTons] Cargo and Shuttle.png",
+		"url": "LS/LS-019 [Starboard] [50x100] [33+22-dTons] Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 55,
+		"uses": {
+			"Aerofin": 22,
+			"Cargo": 8,
+			"Docking": 5,
+			"Engineering": 8,
+			"Staterooms": 12
+		},
+		"facilities": {
+			"RoomDouble": 3,
+			"Airlocks": 0
+		}
+	},
+	"LS-020": {
+		"mirrorUrl": "LS/LS-020 [Port] [50x100] [31+13-dTons] Engineering, Fuel.png",
+		"url": "LS/LS-020 [Starboard] [50x100] [31+13-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 44,
+		"uses": {
+			"Engineering": 16,
+			"Fuel": 14,
+			"Aerofin": 13,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-021": {
+		"mirrorUrl": "LS/LS-021 [Port] [50x100] [44-dTons] Fighter Hangar.png",
+		"overlayUrl": "LS/LS-021 [Starboard] [50x100] [Overlay] [44-dTons] Rampart Fighter.png",
+		"overlayMirrorUrl": "LS/LS-021 [Port] [50x100] [Overlay] [44-dTons] Rampart Fighter.png",
+		"url": "LS/LS-021 [Starboard] [50x100] [44-dTons] Fighter Hangar.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 44,
+		"uses": {
+			"Hangar": 44
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-022": {
+		"mirrorUrl": "LS/LS-022 [Port] [50x100] [32-dTons] Cargo, Fuel, Staterooms.png",
+		"overlayUrl": "LS/LS-022 [Starboard] [50x100] [Overlay] [32-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-022 [Port] [50x100] [Overlay] [32-dTons] Cargo.png",
+		"url": "LS/LS-022 [Starboard] [50x100] [32-dTons] Cargo, Fuel, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 32,
+		"uses": {
+			"Cargo": 12,
+			"Fuel": 12,
+			"Staterooms": 4,
+			"Lounge": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"LS-023": {
+		"mirrorUrl": "LS/LS-023 [Port] [50x100] [33-dTons] Engineering, Cargo, Fuel.png",
+		"overlayUrl": "LS/LS-023 [Starboard] [50x100] [Overlay] [33-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-023 [Port] [50x100] [Overlay] [33-dTons] Cargo.png",
+		"url": "LS/LS-023 [Starboard] [50x100] [33-dTons] Engineering, Cargo, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 33,
+		"uses": {
+			"Engineering": 13,
+			"Cargo": 11,
+			"Fuel": 9,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-024": {
+		"mirrorUrl": "LS/LS-024 [Port] [50x100] [29-dTons] Labs.png",
+		"url": "LS/LS-024 [Starboard] [50x100] [29-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 29,
+		"uses": {
+			"Labs": 16,
+			"Staterooms": 8,
+			"Airlock": 2,
+			"Lounge": 3
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 1
+		}
+	},
+	"LS-025": {
+		"mirrorUrl": "LS/LS-025 [Port] [50x100] [29-dTons] Fuel.png",
+		"url": "LS/LS-025 [Starboard] [50x100] [29-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 29,
+		"uses": {
+			"Fuel": 29
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-026": {
+		"mirrorUrl": "LS/LS-026 [Port] [50x100] [29-dTons] Cargo Bay.png",
+		"overlayUrl": "LS/LS-026 [Starboard] [50x100] [Overlay] [29-dTons] Animals and Cargo.png",
+		"overlayMirrorUrl": "LS/LS-026 [Port] [50x100] [Overlay] [29-dTons] Animals and Cargo.png",
+		"url": "LS/LS-026 [Starboard] [50x100] [29-dTons] Cargo Bay.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 29,
+		"uses": {
+			"Cargo": 23,
+			"Stable": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-027": {
+		"mirrorUrl": "LS/LS-027 [Port] [50x100] [29-dTons] Engineering, Staterooms.png",
+		"url": "LS/LS-027 [Starboard] [50x100] [29-dTons] Engineering, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 29,
+		"uses": {
+			"Engineering": 15,
+			"Staterooms": 8,
+			"Fuel": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"LS-028": {
+		"mirrorUrl": "LS/LS-028 [Port] [50x100] [23-dTons] Staterooms, Sensors.png",
+		"url": "LS/LS-028 [Starboard] [50x100] [23-dTons] Staterooms, Sensors.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 23,
+		"uses": {
+			"Staterooms": 8,
+			"Lounge": 7,
+			"Sensors": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"LS-029": {
+		"mirrorUrl": "LS/LS-029 [Port] [50x100] [23-dTons] Labs.png",
+		"url": "LS/LS-029 [Starboard] [50x100] [23-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 23,
+		"uses": {
+			"Labs": 21,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-030": {
+		"mirrorUrl": "LS/LS-030 [Port] [50x100] [23-dTons] Barracks.png",
+		"url": "LS/LS-030 [Starboard] [50x100] [23-dTons] Barracks.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 23,
+		"uses": {
+			"Barracks": 21,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Seats": 12
+		}
+	},
+	"LS-031": {
+		"mirrorUrl": "LS/LS-031 [Port] [50x100] [23-dTons] Barracks.png",
+		"url": "LS/LS-031 [Starboard] [50x100] [23-dTons] Barracks.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 23,
+		"uses": {
+			"Barracks": 23,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 24
+		}
+	},
+	"LS-032": {
+		"mirrorUrl": "LS/LS-032 [Port] [50x100] [23-dTons] Staterooms.png",
+		"url": "LS/LS-032 [Starboard] [50x100] [23-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 23,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"LS-033": {
+		"mirrorUrl": "LS/LS-033 [Port] [50x100] [23-dTons] Fuel, Life Support.png",
+		"url": "LS/LS-033 [Starboard] [50x100] [23-dTons] Fuel, Life Support.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 23,
+		"uses": {
+			"Fuel": 16,
+			"Airlock": 2,
+			"Lounge": 5
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-034": {
+		"mirrorUrl": "LS/LS-034 [Port] [50x100] [30-dTons] Grav Tank Hangar.png",
+		"overlayUrl": "LS/LS-034 [Starboard] [50x100] [Overlay] [30-dTons] Grav Tanks.png",
+		"overlayMirrorUrl": "LS/LS-034 [Port] [50x100] [Overlay] [30-dTons] Grav Tanks.png",
+		"url": "LS/LS-034 [Starboard] [50x100] [30-dTons] Grav Tank Hangar.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 30,
+		"uses": {
+			"Vehicle": 30
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-035": {
+		"mirrorUrl": "LS/LS-035 [Port] [50x100] [30-dTons] Steerage, Fuel.png",
+		"url": "LS/LS-035 [Starboard] [50x100] [30-dTons] Steerage, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 30,
+		"uses": {
+			"Barracks": 22,
+			"Fuel": 8,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 25
+		}
+	},
+	"LS-036": {
+		"mirrorUrl": "LS/LS-036 [Port] [50x110] [45-dTons] Staterooms, Engineering.png",
+		"url": "LS/LS-036 [Starboard] [50x110] [45-dTons] Staterooms, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 22,
+		"tons": 45,
+		"uses": {
+			"Staterooms": 8,
+			"Engineering": 18,
+			"Lounge": 7,
+			"Fuel": 11,
+			"Airlock": 1
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"LS-037": {
+		"mirrorUrl": "LS/LS-037 [Port] [100x100] [45+36-dTons] Labs, Engineering.png",
+		"url": "LS/LS-037 [Starboard] [100x100] [45+36-dTons] Labs, Engineering.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 81,
+		"uses": {
+			"Labs": 12,
+			"Lounge": 3,
+			"Engineering": 18,
+			"Aerofin": 36,
+			"Fuel": 10,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-038": {
+		"mirrorUrl": "LS/LS-038 [Port] [50x100] [36+14-dTons] Multi purpose.png",
+		"overlayUrl": "LS/LS-038 [Starboard] [50x100] [Overlay] [36+14-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-038 [Port] [50x100] [Overlay] [36+14-dTons] Cargo.png",
+		"url": "LS/LS-038 [Starboard] [50x100] [36+14-dTons] Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Aerofin": 14,
+			"Staterooms": 8,
+			"Airlock": 2,
+			"Cargo": 15,
+			"Engineering": 2,
+			"Lounge": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-039": {
+		"mirrorUrl": "LS/LS-039 [Port] [50x100] [29-dTons] Engineering, Fuel.png",
+		"url": "LS/LS-039 [Starboard] [50x100] [29-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 29,
+		"uses": {
+			"Engineering": 15,
+			"Fuel": 12,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-040": {
+		"mirrorUrl": "LS/LS-040 [Port] [50x100] [21+17-dTons] Engineering, Multi purpose.png",
+		"overlayUrl": "LS/LS-040 [Starboard] [50x100] [Overlay] [21+17-dTons] Air-Raft.png",
+		"overlayMirrorUrl": "LS/LS-040 [Port] [50x100] [Overlay] [21+17-dTons] Air-Raft.png",
+		"url": "LS/LS-040 [Starboard] [50x100] [21+17-dTons] Engineering, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 38,
+		"uses": {
+			"Engineering": 7,
+			"Aerofin": 17,
+			"Workshop": 6,
+			"Airlock": 2,
+			"Fuel": 6
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-041": {
+		"mirrorUrl": "LS/LS-041 [Port] [50x100] [49-dTons] Fuel, Engineering.png",
+		"url": "LS/LS-041 [Starboard] [50x100] [49-dTons] Fuel, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 49,
+		"uses": {
+			"Fuel": 32,
+			"Engineering": 12,
+			"Military": 4,
+			"Weapons": 1,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-042": {
+		"mirrorUrl": "LS/LS-042 [Port] [50x100] [50-dTons] Fuel, Cargo Bay.png",
+		"overlayUrl": "LS/LS-042 [Starboard] [50x100] [Overlay] [50-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-042 [Port] [50x100] [Overlay] [50-dTons] Cargo.png",
+		"url": "LS/LS-042 [Starboard] [50x100] [50-dTons] Fuel, Cargo Bay.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Fuel": 25,
+			"Cargo": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-043": {
+		"mirrorUrl": "LS/LS-043 [Port] [50x100] [8+150-dTons] Drop Tanks.png",
+		"url": "LS/LS-043 [Starboard] [50x100] [8+150-dTons] Drop Tanks.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 158,
+		"uses": {
+			"Engineering": 8,
+			"Fuel": 150
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-044": {
+		"mirrorUrl": "LS/LS-044 [Port] [50x100] [8+150-dTons] Drop Tanks - Detached.png",
+		"url": "LS/LS-044 [Starboard] [50x100] [8+150-dTons] Drop Tanks - Detached.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 158,
+		"uses": {
+			"Engineering": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-045": {
+		"mirrorUrl": "LS/LS-045 [Port] [50x100] [34-dTons] Fuel.png",
+		"url": "LS/LS-045 [Starboard] [50x100] [34-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 34,
+		"uses": {
+			"Fuel": 34
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-046": {
+		"mirrorUrl": "LS/LS-046 [Port] [50x100] [30-dTons] Staterooms, Engineering.png",
+		"url": "LS/LS-046 [Starboard] [50x100] [30-dTons] Staterooms, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 30,
+		"uses": {
+			"Staterooms": 12,
+			"Engineering": 11,
+			"Lounge": 4,
+			"Workshop": 0,
+			"Low Berths": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"LS-047": {
+		"mirrorUrl": "LS/LS-047 [Port] [50x100] [35-dTons] Medical.png",
+		"url": "LS/LS-047 [Starboard] [50x100] [35-dTons] Medical.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Medical": 33,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-048": {
+		"mirrorUrl": "LS/LS-048 [Port] [100x110] [46+29-dTons] Engineering, Fuel.png",
+		"url": "LS/LS-048 [Starboard] [100x110] [46+29-dTons] Engineering, Fuel.png",
+		"sizeX": 20,
+		"sizeY": 22,
+		"tons": 75,
+		"uses": {
+			"Engineering": 33,
+			"Fuel": 11,
+			"Aerofin": 29,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-049": {
+		"mirrorUrl": "LS/LS-049 [Port] [50x100] [36-dTons] Engineering, Ortillary, Staterooms.png",
+		"url": "LS/LS-049 [Starboard] [50x100] [36-dTons] Engineering, Ortillary, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 36,
+		"uses": {
+			"Engineering": 20,
+			"Staterooms": 8,
+			"Airlock": 2,
+			"Weapons": 6
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"LS-050": {
+		"mirrorUrl": "LS/LS-050 [Port] [100x100] [53+21-dTons] Staterooms, Fuel.png",
+		"overlayUrl": "LS/LS-050 [Starboard] [100x100] [Overlay] [53+21-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-050 [Port] [100x100] [Overlay] [53+21-dTons] Cargo.png",
+		"url": "LS/LS-050 [Starboard] [100x100] [53+21-dTons] Staterooms, Fuel.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 74,
+		"uses": {
+			"Staterooms": 20,
+			"Fuel": 5,
+			"Cargo": 17,
+			"Aerofin": 21,
+			"Lounge": 11
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 5
+		}
+	},
+	"LS-051": {
+		"mirrorUrl": "LS/LS-051 [Port] [50x100] [51-dTons] Fuel, Engineering.png",
+		"url": "LS/LS-051 [Starboard] [50x100] [51-dTons] Fuel, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 51,
+		"uses": {
+			"Fuel": 43,
+			"Engineering": 8,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-052": {
+		"mirrorUrl": "LS/LS-052 [Port] [50x100] [30-dTons] Cargo Bay, Turret.png",
+		"overlayUrl": "LS/LS-052 [Starboard] [50x100] [Overlay] [30-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-052 [Port] [50x100] [Overlay] [30-dTons] Cargo.png",
+		"url": "LS/LS-052 [Starboard] [50x100] [30-dTons] Cargo Bay, Turret.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 30,
+		"uses": {
+			"Cargo": 22,
+			"Weapons": 3,
+			"Fuel": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2
+		}
+	},
+	"LS-053": {
+		"mirrorUrl": "LS/LS-053 [Port] [50x100] [58-dTons] Engineering, Cargo Bay.png",
+		"overlayUrl": "LS/LS-053 [Starboard] [50x100] [Overlay] [58-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-053 [Port] [50x100] [Overlay] [58-dTons] Cargo.png",
+		"url": "LS/LS-053 [Starboard] [50x100] [58-dTons] Engineering, Cargo Bay.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 58,
+		"uses": {
+			"Engineering": 48,
+			"Cargo": 10,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-054": {
+		"mirrorUrl": "LS/LS-054 [Port] [50x100] [32+30-dTons] Fuel, Engineering.png",
+		"url": "LS/LS-054 [Starboard] [50x100] [32+30-dTons] Fuel, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 62,
+		"uses": {
+			"Fuel": 19,
+			"Engineering": 12,
+			"Comms": 1,
+			"Aerofin": 30,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-055": {
+		"mirrorUrl": "LS/LS-055 [Port] [50x100] [45-dTons] Engineering, Fuel.png",
+		"url": "LS/LS-055 [Starboard] [50x100] [45-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 45,
+		"uses": {
+			"Engineering": 12,
+			"Fuel": 31,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-056": {
+		"mirrorUrl": "LS/LS-056 [Port] [50x100] [46-dTons] Engineering, Fuel.png",
+		"url": "LS/LS-056 [Starboard] [50x100] [46-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 46,
+		"uses": {
+			"Engineering": 16,
+			"Fuel": 15,
+			"Lounge": 7,
+			"Workshop": 4,
+			"Airlock": 2,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2
+		}
+	},
+	"LS-057": {
+		"mirrorUrl": "LS/LS-057 [Port] [50x110] [37-dTons] Fuel, Vehicel, Cargo.png",
+		"overlayUrl": "LS/LS-057 [Starboard] [50x110] [Overlay] [37-dTons] Air-Raft.png",
+		"overlayMirrorUrl": "LS/LS-057 [Port] [50x110] [Overlay] [37-dTons] Air-Raft.png",
+		"url": "LS/LS-057 [Starboard] [50x110] [37-dTons] Fuel, Vehicel, Cargo.png",
+		"sizeX": 10,
+		"sizeY": 22,
+		"tons": 37,
+		"uses": {
+			"Fuel": 29,
+			"Cargo": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-058": {
+		"mirrorUrl": "LS/LS-058 [Port] [50x100] [54-dTons] Fuel, Turrets.png",
+		"url": "LS/LS-058 [Starboard] [50x100] [54-dTons] Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 54,
+		"uses": {
+			"Fuel": 47,
+			"Military": 4,
+			"Weapons": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 4,
+			"Barbettes": 0,
+			"Capsules": 4
+		}
+	},
+	"LS-059": {
+		"mirrorUrl": "LS/LS-059 [Port] [50x100] [36+20-dTons] Staterooms, Fuel.png",
+		"overlayUrl": "LS/LS-059 [Starboard] [50x100] [Overlay] [36+20-dTons] Air-Raft.png",
+		"overlayMirrorUrl": "LS/LS-059 [Port] [50x100] [Overlay] [36+20-dTons] Air-Raft.png",
+		"url": "LS/LS-059 [Starboard] [50x100] [36+20-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 56,
+		"uses": {
+			"Staterooms": 12,
+			"Fuel": 8,
+			"Aerofin": 20,
+			"Lounge": 8,
+			"Cargo": 6,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Barbettes": 2,
+			"RoomSingle": 0,
+			"RoomDouble": 3
+		}
+	},
+	"LS-060": {
+		"mirrorUrl": "LS/LS-060 [Port] [100x100] [31+38-dTons] Engineering, Fuel.png",
+		"url": "LS/LS-060 [Starboard] [100x100] [31+38-dTons] Engineering, Fuel.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 69,
+		"uses": {
+			"Engineering": 19,
+			"Fuel": 10,
+			"Aerofin": 38,
+			"Workshop": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-061": {
+		"mirrorUrl": "LS/LS-061 [Port] [50x100] [34-dTons] Cargo Bay, Fuel.png",
+		"overlayUrl": "LS/LS-061 [Starboard] [50x100] [Overlay] [34-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-061 [Port] [50x100] [Overlay] [34-dTons] Cargo.png",
+		"url": "LS/LS-061 [Starboard] [50x100] [34-dTons] Cargo Bay, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 34,
+		"uses": {
+			"Cargo": 12,
+			"Fuel": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-062": {
+		"mirrorUrl": "LS/LS-062 [Port] [50x100] [35-dTons] Cargo Bay, Fuel.png",
+		"overlayUrl": "LS/LS-062 [Starboard] [50x100] [Overlay] [35-dTons] Cargo.png",
+		"overlayMirrorUrl": "LS/LS-062 [Port] [50x100] [Overlay] [35-dTons] Cargo.png",
+		"url": "LS/LS-062 [Starboard] [50x100] [35-dTons] Cargo Bay, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Cargo": 19,
+			"Fuel": 16
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LS-063": {
+		"mirrorUrl": "LS/LS-063 [Port] [100x110] [8+68-dTons] Aerofin, Sensors.png",
+		"url": "LS/LS-063 [Starboard] [100x110] [8+68-dTons] Aerofin, Sensors.png",
+		"sizeX": 20,
+		"sizeY": 22,
+		"tons": 76,
+		"uses": {
+			"Aerofin": 68,
+			"Sensors": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"LS-064": {
+		"mirrorUrl": "LS/LS-064 [Port] [100x100] [36+34-dTons] Engineering, Aerofin.png",
+		"url": "LS/LS-064 [Starboard] [100x100] [36+34-dTons] Engineering, Aerofin.png",
+		"sizeX": 20,
+		"sizeY": 20,
+		"tons": 70,
+		"uses": {
+			"Engineering": 24,
+			"Fuel": 10,
+			"Aerofin": 34,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+
+
+
+
+ "AF01": {
+  "url": "../geomorphs/LS/AF01 [50x100] Starboard (Fuel Intake Scoops, Missiles, Engineering).png",
+  "mirrorUrl": "../geomorphs/LS/AF01 [50x100] Port (Fuel Intake Scoops, Missiles, Engineering).png",
+  "sizeX": 10,
+  "sizeY": 20,
+  "tons": 79,
+  "uses": {
+   "Weapons": 6,
+   "Fuel": 21,
+   "Engineering": 21,
+   "Aerofin": 31
+  },
+  "facilities": {
+   "Turrets": 1
+  }
+ },
+ "AF02": {
+  "url": "../geomorphs/LS/AF02 [50x100] Starboard (Fuel Intake Scoops, 2x Gunnery).png",
+  "mirrorUrl": "../geomorphs/LS/AF02 [50x100] Port (Fuel Intake Scoops, 2x Gunnery).png",
+  "sizeX": 10,
+  "sizeY": 20,
+  "tons": 56,
+  "uses": {
+	"Weapons": 3,
+	"Fuel": 53
+  },
+  "facilities": {
+   "Turrets": 2
+  }
+ },
+ "AF03": {
+  "url": "../geomorphs/LS/AF03 [50x200] Starboard (4x Gunnery, Fuel).png",
+  "mirrorUrl": "../geomorphs/LS/AF03 [50x200] Port (4x Gunnery, Fuel).png",
+  "sizeX": 10,
+  "sizeY": 40,
+  "tons": 77,
+  "uses": {
+	"Weapons": 8,
+	"Fuel": 69
+  },
+  "facilities": {
+   "Turrets": 3,
+   "Barbettes": 1
+  }
+ },
+ "AF04": {
+  "url": "../geomorphs/LS/AF04 [50x100] Starboard (Fuel).png",
+  "mirrorUrl": "../geomorphs/LS/AF04 [50x100] Port (Fuel).png",
+  "sizeX": 10,
+  "sizeY": 20,
+  "tons": 27,
+  "uses": {
+	"Fuel": 27
+  },
+  "facilities": {
+   "Airlocks": 0
+  }
+ },
+ "AF05": {
+  "url": "../geomorphs/LS/AF05 [50x100] Starboard (2x Gunnery, Fuel).png",
+  "mirrorUrl": "../geomorphs/LS/AF05 [50x100] Port (2x Gunnery, Fuel).png",
+  "sizeX": 10,
+  "sizeY": 20,
+  "tons": 36,
+  "uses": {
+	"Weapons": 3,
+	"Fuel": 33
+  },
+  "facilities": {
+   "Turrets": 2
+  }
+ },
+ "AF06": {
+  "url": "../geomorphs/LS/AF06 [50x100] Starboard (1x Gunnery, Engineering, Fuel).png",
+  "mirrorUrl": "../geomorphs/LS/AF06 [50x100] Port (1x Gunnery, Engineering, Fuel).png",
+  "sizeX": 10,
+  "sizeY": 20,
+  "tons": 44,
+  "uses": {
+   "Engineering": 8,
+	"Weapons": 2,
+	"Fuel": 34
+  },
+  "facilities": {
+   "Turrets": 1
+  }
+ },
+ "AF07": {
+  "url": "../geomorphs/LS/AF07 [50x100] Starboard (Fuel Intake Scoops, Engineering).png",
+  "mirrorUrl": "../geomorphs/LS/AF07 [50x100] Port (Fuel Intake Scoops, Engineering).png",
+  "sizeX": 10,
+  "sizeY": 20,
+  "tons": 57,
+  "uses": {
+   "Weapons": 0,
+   "Fuel": 35,
+   "Engineering": 6,
+   "Aerofin": 16
+  },
+  "facilities": {
+   "Airlocks": 0
+  }
+ },
+ "AF08": {
+  "url": "../geomorphs/LS/AF08 [50x100] Starboard (2x Gunnery, Fuel, Vertical Aerofin).png",
+  "mirrorUrl": "../geomorphs/LS/AF08 [50x100] Port (2x Gunnery, Fuel, Vertical Aerofin).png",
+  "sizeX": 10,
+  "sizeY": 20,
+  "tons": 60,
+  "uses": {
+   "Weapons": 6,
+   "Fuel": 54
+  },
+  "facilities": {
+   "Turrets": 3
+  }
+ },
+ "AF09": {
+  "url": "../geomorphs/LS/AF09 [100x100] Starboard (Staterooms, Cargo Hold, Engineering, Cargo Shuttle Dock, Fuel Intake Scoops, Wingtip Engines).png",
+  "mirrorUrl": "../geomorphs/LS/AF09 [100x100] Port (Staterooms, Cargo Hold, Engineering, Cargo Shuttle Dock, Fuel Intake Scoops, Wingtip Engines).png",
+  "sizeX": 20,
+  "sizeY": 20,
+  "tons": 81,
+  "uses": {
+   "Staterooms": 18,
+   "Fuel": 0,
+   "Engineering": 16,
+   "Cargo": 6,
+   "Vehicle": 4,
+   "Aerofin": 33
+  },
+  "facilities": {
+   "RoomSingle": 2,
+   "RoomDouble": 1,
+   "RoomHigh": 1
+  },
+  "overlayUrl": "../geomorphs/LS/AF09 [100x100] [Overlay] Starboard Cargo Shuttle.png",
+  "overlayMirrorUrl": "../geomorphs/LS/AF09 [100x100] [Overlay] Port Cargo Shuttle.png"
+ },
+ "AF10": {
+  "url": "../geomorphs/LS/AF10 [50x100] Starboard (Engineering, Fuel).png",
+  "mirrorUrl": "../geomorphs/LS/AF10 [50x100] Port (Engineering, Fuel).png",
+  "sizeX": 20,
+  "sizeY": 20,
+  "tons": 68,
+  "uses": {
+   "Fuel": 17,
+   "Engineering": 8,
+   "Aerofin": 43},
+  "facilities": {
+   "Airlocks": 0
+  }
+ },
+ "AF11": {
+  "url": "../geomorphs/LS/AF11 [50x200] Starboard (Fuel Intake Scoops, Cargo Bay, Engineering, Airlock).png",
+  "mirrorUrl": "../geomorphs/LS/AF11 [50x200] Port (Fuel Intake Scoops, Cargo Bay, Engineering, Airlock).png",
+  "sizeX": 10,
+  "sizeY": 40,
+  "tons": 116,
+  "uses": {
+  "Cargo": 40,
+   "Fuel": 60,
+   "Engineering": 16,
+   "Airlock": 2
+  },
+  "facilities": {
+   "Airlocks": 1
+  }
+ },
+ "AF12": {
+  "url": "../geomorphs/LS/AF12 [50x50] Starboard (Fuel).png",
+  "mirrorUrl": "../geomorphs/LS/AF12 [50x50] Port (Fuel).png",
+  "sizeX": 10,
+  "sizeY": 10,
+  "tons": 25,
+  "uses": {
+  "Fuel": 25
+  },
+  "facilities": {
+   "Airlocks": 0
+  }
+ },
+ "AF13": {
+  "url": "../geomorphs/LS/AF13 [50x100] (1) Starboard (Fuel Intake Scoops).png",
+  "mirrorUrl": "../geomorphs/LS/AF13 [50x100] (1) Port (Fuel Intake Scoops).png",
+  "sizeX": 10,
+  "sizeY": 20,
+  "tons": 50,
+  "uses": {
+  "Fuel": 50
+  },
+  "facilities": {
+   "Airlocks": 0
+  }
+ }
+
+}

@@ -1,0 +1,1748 @@
+{
+	"501": {
+		"url": "corner/501 [50x50] Fuel Deck (Intake Scoop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Fuel": 34
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"502": {
+		"url": "corner/502 [50x50] [Mirror] Fuel Deck (Intake Scoop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Fuel": 20,
+			"Engineering": 5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"503": {
+		"url": "corner/503 [50x50] Fuel Deck.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Fuel": 31
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"504": {
+		"url": "corner/504 [50x50] Fuel Refinery (Intake Scoop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 15,
+			"Fuel": 35
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"505": {
+		"url": "corner/505 [50x50] Fuel Deck & Gunnery (Intake Scoop, 1x Gunnery, Office).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Lounge": 2,
+			"Weapons": 2,
+			"Fuel": 43
+		},
+		"facilities": {
+			"Turrets": 1
+		}
+	},
+	"506": {
+		"url": "corner/506 [50x50] Bridge & Crew Area (4 Station Bridge, Avionics, Probes, Staterooms, Air-Raft, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Bridge": 6,
+			"Staterooms": 16,
+			"Vehicle": 6,
+			"Sensors": 6,
+			"Lounge": 16
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 0,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"mirrorUrl": "corner/506 [50x50] [Mirror] Bridge & Crew Area (4 Station Bridge, Avionics, Probes, Staterooms, Air-Raft, Lounge).png",
+		"overlayMirrorUrl": "corner/506 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/506 [50x50] [Overlay] Air-Raft.png"
+	},
+	"507": {
+		"url": "corner/507 [50x50] Bridge (3 Station Bridge, 2x Gunnery, Air-Raft, Office, Stateroom, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 45,
+		"uses": {
+			"Bridge": 6,
+			"Weapons": 4,
+			"Staterooms": 4,
+			"Vehicle": 6,
+			"Lounge": 25
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2
+		},
+		"mirrorUrl": "corner/507 [50x50] [Mirror] Bridge (3 Station Bridge, 2x Gunnery, Air-Raft, Office, Stateroom, Lounge).png",
+		"overlayMirrorUrl": "corner/507 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/507 [50x50] [Overlay] Air-Raft.png"
+	},
+	"508": {
+		"url": "corner/508 [50x50] Bridge (8 Station Bridge, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Bridge": 42,
+			"Lounge": 5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"509": {
+		"url": "corner/509 [50x50] Bridge (3 Station Bridge, 2x Gunnery, Lounge, Briefing, Security).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Bridge": 12,
+			"Weapons": 4,
+			"Comms": 12,
+			"Briefing": 4,
+			"Military": 4,
+			"Lounge": 11
+		},
+		"facilities": {
+			"Turrets": 2
+		}
+	},
+	"510": {
+		"url": "corner/510 [50x50] Bridge (4 Station Bridge, 2x Gunnery, Stateroom, Office, Briefing).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Bridge": 10,
+			"Briefing": 8,
+			"Staterooms": 8,
+			"Weapons": 3,
+			"Comms": 2,
+			"Lounge": 17
+		},
+		"facilities": {
+			"Barbettes": 2,
+			"RoomDouble": 2
+		}
+	},
+	"511": {
+		"url": "corner/511 [50x50] Bridge (3 Station Bridge, Communications, Staterooms, Security).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Bridge": 10,
+			"Military": 6,
+			"Brig": 2,
+			"Staterooms": 16,
+			"Sensors": 2,
+			"Lounge": 13
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 3,
+			"Prisoners": 1
+		}
+	},
+	"512": {
+		"url": "corner/512 [50x50] Bridge & Engineering (3 Station Bridge, 2x Gunnery, Air-Raft, Briefing, Office).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Bridge": 5,
+			"Briefing": 4,
+			"Weapons": 3,
+			"Comms": 2,
+			"Airlock": 2,
+			"Vehicle": 4,
+			"Engineering": 20,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/512 [50x50] [Mirror] Bridge & Engineering (3 Station Bridge, 2x Gunnery, Air-Raft, Briefing, Office).png",
+		"overlayMirrorUrl": "corner/512 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/512 [50x50] [Overlay] Air-Raft.png"
+	},
+	"513": {
+		"url": "corner/513 [50x50] Cargo Bay (Cargo Lift).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"514": {
+		"url": "corner/514 [50x50] Cargo Bay (Cargo Lift, Air-Raft).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 44,
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/514 [50x50] [Mirror] Cargo Bay (Cargo Lift, Air-Raft).png",
+		"overlayMirrorUrl": "corner/514 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/514 [50x50] [Overlay] Air-Raft.png"
+	},
+	"515": {
+		"url": "corner/515 [50x50] Cargo Bay (10-dTon Ship's Boat).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 29,
+			"Docking": 11,
+			"Stables": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/515 [50x50] [Mirror] Cargo Bay (10-dTon Ship's Boat).png",
+		"overlayMirrorUrl": "corner/515 [50x50] [Mirror] [Overlay] 10-dTon Ship's Boat.png",
+		"overlayUrl": "corner/515 [50x50] [Overlay] 10-dTon Ship's Boat.png"
+	},
+	"516": {
+		"url": "corner/516 [50x50] Cargo Bay & Launch (20-dTon Launch).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Docking": 22,
+			"Cargo": 28
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/516 [50x50] [Mirror] Cargo Bay & Launch (20-dTon Launch).png",
+		"overlayMirrorUrl": "corner/516 [50x50] [Mirror] [Overlay] Retractable Airlock.png",
+		"overlayUrl": "corner/516 [50x50] [Overlay] Retractable Airlock.png"
+	},
+	"517": {
+		"url": "corner/517 [50x50] Cargo Bay & Launch (20-dTon Launch, Cargo Lift).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Docking": 22,
+			"Cargo": 28
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/517 [50x50] [Mirror] Cargo Bay & Launch (20-dTon Launch, Cargo Lift).png",
+		"overlayMirrorUrl": "corner/517 [50x50] [Mirror] [Overlay] 20-dTon Launch (Cargo).png",
+		"overlayUrl": "corner/517 [50x50] [Overlay] 20-dTon Launch (Cargo).png"
+	},
+	"518": {
+		"url": "corner/518 [50x50] Cargo Bay & Launch (20-dTon Launch, Office, Airlock).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Docking": 22,
+			"Comms": 4,
+			"Airlock": 2,
+			"Cargo": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/518 [50x50] [Mirror] Cargo Bay & Launch (20-dTon Launch, Office, Airlock).png",
+		"overlayMirrorUrl": "corner/518 [50x50] [Mirror] [Overlay] 20-dTon Launch (Cargo).png",
+		"overlayUrl": "corner/518 [50x50] [Overlay] 20-dTon Launch (Cargo).png"
+	},
+	"519": {
+		"url": "corner/519 [50x50] Launch & Gunnery (Fast Launch, 2x Gunnery, Stateroom, Office, Launge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Docking": 22,
+			"Weapons": 3,
+			"Airlock": 2,
+			"Staterooms": 8,
+			"Lounge": 15
+		},
+		"facilities": {
+			"Barbettes": 1, "Turrets": 1, "RoomSingle": 2
+		},
+		"mirrorUrl": "corner/519 [50x50] [Mirror] Launch & Gunnery (Fast Launch, 2x Gunnery, Stateroom, Office, Launge).png",
+		"overlayMirrorUrl": "corner/519 [50x50] [Mirror] [Overlay] Fast Launch.png",
+		"overlayUrl": "corner/519 [50x50] [Overlay] Fast Launch.png"
+	},
+	"520": {
+		"url": "corner/520 [50x50] Engineering (Fuel, Offices, Sensor).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Fuel": 12,
+            "Sensors": 6,
+            "Engineering": 20,
+            "Comms": 4,
+            "Lounge":8
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/520 [50x50] [Mirror] Engineering (Fuel, Offices, Sensor).png"
+	},
+	"521": {
+		"url": "corner/521 [50x50] Engineering (Air-Raft).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+            "Vehicle": 4,
+            "Engineering": 43
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/521 [50x50] [Mirror] Engineering (Air-Raft).png",
+		"overlayMirrorUrl": "corner/521 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/521 [50x50] [Overlay] Air-Raft.png"
+	},
+	"522": {
+		"url": "corner/522 [50x50] Engineering (Offices, Repair Shop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 45,
+		"uses": {
+            "Workshop": 5,
+            "Engineering": 40
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"523": {
+		"url": "corner/523 [50x50] Engineering (Offices, Repair Shop, Security).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+            "Workshop": 4,
+            "Engineering": 45
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"524": {
+		"url": "corner/524 [50x50] Engineering-Sensors (Work Pod, Sensor Probes, Briefing).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 45,
+		"uses": {
+            "Briefing": 8,
+            "Sensors": 10,
+            "Engineering": 27
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"525": {
+		"url": "corner/525 [50x50] Fighter Hangar (2x Rampart Fighters, Repair Shop, Flight Control).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Hangar": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/525 [50x50] [Mirror] Fighter Hangar (2x Rampart Fighters, Repair Shop, Flight Control).png",
+		"overlayUrl": "corner/525 [50x50] [Overlay] (2) 2x Rampart Fighters.png"
+	},
+	"526": {
+		"url": "corner/526 [50x50] Fighter Hangar (Manta Fighter, Repair Shop, Airlock, Flight Control).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 54,
+		"uses": {
+			"Airlock": 2,
+			"Workshop": 8,
+			"Hangar": 44
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "corner/526 [50x50] [Overlay] Manta Fighter.png"
+	},
+	"527": {
+		"url": "corner/527 [50x50] Fighter Hangar (Valkyrie Fighter, Repair Shop, Stateroom, Office).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+			"Staterooms": 4,
+			"Workshop": 4,
+			"Hangar": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/527 [50x50] [Mirror] Fighter Hangar (Valkyrie Fighter, Repair Shop, Stateroom, Office).png",
+		"overlayUrl": "corner/527 [50x50] [Overlay] Valkyrie Fighter.png"
+	},
+	"528": {
+		"url": "corner/528 [50x50] Fighter Hangar (Manta Figher, Office, Stateroom).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+		"Hangar": 36,
+		"Staterooms": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "corner/528 [50x50] [Overlay] Manta Fighter.png"
+	},
+	"529": {
+		"url": "corner/529 [50x50] Figher Bay - Lower (Manta Fighter, Repair Shop, Lift).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+		"Hangar": 46
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "corner/529 [50x50] [Overlay] Manta Fighter.png"
+	},
+	"530": {
+		"url": "corner/530 [50x50] Fighter Bay - Upper (Flight Control).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+		"Hangar": 46
+		},		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"531": {
+		"url": "corner/531 [50x50] Weapons Deck (2x Gunnery, 2x Missile Control).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+		"Weapons": 39
+		},
+		"facilities": {
+			"Airlocks": 0, "Turrets": 4
+		}
+	},
+	"532": {
+		"url": "corner/532 [50x50] Missile Deck (2x Missile Control).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+		"Staterooms": 4,
+		"Engineering": 4,
+		"Weapons": 39
+		},
+		"facilities": {
+			"RoomDouble": 1, "Turrets": 2
+		}
+	},
+	"533": {
+		"url": "corner/533 [50x50] Sandcaster Deck (4x Gunnery, Staterooms, Control Room).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 8,
+			"Bridge": 10,
+			"Weapons": 32
+		},
+		"facilities": {
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"534": {
+		"url": "corner/534 [50x50] Barbette Deck (4x Gunnery, Airlock, Briefing, Repair Shop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Airlock": 2,
+			"Briefing": 4,
+			"Workshop": 4,
+			"Weapons": 32
+		},
+		"facilities": {
+			"Airlocks": 1,"Barbettes": 4
+		},
+		"mirrorUrl": "corner/534 [50x50] [Mirror] Barbette Deck (4x Gunnery, Airlock, Briefing, Repair Shop).png"
+	},
+	"535": {
+		"url": "corner/535 [50x50] Barbette Deck (3x Gunnery, Security, Lounge, Briefing, Repair Shop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Lounge": 8,
+			"Military": 4,
+			"Weapons": 28
+		},
+		"facilities": {
+			"Airlocks": 0, "Barbette": 3
+		}
+	},
+	"536": {
+		"url": "corner/536 [50x50] Missile Deck (Staterooms, Security, Office).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Lounge": 4,
+			"Staterooms": 8,
+			"Weapons": 37
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2, "Turrets": 2
+		}
+	},
+	"537": {
+		"url": "corner/537 [50x50] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"538": {
+		"url": "corner/538 [50x50] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"539": {
+		"url": "corner/539 [50x50] Cargo Bay (10-Ton Utility Shuttle).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+		"Hangar": 20,
+		"Cargo": 30
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/539 [50x50] [Mirror] Cargo Bay (10-Ton Utility Shuttle).png",
+		"overlayMirrorUrl": "corner/539 [50x50] [Mirror] [Overlay] Cargo.png",
+		"overlayUrl": "corner/539 [50x50] [Overlay] Cargo.png"
+	},
+	"540": {
+		"url": "corner/540 [50x50] Cargo Bay - Full (20-dTon Launch, Airlock).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Docking": 22,
+            "Airlock": 2,
+            "Cargo": 26
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"mirrorUrl": "corner/540 [50x50] [Mirror] Cargo Bay - Full (20-dTon Launch, Airlock).png"
+	},
+	"541": {
+		"url": "corner/541 [50x50] Cargo Bay - Empty (20-dTon Launch, Airlock).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Docking": 22,
+            "Airlock": 2,
+            "Cargo": 26
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+
+		"mirrorUrl": "corner/541 [50x50] [Mirror] Cargo Bay - Empty (20-dTon Launch, Airlock).png",
+		"overlayMirrorUrl": "corner/541 [50x50] [Mirror] [Overlay] Cargo.png",
+		"overlayUrl": "corner/541 [50x50] [Overlay] Cargo.png"
+	},
+	"542": {
+		"url": "corner/542 [50x50] Cargo Bay (Cargo Lift).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "corner/542 [50x50] [Overlay] Cargo.png"
+	},
+	"543": {
+		"url": "corner/543 [50x50] Arboretum (Waterfall, Stream).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+            "Biosphere": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"544": {
+		"url": "corner/544 [50x50] Arboretum (Fountain).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+            "Biosphere": 41
+		},		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"545": {
+		"url": "corner/545 [50x50] Arboretum (Airlock).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+            "Biosphere": 35,
+            "Airlock": 2,
+            "Lounge": 10
+		},		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"546": {
+		"url": "corner/546 [50x50] Arboretum (Pool, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+            "Biosphere": 30,
+            "Lounge": 17
+		},		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"547": {
+		"url": "corner/547 [50x50] Arboretum (Stream).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+            "Biosphere": 43
+		},		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"548-1": {
+		"url": "corner/548 [50x50] (2) Arboretum - Lower (Fresher).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+            "Lounge": 17,
+            "Biosphere": 29
+		},		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"548-2": {
+		"url": "corner/548 [50x50] (2) Arboretum - Upper (Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Lounge": 17,
+            "Biosphere": 29
+        },		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"549": {
+		"url": "corner/549 [50x50] Survey Deck (10-dTon Recon Drone, Holo Analysis, Sensors, Probe Launch, Repair Shop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+		"Drones": 20,
+			"Sensors": 37
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/549 [50x50] [Mirror] Survey Deck (10-dTon Recon Drone, Holo Analysis, Sensors, Probe Launch, Repair Shop).png"
+	},
+	"550": {
+		"url": "corner/550 [50x50] Agricultural Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+		"Biosphere": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"551": {
+		"url": "corner/551 [50x50] Hydroponics Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {"Biosphere": 46},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"552": {
+		"url": "corner/552 [50x50] Water Storage.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+            "Workshop": 4,
+            "Engineering": 14,
+            "Liquid": 30
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/552 [50x50] [Mirror] Water Storage.png"
+	},
+	"553": {
+		"url": "corner/553 [50x50] Solar & Battery.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+		"Engineering": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"554": {
+		"url": "corner/554 [50x50] Air-Raft Bay (4x Air Raft, Repair Shop, Office).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+		"Vehicles": 24,
+		"Workshop": 6,
+		"Lounge": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/554 [50x50] [Mirror] Air-Raft Bay (4x Air Raft, Repair Shop, Office).png",
+		"overlayMirrorUrl": "corner/554 [50x50] [Mirror] [Overlay] 4x Air Raft.png",
+		"overlayUrl": "corner/554 [50x50] [Overlay] 4x Air Raft.png"
+	},
+	"555": {
+		"url": "corner/555 [50x50] ATV Bay (2x Wheeled ATV, Airlock, Office, Repair Shop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Airlock": 2,
+			"Vehicle": 40,
+			"Lounge": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/555 [50x50] [Mirror] ATV Bay (2x Wheeled ATV, Airlock, Office, Repair Shop).png",
+		"overlayMirrorUrl": "corner/555 [50x50] [Mirror] [Overlay] 2x Wheeled ATV.png",
+		"overlayUrl": "corner/555 [50x50] [Overlay] 2x Wheeled ATV.png"
+	},
+	"556": {
+		"url": "corner/556 [50x50] Grav-Tank Bay (4x Grav Tanks).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {"Vehicle": 50},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/556 [50x50] [Mirror] Grav-Tank Bay (4x Grav Tanks).png",
+		"overlayMirrorUrl": "corner/556 [50x50] [Mirror] [Overlay] 4x Grav Tanks.png",
+		"overlayUrl": "corner/556 [50x50] [Overlay] 4x Grav Tanks.png"
+	},
+	"557": {
+		"url": "corner/557 [50x50] Grav-Bike Bay (12x Grav Bikes, Office, Repair Shop, Airlock).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {"Vehicle": 48, "Airlock": 2},
+        "facilities": {
+			"Airlocks": 1
+		},
+		"mirrorUrl": "corner/557 [50x50] [Mirror] Grav-Bike Bay (12x Grav Bikes, Office, Repair Shop, Airlock).png",
+		"overlayMirrorUrl": "corner/557 [50x50] [Mirror] [Overlay] 12x Grav Bikes.png",
+		"overlayUrl": "corner/557 [50x50] [Overlay] 12x Grav Bikes.png"
+	},
+	"558": {
+		"url": "corner/558 [50x50] Vehicle Bay (2x Mech, 2x Grav Fighter).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+		"Vehicle": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/558 [50x50] [Mirror] Vehicle Bay (2x Mech, 2x Grav Fighter).png",
+		"overlayMirrorUrl": "corner/558 [50x50] [Mirror] [Overlay] 2x Mech, 2x Grav Fighter.png",
+		"overlayUrl": "corner/558 [50x50] [Overlay] 2x Mech, 2x Grav Fighter.png"
+	},
+	"559": {
+		"url": "corner/559 [50x50] Vehicle Bay (3x Grav Fighters, Control Room, Repair Shop, Airlock).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {"Bridge":  9, "Hangar": 36, "Airlock": 2},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "corner/559 [50x50] [Overlay] 3x Grav Fighters.png"
+	},
+	"560": {
+		"url": "corner/560 [50x50] Vehicle Bay (5x Work Pods, Repair Shop, Office, Airlock).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {"Engineering":  34},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "corner/560 [50x50] [Overlay] 5x Work Pods.png"
+	},
+	"561": {
+		"url": "corner/561 [50x50] Sensor Ops (15 Station Control Room, Sensor Probes, Lounge, Security).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+		"Lounge": 6,
+		"Military": 4,
+		"Sensors": 37
+		},
+		"facilities": {
+			"Airlocks": 0, "RoomSingle": 2
+		},
+		"mirrorUrl": "corner/561 [50x50] [Mirror] Sensor Ops (15 Station Control Room, Sensor Probes, Lounge, Security).png"
+	},
+	"562": {
+		"url": "corner/562 [50x50] Sensor & Communication Bay (2 Station Control Room, Staterooms).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Bridge": 7,
+			"Sensors": 17,
+			"Comms": 17,
+			"Staterooms": 8
+		},
+		"facilities": {
+			"Airlocks": 0, "Capsules": 14
+		},
+		"mirrorUrl": "corner/562 [50x50] [Mirror] Sensor & Communication Bay (2 Station Control Room, Staterooms).png"
+	},
+	"563": {
+		"url": "corner/563 [50x50] Drop Capsules (14x Drop Capsules, Armory).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {            "Armory": 4,
+            "Military": 45},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "corner/563 [50x50] [Overlay] 14x Drop Capsules.png"
+	},
+	"564": {
+		"url": "corner/564 [50x50] Escape Pods (6x Escape Pods, Security).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Docking": 30,
+            "Military": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "corner/564 [50x50] [Overlay] 6x Escape Pods.png"
+	},
+	"565": {
+		"url": "corner/565 [50x50] Escape Pods (8x Escape Pods).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Docking": 32,
+            "Lounge": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "corner/565 [50x50] [Overlay] 8x Escape Pods.png"
+	},
+	"566": {
+		"url": "corner/566 [50x50] Control Room (15 Station, Engineering).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+            "Bridge": 33,
+            "Engineering": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"567": {
+		"url": "corner/567 [50x50] Scrap & Recycling (Trash Compactor, Incinerator, Office).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Engineering": 30,
+            "Cargo": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"568": {
+		"url": "corner/568 [50x50] Offices (Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Lounge": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"569": {
+		"url": "corner/569 [50x50] Executive Lounge (Galley, Security).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+            "Military": 12,
+            "Lounge": 26
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"570": {
+		"url": "corner/570 [50x50] Barracks (Galley & Mess, Staterooms, Offices).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 8,
+			"Lounge": 4,
+			"Barracks": 38
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"Seats": 54
+		}
+	},
+	"571": {
+		"url": "corner/571 [50x50] Crew Areas (Air-Raft, Medical, Lounge, Airlock, Staterooms).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Medical": 4,
+			"Low Berths": 2,
+			"Airlock": 2,
+			"Staterooms": 14,
+			"Vehicle": 4,
+			"Lounge": 21
+		},
+		"facilities": {
+			"Airlocks": 0, "RoomSingle":2, "RoomHigh": 1
+		},
+		"mirrorUrl": "corner/571 [50x50] [Mirror] Crew Areas (Air-Raft, Medical, Lounge, Airlock, Staterooms).png",
+		"overlayMirrorUrl": "corner/571 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/571 [50x50] [Overlay] Air-Raft.png"
+	},
+	"572": {
+		"url": "corner/572 [50x50] Stellar Cartography.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+            "Comms": 42
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"573": {
+		"url": "corner/573 [50x50] Science Lab (Clean Lab, Office, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Labs": 38,
+            "Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"574": {
+		"url": "corner/574 [50x50] Medical Research (Morgue, Decon Vault, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+            "Labs": 37,
+            "Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"575": {
+		"url": "corner/575 [50x50] Med Lab & Low Berths (22 Low Berths, Lab, Medical Bay).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+            "Labs": 8,
+            "Medical": 8,
+            "Low Berth": 22,
+            "Engineering": 11
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"576": {
+		"url": "corner/576 [50x50] Robotics Lab (Airlock, Repair Shop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+		"Airlock": 4,
+		"Drones": 46
+		},
+		"facilities": {
+			"Airlocks": 2
+		},
+		"mirrorUrl": "corner/576 [50x50] [Mirror] Robotics Lab (Airlock, Repair Shop).png"
+	},
+	"577": {
+		"url": "corner/577 [50x50] Engineering (Work Pod, Airlock, Fuel, Repair Shop, Office).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Airlock": 2,
+			"Fuel": 5,
+			"Workshop": 4,
+			"Engineering": 39
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"mirrorUrl": "corner/577 [50x50] [Mirror] Engineering (Work Pod, Airlock, Fuel, Repair Shop, Office).png"
+	},
+	"578": {
+		"url": "corner/578 [50x50] Engineering (Power Plant, Air-Raft).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/578 [50x50] [Mirror] Engineering (Power Plant, Air-Raft).png",
+		"overlayMirrorUrl": "corner/578 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/578 [50x50] [Overlay] Air-Raft.png"
+	},
+	"579": {
+		"url": "corner/579 [50x50] Engineering (Airlock, Office, Repair Shop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 45,
+		"uses": {
+		"Engineering": 41,
+		"Workshop": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/579 [50x50] [Mirror] Engineering (Airlock, Office, Repair Shop).png"
+	},
+	"580": {
+		"url": "corner/580 [50x50] Engineering (Airlock, Repair Shop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+		"Engineering": 44,
+		"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"mirrorUrl": "corner/580 [50x50] [Mirror] Engineering (Airlock, Repair Shop).png"
+	},
+	"581": {
+		"url": "corner/581 [50x50] (2) Engineering - Upper.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+            "Labs": 8,
+            "Engineering": 40
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"582": {
+		"url": "corner/582 [50x50] Engineering (Airlock, Solar, Repair Shop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+		"Airlock": 2,
+		"Engineering": 48
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"mirrorUrl": "corner/582 [50x50] [Mirror] Engineering (Airlock, Solar, Repair Shop).png"
+	},
+	"583": {
+		"url": "corner/583 [50x50] Engineering (Work Pod, Office, Repair Shop, Lift).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 32,
+		"uses": {
+            "Engineering":32
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/583 [50x50] [Mirror] Engineering (Work Pod, Office, Repair Shop, Lift).png"
+	},
+	"584": {
+		"url": "corner/584 [50x50] Engineering (Maneuver Drive, Jump Drive, Power Plant).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+            "Engineering": 46
+
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"585": {
+		"url": "corner/585 [50x50] Multipurpose (Airlock, Medical, Lounge, Galley & Mess).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+            "Airlock": 2,
+			"Medical": 8,
+			"Lounge": 36
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"586": {
+		"url": "corner/586 [50x50] Multipurpose (3 Station Bridge, Engineering, Office, Security, Sensors, Staterooms, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+            "Bridge": 10,
+			"Engineering": 5,
+			"Sensors": 5,
+			"Staterooms": 8,
+			"Lounge": 14,
+			"Military": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2
+		}
+	},
+	"587": {
+		"url": "corner/587 [50x50] Multipurpose (Brig, Engineering, Office, 24 Pod-Beds, Airlock).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Airlock": 2,
+			"Brig": 8,
+			"Workshop": 40
+		},
+		"facilities": {
+			"Airlocks": 1, "Prisoners": 3
+		},
+		"mirrorUrl": "corner/587 [50x50] [Mirror] Multipurpose (Brig, Engineering, Office, 24 Pod-Beds, Airlock).png"
+	},
+	"588": {
+		"url": "corner/588 [50x50] Multipurpose (Air-Raft, Airlock, Engineering, Lab, Office, Staterooms, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Airlock": 2,
+			"Staterooms": 4,
+			"Engineering": 13,
+			"Labs": 4,
+			"Lounge": 20,
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 1
+		},
+		"mirrorUrl": "corner/588 [50x50] [Mirror] Multipurpose (Air-Raft, Airlock, Engineering, Lab, Office, Staterooms, Lounge).png",
+		"overlayMirrorUrl": "corner/588 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/588 [50x50] [Overlay] Air-Raft.png"
+	},
+	"589": {
+		"url": "corner/589 [50x50] Multipurpose (Air-Raft, Airlock, Cargo Hold, Engineering, Fuel Intake Scoop).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+			"Airlock": 2,
+			"Fuel": 10,
+			"Cargo": 8,
+			"Engineering": 8,
+			"Vehicle": 4,
+			"Lounge": 11
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/589 [50x50] [Mirror] Multipurpose (Air-Raft, Airlock, Cargo Hold, Engineering, Fuel Intake Scoop).png",
+		"overlayMirrorUrl": "corner/589 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/589 [50x50] [Overlay] Air-Raft.png"
+	},
+	"590": {
+		"url": "corner/590 [50x50] Multipurpose (2x Escape Pod, Medical, Office, Staterooms).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 52,
+		"uses": {
+            "Docking": 8,
+            "Staterooms": 12,
+			"Medical": 12,
+			"Lounge": 20
+		},
+		"facilities": {
+			"RoomDouble": 3
+		},
+		"mirrorUrl": "corner/590 [50x50] [Mirror] Multipurpose (2x Escape Pod, Medical, Office, Staterooms).png",
+		"overlayMirrorUrl": "corner/590 [50x50] [Mirror] [Overlay] 2x Escape Pods.png",
+		"overlayUrl": "corner/590 [50x50] [Overlay] 2x Escape Pods.png"
+	},
+	"591": {
+		"url": "corner/591 [50x50] Multipurpose (Air-Raft, Dragonfly Fighter, Engineering, Lab, Office, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Labs": 8,
+            "Hangar": 12,
+            "Vehicle": 6,
+			"Engineering": 8,
+			"Lounge": 16
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/591 [50x50] [Mirror] Multipurpose (Air-Raft, Dragonfly Fighter, Engineering, Lab, Office, Lounge).png",
+		"overlayMirrorUrl": "corner/591 [50x50] [Mirror] [Overlay] Dragonfly Fighter (Interior).png",
+		"overlayUrl": "corner/591 [50x50] [Overlay] Dragonfly Fighter (Interior).png"
+	},
+	"592": {
+		"url": "corner/592 [50x50] Multipurpose (4 Station Bridge, 2x Gunnery, Briefing, Medical, Office, Staterooms, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Briefing": 6,
+			"Medical": 8,
+			"Staterooms": 16,
+			"Bridge": 10,
+			"Weapons": 3,
+			"Lounge": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 3,
+			"RoomDouble": 1
+		}
+	},
+	"593": {
+		"url": "corner/593 [50x50] Multipurpose (Engineering, Lab, Office, Staterooms, Briefing).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+            "Engineering": 20,
+			"Staterooms": 8,
+			"Briefing": 4,
+			"Labs": 4,
+			"Lounge": 11
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"594": {
+		"url": "corner/594 [50x50] Multipurpose (Airlock, Cargo Shuttle, Cargo Hold, Engineering, Staterooms).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+            "Airlock": 2,
+            "Docking": 5,
+            "Cargo": 16,
+			"Engineering": 8,
+			"Staterooms": 8,
+			"Lounge": 9
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"mirrorUrl": "corner/594 [50x50] [Mirror] Multipurpose (Airlock, Cargo Shuttle, Cargo Hold, Engineering, Staterooms).png",
+		"overlayMirrorUrl": "corner/594 [50x50] [Mirror] [Overlay] Extendible Airlock Passage.png",
+		"overlayUrl": "corner/594 [50x50] [Overlay] Extendible Airlock Passage.png"
+	},
+	"595": {
+		"url": "corner/595 [50x50] Multipurpose (Air-Raft, 2x Gunnery, Engineering, Office, Airlock).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Engineering": 15,
+			"Weapons": 6,
+			"Vehicle": 6,
+			"Airlock": 2,
+			"Lounge": 19
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"mirrorUrl": "corner/595 [50x50] [Mirror] Multipurpose (Air-Raft, 2x Gunnery, Engineering, Office, Airlock).png",
+		"overlayMirrorUrl": "corner/595 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/595 [50x50] [Overlay] Air-Raft.png"
+	},
+	"596": {
+		"url": "corner/596 [50x50] Offices (Briefing).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+		"Briefing": 8,
+		"Lounge": 42
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"597": {
+		"url": "corner/597 [50x50] Transporter (Air-Raft, Stateroom, Offices, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+            "Vehicle": 6,
+            "Staterooms": 12,
+            "Engineering": 12,
+            "Lounge": 18
+		},
+		"facilities": {
+			"Airlocks": 0, "RoomSingle": 3
+		},
+		"mirrorUrl": "corner/597 [50x50] [Mirror] Transporter (Air-Raft, Stateroom, Offices, Lounge).png",
+		"overlayMirrorUrl": "corner/597 [50x50] [Mirror] [Overlay] Air-Raft.png",
+		"overlayUrl": "corner/597 [50x50] [Overlay] Air-Raft.png"
+	},
+	"598": {
+		"url": "corner/598 [50x50] Holo Suites (Engineering, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Lounge": 6,
+            "Engineering": 8,
+            "Training":36
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/598 [50x50] [Mirror] Holo Suites (Engineering, Lounge).png"
+	},
+	"599": {
+		"url": "corner/599 [50x50] Fighter Hangar (Medium Fighter).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+            "Workshop": 4,
+            "Hangar": 39
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/599 [50x50] [Mirror] Fighter Hangar (Medium Fighter).png",
+		"overlayMirrorUrl": "corner/599 [50x50] [Mirror] [Overlay] Medium Fighter.png",
+		"overlayUrl": "corner/599 [50x50] [Overlay] Medium Fighter.png"
+	},
+	"600": {
+		"url": "corner/600 [50x50] Fighter Hangar (Heavy Fighter).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+		"Hangar": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/600 [50x50] [Mirror] Fighter Hangar (Heavy Fighter).png",
+		"overlayUrl": "corner/600 [50x50] [Overlay] Heavy Fighter.png"
+	},
+	"601": {
+		"url": "corner/601 [50x50] Passenger Gate (Office, Observation Deck).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 45,
+		"uses": {
+		"Lounge": 45
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "corner/601 [50x50] [Overlay] Extendible Airlock Passage.png"
+	},
+	"602": {
+		"url": "corner/602 [50x50] Security Checkpoint (20-dTon Launch, Lounge, Brig).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Docking": 22,
+            "Brig": 12,
+            "Military": 8,
+			"Lounge": 8
+		},
+		"facilities": {
+			"Airlocks": 0, "Prisoners": 4
+		},
+		"mirrorUrl": "corner/602 [50x50] [Mirror] Security Checkpoint (20-dTon Launch, Lounge, Brig).png",
+		"overlayMirrorUrl": "corner/602 [50x50] [Mirror] [Overlay] 20-dTon Launch (Passenger).png",
+		"overlayUrl": "corner/602 [50x50] [Overlay] 20-dTon Launch (Passenger).png"
+	},
+	"603": {
+		"url": "corner/603 [50x50] Food Court (Observation Window).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 45,
+		"uses": {
+            "Lounge": 45
+		},
+		"facilities": { }
+	},
+	"604": {
+		"url": "corner/604 [50x50] Restaurant (Observation Window).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Lounge": 45
+		},
+		"facilities": { }
+	},
+	"605": {
+		"url": "corner/605 [50x50] Bar (Observation Window).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Lounge": 45
+		},
+		"facilities": { }
+	},
+	"606": {
+		"url": "corner/606 [50x50] Bar (Observation Window, Stage or Dance Floor).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Lounge": 45
+		},
+		"facilities": { }
+	},
+	"607": {
+		"url": "corner/607 [50x50] Retail (Observation Window).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Lounge": 45
+		},
+		"facilities": { }
+	},
+	"608": {
+		"url": "corner/608 [50x50] Casino (Observation Window).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Lounge": 45
+		},
+		"facilities": { }
+	},
+	"609": {
+		"url": "corner/609 [50x50] Passenger Quarters (Staterooms, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+            "Staterooms":26,
+            "Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 0,"RoomSingle": 4,
+			"RoomDouble": 1,"RoomHigh": 1
+		}
+	},
+	"610": {
+		"url": "corner/610 [50x50] Passenger Quarters (Staterooms, Lounge, Galley).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Staterooms": 40,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0,"RoomSingle": 4,
+			"RoomDouble": 0,"RoomHigh": 4
+        }
+	},
+	"611": {
+		"url": "corner/611 [50x50] Passenger Quarters (Staterooms, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+            "Staterooms": 38,
+            "Lounge": 11
+		},
+		"facilities": {
+			"Airlocks": 0,"RoomSingle": 2, "RoomDouble": 3,"RoomHigh": 3 }
+	},
+	"612": {
+		"url": "corner/612 [50x50] High Passenger Quarters (Lounge, Galley, Escape Pod).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+            "Staterooms": 24,
+            "Docking": 4,
+            "Lounge": 17,
+            "Low Berths": 2
+		},
+		"facilities": {
+			"Airlocks": 0,"RoomSingle": 0, "RoomDouble": 1,"RoomLuxury": 2
+		},
+		"overlayUrl": "corner/612 [50x50] [Overlay] Escape Pod.png"
+	},
+	"613": {
+		"url": "corner/613 [50x50] Steerage (36x Steerage, Lounge).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Barracks": 50
+		},
+		"facilities": {
+			"Airlocks": 0, "Seats": 36
+		}
+	},
+	"614": {
+		"url": "corner/614 [50x50] Steerage and Low Berths (27x Steerage, 14x Low Berths).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Barracks": 32,
+            "Low Berths": 14,
+            "Engineering": 4
+		},
+		"facilities": {
+			"Airlocks": 0, "Seats": 27
+		}
+	},
+	"615": {
+		"url": "corner/615 [50x50] Engineering - Lower (Office, Airlock, Lift).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+			"Airlock": 2,
+			"Engineering": 44
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"mirrorUrl": "corner/615 [50x50] [Mirror] Engineering - Lower (Office, Airlock, Lift).png"
+	},
+	"616": {
+		"url": "corner/616 [50x50] Engineering - Upper (Repair Shop, Lift).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+			"Engineering": 46
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/616 [50x50] [Mirror] Engineering - Upper (Repair Shop, Lift).png"
+	},
+	"617": {
+		"url": "corner/617 [50x50] Conference Room (20 Chair Conference Room).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+            "Briefing": 43
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"618": {
+		"url": "corner/618 [50x50] Elevator Core (4x Elevators, Stairs, Lounge, Security, Observation Deck).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Lounge": 44,
+			"Military": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"619": {
+		"url": "corner/619 [50x50] Elevator Core (4x Elevators, Stairs, Bar, Observatrion Deck).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Lounge": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"mirrorUrl": "corner/619 [50x50] [Mirror] Elevator Core (4x Elevators, Stairs, Bar, Observatrion Deck).png"
+	},
+	"620": {
+		"url": "corner/620 [50x50] Cargo Elevator Core (2x Cargo Elevators, Stairs, Secure Cargo Transfer).png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+            "Lounge": 5,
+            "Cargo": 45
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	}
+}

@@ -1,0 +1,437 @@
+{
+	"AS-101": {
+		"url": "../geomorphs/As/AS-101 [50x20] [14-dTons] Asteroid Edge.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": {},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AS-102": {
+		"url": "../geomorphs/As/AS-102 [50x20] [14-dTons] Air-Raft.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": {
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "../geomorphs/As/AS-102 [50x20] [Overlay] Air-Raft.png"
+	},
+	"AS-103": {
+		"url": "../geomorphs/As/AS-103 [50x20] [14-dTons] EVA Airlock.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": { "Airlock": 2 },
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"AS-104": {
+		"url": "../geomorphs/As/AS-104 [50x20] [14-dTons] Hidden Airlock.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": { "Airlock": 2 },
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "../geomorphs/As/AS-104 [50x20] [Overlay] Airlock Door Open.png"
+	},
+	"AS-105": {
+		"url": "../geomorphs/As/AS-105 [50x20] [14-dTons] Floor-Ceiling Iris Airlock.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": { "Airlock": 2 },
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"AS-106": {
+		"url": "../geomorphs/As/AS-106 [50x20] [14-dTons] Lift.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": { "Lounge": 2 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AS-107": {
+		"url": "../geomorphs/As/AS-107 [50x20] [14-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": {
+			"Engineering": 4,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AS-108": {
+		"url": "../geomorphs/As/AS-108 [50x20] [14-dTons] Life Support.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": { "Lounge": 4 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AS-109": {
+		"url": "../geomorphs/As/AS-109 [50x20] [14-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": {
+			"Staterooms": 8,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		}
+	},
+	"AS-111": {
+		"url": "../geomorphs/As/AS-111 [50x20] [14-dTons] Turret.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": { "Weapons": 3 },
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 1,
+			"Barbettes": 0
+		}
+	},
+	"AS-112": {
+		"url": "../geomorphs/As/AS-112 [50x20] [20-dTons] Fuel, Vertical Access.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 20,
+		"uses": {
+			"Fuel": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AS-113": {
+		"url": "../geomorphs/As/AS-113 [50x20] [14-dTons] Storage.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 14,
+		"uses": { "Cargo": 4 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AS-153": {
+		"url": "../geomorphs/As/AS-153 [50x20] [46-dTons] Fuel, Vertical Access .png",
+		"sizeX": 20,
+		"sizeY": 4,
+		"tons": 46,
+		"uses": {
+			"Fuel": 14
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AS-154": {
+		"url": "../geomorphs/As/AS-154 [100x50] [64-dTons] Stairs, Lift, Cargo Elevator, Variable Use or Cargo Bay.png",
+		"sizeX": 20,
+		"sizeY": 10,
+		"tons": 64,
+		"uses": { "Cargo": 24, "Airlock": 2, "Lounge": 6 },
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"AS-155": {
+		"url": "../geomorphs/As/AS-155 [100x50] [64-dTons] Stairs, Lift, Cargo Elevator, Variable Use or Cargo Bay.png",
+		"sizeX": 20,
+		"sizeY": 10,
+		"tons": 64,
+		"uses": { "Cargo": 24, "Lounge": 6 },
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "../geomorphs/As/AS-155 [100x50] [Overlay] 20-dTon Launch.png"
+	},
+	"AS-156": {
+		"url": "../geomorphs/As/AS-156 [100x50] [64-dTons] Stairs, Lift, Cargo Elevator, 20-dTon Launch.png",
+		"sizeX": 24,
+		"sizeY": 10,
+		"tons": 64,
+		"uses": { "Docking": 22, "Cargo": 16, "Lounge": 6, "Airlock": 1 },
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "../geomorphs/As/AS-156 [100x50] [Overlay] Launch Bay Doors Open.png"
+	},
+	"As-001": {
+		"url": "As/As-001 [110x80] [85-dTons] Short Asteroid Hull.png",
+		"sizeX": 22,
+		"sizeY": 16,
+		"tons": 85,
+		"uses": { "Sensors": 25, "Airlock": 2 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"As-002": {
+		"url": "As/As-002 [100x70] [94-dTons] Short Asteroid Hull.png",
+		"sizeX": 20,
+		"sizeY": 14,
+		"tons": 94,
+		"uses": { "Docking": 22, "Cargo": 8, "Airlock": 2 },
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "As/As-002 [100x70] [Overlay] Bay Doors Open.png"
+	},
+	"As-003": {
+		"url": "As/As-003 [100x70] [92-dTons] Short Asteroid Hull.png",
+		"sizeX": 20,
+		"sizeY": 14,
+		"tons": 92,
+		"uses": { "Bridge": 10, "Lounge": 4, "Engineering": 14, "Fuel": 12 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"As-004": {
+		"url": "As/As-004 [100x70] [92-dTons] Short Asteroid Hull.png",
+		"sizeX": 20,
+		"sizeY": 14,
+		"tons": 92,
+		"uses": { "Staterooms": 8, "Lounge": 8, "Fuel": 8 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"As-005": {
+		"url": "As/As-005 [100x90] [80-dTons] Short Asteroid Hull.png",
+		"sizeX": 20,
+		"sizeY": 18,
+		"tons": 80,
+		"uses": { "Bridge": 8, "Engineering": 8, "Fuel": 10, "Weapons": 4 },
+		"facilities": {
+			"Turrets": 4
+		}
+	},
+	"As-006": {
+		"url": "As/As-006 [90x70] [75-dTons] Short Asteroid Hull.png",
+		"sizeX": 18,
+		"sizeY": 14,
+		"tons": 75,
+		"uses": { "Airlock": 2, "Fuel": 12, "Engineering": 12 },
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"As-007": {
+		"url": "As/As-007 [140x90] [139-dTons] Long Asteroid Hull.png",
+		"sizeX": 28,
+		"sizeY": 18,
+		"tons": 139,
+		"uses": {
+			"Bridge": 15,
+			"Engineering": 22,
+			"Vehicle": 6,
+			"Weapons": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2
+		},
+		"overlayUrl": "As/As-007 [140x90] [Overlay] Air-Raft.png"
+	},
+	"As-008": {
+		"url": "As/As-008 [160x90] [145-dTons] Long Asteroid Hull.png",
+		"sizeX": 32,
+		"sizeY": 18,
+		"tons": 145,
+		"uses": { "Cargo": 4, "Staterooms": 16, "Lounge": 4, "Lounge": 16 },
+		"facilities": {
+			"RoomSingle": 4
+		},
+		"overlayUrl": "As/As-008 [160x90] [Overlay] Observation Shutters Open.png"
+	},
+	"As-009": {
+		"url": "As/As-009 [140x80] [139-dTons] Long Asteroid Hull.png",
+		"sizeX": 28,
+		"sizeY": 16,
+		"tons": 139,
+		"uses": { "Cargo": 8, "Engineering": 13 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"As-010": {
+		"url": "As/As-010 [170x140] [184-dTons] Large Asteroid Hull.png",
+		"sizeX": 34,
+		"sizeY": 28,
+		"tons": 184,
+		"uses": {
+			"Bridge": 15,
+			"Briefing": 4,
+			"Fuel": 16,
+			"Airlock": 2,
+			"Workshop": 4,
+			"Engineering": 35,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "As/As-010 [170x140] [Overlay] Engine Bay Doors Open.png"
+	},
+	"As-011": {
+		"url": "As/As-011 [160x130] [184-dTons] Large Asteroid Hull.png",
+		"sizeX": 32,
+		"sizeY": 26,
+		"tons": 184,
+		"uses": {
+			"Fuel": 14,
+			"Airlock": 2,
+			"Cargo": 24,
+			"Engineering": 0,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "As/As-011 [160x130] [Overlay] Bay Doors Open.png"
+	},
+	"As-012": {
+		"url": "As/As-012 [150x130] [184-dTons] Large Asteroid Hull.png",
+		"sizeX": 30,
+		"sizeY": 26,
+		"tons": 184,
+		"uses": {
+			"Fuel": 14,
+			"Airlock": 2,
+			"Cargo": 24,
+			"Docking": 22,
+			"Lounge": 6,
+			"Staterooms": 8
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "As/As-012 [150x130] [Overlay] Bay Doors Open.png"
+	},
+	"As-013": {
+		"url": "As/As-013 [160x140] [184-dTons] Large Asteroid Hull.png",
+		"sizeX": 32,
+		"sizeY": 28,
+		"tons": 184,
+		"uses": {
+			"Fuel": 14,
+			"Airlock": 2,
+			"Cargo": 20,
+			"Vehicle": 6,
+			"Weapons": 4,
+			"Lounge": 6,
+			"Staterooms": 8
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2
+		},
+		"overlayUrl": "As/As-013 [160x140] [Overlay] Bay Doors Open.png"
+	},
+	"As-100": {
+		"url": "As/As-100 [50x50] [24-dTons)) Asteroid Edge.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 24,
+		"uses": {},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"As-110": {
+		"url": "As/As-110 [50x100] [24-dTons] Double Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 24,
+		"uses": { "Staterooms": 8, "Lounge": 4 },
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2
+		}
+	},
+	"As-114": {
+		"url": "As/As-114 [50x50] [24-dTons)) Bridge.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 24,
+		"uses": { "Bridge": 10 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"As-115": {
+		"url": "As/As-115 [50x50] [24-dTons)) Bridge.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 24,
+		"uses": { "Bridge": 10 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"As-116": {
+		"url": "As/As-116 [50x50] [24-dTons)) Bridge, Lounge.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 24,
+		"uses": { "Bridge": 10 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"As-151": {
+		"url": "As/As-151 [100x50] [65-dTons] Engineering.png",
+		"sizeX": 20,
+		"sizeY": 10,
+		"tons": 65,
+		"uses": {
+			"Engineering": 35,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "As/As-151 [100x50] [Overlay] Engine Bay Doors Open.png"
+	},
+	"As-152": {
+		"url": "As/As-152 [100x50] [47-dTons] Bridge, Briefing Room.png",
+		"sizeX": 20,
+		"sizeY": 4,
+		"tons": 47,
+		"uses": {
+			"Bridge": 15,
+			"Briefing": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	}
+}

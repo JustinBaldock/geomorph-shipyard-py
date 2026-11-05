@@ -1,0 +1,1226 @@
+{
+	"QG-001": {
+		"url": "QG/QG-001 [50x50] [50-dTons] Cargo Bay - Empty.png",
+		"overlayUrl": "QG/QG-001 [50x50] [Overlay] Cargo.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-002": {
+		"url": "QG/QG-002 [50x50] [50-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-003": {
+		"url": "QG/QG-003 [50x50] [50-dTons] Cargo Bay - Upper.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-004": {
+		"url": "QG/QG-004 [50x50] [50-dTons] Fuel, Security Checkpoint.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Fuel": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-005": {
+		"url": "QG/QG-005 [50x50] [50-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Fuel": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-006": {
+		"url": "QG/QG-006 [50x50] [50-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Fuel": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-007": {
+		"url": "QG/QG-007 [50x50] [50-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 20,
+			"Lounge": 11,
+			"Briefing": 0,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 5
+		}
+	},
+	"QG-008": {
+		"url": "QG/QG-008 [50x50] [50-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 20,
+			"Lounge": 20,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 3,
+			"RoomDouble": 2
+		}
+	},
+	"QG-009": {
+		"url": "QG/QG-009 [50x50] [50-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 20,
+			"Lounge": 15,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 3,
+			"RoomDouble": 2
+		}
+	},
+	"QG-010": {
+		"url": "QG/QG-010 [50x50] [50-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 24,
+			"Lounge": 11,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 2
+		}
+	},
+	"QG-011": {
+		"url": "QG/QG-011 [50x50] [50-dTons] Bridge, Staterooms.png",
+		"overlayUrl": "QG/QG-011 [50x50] [Overlay] Air-Raft.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 12,
+			"Lounge": 17,
+			"Briefing": 0,
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"QG-012": {
+		"url": "QG/QG-012 [50x50] [50-dTons] Bridge, Staterooms, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 4,
+			"Engineering": 20,
+			"Lounge": 11
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1
+		}
+	},
+	"QG-013": {
+		"url": "QG/QG-013 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 36,
+			"Lounge": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 4,
+			"RoomHigh": 2
+		}
+	},
+	"QG-014": {
+		"url": "QG/QG-014 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 40,
+			"Lounge": 6,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 0,
+			"RoomHigh": 4
+		}
+	},
+	"QG-015": {
+		"url": "QG/QG-015 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 32,
+			"Lounge": 18
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 4
+		}
+	},
+	"QG-016": {
+		"url": "QG/QG-016 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 14,
+			"Medical": 4,
+			"Low Berths": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 4
+		}
+	},
+	"QG-017": {
+		"url": "QG/QG-017 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 20,
+			"Barracks": 20,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomHigh": 2,
+			"Seats": 12
+		}
+	},
+	"QG-018": {
+		"url": "QG/QG-018 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 36,
+			"Lounge": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6,
+			"RoomHigh": 2
+		}
+	},
+	"QG-019": {
+		"url": "QG/QG-019 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 44,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 11
+		}
+	},
+	"QG-020": {
+		"url": "QG/QG-020 [50x50] [50-dTons] Luxury Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 40,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomLuxury": 4
+		}
+	},
+	"QG-021": {
+		"url": "QG/QG-021 [50x50] [50-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 16,
+			"Fuel": 20,
+			"Lounge": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"QG-022": {
+		"url": "QG/QG-022 [50x50] [50-dTons] Staterooms, Steerage.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 12,
+			"Barracks": 25,
+			"Lounge": 13
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 3,
+			"Seats": 18
+		}
+	},
+	"QG-023": {
+		"url": "QG/QG-023 [50x50] [50-dTons] Steerage.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Barracks": 50,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 36
+		}
+	},
+	"QG-024": {
+		"url": "QG/QG-024 [50x50] [50-dTons] Steerage, Low Berths.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Barracks": 22,
+			"Low Berths": 16,
+			"Medical": 4,
+			"Lounge": 0,
+			"Staterooms": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"Seats": 12
+		}
+	},
+	"QG-025": {
+		"url": "QG/QG-025 [50x50] [50-dTons] Staterooms, Lounge.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 30,
+			"Lounge": 20
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 5,
+			"RoomHigh": 0,
+			"RoomLuxury": 1
+		}
+	},
+	"QG-026": {
+		"url": "QG/QG-026 [50x50] [50-dTons] Low Berths.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Low Berths": 40,
+			"Medical": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-027": {
+		"url": "QG/QG-027 [50x50] [50-dTons] Low Berths.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Low Berths": 40,
+			"Medical": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-028": {
+		"url": "QG/QG-028 [50x50] [50-dTons] Medical.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Low Berths": 8,
+			"Medical": 42
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-029": {
+		"url": "QG/QG-029 [50x50] [50-dTons] Medical.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Low Berths": 4,
+			"Briefing": 5,
+			"Medical": 41
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-030": {
+		"url": "QG/QG-030 [50x50] [50-dTons] Medical.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Medical": 34,
+			"Staterooms": 4,
+			"Labs": 4,
+			"Lounge": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1
+		}
+	},
+	"QG-031": {
+		"url": "QG/QG-031 [50x50] [50-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 45,
+			"Workshop": 0,
+			"Lounge": 5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-032": {
+		"url": "QG/QG-032 [50x50] [50-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 45,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-033": {
+		"url": "QG/QG-033 [50x50] [50-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 50,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-034": {
+		"url": "QG/QG-034 [50x50] [50-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 44,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-035": {
+		"url": "QG/QG-035 [50x50] [50-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 38,
+			"Workshop": 6,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-036": {
+		"url": "QG/QG-036 [50x50] [50-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 38,
+			"Workshop": 6,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-037": {
+		"url": "QG/QG-037 [50x50] [50-dTons] Sensors, Survey.png",
+		"overlayUrl": "QG/QG-037 [50x50] [Overlay] Air-Raft.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Lounge": 10,
+			"Drones": 8,
+			"Briefing": 8,
+			"Staterooms": 8,
+			"Labs": 8,
+			"Vehicle": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2
+		}
+	},
+	"QG-038": {
+		"url": "QG/QG-038 [50x50] [50-dTons] Sensors, Survey.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Drones": 30,
+			"Staterooms": 16,
+			"Lounge": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 4
+		}
+	},
+	"QG-039": {
+		"url": "QG/QG-039 [50x50] [50-dTons] Sensors, Survey.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Drones": 18,
+			"Staterooms": 16,
+			"Lounge": 8,
+			"Labs": 4,
+			"Engineering": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 4
+		}
+	},
+	"QG-040": {
+		"url": "QG/QG-040 [50x50] [50-dTons] Communications, Data.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 4,
+			"Workshop": 6,
+			"Comms": 40
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 1
+		}
+	},
+	"QG-041": {
+		"url": "QG/QG-041 [50x50] [50-dTons] Data Storage.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Comms": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-042": {
+		"url": "QG/QG-042 [50x50] [50-dTons] Data Storage, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Comms": 25,
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-043": {
+		"url": "QG/QG-043 [50x50] [50-dTons] Labs, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Labs": 30,
+			"Staterooms": 12,
+			"Lounge": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 3
+		}
+	},
+	"QG-044": {
+		"url": "QG/QG-044 [50x50] [50-dTons] Labs, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Labs": 18,
+			"Staterooms": 24,
+			"Lounge": 4,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 6
+		}
+	},
+	"QG-045": {
+		"url": "QG/QG-045 [50x50] [50-dTons] Labs, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Labs": 22,
+			"Staterooms": 12,
+			"Lounge": 6,
+			"Low Berths": 6,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 3
+		}
+	},
+	"QG-046": {
+		"url": "QG/QG-046 [50x50] [50-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Labs": 28,
+			"Briefing": 4,
+			"Staterooms": 4,
+			"Medical": 8,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 1
+		}
+	},
+	"QG-047": {
+		"url": "QG/QG-047 [50x50] [50-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Labs": 38,
+			"Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-048": {
+		"url": "QG/QG-048 [50x50] [50-dTons] Xenofauna Labs.png",
+		"overlayUrl": "QG/QG-048 [50x50] [Overlay] Research Launch and Animals.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Labs": 8,
+			"Medical": 8,
+			"Stable": 8,
+			"Docking": 15,
+			"Staterooms": 8,
+			"Lounge": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2
+		}
+	},
+	"QG-049": {
+		"url": "QG/QG-049 [50x50] [50-dTons] Mining Bay.png",
+		"overlayUrl": "QG/QG-049 [50x50] [Overlay] Prospector's Buggy.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Mining": 38,
+			"Drones": 6,
+			"Vehicles": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-050": {
+		"url": "QG/QG-050 [50x50] [50-dTons] Mining Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Mining": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-051": {
+		"url": "QG/QG-051 [50x50] [50-dTons] Mining Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Mining": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-052": {
+		"url": "QG/QG-052 [50x50] [50-dTons] Mining Mech Bay.png",
+		"overlayUrl": "QG/QG-052 [50x50] [Overlay] Mining Mechs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Mining": 28,
+			"Vehicles": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-053": {
+		"url": "QG/QG-053 [50x50] [50-dTons] Prison, Brig.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Brig": 25,
+			"Lounge": 25
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Prisoners": 8
+		}
+	},
+	"QG-054": {
+		"url": "QG/QG-054 [50x50] [50-dTons] Prison, Brig.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Brig": 20,
+			"Low Berths": 12,
+			"Airlock": 8,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 4,
+			"Prisoners": 8
+		}
+	},
+	"QG-055": {
+		"url": "QG/QG-055 [50x50] [50-dTons] Barracks.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Barracks": 25,
+			"Lounge": 25
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 32
+		}
+	},
+	"QG-056": {
+		"url": "QG/QG-056 [50x50] [50-dTons] Barracks.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Barracks": 25,
+			"Lounge": 25
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 24
+		}
+	},
+	"QG-057": {
+		"url": "QG/QG-057 [50x50] [50-dTons] Drop Capsules.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 16,
+			"Military": 34
+		},
+		"facilities": {
+			"Capsules": 8,
+			"Airlocks": 0,
+			"RoomDouble": 4
+		}
+	},
+	"QG-058": {
+		"url": "QG/QG-058 [50x50] [50-dTons] Drop Capsules.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Military": 50
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Capsules": 16
+		}
+	},
+	"QG-059": {
+		"url": "QG/QG-059 [50x50] [50-dTons] Troop Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Barracks": 25,
+			"Lounge": 15,
+			"Military": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 16
+		}
+	},
+	"QG-060": {
+		"url": "QG/QG-060 [50x50] [50-dTons] Sensors, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Sensors": 34,
+			"Staterooms": 16,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"QG-061": {
+		"url": "QG/QG-061 [50x50] [50-dTons] Fighter Hangar.png",
+		"overlayUrl": "QG/QG-061 [50x50] [Overlay] Rampart Fighters.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Hangar": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-062": {
+		"url": "QG/QG-062 [50x50] [50-dTons] Fighter Hangar.png",
+		"overlayUrl": "QG/QG-062 [50x50] [Overlay] Dragonfly Fighters.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Hangar": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-063": {
+		"url": "QG/QG-063 [50x50] [50-dTons] Fighter Hangar.png",
+		"overlayUrl": "QG/QG-063 [50x50] [Overlay] [50-dTons] {Overlay] Valkarie Fighter.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Hangar": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-064": {
+		"url": "QG/QG-064 [50x50] [50-dTons] Gunboat Hangar.png",
+		"overlayUrl": "QG/QG-064 [50x50] [Overlay] 20-dTon Gunboat.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Hangar": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-065": {
+		"url": "QG/QG-065 [50x50] [50-dTons] Grav Tank Hangar.png",
+		"overlayUrl": "QG/QG-065 [50x50] [Overlay] Grav Tank.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Vehicle": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-066": {
+		"url": "QG/QG-066 [50x50] [50-dTons] Vehicle Hangar.png",
+		"overlayUrl": "QG/QG-066 [50x50] [Overlay] ATV.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Vehicle": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-067": {
+		"url": "QG/QG-067 [50x50] [50-dTons] Passenger Seating.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Seating": 43,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 86
+		}
+	},
+	"QG-068": {
+		"url": "QG/QG-068 [50x50] [50-dTons] Carniculture Lab.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Biosphere": 46,
+			"Labs": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-069": {
+		"url": "QG/QG-069 [50x50] [50-dTons] Cloning Facility.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Low Berths": 22,
+			"Medical": 8,
+			"Labs": 5,
+			"Lounge": 5,
+			"Engineering": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-070": {
+		"url": "QG/QG-070 [50x50] [50-dTons] Xenofauna Lab.png",
+		"overlayUrl": "QG/QG-070 [50x50] [Overlay] Animals.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Labs": 6,
+			"Lounge": 6,
+			"Stable": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-071": {
+		"url": "QG/QG-071 [50x50] [50-dTons] Staterooms, Transporter.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 14,
+			"Engineering": 20
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"QG-072": {
+		"url": "QG/QG-072 [50x50] [50-dTons] Cargo Bay, Transporter.png",
+		"overlayUrl": "QG/QG-072 [50x50] [Overlay] Cargo.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 12,
+			"Cargo": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-073": {
+		"url": "QG/QG-073 [50x50] [50-dTons] Dining Room, Bar.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Lounge": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-074": {
+		"url": "QG/QG-074 [50x50] [50-dTons] Salvage Deck.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Mining": 30,
+			"Staterooms": 8,
+			"Workshop": 6,
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2
+		}
+	},
+	"QG-075": {
+		"url": "QG/QG-075 [50x50] [50-dTons] Offices.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Lounge": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-076": {
+		"url": "QG/QG-076 [50x50] [50-dTons] Hydroponics Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Biosphere": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-077": {
+		"url": "QG/QG-077 [50x50] [50-dTons] Agricultural Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Biosphere": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-078": {
+		"url": "QG/QG-078 [50x50] [50-dTons] Arboretum.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Biosphere": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-079": {
+		"url": "QG/QG-079 [50x50] [50-dTons] Vertical Core - Cargo Bay.png",
+		"overlayUrl": "QG/QG-079 [50x50] [Overlay] Cargo.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-080": {
+		"url": "QG/QG-080 [50x50] [50-dTons] Vertical Core - Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 28,
+			"Lounge": 18,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 3,
+			"RoomDouble": 4
+		}
+	},
+	"QG-081": {
+		"url": "QG/QG-081 [50x50] [50-dTons] Vertical Core - Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 19,
+			"Engineering": 2,
+			"Low Berths": 9,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": null,
+			"RoomHigh": null,
+			"RoomLuxury": null
+		}
+	},
+	"QG-082": {
+		"url": "QG/QG-082 [50x50] [50-dTons] Vertical Core - Survey Deck.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Drones": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-083": {
+		"url": "QG/QG-083 [50x50] [50-dTons] Vertical Core - Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Fuel": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"QG-084": {
+		"url": "QG/QG-084 [50x50] [50-dTons] Vertical Core - Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Labs": 38,
+			"Engineering": 2,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	}
+}

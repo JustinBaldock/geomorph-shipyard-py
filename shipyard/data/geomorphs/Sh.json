@@ -1,0 +1,1577 @@
+{
+	"Sh-001": {
+		"url": "Sh/Sh-001 [50x50] [41-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Cargo": 41
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-001 [50x50] [Overlay] Cargo.png"
+	},
+	"Sh-002": {
+		"url": "Sh/Sh-002 [50x50] [41-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Cargo": 41
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-003": {
+		"url": "Sh/Sh-003 [50x50] [48-dTons] Cargo Bay with Launches.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Cargo": 8,
+			"Docking": 40
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-003 [50x50] [Overlay] 20-dTon Cargo Launch.png"
+	},
+	"Sh-004": {
+		"url": "Sh/Sh-004 [50x50] [50-dTons] Cargo Bay with Shuttles.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 30,
+			"Docking": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-004 [50x50] [Overlay] Cargo and Shuttles.png"
+	},
+	"Sh-005": {
+		"url": "Sh/Sh-005 [50x50] [50-dTons] Cargo Bay with Shuttles.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 30,
+			"Docking": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-006": {
+		"url": "Sh/Sh-006 [50x50] [50-dTons] Cargo Bay with Grappling Arms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-007": {
+		"url": "Sh/Sh-007 [50x50] [50-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-007 [50x50] [Overlay] Cargo.png"
+	},
+	"Sh-008": {
+		"url": "Sh/Sh-008 [50x50] [50-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-008 [50x50] [Overlay] Cargo.png"
+	},
+	"Sh-009": {
+		"url": "Sh/Sh-009 [50x60] [59-dTons] 20 Ton Launch Bay.png",
+		"overlayUrl": "Sh/Sh-009 [50x50] [Overlay] 20-dTon Cargo Launch.png",
+		"sizeX": 10,
+		"sizeY": 12,
+		"tons": 59,
+		"uses": {
+			"Docking": 50,
+			"Fuel": 3,
+			"Cargo": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-010": {
+		"url": "Sh/Sh-010 [50x50] [50-dTons] Cargo Bay - Upper.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-011": {
+		"url": "Sh/Sh-011 [50x50] [52-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 52,
+		"uses": {
+			"Cargo": 52
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-012": {
+		"url": "Sh/Sh-012 [50x60] [55-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 12,
+		"tons": 55,
+		"uses": {
+			"Cargo": 55
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-013": {
+		"url": "Sh/Sh-013 [50x50] [16+36 or 16+117-dTons] Bulk Cargo, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 133,
+		"uses": {
+			"Liquid": 117,
+			"Engineering": 8,
+			"Lounge": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-014": {
+		"url": "Sh/Sh-014 [50x50] [16+36 or 16+117-dTons] Bulk Cargo, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 133,
+		"uses": {
+			"Liquid": 117,
+			"Engineering": 8,
+			"Lounge": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-015": {
+		"url": "Sh/Sh-015 [50x50] [22+36 or 22+117-dTons] Bulk Cargo, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 139,
+		"uses": {
+			"Liquid": 117,
+			"Engineering": 11,
+			"Lounge": 11
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-016": {
+		"url": "Sh/Sh-016 [50x50] [49-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Fuel": 45,
+			"Engineering": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-017": {
+		"url": "Sh/Sh-017 [50x50] [52-dTons] Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 52,
+		"uses": {
+			"Fuel": 45,
+			"Weapons": 7
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2
+		}
+	},
+	"Sh-018": {
+		"url": "Sh/Sh-018 [50x50] [50-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Engineering": 30,
+			"Fuel": 20,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-019": {
+		"url": "Sh/Sh-019 [50x50] [50-dTons] Collapsible Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Fuel": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-020": {
+		"url": "Sh/Sh-020 [50x50] [50-dTons] Collapsible Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-020 [50x50] [Overlay] Extended Fuel Bladder.png"
+	},
+	"Sh-021": {
+		"url": "Sh/Sh-021 [50x50] [34-dTons] Fuel, Re-Entry Capsules.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Fuel": 26,
+			"Military": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Capsules": 8
+		}
+	},
+	"Sh-022": {
+		"url": "Sh/Sh-022 [50x50] [50-dTons] Drop Tanks.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Drop Tank": 40,
+			"Airlock": 4,
+			"Engineering": 6
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+	"Sh-023": {
+		"url": "Sh/Sh-023 [50x50] [50-dTons] Drop Tanks - Detached.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Airlock": 4,
+			"Engineering": 6
+		},
+		"facilities": {
+			"Airlocks": 2
+		},
+		"overlayUrl": "Sh/Sh-023 [50x50] [Overlay] 20-dTon Drop Tanks.png"
+	},
+	"Sh-024": {
+		"url": "Sh/Sh-024 [50x50] [41-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Fuel": 41
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-025": {
+		"url": "Sh/Sh-025 [50x50] [46-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 16,
+			"Lounge": 15,
+			"Briefing": 0,
+			"Vehicle": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "Sh/Sh-025 [50x50] [Overlay] Air-Raft.png"
+	},
+	"Sh-026": {
+		"url": "Sh/Sh-026 [50x50] [49-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 12,
+			"Lounge": 16,
+			"Briefing": 0,
+			"Sensors": 2,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"Sh-027": {
+		"url": "Sh/Sh-027 [50x50] [47-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 24,
+			"Lounge": 0,
+			"Briefing": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 6
+		}
+	},
+	"Sh-028": {
+		"url": "Sh/Sh-028 [50x50] [48-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 32,
+			"Lounge": 9,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 8
+		}
+	},
+	"Sh-029": {
+		"url": "Sh/Sh-029 [50x50] [46-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 46,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 12,
+			"Lounge": 7,
+			"Briefing": 8,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"Sh-030": {
+		"url": "Sh/Sh-030 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 28,
+			"Lounge": 16,
+			"Medical": 4,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 6
+		}
+	},
+	"Sh-031": {
+		"url": "Sh/Sh-031 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 34,
+			"Lounge": 12,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6,
+			"RoomHigh": 2
+		}
+	},
+	"Sh-032": {
+		"url": "Sh/Sh-032 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 32,
+			"Lounge": 18
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 8
+		}
+	},
+	"Sh-033": {
+		"url": "Sh/Sh-033 [50x50] [47-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Staterooms": 46,
+			"Lounge": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 8,
+			"RoomHigh": 1
+		}
+	},
+	"Sh-034": {
+		"url": "Sh/Sh-034 [50x50] [42-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Staterooms": 36,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 5,
+			"RoomDouble": 4
+		}
+	},
+	"Sh-035": {
+		"url": "Sh/Sh-035 [50x50] [34-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 8
+		}
+	},
+	"Sh-036": {
+		"url": "Sh/Sh-036 [50x50] [34-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Staterooms": 26,
+			"Lounge": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 4,
+			"RoomDouble": 0,
+			"RoomHigh": 2
+		}
+	},
+	"Sh-037": {
+		"url": "Sh/Sh-037 [50x50] [47-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 21,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 6
+		}
+	},
+	"Sh-038": {
+		"url": "Sh/Sh-038 [50x50] [47-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Staterooms": 28,
+			"Lounge": 17,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 7
+		}
+	},
+	"Sh-039": {
+		"url": "Sh/Sh-039 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 38,
+			"Lounge": 10,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 6,
+			"RoomHigh": 2
+		}
+	},
+	"Sh-040": {
+		"url": "Sh/Sh-040 [50x50] [42-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Staterooms": 28,
+			"Lounge": 9,
+			"Airlock": 2,
+			"Low Berths": 3
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 5
+		}
+	},
+	"Sh-041": {
+		"url": "Sh/Sh-041 [50x50] [51-dTons] Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 51,
+		"uses": {
+			"Staterooms": 24,
+			"Weapons": 3,
+			"Lounge": 24
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0,
+			"RoomSingle": 8
+		}
+	},
+	"Sh-042": {
+		"url": "Sh/Sh-042 [50x50] [48-dTons] Luxury Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Staterooms": 44,
+			"Airlock": 2,
+			"Lounge": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 1,
+			"RoomHigh": 0,
+			"RoomLuxury": 4
+		}
+	},
+	"Sh-043": {
+		"url": "Sh/Sh-043 [50x50] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 40,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 10
+		}
+	},
+	"Sh-044": {
+		"url": "Sh/Sh-044 [50x50] [58-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 58,
+		"uses": {
+			"Staterooms": 24,
+			"Fuel": 28,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 8
+		}
+	},
+	"Sh-045": {
+		"url": "Sh/Sh-045 [50x50] [38-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Staterooms": 20,
+			"Fuel": 10,
+			"Lounge": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 4,
+			"RoomDouble": 0,
+			"RoomHigh": 1
+		}
+	},
+	"Sh-046": {
+		"url": "Sh/Sh-046 [50x50] [51-dTons] Low Berths.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 51,
+		"uses": {
+			"Low Berths": 47,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-047": {
+		"url": "Sh/Sh-047 [50x50] [51-dTons] Low Berths.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 51,
+		"uses": {
+			"Low Berths": 36,
+			"Medical": 4,
+			"Engineering": 7,
+			"Lounge": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-048": {
+		"url": "Sh/Sh-048 [50x50] [50-dTons] Steerage, Low Berths.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Barracks": 15,
+			"Low Berths": 18,
+			"Medical": 4,
+			"Lounge": 13
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 12
+		}
+	},
+	"Sh-049": {
+		"url": "Sh/Sh-049 [50x50] [58-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 58,
+		"uses": {
+			"Staterooms": 34,
+			"Lounge": 18,
+			"Medical": 4,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 6,
+			"RoomHigh": 2
+		}
+	},
+	"Sh-050": {
+		"url": "Sh/Sh-050 [60x50] [58-dTons] Staterooms, Sensors.png",
+		"sizeX": 12,
+		"sizeY": 10,
+		"tons": 58,
+		"uses": {
+			"Staterooms": 16,
+			"Sensors": 4,
+			"Drones": 18,
+			"Lounge": 12,
+			"Engineering": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "Sh/Sh-050 [60x50] [Overlay] Dish Stored.png"
+	},
+	"Sh-051": {
+		"url": "Sh/Sh-051 [50x50] [57-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 57,
+		"uses": {
+			"Engineering": 57,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-052": {
+		"url": "Sh/Sh-052 [50x50] [49-dTons] Fuel, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Fuel": 27,
+			"Engineering": 18,
+			"Workshop": 0,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+	"Sh-053": {
+		"url": "Sh/Sh-053 [50x50] [38-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Engineering": 38,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-054": {
+		"url": "Sh/Sh-054 [50x50] [38-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Fuel": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-055": {
+		"url": "Sh/Sh-055 [50x50] [47-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Labs": 30,
+			"Lounge": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-056": {
+		"url": "Sh/Sh-056 [50x50] [50-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Labs": 40,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-057": {
+		"url": "Sh/Sh-057 [50x50] [42-dTons] Labs, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 42,
+		"uses": {
+			"Labs": 20,
+			"Staterooms": 16,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"Sh-058": {
+		"url": "Sh/Sh-058 [50x50] [53-dTons] Labs, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 53,
+		"uses": {
+			"Labs": 12,
+			"Staterooms": 16,
+			"Lounge": 3,
+			"Cargo": 10,
+			"Vehicle": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "Sh/Sh-058 [50x50] [Overlay] Air-Raft and Cargo.png"
+	},
+	"Sh-059": {
+		"url": "Sh/Sh-059 [50x50] [52-dTons] Xenofauna Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 52,
+		"uses": {
+			"Labs": 24,
+			"Stable": 28
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-059 [50x50] [Overlay] Animals.png"
+	},
+	"Sh-060": {
+		"url": "Sh/Sh-060 [50x50] [50-dTons] Carniculture Lab.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Biosphere": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-061": {
+		"url": "Sh/Sh-061 [50x50] [49-dTons] Sensors, Survey.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Drones": 30,
+			"Staterooms": 16,
+			"Lounge": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"Sh-062": {
+		"url": "Sh/Sh-062 [50x50] [50-dTons] Sensors, Survey.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Sensors": 20,
+			"Comms": 10,
+			"Staterooms": 8,
+			"Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 1
+		}
+	},
+	"Sh-063": {
+		"url": "Sh/Sh-063 [50x50] [48-dTons] Sensors, Survey.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Sensors": 20,
+			"Docking": 16,
+			"Staterooms": 8,
+			"Lounge": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"Sh-064": {
+		"url": "Sh/Sh-064 [50x50] [50-dTons] Communication, Data.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Comms": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-065": {
+		"url": "Sh/Sh-065 [50x50] [49-dTons] Communication, Data, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Fuel": 19,
+			"Comms": 30
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-066": {
+		"url": "Sh/Sh-066 [50x50] [50-dTons] Data, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 20,
+			"Comms": 30,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"RoomHigh": 2
+		}
+	},
+	"Sh-067": {
+		"url": "Sh/Sh-067 [50x50] [50-dTons] Barracks.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Barracks": 21,
+			"Staterooms": 4,
+			"Lounge": 25
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"RoomHigh": 2,
+			"Seats": 32
+		}
+	},
+	"Sh-068": {
+		"url": "Sh/Sh-068 [50x50] [50-dTons] Barracks, Re-entry Pods.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Barracks": 30,
+			"Military": 20,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 12,
+			"Capsules": 24
+		}
+	},
+	"Sh-069": {
+		"url": "Sh/Sh-069 [50x50] [50-dTons] Barracks, Drop Capsules.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Barracks": 20,
+			"Military": 30,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 12,
+			"Capsules": 12
+		}
+	},
+	"Sh-070": {
+		"url": "Sh/Sh-070 [50x50] [48-dTons] Troop Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Staterooms": 24,
+			"Armory": 4,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 8
+		}
+	},
+	"Sh-071": {
+		"url": "Sh/Sh-071 [50x50] [52-dTons] Fighter Hangar.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 52,
+		"uses": {
+			"Hangar": 50,
+			"Fuel": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-071 [50x50] [Overlay] Valkyrie Fighter.png"
+	},
+	"Sh-072": {
+		"url": "Sh/Sh-072 [50x50] [52-dTons] Fighter Hangar.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 52,
+		"uses": {
+			"Hangar": 52
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-072 [50x50] [Overlay] Dragonfly Fighters.png"
+	},
+	"Sh-073": {
+		"url": "Sh/Sh-073 [50x50] [48-dTons] Grav Tank Hangar.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Vehicle": 48
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-073 [50x50] [Overlay] Grav Tanks.png"
+	},
+	"Sh-074": {
+		"url": "Sh/Sh-074 [50x50] [50-dTons] Grav Tank Hangar.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Vehicle": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-074 [50x50] [Overlay] Grav Tanks.png"
+	},
+	"Sh-075": {
+		"url": "Sh/Sh-075 [50x50] [48-dTons] Gunboat Hangar.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Hangar": 48
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-075 [50x50] [Overlay] 20-dTon Gunboat.png"
+	},
+	"Sh-076": {
+		"url": "Sh/Sh-076 [50x50] [50-dTons] Mech Hangar - Lower.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Hangar": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-076 [50x50] [Overlay] Mechs.png"
+	},
+	"Sh-077": {
+		"url": "Sh/Sh-077 [50x50] [50-dTons] Mech Hangar - Upper.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Hangar": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-077 [50x50] [Overlay] Mecs.png"
+	},
+	"Sh-078": {
+		"url": "Sh/Sh-078 [50x50] [50-dTons] Fighter Hangar.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Hangar": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-078 [50x50] [Overlay] Rampart Fighters.png"
+	},
+	"Sh-079": {
+		"url": "Sh/Sh-079 [50x50] [51-dTons] Mining Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 51,
+		"uses": {
+			"Mining": 27,
+			"Drones": 12,
+			"Vehicle": 6,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-079 [50x50] [Overlay] Prospector's Buggy.png"
+	},
+	"Sh-080": {
+		"url": "Sh/Sh-080 [50x50] [50-dTons] Ore Refinery.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Mining": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-081": {
+		"url": "Sh/Sh-081 [50x50] [51-dTons] Ore Refinery.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 51,
+		"uses": {
+			"Mining": 51
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-082": {
+		"url": "Sh/Sh-082 [50x50] [57-dTons] Mining Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 57,
+		"uses": {
+			"Mining": 35,
+			"Vehicle": 20,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "Sh/Sh-082 [50x50] [Overlay] Grav Mining Vehicle.png"
+	},
+	"Sh-083": {
+		"url": "Sh/Sh-083 [50x50] [18+48 or 18+80-dTons] Liquid Mining, Transport.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 98,
+		"uses": {
+			"Liquid": 80,
+			"Lounge": 10,
+			"Engineering": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-084": {
+		"url": "Sh/Sh-084 [50x50] [52-dTons] Mining Mechs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 52,
+		"uses": {
+			"Mining": 25,
+			"Vehicle": 27
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-084 [50x50] [Overlay] Mining Mechs.png"
+	},
+	"Sh-085": {
+		"url": "Sh/Sh-085 [50x50] [50-dTons] 50 Ton Bay Weapon.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Weapons": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-086": {
+		"url": "Sh/Sh-086 [50x50] [50-dTons] 50 Ton Missile Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Weapons": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-087": {
+		"url": "Sh/Sh-087 [50x50] [50-dTons] 50 Ton Missile Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Weapons": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-088": {
+		"url": "Sh/Sh-088 [50x50] [50-dTons] 50 Ton Missile Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Weapons": 50
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-089": {
+		"url": "Sh/Sh-089 [50x50] [57-dTons] Auditorium.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 57,
+		"uses": {
+			"Training": 57
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-090": {
+		"url": "Sh/Sh-090 [50x50] [49-dTons] Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 49,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 12,
+			"Weapons": 13
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 4,
+			"Barbettes": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"Sh-091": {
+		"url": "Sh/Sh-091 [50x50] [50-dTons] Medical.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Medical": 36,
+			"Low Berths": 8,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-092": {
+		"url": "Sh/Sh-092 [50x50] [50-dTons] Medical.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Medical": 40,
+			"Low Berths": 4,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-093": {
+		"url": "Sh/Sh-093 [50x50] [50-dTons] Passenger Seating.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Seating": 50
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 104
+		}
+	},
+	"Sh-094": {
+		"url": "Sh/Sh-094 [50x50] [50-dTons] Escape Pods.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Docking": 40,
+			"Military": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-095": {
+		"url": "Sh/Sh-095 [50x50] [50-dTons] Hunting Deck.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Docking": 22,
+			"Staterooms": 16,
+			"Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "Sh/Sh-095 [50x50] [Overlay] 20-dTon Hunting Launch.png"
+	},
+	"Sh-096": {
+		"url": "Sh/Sh-096 [50x50] [50-dTons] Salvage Deck.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Mining": 30,
+			"Staterooms": 8,
+			"Workshop": 6,
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2
+		}
+	},
+	"Sh-097": {
+		"url": "Sh/Sh-097 [50x50] [47-dTons] Cloning Facility.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Low Berths": 22,
+			"Medical": 8,
+			"Labs": 5,
+			"Lounge": 5,
+			"Engineering": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-098": {
+		"url": "Sh/Sh-098 [50x50] [52-dTons] Prison, Brig.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 52,
+		"uses": {
+			"Brig": 30,
+			"Low Berths": 15,
+			"Lounge": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Prisoners": 20
+		}
+	},
+	"Sh-099": {
+		"url": "Sh/Sh-099 [50x50] [36-dTons] Prison, Brig.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 36,
+		"uses": {
+			"Brig": 22,
+			"Low Berths": 4,
+			"Airlock": 2,
+			"Lounge": 4,
+			"Staterooms": 4
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Prisoners": 8,
+			"RoomDouble": 1
+		}
+	},
+	"Sh-100": {
+		"url": "Sh/Sh-100 [60x50] [66-dTons] Cargo Bay - Empty.png",
+		"sizeX": 12,
+		"sizeY": 10,
+		"tons": 66,
+		"uses": {
+			"Cargo": 66
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "Sh/Sh-100 [60x50] [Overlay] Cargo.png"
+	},
+	"Sh-101": {
+		"url": "Sh/Sh-101 [60x50] [66-dTons] Cargo Bay - Full.png",
+		"sizeX": 12,
+		"sizeY": 10,
+		"tons": 66,
+		"uses": {
+			"Cargo": 66
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-102": {
+		"url": "Sh/Sh-102 [60x50] [66-dTons] Cargo Bay, Staterooms.png",
+		"sizeX": 12,
+		"sizeY": 10,
+		"tons": 66,
+		"uses": {
+			"Cargo": 36,
+			"Staterooms": 16,
+			"Lounge": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "Sh/Sh-102 [60x50] [Overlay] Cargo.png"
+	},
+	"Sh-103": {
+		"url": "Sh/Sh-103 [60x50] [57-dTons] Launch Cradle.png",
+		"overlayUrl": "Sh/Sh-103-Sh-104 [60x50] [Overlay] 20-dTon Long Range General Purpose Launch.png",
+		"sizeX": 12,
+		"sizeY": 10,
+		"tons": 57,
+		"uses": {
+			"Docking": 22,
+			"Cargo": 17.5,
+			"Lounge": 17.5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-104": {
+		"url": "Sh/Sh-104 [50x50] [43-dTons] Launch Cradle.png",
+		"overlayUrl": "Sh/Sh-103-Sh-104 [60x50] [Overlay] 20-dTon Long Range General Purpose Launch.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+			"Docking": 22,
+			"Lounge": 16,
+			"Engineering": 5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-105": {
+		"url": "Sh/Sh-105 [60x50] [43-dTons] Cargo Bay.png",
+		"sizeX": 12,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+			"Cargo": 43
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-106": {
+		"url": "Sh/Sh-106 [50x50] [48-dTons] Variable Use, Pod Craft.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Docking": 16,
+			"Cargo": 16,
+			"Lounge": 16
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"Sh-107": {
+		"url": "Sh/Sh-107 [50x50] [55-dTons] Steerage, Lifeboats.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 55,
+		"uses": {
+			"Fuel": 8,
+			"Barracks": 20,
+			"Lounge": 11,
+			"Docking": 16
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 24
+		}
+	},
+	"Sh-108": {
+		"url": "Sh/Sh-108 [50x50] [55-dTons] Engineering, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 55,
+		"uses": {
+			"Engineering": 30,
+			"Fuel": 25,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	}
+}

@@ -1,0 +1,612 @@
+{
+	"UG-001": {
+		"url": "UG/UG-001 [140x140] [152-dTons] Large Saucer Hull.png",
+		"sizeX": 28,
+		"sizeY": 28,
+		"tons": 152,
+		"uses": {
+			"Bridge": 15,
+			"Briefing": 4,
+			"Weapons": 4,
+			"Cargo": 50,
+			"Engineering": 50,
+			"Sensors": 4,
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"UG-002": {
+		"url": "UG/UG-002 [140x140] [154-dTons] Large Saucer Hull.png",
+		"sizeX": 28,
+		"sizeY": 28,
+		"tons": 154,
+		"uses": {
+			"Cargo": 52,
+			"Staterooms": 64,
+			"Lounge": 18,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 8,
+			"RoomDouble": 8
+		},
+		"overlayUrl": "UG/UG-002 [140x140] [Overlay] Cargo.png"
+	},
+	"UG-003": {
+		"url": "UG/UG-003 [140x140] [153-dTons] Large Saucer Hull.png",
+		"sizeX": 28,
+		"sizeY": 28,
+		"tons": 153,
+		"uses": {
+			"Docking": 44,
+			"Cargo": 5,
+			"Lounge": 5,
+			"Fuel": 99
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "UG/UG-003 [140x140] [Overlay] 20-dTon Passenger Launch and Cargo.png"
+	},
+	"UG-004": {
+		"url": "UG/UG-004 [140x140] [153-dTons] Large Saucer Hull.png",
+		"sizeX": 28,
+		"sizeY": 28,
+		"tons": 153,
+		"uses": {
+			"Cargo": 0,
+			"Staterooms": 64,
+			"Lounge": 43,
+			"Fuel": 20,
+			"Docking": 26
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 16
+		}
+	},
+	"UG-005": {
+		"url": "UG/UG-005 [90x90] [77-dTons] Medium Saucer Hull.png",
+		"sizeX": 18,
+		"sizeY": 18,
+		"tons": 77,
+		"uses": {
+			"Bridge": 6,
+			"Briefing": 0,
+			"Staterooms": 8,
+			"Lounge": 0,
+			"Airlock": 2,
+			"Weapons": 0,
+			"Cargo": 0,
+			"Engineering": 18,
+			"Sensors": 1,
+			"Fuel": 44
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomDouble": 2
+		}
+	},
+	"UG-006": {
+		"url": "UG/UG-006 [90x90] [77-dTons] Medium Saucer Hull.png",
+		"sizeX": 18,
+		"sizeY": 18,
+		"tons": 77,
+		"uses": {
+			"Bridge": 6,
+			"Briefing": 0,
+			"Staterooms": 8,
+			"Lounge": 5,
+			"Airlock": 4,
+			"Weapons": 0,
+			"Cargo": 17,
+			"Engineering": 22,
+			"Sensors": 5,
+			"Fuel": 10
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+	"UG-007": {
+		"url": "UG/UG-007 [90x90] [77-dTons] Medium Saucer Hull.png",
+		"sizeX": 18,
+		"sizeY": 18,
+		"tons": 77,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 4,
+			"Vehicle": 17,
+			"Fuel": 40
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "UG/UG-007 [90x90] [Overlay] [77-dTons] [Overlay} Air-Rafts.png"
+	},
+	"UG-008": {
+		"url": "UG/UG-008 [90x90] [78-dTons] Medium Saucer Hull.png",
+		"sizeX": 18,
+		"sizeY": 18,
+		"tons": 78,
+		"uses": {
+			"Bridge": 6,
+			"Briefing": 4,
+			"Staterooms": 6,
+			"Airlock": 2,
+			"Weapons": 4,
+			"Engineering": 17,
+			"Fuel": 42
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomHigh": 1
+		},
+		"overlayUrl": "UG/UG-008 [90x90] [Overlay] Turrets Retracted.png"
+	},
+	"UG-009": {
+		"url": "UG/UG-009 [70x70] [29-dTons] Small Saucer Hull.png",
+		"sizeX": 14,
+		"sizeY": 14,
+		"tons": 29,
+		"uses": {
+			"Bridge": 7,
+			"Engineering": 7,
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"UG-010": {
+		"url": "UG/UG-010 [70x70] [31-dTons] Small Saucer Hull.png",
+		"sizeX": 14,
+		"sizeY": 14,
+		"tons": 31,
+		"uses": {
+			"Bridge": 7,
+			"Engineering": 20,
+			"Low Berths": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"UG-011": {
+		"url": "UG/UG-011 [70x70] [31-dTons] Small Saucer Hull.png",
+		"sizeX": 14,
+		"sizeY": 14,
+		"tons": 31,
+		"uses": {
+			"Bridge": 7,
+			"Engineering": 7,
+			"Staterooms": 8,
+			"Lounge": 4,
+			"Weapons": 5
+		},
+		"facilities": {
+			"Turrets": 2
+		}
+	},
+	"UG-012": {
+		"url": "UG/UG-012 [70x70] [32-dTons] Small Saucer Hull.png",
+		"sizeX": 14,
+		"sizeY": 14,
+		"tons": 32,
+		"uses": {
+			"Bridge": 7,
+			"Engineering": 13,
+			"Drones": 8,
+			"Lounge": 0,
+			"Weapons": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2
+		}
+	},
+	"UG-013": {
+		"url": "UG/UG-013 [140x70] [76-dTons] Long Ovoid Hull.png",
+		"sizeX": 28,
+		"sizeY": 14,
+		"tons": 76,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 3,
+			"Staterooms": 0,
+			"Airlock": 2,
+			"Vehicle": 6,
+			"Engineering": 25,
+			"Cargo": 10,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "UG/UG-013 [140x70] [Overlay] Air-Raft and Cargo.png"
+	},
+	"UG-014": {
+		"url": "UG/UG-014 [110x70] [100-dTons] Short Ovoid Hull.png",
+		"sizeX": 22,
+		"sizeY": 14,
+		"tons": 100,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 6,
+			"Staterooms": 30,
+			"Lounge": 6,
+			"Airlock": 4,
+			"Vehicle": 0,
+			"Engineering": 25,
+			"Workshop": 4,
+			"Cargo": 0,
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomDouble": 4,
+			"RoomHigh": 1
+		}
+	},
+	"UG-015": {
+		"url": "UG/UG-015 [90x70] [65-dTons] Short Ovoid Hull.png",
+		"sizeX": 18,
+		"sizeY": 14,
+		"tons": 65,
+		"uses": {
+			"Bridge": 4,
+			"Sensors": 0,
+			"Weapons": 2,
+			"Staterooms": 8,
+			"Lounge": 0,
+			"Airlock": 0,
+			"Vehicle": 8,
+			"Engineering": 16,
+			"Workshop": 4,
+			"Cargo": 8,
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "UG/UG-015 [90x70] [Overlay] Air-Raft and Cargo.png"
+	},
+	"UG-016": {
+		"url": "UG/UG-016 [110x70] [100-dTons] Short Ovoid Hull.png",
+		"sizeX": 22,
+		"sizeY": 14,
+		"tons": 100,
+		"uses": {
+			"Bridge": 8,
+			"Sensors": 2,
+			"Weapons": 0,
+			"Staterooms": 24,
+			"Lounge": 0,
+			"Airlock": 4,
+			"Vehicle": 0,
+			"Engineering": 24,
+			"Workshop": 4,
+			"Cargo": 0,
+			"Fuel": 38
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomDouble": 6
+		}
+	},
+	"UG-017": {
+		"url": "UG/UG-017 [90x70] [60-dTons] Short Ovoid Hull.png",
+		"sizeX": 18,
+		"sizeY": 14,
+		"tons": 60,
+		"uses": { "Cargo": 14, "Fuel": 44, "Lounge": 4 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"UG-018": {
+		"url": "UG/UG-018 [120x90] [127-dTons] Short Standard Hull.png",
+		"sizeX": 24,
+		"sizeY": 18,
+		"tons": 127,
+		"uses": {
+			"Bridge": 8,
+			"Sensors": 0,
+			"Weapons": 0,
+			"Staterooms": 20,
+			"Lounge": 28,
+			"Airlock": 4,
+			"Vehicle": 6,
+			"Engineering": 40,
+			"Workshop": 0,
+			"Cargo": 6,
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 2,
+			"RoomDouble": 2,
+			"RoomHigh": 1
+		},
+		"overlayUrl": "UG/UG-018 [120x90] [Overlay] Air-Raft and Cargo.png"
+	},
+	"UG-019": {
+		"url": "UG/UG-019 [120x70] [83-dTons] Short Standard Hull.png",
+		"sizeX": 24,
+		"sizeY": 14,
+		"tons": 83,
+		"uses": {
+			"Bridge": 3,
+			"Sensors": 0,
+			"Weapons": 4,
+			"Staterooms": 16,
+			"Lounge": 5,
+			"Airlock": 4,
+			"Vehicle": 0,
+			"Engineering": 16,
+			"Workshop": 0,
+			"Cargo": 12,
+			"Fuel": 23
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "UG/UG-019 [120x70] [Overlay] Cargo.png"
+	},
+	"UG-020": {
+		"url": "UG/UG-020 [120x70] [88-dTons] Short Standard Hull.png",
+		"sizeX": 24,
+		"sizeY": 14,
+		"tons": 88,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 0,
+			"Weapons": 0,
+			"Staterooms": 16,
+			"Lounge": 9,
+			"Airlock": 0,
+			"Vehicle": 6,
+			"Engineering": 25,
+			"Workshop": 0,
+			"Cargo": 14,
+			"Fuel": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "UG/UG-020 [120x70] [Overlay] Air-Raft and Cargo.png"
+	},
+	"UG-021": {
+		"url": "UG/UG-021 [110x70] [89-dTons] Short Standard Hull.png",
+		"sizeX": 22,
+		"sizeY": 14,
+		"tons": 89,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 1,
+			"Weapons": 0,
+			"Staterooms": 16,
+			"Lounge": 6,
+			"Airlock": 2,
+			"Vehicle": 6,
+			"Engineering": 28,
+			"Workshop": 0,
+			"Cargo": 0,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "UG/UG-021 [110x70] [Overlay] Air-Raft.png"
+	},
+	"UG-022": {
+		"url": "UG/UG-022 [110x90] [75-dTons] Short Standard Hull.png",
+		"sizeX": 22,
+		"sizeY": 18,
+		"tons": 75,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 2,
+			"Weapons": 0,
+			"Staterooms": 8,
+			"Lounge": 4,
+			"Airlock": 0,
+			"Vehicle": 0,
+			"Engineering": 26,
+			"Workshop": 0,
+			"Cargo": 0,
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2
+		}
+	},
+	"UG-023": {
+		"url": "UG/UG-023 [110x50] [43-dTons] Short Standard Hull.png",
+		"sizeX": 22,
+		"sizeY": 10,
+		"tons": 43,
+		"uses": {
+			"Bridge": 0,
+			"Sensors": 0,
+			"Weapons": 0,
+			"Staterooms": 8,
+			"Lounge": 20,
+			"Airlock": 0,
+			"Vehicle": 0,
+			"Engineering": 15,
+			"Workshop": 0,
+			"Cargo": 0,
+			"Fuel": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 2
+		}
+	},
+	"UG-024": {
+		"url": "UG/UG-024 [160x130] [117-dTons] Short Standard Hull - Vargr.png",
+		"sizeX": 32,
+		"sizeY": 26,
+		"tons": 117,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 2,
+			"Weapons": 2,
+			"Staterooms": 20,
+			"Lounge": 5,
+			"Airlock": 0,
+			"Vehicle": 6,
+			"Engineering": 18,
+			"Workshop": 0,
+			"Cargo": 9,
+			"Fuel": 45
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 4,
+			"RoomSingle": 1,
+			"Turrets": 2
+		},
+		"overlayUrl": "UG/UG-024 [160x130] [Overlay] Air-Raft and Cargo.png"
+	},
+	"UG-025": {
+		"url": "UG/UG-025 [200x130] [182-dTons] Long Standard Hull.png",
+		"sizeX": 40,
+		"sizeY": 26,
+		"tons": 182,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 2,
+			"Weapons": 2,
+			"Staterooms": 24,
+			"Lounge": 10,
+			"Airlock": 0,
+			"Vehicle": 0,
+			"Engineering": 30,
+			"Workshop": 0,
+			"Cargo": 15,
+			"Fuel": 89
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "UG/UG-025 [200x130] [Overlay] Cargo.png"
+	},
+	"UG-026": {
+		"url": "UG/UG-026 [190x130] [150-dTons] Long Standard Hull.png",
+		"sizeX": 38,
+		"sizeY": 26,
+		"tons": 150,
+		"uses": {
+			"Bridge": 6,
+			"Sensors": 0,
+			"Weapons": 0,
+			"Staterooms": 16,
+			"Lounge": 5,
+			"Airlock": 4,
+			"Vehicle": 0,
+			"Engineering": 55,
+			"Workshop": 0,
+			"Cargo": 4,
+			"Fuel": 60
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 4
+		},
+		"overlayUrl": "UG/UG-026 [190x130] [Overlay] Cargo.png"
+	},
+	"UG-027": {
+		"url": "UG/UG-027 [190x150] [278-dTons] Long Standard Hull.png",
+		"sizeX": 38,
+		"sizeY": 30,
+		"tons": 278,
+		"uses": {
+			"Bridge": 9,
+			"Comms": 2,
+			"Weapons": 0,
+			"Staterooms": 52,
+			"Medical": 4,
+			"Lounge": 12,
+			"Airlock": 4,
+			"Vehicle": 0,
+			"Engineering": 70,
+			"Workshop": 0,
+			"Cargo": 0,
+			"Fuel": 125
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 7,
+			"RoomDouble": 3,
+			"RoomHigh": 2
+		}
+	},
+	"UG-028": {
+		"url": "UG/UG-028 [180x130] [125+55-dTons] Long Standard Hull.png",
+		"sizeX": 36,
+		"sizeY": 26,
+		"tons": 180,
+		"uses": {
+			"Aerofin": 55,
+
+			"Bridge": 9,
+			"Sensors": 4,
+			"Weapons": 0,
+			"Staterooms": 12,
+			"Medical": 0,
+			"Lounge": 4,
+			"Airlock": 4,
+			"Vehicle": 0,
+			"Engineering": 36,
+			"Workshop": 0,
+			"Cargo": 0,
+			"Fuel": 56
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"UG-029": {
+		"url": "UG/UG-029 [200x130] [177+84-dTons] Long Standard Hull.png",
+		"sizeX": 40,
+		"sizeY": 26,
+		"tons": 261,
+		"uses": {
+			"Aerofin": 84,
+
+			"Bridge": 12,
+			"Sensors": 2,
+			"Weapons": 8,
+			"Staterooms": 8,
+			"Medical": 0,
+			"Lounge": 8,
+			"Airlock": 6,
+			"Vehicle": 0,
+			"Engineering": 48,
+			"Workshop": 5,
+			"Cargo": 5,
+			"Fuel": 75
+		},
+		"facilities": {
+			"Airlocks": 3,
+			"RoomDouble": 2,
+			"Turrets": 2
+		},
+		"overlayUrl": "UG/UG-029 [200x130] [Overlay] Cargo.png"
+	}
+}

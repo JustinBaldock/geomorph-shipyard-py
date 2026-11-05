@@ -1,0 +1,355 @@
+{
+	"DV-001": {
+		"url": "DV/DV-001 [10x10] [1-dTons] Single Turret with Gunner.png",
+		"sizeX": 2,
+		"sizeY": 2,
+		"tons": 1,
+		"uses": { "Weapons": 1 },
+		"facilities": {
+			"Turrets": 1
+		}
+	},
+	"DV-002": {
+		"url": "DV/DV-002 [10x10] [1-dTons] Double Turrent with Gunner.png",
+		"sizeX": 2,
+		"sizeY": 2,
+		"tons": 1,
+		"uses": { "Weapons": 1 },
+		"facilities": {
+			"Turrets": 1
+		}
+	},
+	"DV-003": {
+		"url": "DV/DV-003 [10x10] [1-dTons] Triple Turrent with Gunner.png",
+		"sizeX": 2,
+		"sizeY": 2,
+		"tons": 1,
+		"uses": { "Weapons": 1 },
+		"facilities": {
+			"Turrets": 1
+		}
+	},
+	"DV-004": {
+		"url": "DV/DV-004 [15x15] [1-dTons] Sandcaster Turret with Gunner.png",
+		"sizeX": 3,
+		"sizeY": 3,
+		"tons": 1,
+		"uses": { "Weapons": 1 },
+		"facilities": {
+			"Turrets": 1
+		}
+	},
+	"DV-005": {
+		"url": "DV/DV-005 [30x15] [5-dTons] Generic Barbette.png",
+		"sizeX": 6,
+		"sizeY": 3,
+		"tons": 5,
+		"uses": { "Weapons": 5 },
+		"facilities": {
+			"Barbettes": 1
+		}
+	},
+	"DV-006": {
+		"url": "DV/DV-006 [20x15] [5-dTons] Missile Barbette.png",
+		"sizeX": 4,
+		"sizeY": 3,
+		"tons": 5,
+		"uses": { "Weapons": 5 },
+		"facilities": {
+			"Barbettes": 5
+		}
+	},
+	"DV-007": {
+		"url": "DV/DV-007 [20x15] [5-dTons] Torpedo Barbette.png",
+		"sizeX": 4,
+		"sizeY": 3,
+		"tons": 5,
+		"uses": { "Weapons": 5 },
+		"facilities": {
+			"Barbettes": 5
+		}
+	},
+	"DV-008": {
+		"url": "DV/DV-008 [30x15] [5-dTons] Railgun Barbette.png",
+		"sizeX": 6,
+		"sizeY": 3,
+		"tons": 5,
+		"uses": { "Weapons": 5 },
+		"facilities": {
+			"Barbettes": 5
+		}
+	},
+	"DV-009": {
+		"url": "DV/DV-009 [10x10] [2-dTons] Observation Dome.png",
+		"sizeX": 2,
+		"sizeY": 2,
+		"tons": 2,
+		"uses": { "Lounge": 2 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"DV-010": {
+		"url": "DV/DV-010 [30x30] [14-dTons] Bridge.png",
+		"sizeX": 6,
+		"sizeY": 6,
+		"tons": 14,
+		"uses": {
+			"Bridge": 14
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"DV-011": {
+		"url": "DV/DV-011 [30x20] [9-dTons] Bridge.png",
+		"sizeX": 6,
+		"sizeY": 4,
+		"tons": 9,
+		"uses": {
+			"Bridge": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"DV-012": {
+		"url": "DV/DV-012 [55x25] [24-dTons] Bridge and Staterooms.png",
+		"sizeX": 11,
+		"sizeY": 5,
+		"tons": 24,
+		"uses": { "Bridge": 8, "Staterooms": 16 },
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"DV-013": {
+		"url": "DV/DV-013 [30x30] [14-dTons] Luxury Lounge.png",
+		"sizeX": 6,
+		"sizeY": 6,
+		"tons": 14,
+		"uses": { "Lounge": 14 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"DV-014": {
+		"url": "DV/DV-014 [30x30] [14-dTons] Luxury Stateroom.png",
+		"sizeX": 6,
+		"sizeY": 6,
+		"tons": 14,
+		"uses": { "Staterooms": 10, "Lounge": 4 },
+		"facilities": {
+			"Airlocks": 0,
+			"RoomLuxury": 1
+		}
+	},
+	"DV-015": {
+		"url": "DV/DV-015 [55x25] [25-dTons] Staterooms.png",
+		"sizeX": 11,
+		"sizeY": 5,
+		"tons": 25,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 7,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"DV-016": {
+		"url": "DV/DV-016 [30x20] [11-dTons] Air-Raft Hangar.png",
+		"sizeX": 6,
+		"sizeY": 4,
+		"tons": 11,
+		"uses": { "Vehicle": 9, "Airlock": 2 },
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "DV/DV-016 [30x20] [Overlay] Air-Raft.png"
+	},
+	"DV-017": {
+		"url": "DV/DV-017 [30x20] [10-dTons] Missile Storage.png",
+		"sizeX": 6,
+		"sizeY": 4,
+		"tons": 10,
+		"uses": { "Weapons": 10 },
+		"facilities": {
+			"Airlocks": 0,
+			"Barbettes": 1
+		}
+	},
+	"DV-018": {
+		"url": "DV/DV-018 [50x20] [18-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 18,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 8,
+			"Vehicle": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"RoomHigh": 0,
+			"RoomLuxury": 0
+		},
+		"overlayUrl": "DV/DV-018 [50x20] [Overlay] Air-Raft.png"
+	},
+	"DV-019": {
+		"url": "DV/DV-019 [65x35] [36-dTons] Fuel, Engineering.png",
+		"sizeX": 13,
+		"sizeY": 7,
+		"tons": 36,
+		"uses": {
+			"Fuel": 18,
+			"Engineering": 18,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"DV-020": {
+		"url": "DV/DV-020 [45x40] [26 or 34-dTons] Arboretum.png",
+		"sizeX": 9,
+		"sizeY": 8,
+		"tons": 34,
+		"uses": { "Biosphere": 34 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"DV-021": {
+		"url": "DV/DV-021 [60x25] [28-dTons] Cargo.png",
+		"sizeX": 12,
+		"sizeY": 5,
+		"tons": 28,
+		"uses": {
+			"Cargo": 28
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "DV/DV-021 [60x25] [Overlay] Cargo.png"
+	},
+	"DV-022": {
+		"url": "DV/DV-022 [70x40] [44-dTons] Cargo, Engineering.png",
+		"sizeX": 14,
+		"sizeY": 8,
+		"tons": 44,
+		"uses": {
+			"Cargo": 27,
+			"Engineering": 13,
+			"Staterooms": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 1
+		}
+	},
+	"DV-023": {
+		"url": "DV/DV-023 [50x20] [22-dTons] Probes.png",
+		"sizeX": 10,
+		"sizeY": 4,
+		"tons": 22,
+		"uses": { "Drones": 22 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"DV-024": {
+		"url": "DV/DV-024 [65x25] [30-dTons] Cargo.png",
+		"sizeX": 13,
+		"sizeY": 5,
+		"tons": 30,
+		"uses": {
+			"Cargo": 21,
+			"Engineering": 3,
+			"Stables": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "DV/DV-024 [65x25] [Overlay] Animals and Cargo.png"
+	},
+	"DV-025": {
+		"url": "DV/DV-025 [40x40] [25-dTons] Bridge, Staterooms.png",
+		"sizeX": 8,
+		"sizeY": 8,
+		"tons": 25,
+		"uses": {
+			"Bridge": 8,
+			"Staterooms": 16
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4
+		}
+	},
+	"DV-026": {
+		"url": "DV/DV-026 [40x40] [25-dTons] Cargo.png",
+		"sizeX": 8,
+		"sizeY": 8,
+		"tons": 25,
+		"uses": {
+			"Cargo": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "DV/DV-026 [40x40] [Overlay] Cargo.png"
+	},
+	"DV-027": {
+		"url": "DV/DV-027 [60x30] [28-dTons] Comms, Data.png",
+		"sizeX": 12,
+		"sizeY": 6,
+		"tons": 28,
+		"uses": {
+			"Comms": 20,
+			"Staterooms": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2
+		}
+ },
+ "452-fusion": {
+  "url": "edge/452 [40x40] Fusion Barbette.png",
+  "sizeX": 8, "sizeY": 8, "tons": 5, "uses": {"Weapons": 5},
+  "facilities": { "Barbettes": 1 }
+ },
+ "452-ion": {
+  "url": "edge/452 [40x40] Ion Barbette.png",
+  "sizeX": 8, "sizeY": 8, "tons": 5, "uses": {"Weapons": 5},
+  "facilities": { "Barbettes": 1 }
+ },
+ "452-laser": {
+  "url": "edge/452 [40x40] Laser Barbette.png",
+  "sizeX": 8, "sizeY": 8, "tons": 5, "uses": {"Weapons": 5},
+  "facilities": { "Barbettes": 1 }
+ },
+ "452-missile": {
+  "url": "edge/452 [40x40] Missile Barbette.png",
+  "sizeX": 8, "sizeY": 8, "tons": 5, "uses": {"Weapons": 5},
+  "facilities": { "Barbettes": 1 }
+ },
+ "452-plasma": {
+  "url": "edge/452 [40x40] Plasma Barbette.png",
+  "sizeX": 8, "sizeY": 8, "tons": 5, "uses": {"Weapons": 5},
+  "facilities": { "Barbettes": 1 }
+ },
+ "452-sand": {
+  "url": "edge/452 [40x40] Sandcaster Barbette.png",
+  "sizeX": 8, "sizeY": 8, "tons": 5, "uses": {"Weapons": 5},
+  "facilities": { "Barbettes": 1 }
+  }
+}
+

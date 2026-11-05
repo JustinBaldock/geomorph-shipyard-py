@@ -1,0 +1,236 @@
+{
+	"LC-001": {
+		"url": "LC/LC-001 [40x200] [105-dTons] Bridge, Staterooms.png",
+		"sizeX": 8,
+		"sizeY": 40,
+		"tons": 105,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 40,
+			"Lounge": 34,
+			"Docking": 11,
+			"Cargo": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 10
+		},
+		"overlayUrl": "LC/LC-001 [40x200] [Overlay] 10-dTon Shuttle and Cargo.png"
+	},
+	"LC-002": {
+		"url": "LC/LC-002 [30x150] [73-dTons] Bridge, Staterooms, Cargo.png",
+		"sizeX": 6,
+		"sizeY": 30,
+		"tons": 73,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 40,
+			"Cargo": 16,
+			"Lounge": 12,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 10
+		},
+		"overlayUrl": "LC/LC-002 [30x150] [Overlay] Cargo.png"
+	},
+	"LC-003": {
+		"url": "LC/LC-003 [30x150] [66-dTons] Bridge, Labs, Cargo.png",
+		"sizeX": 6,
+		"sizeY": 30,
+		"tons": 66,
+		"uses": {
+			"Bridge": 10,
+			"Labs": 24,
+			"Barracks": 6,
+			"Lounge": 10,
+			"Docking": 5,
+			"Cargo": 7,
+			"Weapons": 2,
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "LC/LC-003 [30x150] [Overlay] Cargo Shuttle and Cargo.png"
+	},
+	"LC-004": {
+		"url": "LC/LC-004 [25x150] [58-dTons] Bridge, Cargo.png",
+		"sizeX": 5,
+		"sizeY": 30,
+		"tons": 58,
+		"uses": {
+			"Bridge": 8,
+			"Cargo": 21,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LC-005": {
+		"url": "LC/LC-005 [25x150] [72-dTons] Bridge, Multi purpose.png",
+		"sizeX": 5,
+		"sizeY": 30,
+		"tons": 72,
+		"uses": {
+			"Bridge": 10,
+			"Briefing": 4,
+			"Staterooms": 24,
+			"Lounge": 11,
+			"Cargo": 23
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "LC/LC-005 [25x150] [Overlay] Cargo.png"
+	},
+	"LC-006": {
+		"url": "LC/LC-006 [25x150] [61-dTons] Bridge, Staterooms.png",
+		"sizeX": 5,
+		"sizeY": 30,
+		"tons": 61,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 40,
+			"Lounge": 0,
+			"Briefing": 0,
+			"Sensors": 2,
+			"Airlock": 2,
+			"Engineering": 7
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 10
+		}
+	},
+	"LC-007": {
+		"url": "LC/LC-007 [25x150] [56-dTons] Bridge, Staterooms.png",
+		"sizeX": 5,
+		"sizeY": 30,
+		"tons": 56,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 24,
+			"Lounge": 8,
+			"Briefing": 0,
+			"Engineering": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"LC-008": {
+		"url": "LC/LC-008 [15x150] [33-dTons] Low Berth Transport.png",
+		"sizeX": 3,
+		"sizeY": 30,
+		"tons": 33,
+		"uses": {
+			"Bridge": 2,
+			"Staterooms": 4,
+			"Lounge": 7,
+			"Low Berths": 14,
+			"Engineering": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"LC-009": {
+		"url": "LC/LC-009 [10x150] [22-dTons] Passenger Carrier.png",
+		"sizeX": 2,
+		"sizeY": 30,
+		"tons": 22,
+		"uses": {
+			"Bridge": 2,
+			"Engineering": 4,
+			"Seating": 16
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 43
+		}
+	},
+	"LC-010": {
+		"url": "LC/LC-010 [35x150] [95-dTons] Staterooms, Cargo.png",
+		"sizeX": 7,
+		"sizeY": 30,
+		"tons": 95,
+		"uses": {
+			"Staterooms": 36,
+			"Bridge": 5,
+			"Cargo": 25,
+			"Lounge": 0,
+			"Vehicle": 6,
+			"Engineering": 11,
+			"Airlock": 2,
+			"Stable": 10
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 9
+		},
+		"overlayUrl": "LC/LC-010 [35x150] [Overlay] Cargo.png"
+	},
+	"LC-011": {
+		"url": "LC/LC-011 [25x150] [63-dTons] Staterooms, Labs.png",
+		"sizeX": 5,
+		"sizeY": 30,
+		"tons": 63,
+		"uses": {
+			"Staterooms": 24,
+			"Labs": 12,
+			"Lounge": 7,
+			"Engineering": 10,
+			"Bridge": 8,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 4,
+			"RoomDouble": 2
+		}
+	},
+	"LC-012": {
+		"url": "LC/LC-012 [25x150] [57-dTons] Staterooms.png",
+		"sizeX": 5,
+		"sizeY": 30,
+		"tons": 57,
+		"uses": {
+			"Staterooms": 24,
+			"Bridge": 5,
+			"Engineering": 11,
+			"Airlock": 2,
+			"Lounge": 15
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 4
+		}
+	},
+	"LC-013": {
+		"url": "LC/LC-013 [25x150] [52-dTons] Staterooms.png",
+		"sizeX": 5,
+		"sizeY": 30,
+		"tons": 52,
+		"uses": {
+			"Staterooms": 34,
+			"Bridge": 6,
+			"Lounge": 7,
+			"Engineering": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 7,
+			"RoomDouble": 0,
+			"RoomHigh": 1
+		}
+	}
+}

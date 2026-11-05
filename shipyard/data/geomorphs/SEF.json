@@ -1,0 +1,5827 @@
+{
+	"SE-001": {
+		"url": "SEF/SE-001 [Fore] [50x50] [27-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Cargo": 27
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-001 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-002": {
+		"url": "SEF/SE-002 [Fore] [50x50] [34-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Cargo": 34
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-002 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-003": {
+		"url": "SEF/SE-003 [Fore] [50x50] [40-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Cargo": 40
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-003 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-004": {
+		"url": "SEF/SE-004 [Fore] [50x50] [40-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Cargo": 40
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-004 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-005": {
+		"url": "SEF/SE-005 [Fore] [50x50] [38-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Cargo": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-005 [Fore] [50x50] [Overlay] Cargo and 10-dTon Shuttle.png"
+	},
+	"SE-006": {
+		"url": "SEF/SE-006 [Fore] [50x50] [25-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Cargo": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-006 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-007": {
+		"url": "SEF/SE-007 [Fore] [50x50] [34-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Cargo": 34
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-007 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-008": {
+		"url": "SEF/SE-008 [Fore] [50x50] [20-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 20,
+		"uses": {
+			"Cargo": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-008 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-009": {
+		"url": "SEF/SE-009 [Fore] [50x55] [47-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 11,
+		"tons": 47,
+		"uses": {
+			"Cargo": 23.5,
+			"Fuel": 23.5
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-009 [Fore] [50x55] [Overlay] Cargo.png"
+	},
+	"SE-010": {
+		"url": "SEF/SE-010 [Fore] [50x50] [28-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Cargo": 28
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-010 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-011": {
+		"url": "SEF/SE-011 [Fore] [50x100] [52-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 52,
+		"uses": {
+			"Cargo": 52
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-011 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-012": {
+		"url": "SEF/SE-012 [Fore] [50x50] [39-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Cargo": 39
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-012 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-013": {
+		"url": "SEF/SE-013 [Fore] [50x50] [16-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 16,
+		"uses": {
+			"Cargo": 16
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-013 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-014": {
+		"url": "SEF/SE-014 [Fore] [50x50] [18-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Cargo": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-014 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-015": {
+		"url": "SEF/SE-015 [Fore] [50x50] [11-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 11,
+		"uses": {
+			"Cargo": 11
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-015 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-016": {
+		"url": "SEF/SE-016 [Fore] [50x50] [47-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Cargo": 47
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-016 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-017": {
+		"url": "SEF/SE-017 [Fore] [50x100] [60-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 60,
+		"uses": {
+			"Cargo": 60
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-017 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-018": {
+		"url": "SEF/SE-018 [Fore] [50x100] [63-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 63,
+		"uses": {
+			"Cargo": 41,
+			"Fuel": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-018 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-019": {
+		"url": "SEF/SE-019 [Fore] [50x100] [57-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Cargo": 40,
+			"Fuel": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-019 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-020": {
+		"url": "SEF/SE-020 [Fore] [50x50] [26-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Cargo": 26
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-020 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-021": {
+		"url": "SEF/SE-021 [Fore] [50x100] [59-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 59,
+		"uses": {
+			"Cargo": 59
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-021 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-022": {
+		"url": "SEF/SE-022 [Fore] [50x100] [61-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 61,
+		"uses": {
+			"Cargo": 36,
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-022 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-023": {
+		"url": "SEF/SE-023 [Fore] [50x50] [28-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Cargo": 28
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-023 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-024": {
+		"url": "SEF/SE-024 [Fore] [50x100] [49-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 49,
+		"uses": {
+			"Cargo": 35,
+			"Stable": 14
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-024 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-025": {
+		"url": "SEF/SE-025 [Fore] [50x50] [30-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Cargo": 30
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-025 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-026": {
+		"url": "SEF/SE-026 [Fore] [50x50] [30-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Cargo": 30,
+			"Stable": 6,
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-026 [Fore] [50x50] [Overlay] Air-Raft and Cargo.png"
+	},
+	"SE-027": {
+		"url": "SEF/SE-027 [Fore] [50x100] [76-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 76,
+		"uses": {
+			"Cargo": 72,
+			"Weapons": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turret": 1
+		},
+		"overlayUrl": "SEF/SE-027 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-028": {
+		"url": "SEF/SE-028 [Fore] [50x50] [21-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Cargo": 12,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-028 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-029": {
+		"url": "SEF/SE-029 [Fore] [60x55] [62-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 12,
+		"sizeY": 11,
+		"tons": 62,
+		"uses": {
+			"Cargo": 42,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-029 [Fore] [60x55] [Overlay] Cargo.png"
+	},
+	"SE-030": {
+		"url": "SEF/SE-030 [Fore] [60x55] [71-dTons] Cargo Bay - Empty.png",
+		"sizeX": 12,
+		"sizeY": 11,
+		"tons": 71,
+		"uses": {
+			"Cargo": 71
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-030 [Fore] [60x55] [Overlay] Cargo.png"
+	},
+	"SE-031": {
+		"url": "SEF/SE-031 [Fore] [50x100] [41-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Cargo": 41
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-031 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-032": {
+		"url": "SEF/SE-032 [Fore] [50x50] [18-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Cargo": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-032 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-033": {
+		"url": "SEF/SE-033 [Fore] [50x50] [37-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Cargo": 37
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-033 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-034": {
+		"url": "SEF/SE-034 [Fore] [50x50] [31-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Cargo": 31
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-034 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-035": {
+		"url": "SEF/SE-035 [Fore] [50x50] [35-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Cargo": 35
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-035 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-036": {
+		"url": "SEF/SE-036 [Fore] [50x50] [18-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Cargo": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-036 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-037": {
+		"url": "SEF/SE-037 [Fore] [50x100] [50-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Cargo": 30,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-037 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-038": {
+		"url": "SEF/SE-038 [Fore] [50x100] [35-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Cargo": 23,
+			"Vehicle": 10,
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-038 [Fore] [50x100] [Overlay] Air-Raft and Cargo.png"
+	},
+	"SE-039": {
+		"url": "SEF/SE-039 [Fore] [50x100] [50-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50,
+			"Weapons": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turret": 1
+		},
+		"overlayUrl": "SEF/SE-039 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-040": {
+		"url": "SEF/SE-040 [Fore] [50x50] [21-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Cargo": 21
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-040 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-041": {
+		"url": "SEF/SE-041 [Fore] [50x100] [36-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 36,
+		"uses": {
+			"Cargo": 28,
+			"Stable": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-041 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-042": {
+		"url": "SEF/SE-042 [Fore] [50x50] [34-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Cargo": 34
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Barbette": 1
+		},
+		"overlayUrl": "SEF/SE-042 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-043": {
+		"url": "SEF/SE-043 [Fore] [50x100] [46-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 46,
+		"uses": {
+			"Cargo": 46
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-043 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-044": {
+		"url": "SEF/SE-044 [Fore] [50x50] [31-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Cargo": 27,
+			"Fuel": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-044 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-045": {
+		"url": "SEF/SE-045 [Fore] [50x50] [38-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Cargo": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-045 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-046": {
+		"url": "SEF/SE-046 [Fore] [50x100] [48-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 48,
+		"uses": {
+			"Cargo": 30,
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-046 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-047": {
+		"url": "SEF/SE-047 [Fore] [50x150] [89-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 89,
+		"uses": {
+			"Cargo": 70,
+			"Fuel": 15,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2
+		},
+		"overlayUrl": "SEF/SE-047 [Fore] [50x150] [Overlay] Cargo.png"
+	},
+	"SE-048": {
+		"url": "SEF/SE-048 [Fore] [50x100] [57-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Cargo": 57
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-048 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-049": {
+		"url": "SEF/SE-049 [Fore] [50x100] [35-dTons] Cargo Bay - Empty.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Cargo": 20,
+			"Stable": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-049 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-050": {
+		"url": "SEF/SE-050 [Fore] [50x100] [37-dTons] Cargo Bay - Empty, Shuttle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 37,
+		"uses": {
+			"Cargo": 25,
+			"Docking": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-050 [Fore] [50x100] [Overlay] Shuttle.png"
+	},
+	"SE-051": {
+		"url": "SEF/SE-051 [Fore] [50x100] [47-dTons] Cargo Bay - Empty, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Cargo": 30,
+			"Fuel": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-051 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-052": {
+		"url": "SEF/SE-052 [Fore] [50x50] [27-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Cargo": 27
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-053": {
+		"url": "SEF/SE-053 [Fore] [50x50] [34-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Cargo": 34
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-054": {
+		"url": "SEF/SE-054 [Fore] [50x50] [40-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Cargo": 40
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-055": {
+		"url": "SEF/SE-055 [Fore] [50x50] [40-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Cargo": 40
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-056": {
+		"url": "SEF/SE-056 [Fore] [50x50] [38-dTons] Cargo Bay - Full, Shuttle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Cargo": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-057": {
+		"url": "SEF/SE-057 [Fore] [50x50] [25-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Cargo": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-058": {
+		"url": "SEF/SE-058 [Fore] [50x50] [34-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Cargo": 34
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-059": {
+		"url": "SEF/SE-059 [Fore] [50x50] [20-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 20,
+		"uses": {
+			"Cargo": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-060": {
+		"url": "SEF/SE-060 [Fore] [50x55] [47-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 11,
+		"tons": 47,
+		"uses": {
+			"Cargo": 23.5,
+			"Fuel": 23.5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-061": {
+		"url": "SEF/SE-061 [Fore] [50x50] [28-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Cargo": 28
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-062": {
+		"url": "SEF/SE-062 [Fore] [50x100] [52-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 52,
+		"uses": {
+			"Cargo": 52
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-063": {
+		"url": "SEF/SE-063 [Fore] [50x50] [39-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Cargo": 39
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-064": {
+		"url": "SEF/SE-064 [Fore] [50x50] [16-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 16,
+		"uses": {
+			"Cargo": 16
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-065": {
+		"url": "SEF/SE-065 [Fore] [50x50] [18-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Cargo": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-066": {
+		"url": "SEF/SE-066 [Fore] [50x50] [11-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 11,
+		"uses": {
+			"Cargo": 11
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-067": {
+		"url": "SEF/SE-067 [Fore] [50x50] [47-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Cargo": 47
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-068": {
+		"url": "SEF/SE-068 [Fore] [50x100] [60-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 60,
+		"uses": {
+			"Cargo": 60
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-069": {
+		"url": "SEF/SE-069 [Fore] [50x100] [63-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 63,
+		"uses": {
+			"Cargo": 41,
+			"Fuel": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-070": {
+		"url": "SEF/SE-070 [Fore] [50x100] [57-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Cargo": 40,
+			"Fuel": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-071": {
+		"url": "SEF/SE-071 [Fore] [50x50] [26-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Cargo": 26
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-072": {
+		"url": "SEF/SE-072 [Fore] [50x100] [59-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 59,
+		"uses": {
+			"Cargo": 59
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-073": {
+		"url": "SEF/SE-073 [Fore] [50x100] [61-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 61,
+		"uses": {
+			"Cargo": 36,
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-074": {
+		"url": "SEF/SE-074 [Fore] [50x50] [28-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Cargo": 28
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-075": {
+		"url": "SEF/SE-075 [Fore] [50x100] [49-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 49,
+		"uses": {
+			"Cargo": 35,
+			"Stable": 14
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-076": {
+		"url": "SEF/SE-076 [Fore] [50x50] [30-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Cargo": 30
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-077": {
+		"url": "SEF/SE-077 [Fore] [50x50] [30-dTons] Cargo Bay - Full, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Cargo": 30,
+			"Stable": 6,
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-077 [Fore] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-078": {
+		"url": "SEF/SE-078 [Fore] [50x100] [76-dTons] Cargo Bay - Full, Missiles.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 76,
+		"uses": {
+			"Cargo": 72,
+			"Weapons": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turret": 1
+		}
+	},
+	"SE-079": {
+		"url": "SEF/SE-079 [Fore] [50x50] [21-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Cargo": 12,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-080": {
+		"url": "SEF/SE-080 [Fore] [60x55] [62-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 12,
+		"sizeY": 11,
+		"tons": 62,
+		"uses": {
+			"Cargo": 42,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-081": {
+		"url": "SEF/SE-081 [Fore] [60x55] [71-dTons] Cargo Bay - Full.png",
+		"sizeX": 12,
+		"sizeY": 11,
+		"tons": 71,
+		"uses": {
+			"Cargo": 71
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-082": {
+		"url": "SEF/SE-082 [Fore] [50x100] [41-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Cargo": 41
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-083": {
+		"url": "SEF/SE-083 [Fore] [50x50] [18-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Cargo": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-084": {
+		"url": "SEF/SE-084 [Fore] [50x50] [37-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Cargo": 37
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-085": {
+		"url": "SEF/SE-085 [Fore] [50x50] [31-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Cargo": 31
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-086": {
+		"url": "SEF/SE-086 [Fore] [50x50] [35-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Cargo": 35
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-087": {
+		"url": "SEF/SE-087 [Fore] [50x100] [18-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 18,
+		"uses": {
+			"Cargo": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-088": {
+		"url": "SEF/SE-088 [Fore] [50x50] [50-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 50,
+		"uses": {
+			"Cargo": 30,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-089": {
+		"url": "SEF/SE-089 [Fore] [50x100] [35-dTons] Cargo Bay - Full, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Cargo": 23,
+			"Vehicle": 10,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-090": {
+		"url": "SEF/SE-090 [Fore] [50x100] [50-dTons] Cargo Bay - Full, Turret.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Cargo": 50,
+			"Weapons": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turret": 1
+		},
+		"overlayUrl": "SEF/SE-090 [Fore] [50x100] [Overlay] Air-Raft.png"
+	},
+	"SE-091": {
+		"url": "SEF/SE-091 [Fore] [50x50] [21-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Cargo": 21
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-092": {
+		"url": "SEF/SE-092 [Fore] [50x100] [36-dTons] Cargo Bay - Full, Turret.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 36,
+		"uses": {
+			"Cargo": 28,
+			"Stable": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-093": {
+		"url": "SEF/SE-093 [Fore] [50x50] [34-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Cargo": 34
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 1
+		}
+	},
+	"SE-094": {
+		"url": "SEF/SE-094 [Fore] [50x100] [46-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 46,
+		"uses": {
+			"Cargo": 46
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-095": {
+		"url": "SEF/SE-095 [Fore] [50x50] [31-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Cargo": 27,
+			"Fuel": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-096": {
+		"url": "SEF/SE-096 [Fore] [50x50] [38-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Cargo": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-097": {
+		"url": "SEF/SE-097 [Fore] [50x100] [48-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 48,
+		"uses": {
+			"Cargo": 30,
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-098": {
+		"url": "SEF/SE-098 [Fore] [50x150] [89-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 89,
+		"uses": {
+			"Cargo": 70,
+			"Fuel": 15,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2
+		}
+	},
+	"SE-099": {
+		"url": "SEF/SE-099 [Fore] [50x100] [57-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Cargo": 57
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-100": {
+		"url": "SEF/SE-100 [Fore] [50x100] [35-dTons] Cargo Bay - Full.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Cargo": 20,
+			"Stable": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-101": {
+		"url": "SEF/SE-101 [Fore] [50x100] [37-dTons] Cargo Bay - Full, Shuttle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 37,
+		"uses": {
+			"Cargo": 25,
+			"Docking": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-102": {
+		"url": "SEF/SE-102 [Fore] [50x100] [47-dTons] Cargo Bay - Full, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Cargo": 30,
+			"Fuel": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-103": {
+		"url": "SEF/SE-103 [Fore] [50x50] [27-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 11
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"SE-104": {
+		"url": "SEF/SE-104 [Fore] [50x50] [34-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Staterooms": 18,
+			"Lounge": 14,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 2,
+			"RoomHigh": 2
+		}
+	},
+	"SE-105": {
+		"url": "SEF/SE-105 [Fore] [50x50] [40-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Staterooms": 18,
+			"Lounge": 22
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"RoomHigh": 2
+		}
+	},
+	"SE-106": {
+		"url": "SEF/SE-106 [Fore] [50x50] [40-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Staterooms": 36,
+			"Lounge": 2,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6,
+			"RoomHigh": 2
+		}
+	},
+	"SE-107": {
+		"url": "SEF/SE-107 [Fore] [50x50] [39-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Staterooms": 18,
+			"Lounge": 15,
+			"Low Berths": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"RoomHigh": 2
+		}
+	},
+	"SE-108": {
+		"url": "SEF/SE-108 [Fore] [50x50] [25-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 9
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 3
+		}
+	},
+	"SE-109": {
+		"url": "SEF/SE-109 [Fore] [50x50] [34-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Staterooms": 32,
+			"Lounge": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 8
+		}
+	},
+	"SE-110": {
+		"url": "SEF/SE-110 [Fore] [50x50] [20-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 20,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4
+		}
+	},
+	"SE-111": {
+		"url": "SEF/SE-111 [Fore] [50x100] [47-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Staterooms": 36,
+			"Lounge": 11
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6,
+			"RoomHigh": 2
+		}
+	},
+	"SE-112": {
+		"url": "SEF/SE-112 [Fore] [50x50] [28-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 10,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-113": {
+		"url": "SEF/SE-113 [Fore] [50x100] [52-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 52,
+		"uses": {
+			"Staterooms": 32,
+			"Lounge": 10,
+			"Low Berths": 6,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 7,
+			"RoomDouble": 1
+		}
+	},
+	"SE-114": {
+		"url": "SEF/SE-114 [Fore] [50x50] [39-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 4,
+			"Cargo": 9,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "SEF/SE-114 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-115": {
+		"url": "SEF/SE-115 [Fore] [50x50] [16-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 16,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"SE-116": {
+		"url": "SEF/SE-116 [Fore] [50x50] [18-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-117": {
+		"url": "SEF/SE-117 [Fore] [50x50] [11-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 11,
+		"uses": {
+			"Staterooms": 8,
+			"Lounge": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-118": {
+		"url": "SEF/SE-118 [Fore] [50x50] [47-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Staterooms": 16,
+			"Fuel": 17,
+			"Lounge": 9,
+			"Airlock": 2,
+			"Cargo": 3
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-119": {
+		"url": "SEF/SE-119 [Fore] [50x100] [60-dTons] Staterooms, Vehicles.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 60,
+		"uses": {
+			"Staterooms": 40,
+			"Vehicle": 8,
+			"Lounge": 8,
+			"Sensors": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 8,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "SEF/SE-119 [Fore] [50x100] [Overlay] Escape Pods.png"
+	},
+	"SE-120": {
+		"url": "SEF/SE-120 [Fore] [50x100] [63-dTons] Staterooms, Fuel, Escape Pods.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 63,
+		"uses": {
+			"Staterooms": 24,
+			"Vehicle": 8,
+			"Fuel": 19,
+			"Lounge": 12
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "SEF/SE-120 [Fore] [50x100] [Overlay] Escape Pods.png"
+	},
+	"SE-121": {
+		"url": "SEF/SE-121 [Fore] [50x100] [57-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Staterooms": 32,
+			"Lounge": 25,
+			"Fuel": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 0,
+			"RoomHigh": 1,
+			"RoomLuxury": 1
+		}
+	},
+	"SE-122": {
+		"url": "SEF/SE-122 [Fore] [50x50] [26-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 6
+		}
+	},
+	"SE-123": {
+		"url": "SEF/SE-123 [Fore] [50x100] [59-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 59,
+		"uses": {
+			"Staterooms": 24,
+			"Fuel": 25,
+			"Lounge": 0,
+			"Airlock": 2,
+			"Military": 6,
+			"Engineering": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Capsules": 8,
+			"RoomSingle": 6
+		}
+	},
+	"SE-124": {
+		"url": "SEF/SE-124 [Fore] [50x100] [61-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 61,
+		"uses": {
+			"Staterooms": 36,
+			"Fuel": 10,
+			"Lounge": 13,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 4,
+			"RoomHigh": 2
+		}
+	},
+	"SE-125": {
+		"url": "SEF/SE-125 [Fore] [50x50] [28-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 10,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-126": {
+		"url": "SEF/SE-126 [Fore] [50x100] [49-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 49,
+		"uses": {
+			"Staterooms": 26,
+			"Lounge": 11,
+			"Medical": 2,
+			"Low Berths": 2,
+			"Airlock": 2,
+			"Cargo": 6
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 5,
+			"RoomHigh": 1
+		}
+	},
+	"SE-127": {
+		"url": "SEF/SE-127 [Fore] [50x50] [30-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Staterooms": 20,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"RoomHigh": 2
+		}
+	},
+	"SE-128": {
+		"url": "SEF/SE-128 [Fore] [50x50] [30-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 4,
+			"Airlock": 2,
+			"Medical": 4,
+			"Low Berths": 4
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-129": {
+		"url": "SEF/SE-129 [Fore] [50x100] [76-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 76,
+		"uses": {
+			"Staterooms": 60,
+			"Airlock": 2,
+			"Lounge": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 9,
+			"RoomHigh": 4
+		}
+	},
+	"SE-130": {
+		"url": "SEF/SE-130 [Fore] [50x50] [21-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Staterooms": 12,
+			"Barracks": 8,
+			"Lounge": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 0,
+			"RoomHigh": 2,
+			"Seats": 6
+		}
+	},
+	"SE-131": {
+		"url": "SEF/SE-131 [Fore] [60x100] [62-dTons] Staterooms.png",
+		"sizeX": 12,
+		"sizeY": 20,
+		"tons": 62,
+		"uses": {
+			"Staterooms": 52,
+			"Lounge": 5,
+			"Low Berths": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2,
+			"RoomHigh": 6
+		}
+	},
+	"SE-132": {
+		"url": "SEF/SE-132 [Fore] [60x100] [71-dTons] Staterooms.png",
+		"sizeX": 12,
+		"sizeY": 20,
+		"tons": 71,
+		"uses": {
+			"Staterooms": 64,
+			"Lounge": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 16
+		}
+	},
+	"SE-133": {
+		"url": "SEF/SE-133 [Fore] [50x100] [41-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Staterooms": 4,
+			"Brig": 30,
+			"Lounge": 5,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 1,
+			"Prisoners": 10
+		}
+	},
+	"SE-134": {
+		"url": "SEF/SE-134 [Fore] [50x50] [18-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-135": {
+		"url": "SEF/SE-135 [Fore] [50x50] [37-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Staterooms": 28,
+			"Lounge": 9
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"RoomHigh": 2
+		}
+	},
+	"SE-136": {
+		"url": "SEF/SE-136 [Fore] [50x50] [31-dTons] Staterooms, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Staterooms": 24,
+			"Vehicle": 4,
+			"Lounge": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "SEF/SE-136 [Fore] [50x50] [Overlay] Escape Pod.png"
+	},
+	"SE-137": {
+		"url": "SEF/SE-137 [Fore] [50x50] [35-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 8,
+			"Sensors": 1,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"SE-138": {
+		"url": "SEF/SE-138 [Fore] [50x50] [18-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Staterooms": 12,
+			"Lounge": 4,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 0,
+			"RoomHigh": 2
+		}
+	},
+	"SE-139": {
+		"url": "SEF/SE-139 [Fore] [50x100] [50-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 16,
+			"Fuel": 27,
+			"Lounge": 5,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"SE-140": {
+		"url": "SEF/SE-140 [Fore] [50x100] [35-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 6,
+			"Sensors": 3,
+			"Low Berths": 4,
+			"Medical": 4,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-141": {
+		"url": "SEF/SE-141 [Fore] [50x100] [50-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 12,
+			"Sensors": 2,
+			"Medical": 4,
+			"Low Berths": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 4
+		}
+	},
+	"SE-142": {
+		"url": "SEF/SE-142 [Fore] [50x50] [21-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Staterooms": 16,
+			"Lounge": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"SE-143": {
+		"url": "SEF/SE-143 [Fore] [50x100] [36-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 36,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 10,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 4
+		}
+	},
+	"SE-144": {
+		"url": "SEF/SE-144 [Fore] [50x50] [34-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 8,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"SE-145": {
+		"url": "SEF/SE-145 [Fore] [50x100] [46-dTons] Staterooms, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 46,
+		"uses": {
+			"Staterooms": 24,
+			"Vehicle": 8,
+			"Lounge": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "SEF/SE-145 [Fore] [50x100] [Overlay] Air-Raft.png"
+	},
+	"SE-146": {
+		"url": "SEF/SE-146 [Fore] [50x50] [31-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Staterooms": 24,
+			"Lounge": 5,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 3,
+			"RoomDouble": 3
+		}
+	},
+	"SE-147": {
+		"url": "SEF/SE-147 [Fore] [50x50] [38-dTons] Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Staterooms": 28,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"RoomHigh": 2
+		}
+	},
+	"SE-148": {
+		"url": "SEF/SE-148 [Fore] [50x100] [48-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 48,
+		"uses": {
+			"Staterooms": 24,
+			"Fuel": 14,
+			"Lounge": 6,
+			"Airlock": 2,
+			"Cargo": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"SE-149": {
+		"url": "SEF/SE-149 [Fore] [50x150] [89-dTons] Staterooms, Steerage.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 89,
+		"uses": {
+			"Staterooms": 24,
+			"Barracks": 40,
+			"Lounge": 17,
+			"Airlock": 4,
+			"Fuel": 4
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 0,
+			"RoomDouble": 6,
+			"Seats": 24
+		}
+	},
+	"SE-150": {
+		"url": "SEF/SE-150 [Fore] [50x100] [57-dTons] Steerage.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Barracks": 35,
+			"Lounge": 0,
+			"Airlock": 4,
+			"Low Berths": 10,
+			"Cargo": 8
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"Seats": 24
+		}
+	},
+	"SE-151": {
+		"url": "SEF/SE-151 [Fore] [50x150] [87-dTons] Staterooms, Cargo, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 87,
+		"uses": {
+			"Staterooms": 32,
+			"Cargo": 25,
+			"Fuel": 15,
+			"Lounge": 13,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 4,
+			"RoomDouble": 4
+		}
+	},
+	"SE-152": {
+		"url": "SEF/SE-152 [Fore] [50x50] [47-dTons] Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Barracks": 21,
+			"Fuel": 17,
+			"Lounge": 6,
+			"Airlock": 2,
+			"Sensors": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 24
+		}
+	},
+	"SE-153": {
+		"url": "SEF/SE-153 [Fore] [50x50] [27-dTons] Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Fuel": 27
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2
+		}
+	},
+	"SE-154": {
+		"url": "SEF/SE-154 [Fore] [50x50] [36-dTons] Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 36,
+		"uses": {
+			"Fuel": 36
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2
+		}
+	},
+	"SE-155": {
+		"url": "SEF/SE-155 [Fore] [50x50] [38-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Fuel": 31,
+			"Cargo": 3,
+			"Engineering": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-156": {
+		"url": "SEF/SE-156 [Fore] [50x50] [40-dTons] Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Fuel": 38,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2
+		}
+	},
+	"SE-157": {
+		"url": "SEF/SE-157 [Fore] [50x50] [40-dTons] Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Fuel": 40
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2
+		}
+	},
+	"SE-158": {
+		"url": "SEF/SE-158 [Fore] [50x50] [25-dTons] Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2
+		}
+	},
+	"SE-159": {
+		"url": "SEF/SE-159 [Fore] [50x50] [34-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Fuel": 26,
+			"Engineering": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-160": {
+		"url": "SEF/SE-160 [Fore] [50x50] [20-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 20,
+		"uses": {
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-161": {
+		"url": "SEF/SE-161 [Fore] [50x55] [47-dTons] Fuel, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 11,
+		"tons": 47,
+		"uses": {
+			"Fuel": 32,
+			"Vehicle": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-161 [Fore] [50x55] [Overlay] Armed Buggy.png"
+	},
+	"SE-162": {
+		"url": "SEF/SE-162 [Fore] [50x50] [28-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Fuel": 28,
+			"Engineering": 2,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-163": {
+		"url": "SEF/SE-163 [Fore] [50x100] [52-dTons] Fuel, Sensor Ops.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 52,
+		"uses": {
+			"Fuel": 42,
+			"Sensors": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-164": {
+		"url": "SEF/SE-164 [Fore] [50x50] [39-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Fuel": 37,
+			"Engineering": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-165": {
+		"url": "SEF/SE-165 [Fore] [50x50] [16-dTons] Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 16,
+		"uses": {
+			"Fuel": 14,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+	"SE-166": {
+		"url": "SEF/SE-166 [Fore] [50x50] [18-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-167": {
+		"url": "SEF/SE-167 [Fore] [50x50] [11-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 11,
+		"uses": {
+			"Fuel": 9,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-168": {
+		"url": "SEF/SE-168 [Fore] [50x50] [47-dTons] Fuel, Launch.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Fuel": 25,
+			"Docking": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-168 [Fore] [50x50] [Overlay] 20-dTon Launch.png"
+	},
+	"SE-169": {
+		"url": "SEF/SE-169 [Fore] [50x100] [60-dTons] Fuel, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 60,
+		"uses": {
+			"Fuel": 32,
+			"Staterooms": 16,
+			"Lounge": 10,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-170": {
+		"url": "SEF/SE-170 [Fore] [50x100] [63-dTons] Fuel, Launch.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 63,
+		"uses": {
+			"Fuel": 41,
+			"Docking": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-170 [Fore] [50x100] [Overlay] 20-dTon Launch.png"
+	},
+	"SE-171": {
+		"url": "SEF/SE-171 [Fore] [50x100] [57-dTons] Fuel, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Fuel": 47,
+			"Vehicle": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-171 [Fore] [50x100] [Overlay] Air-Raft.png"
+	},
+	"SE-172": {
+		"url": "SEF/SE-172 [Fore] [50x50] [26-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Fuel": 24,
+			"Engineering": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-173": {
+		"url": "SEF/SE-173 [Fore] [50x100] [59-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 59,
+		"uses": {
+			"Fuel": 59
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-174": {
+		"url": "SEF/SE-174 [Fore] [50x100] [61-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 61,
+		"uses": {
+			"Fuel": 59,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-175": {
+		"url": "SEF/SE-175 [Fore] [50x50] [31-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Fuel": 30,
+			"Engineering": 1
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-176": {
+		"url": "SEF/SE-176 [Fore] [50x55] [49-dTons] Fuel, Cargo, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 11,
+		"tons": 49,
+		"uses": {
+			"Fuel": 37,
+			"Cargo": 10,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+	"SE-177": {
+		"url": "SEF/SE-177 [Fore] [50x50] [30-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Fuel": 30
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-178": {
+		"url": "SEF/SE-178 [Fore] [50x50] [30-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Fuel": 26,
+			"Engineering": 2,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 1
+		}
+	},
+	"SE-179": {
+		"url": "SEF/SE-179 [Fore] [50x100] [76-dTons] Fuel, Cargo.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 76,
+		"uses": {
+			"Fuel": 50,
+			"Cargo": 22,
+			"Engineering": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-180": {
+		"url": "SEF/SE-180 [Fore] [50x50] [21-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Fuel": 19,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-181": {
+		"url": "SEF/SE-181 [Fore] [60x55] [62-dTons] Fuel, Launch.png",
+		"sizeX": 12,
+		"sizeY": 11,
+		"tons": 62,
+		"uses": {
+			"Fuel": 40,
+			"Docking": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-181 [Fore] [60x55] [Overlay] 20-dTon Launch.png"
+	},
+	"SE-182": {
+		"url": "SEF/SE-182 [Fore] [60x55] [71-dTons] Fuel.png",
+		"sizeX": 12,
+		"sizeY": 11,
+		"tons": 71,
+		"uses": {
+			"Fuel": 61,
+			"Engineering": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-183": {
+		"url": "SEF/SE-183 [Fore] [50x100] [41-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Fuel": 33,
+			"Military": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Capsules": 8
+		}
+	},
+	"SE-184": {
+		"url": "SEF/SE-184 [Fore] [50x50] [18-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-185": {
+		"url": "SEF/SE-185 [Fore] [50x50] [37-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Fuel": 37
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-186": {
+		"url": "SEF/SE-186 [Fore] [50x50] [31-dTons] Fuel, Sensors.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Fuel": 28,
+			"Sensors": 3
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-187": {
+		"url": "SEF/SE-187 [Fore] [50x50] [35-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Fuel": 35
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-188": {
+		"url": "SEF/SE-188 [Fore] [50x50] [18-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-189": {
+		"url": "SEF/SE-189 [Fore] [50x100] [50-dTons] Fuel, Cargo.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Fuel": 28,
+			"Cargo": 20,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "SEF/SE-189 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-190": {
+		"url": "SEF/SE-190 [Fore] [50x100] [35-dTons] Fuel, Sensors.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Fuel": 32,
+			"Sensors": 3
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-191": {
+		"url": "SEF/SE-191 [Fore] [50x100] [50-dTons] Fuel, Re-entry Pods.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Fuel": 40,
+			"Military": 10
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Capsules": 12
+		}
+	},
+	"SE-192": {
+		"url": "SEF/SE-192 [Fore] [50x50] [21-dTons] Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Fuel": 21
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2
+		}
+	},
+	"SE-193": {
+		"url": "SEF/SE-193 [Fore] [50x55] [36-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 11,
+		"tons": 36,
+		"uses": {
+			"Fuel": 36
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-194": {
+		"url": "SEF/SE-194 [Fore] [50x50] [34-dTons] Fuel, Sensors.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Fuel": 24,
+			"Sensors": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-195": {
+		"url": "SEF/SE-195 [Fore] [50x100] [46-dTons] Fuel, User Defined.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 46,
+		"uses": {
+			"Fuel": 26,
+			"Airlock": 2,
+			"Engineering": 20
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-196": {
+		"url": "SEF/SE-196 [Fore] [50x50] [31-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Fuel": 29,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-197": {
+		"url": "SEF/SE-197 [Fore] [50x50] [38-dTons] Fuel, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Fuel": 30,
+			"Vehicle": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-197 [Fore] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-198": {
+		"url": "SEF/SE-198 [Fore] [50x100] [48-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 48,
+		"uses": {
+			"Fuel": 46,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-199": {
+		"url": "SEF/SE-199 [Fore] [50x150] [89-dTons] Fuel, Staterooms, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 89,
+		"uses": {
+			"Fuel": 38,
+			"Staterooms": 20,
+			"Vehicle": 8,
+			"Lounge": 19,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 0,
+			"RoomDouble": 5
+		},
+		"overlayUrl": "SEF/SE-199 [Fore] [50x150] [Overlay] Air-Raft.png"
+	},
+	"SE-200": {
+		"url": "SEF/SE-200 [Fore] [50x100] [57-dTons] Fuel, Missiles.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Fuel": 52,
+			"Weapons": 3,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 1
+		}
+	},
+	"SE-201": {
+		"url": "SEF/SE-201 [Fore] [50x50] [35-dTons] Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Fuel": 35
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-202": {
+		"url": "SEF/SE-202 [Fore] [50x100] [38-dTons] Fuel, Shuttle, Engineering.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 38,
+		"uses": {
+			"Fuel": 18,
+			"Engineering": 10,
+			"Workshop": 0,
+			"Docking": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-202 [Fore] [50x100] [Overlay] Shuttle.png"
+	},
+	"SE-203": {
+		"url": "SEF/SE-203 [Fore] [50x100] [44-dTons] Fuel, Turret.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 44,
+		"uses": {
+			"Fuel": 41,
+			"Weapons": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 1,
+			"Barbettes": 0
+		}
+	},
+	"SE-204": {
+		"url": "SEF/SE-204 [Fore] [50x50] [27-dTons] Bridge, Sensors.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Bridge": 5,
+			"Sensors": 2,
+			"Briefing": 0,
+			"Staterooms": 8,
+			"Weapons": 5,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2,
+			"Turrets": 2
+		}
+	},
+	"SE-205": {
+		"url": "SEF/SE-205 [Fore] [50x50] [36-dTons] Bridge, Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 36,
+		"uses": {
+			"Bridge": 10,
+			"Labs": 16,
+			"Briefing": 0,
+			"Sensors": 4,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-206": {
+		"url": "SEF/SE-206 [Fore] [50x50] [38-dTons] Bridge.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Bridge": 5,
+			"Briefing": 0,
+			"Sensors": 5,
+			"Weapons": 5,
+			"Staterooms": 16,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"Turrets": 2
+		}
+	},
+	"SE-207": {
+		"url": "SEF/SE-207 [Fore] [50x50] [40-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Bridge": 8,
+			"Staterooms": 20,
+			"Lounge": 6,
+			"Briefing": 0,
+			"Vehicle": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 3,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "SEF/SE-207 [Fore] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-208": {
+		"url": "SEF/SE-208 [Fore] [50x50] [39-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 12,
+			"Lounge": 10,
+			"Briefing": 0,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"SE-209": {
+		"url": "SEF/SE-209 [Fore] [50x50] [25-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 16,
+			"Lounge": 3,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"SE-210": {
+		"url": "SEF/SE-210 [Fore] [50x50] [34-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Bridge": 25,
+			"Staterooms": 8,
+			"Lounge": 1,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 1
+		}
+	},
+	"SE-211": {
+		"url": "SEF/SE-211 [Fore] [50x50] [20-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 20,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 8,
+			"Lounge": 5,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-212": {
+		"url": "SEF/SE-212 [Fore] [50x100] [47-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 24,
+			"Lounge": 9,
+			"Briefing": 0,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 4,
+			"RoomSingle": 6
+		}
+	},
+	"SE-213": {
+		"url": "SEF/SE-213 [Fore] [50x50] [28-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 16,
+			"Lounge": 4,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Comms": 1
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 16
+		}
+	},
+	"SE-214": {
+		"url": "SEF/SE-214 [Fore] [50x100] [52-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 52,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 12,
+			"Fuel": 23,
+			"Lounge": 0,
+			"Briefing": 4,
+			"Sensors": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 3
+		}
+	},
+	"SE-215": {
+		"url": "SEF/SE-215 [Fore] [50x50] [39-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 39,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 8,
+			"Fuel": 19,
+			"Lounge": 7,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"SE-216": {
+		"url": "SEF/SE-216 [Fore] [50x50] [16-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 16,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 8,
+			"Lounge": 0,
+			"Briefing": 0,
+			"Weapons": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-217": {
+		"url": "SEF/SE-217 [Fore] [50x50] [18-dTons] Bridge, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Bridge": 15,
+			"Briefing": 0,
+			"Weapons": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+	"SE-218": {
+		"url": "SEF/SE-218 [Fore] [50x50] [11-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 11,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 4,
+			"Lounge": 0,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 1
+		}
+	},
+	"SE-219": {
+		"url": "SEF/SE-219 [Fore] [50x50] [47-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 47,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 20,
+			"Lounge": 0,
+			"Briefing": 4,
+			"Weapons": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 3,
+			"RoomSingle": 1,
+			"RoomDouble": 4
+		}
+	},
+	"SE-220": {
+		"url": "SEF/SE-220 [Fore] [50x100] [60-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 60,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 2,
+			"Staterooms": 28,
+			"Lounge": 14,
+			"Briefing": 0,
+			"Medical": 4,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 3,
+			"RoomHigh": null,
+			"RoomLuxury": null
+		}
+	},
+	"SE-221": {
+		"url": "SEF/SE-221 [Fore] [50x100] [63-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 63,
+		"uses": {
+			"Bridge": 5,
+			"Engineering": 12,
+			"Staterooms": 16,
+			"Briefing": 0,
+			"Fuel": 30
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-222": {
+		"url": "SEF/SE-222 [Fore] [50x100] [57-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Bridge": 10,
+			"Briefing": 0,
+			"Fuel": 9,
+			"Vehicle": 8,
+			"Airlock": 2,
+			"Staterooms": 16,
+			"Lounge": 10,
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-222 [Fore] [50x100] [Overlay] Air-Raft.png"
+	},
+	"SE-223": {
+		"url": "SEF/SE-223 [Fore] [50x50] [26-dTons] Bridge, Survey, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Bridge": 5,
+			"Vehicle": 8,
+			"Sensors": 13
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-223 [Fore] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-224": {
+		"url": "SEF/SE-224 [Fore] [50x100] [59-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 59,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 24,
+			"Lounge": 14,
+			"Briefing": 0,
+			"Comms": 4,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0,
+			"RoomSingle": 2,
+			"RoomDouble": 4
+		}
+	},
+	"SE-225": {
+		"url": "SEF/SE-225 [Fore] [50x100] [62-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 62,
+		"uses": {
+			"Bridge": 5,
+			"Briefing": 0,
+			"Vehicle": 8,
+			"Cargo": 8,
+			"Weapons": 8,
+			"Staterooms": 20,
+			"Lounge": 7,
+			"Sensors": 6
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 1,
+			"Barbettes": 2
+		},
+		"overlayUrl": "SEF/SE-225 [Fore] [50x100] [Overlay] Air-Raft.png"
+	},
+	"SE-226": {
+		"url": "SEF/SE-226 [Fore] [50x50] [28-dTons] Bridge, Missiles.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Bridge": 15,
+			"Weapons": 5,
+			"Briefing": 4,
+			"Lounge": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-227": {
+		"url": "SEF/SE-227 [Fore] [50x55] [49-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 11,
+		"tons": 49,
+		"uses": {
+			"Bridge": 10,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Staterooms": 12,
+			"Cargo": 18,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 3
+		},
+		"overlayUrl": "SEF/SE-227 [Fore] [50x55] [Overlay] Cargo.png"
+	},
+	"SE-228": {
+		"url": "SEF/SE-228 [Fore] [50x50] [30-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Bridge": 5,
+			"Briefing": 0,
+			"Staterooms": 12,
+			"Airlock": 2,
+			"Fuel": 8,
+			"Weapons": 3
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"RoomSingle": 3
+		}
+	},
+	"SE-229": {
+		"url": "SEF/SE-229 [Fore] [50x50] [30-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 12,
+			"Lounge": 0,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Sensors": 3,
+			"Lounge": 8
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"SE-230": {
+		"url": "SEF/SE-230 [Fore] [50x100] [76-dTons] Bridge, Missiles, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 76,
+		"uses": {
+			"Bridge": 10,
+			"Weapons": 4,
+			"Lounge": 21,
+			"Medical": 4,
+			"Staterooms": 36,
+			"Low Berths": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 5,
+			"Turrets": 2
+		}
+	},
+	"SE-231": {
+		"url": "SEF/SE-231 [Fore] [50x50] [21-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 8,
+			"Lounge": 2,
+			"Fuel": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 2
+		}
+	},
+	"SE-232": {
+		"url": "SEF/SE-232 [Fore] [60x55] [62-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 12,
+		"sizeY": 11,
+		"tons": 62,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 20,
+			"Fuel": 20,
+			"Lounge": 8,
+			"Airlock": 2,
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 6
+		}
+	},
+	"SE-233": {
+		"url": "SEF/SE-233 [Fore] [60x55] [71-dTons] Bridge, Staterooms.png",
+		"sizeX": 12,
+		"sizeY": 11,
+		"tons": 71,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 28,
+			"Lounge": 21,
+			"Vehicle": 6,
+			"Comms": 2,
+			"Weapons": 2,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"RoomHigh": 2,
+			"Turrets": 2
+		}
+	},
+	"SE-234": {
+		"url": "SEF/SE-234 [Fore] [50x100] [41-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 20,
+			"Lounge": 9,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 3,
+			"RoomDouble": 2
+		}
+	},
+	"SE-235": {
+		"url": "SEF/SE-235 [Fore] [50x50] [18-dTons] Bridge, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Bridge": 8,
+			"Airlock": 2,
+			"Weapons": 2,
+			"Lounge": 6
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+	"SE-236": {
+		"url": "SEF/SE-236 [Fore] [50x50] [38-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Bridge": 5,
+			"Briefing": 0,
+			"Comms": 3,
+			"Staterooms": 12,
+			"Lounge": 2,
+			"Fuel": 16
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Barbettes": 2,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"SE-237": {
+		"url": "SEF/SE-237 [Fore] [50x50] [31-dTons] Bridge, Fuel, Probes.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Bridge": 10,
+			"Fuel": 12,
+			"Drones": 6,
+			"Weapons": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2
+		}
+	},
+	"SE-238": {
+		"url": "SEF/SE-238 [Fore] [50x50] [35-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 3,
+			"Staterooms": 12,
+			"Lounge": 8,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 2
+		}
+	},
+	"SE-239": {
+		"url": "SEF/SE-239 [Fore] [50x50] [18-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Bridge": 5,
+			"Fuel": 6,
+			"Staterooms": 0,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-240": {
+		"url": "SEF/SE-240 [Fore] [50x100] [50-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 28,
+			"Lounge": 5,
+			"Briefing": 0,
+			"Weapons": 2,
+			"Sensors": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 3
+		}
+	},
+	"SE-241": {
+		"url": "SEF/SE-241 [Fore] [50x100] [35-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Bridge": 8,
+			"Staterooms": 12,
+			"Lounge": 7,
+			"Briefing": 0,
+			"Medical": 4,
+			"Weapons": 2,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 2,
+			"Turrets": 1
+		}
+	},
+	"SE-242": {
+		"url": "SEF/SE-242 [Fore] [50x50] [21-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Bridge": 9,
+			"Staterooms": 12,
+			"Lounge": 0,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 0,
+			"RoomHigh": 2
+		}
+	},
+	"SE-243": {
+		"url": "SEF/SE-243 [Fore] [50x100] [50-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 16,
+			"Fuel": 13,
+			"Lounge": 10,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Sensors": 4
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 4
+		}
+	},
+	"SE-244": {
+		"url": "SEF/SE-244 [Fore] [50x100] [37-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 37,
+		"uses": {
+			"Bridge": 15,
+			"Comms": 5,
+			"Staterooms": 8,
+			"Lounge": 3,
+			"Briefing": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 2,
+			"RoomSingle": 1,
+			"RoomDouble": 1
+		}
+	},
+	"SE-245": {
+		"url": "SEF/SE-245 [Fore] [50x100] [41-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Bridge": 8,
+			"Staterooms": 24,
+			"Lounge": 7,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 2
+		}
+	},
+	"SE-246": {
+		"url": "SEF/SE-246 [Fore] [50x100] [47-dTons] Bridge, Staterooms, Barbettes.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 24,
+			"Lounge": 9,
+			"Briefing": 0,
+			"Sensors": 6,
+			"Airlock": 2,
+			"Weapons": 6
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 4,
+			"RoomDouble": 2,
+			"Barbettes": 2
+		}
+	},
+	"SE-247": {
+		"url": "SEF/SE-247 [Fore] [50x50] [31-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Bridge": 6,
+			"Staterooms": 16,
+			"Lounge": 7,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"SE-248": {
+		"url": "SEF/SE-248 [Fore] [50x50] [40-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Bridge": 6,
+			"Staterooms": 16,
+			"Lounge": 6,
+			"Briefing": 0,
+			"Sensors": 3,
+			"Airlock": 2,
+			"Fuel": 7
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-249": {
+		"url": "SEF/SE-249 [Fore] [50x100] [48-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 48,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 12,
+			"Weapons": 2,
+			"Fuel": 24
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 0,
+			"RoomHigh": 2,
+			"Turrets": 1
+		}
+	},
+	"SE-250": {
+		"url": "SEF/SE-250 [Fore] [50x100] [62-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 62,
+		"uses": {
+			"Bridge": 12,
+			"Briefing": 0,
+			"Staterooms": 16,
+			"Lounge": 11,
+			"Medical": 2,
+			"Low Berths": 2,
+			"Sensors": 2,
+			"Airlock": 2,
+			"Fuel": 14,
+			"Weapons": 1
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Barbettes": 2,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-251": {
+		"url": "SEF/SE-251 [Fore] [50x50] [34-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 16,
+			"Lounge": 8,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Sensors": 3
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-252": {
+		"url": "SEF/SE-252 [Fore] [50x100] [44-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 44,
+		"uses": {
+			"Bridge": 3,
+			"Vehicle": 8,
+			"Staterooms": 16,
+			"Comms": 4,
+			"Cargo": 8,
+			"Airlock": 2,
+			"Lounge": 3
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-252 [Fore] [50x100] [Overlay] Air-Raft and Cargo.png"
+	},
+	"SE-253": {
+		"url": "SEF/SE-253 [Fore] [50x200] [87-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 40,
+		"tons": 87,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 48,
+			"Lounge": 10,
+			"Briefing": 4,
+			"Airlock": 2,
+			"Sensors": 3,
+			"Fuel": 10
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0,
+			"RoomSingle": 6,
+			"RoomDouble": 6
+		}
+	},
+	"SE-254": {
+		"url": "SEF/SE-254 [Fore] [50x100] [46-dTons] Bridge, Missiles, Cargo.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 46,
+		"uses": {
+			"Bridge": 5,
+			"Weapons": 6,
+			"Cargo": 27,
+			"Briefing": 0,
+			"Staterooms": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "SEF/SE-254 [Fore] [50x100] [Overlay] Cargo.png"
+	},
+	"SE-255": {
+		"url": "SEF/SE-255 [Fore] [50x50] [13-dTons] Bridge, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 13,
+		"uses": {
+			"Bridge": 10,
+			"Airlock": 2,
+			"Weapons": 1
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+	"SE-256": {
+		"url": "SEF/SE-256 [Fore] [50x100] [59-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 59,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 28,
+			"Fuel": 10,
+			"Lounge": 7,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 7
+		}
+	},
+	"SE-257": {
+		"url": "SEF/SE-257 [Fore] [50x50] [26-dTons] Bridge, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Bridge": 4,
+			"Fuel": 20,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 1
+		}
+	},
+	"SE-258": {
+		"url": "SEF/SE-258 [Fore] [50x50] [26-dTons] Bridge, Cargo Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Bridge": 4,
+			"Cargo": 22
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-259": {
+		"url": "SEF/SE-259 [Fore] [50x50] [33-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 33,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 8,
+			"Lounge": 15
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-260": {
+		"url": "SEF/SE-260 [Fore] [50x55] [44-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 11,
+		"tons": 44,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 18,
+			"Lounge": 9,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 3,
+			"RoomHigh": 1
+		}
+	},
+	"SE-261": {
+		"url": "SEF/SE-261 [Fore] [50x50] [15-dTons] Bridge.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 15,
+		"uses": {
+			"Bridge": 7,
+			"Airlock": 2,
+			"Lounge": 8
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-262": {
+		"url": "SEF/SE-262 [Fore] [50x50] [16-dTons] Bridge.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 16,
+		"uses": {
+			"Bridge": 10,
+			"Airlock": 2,
+			"Lounge": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-263": {
+		"url": "SEF/SE-263 [Fore] [50x50] [26-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Bridge": 15,
+			"Airlock": 2,
+			"Lounge": 5,
+			"Briefing": 4
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-264": {
+		"url": "SEF/SE-264 [Fore] [50x100] [47-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 2,
+			"Staterooms": 8,
+			"Fuel": 25,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-265": {
+		"url": "SEF/SE-265 [Fore] [50x50] [26-dTons] Bridge, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Bridge": 15,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Lounge": 5,
+			"Weapons": 4
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+	"SE-266": {
+		"url": "SEF/SE-266 [Fore] [50x50] [31-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 8,
+			"Lounge": 1,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"Turret": 1
+		}
+	},
+	"SE-267": {
+		"url": "SEF/SE-267 [Fore] [50x50] [34-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Bridge": 6,
+			"Sensors": 2,
+			"Staterooms": 20,
+			"Lounge": 4,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 5
+		}
+	},
+	"SE-268": {
+		"url": "SEF/SE-268 [Fore] [50x50] [32-dTons] Bridge, Robot Crew.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 32,
+		"uses": {
+			"Bridge": 10,
+			"Engineering": 18,
+			"Weapons": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2
+		}
+	},
+	"SE-269": {
+		"url": "SEF/SE-269 [Fore] [50x100] [47-dTons] Bridge, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Bridge": 6,
+			"Fuel": 31,
+			"Lounge": 10
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-270": {
+		"url": "SEF/SE-270 [Fore] [50x50] [45-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 45,
+		"uses": {
+			"Bridge": 8,
+			"Staterooms": 20,
+			"Lounge": 6,
+			"Medical": 4,
+			"Vehicle": 6,
+			"Low Berths": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4,
+			"RoomDouble": 1
+		},
+		"overlayUrl": "SEF/SE-270 [Fore] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-271": {
+		"url": "SEF/SE-271 [Fore] [50x50] [34-dTons] Bridge, Survey.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Bridge": 5,
+			"Sensors": 15,
+			"Cargo": 6,
+			"Vehicle": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		},
+		"overlayUrl": "SEF/SE-271 [Fore] [50x50] [Overlay] Air-Raft.png"
+	},
+	"SE-272": {
+		"url": "SEF/SE-272 [Fore] [50x50] [27-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 8,
+			"Lounge": 5,
+			"Airlock": 2,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 2,
+			"Barbettes": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-273": {
+		"url": "SEF/SE-273 [Fore] [50x50] [27-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 2,
+			"Staterooms": 8,
+			"Lounge": 9,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-274": {
+		"url": "SEF/SE-274 [Fore] [50x50] [25-dTons] Bridge, Fuel, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Bridge": 5,
+			"Fuel": 20,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+	"SE-275": {
+		"url": "SEF/SE-275 [Fore] [50x50] [36-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 36,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 16,
+			"Lounge": 8,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"SE-276": {
+		"url": "SEF/SE-276 [Fore] [50x100] [69-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 69,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 20,
+			"Fuel": 30,
+			"Lounge": 4,
+			"Briefing": 4,
+			"Cargo": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2,
+			"RoomHigh": 2
+		}
+	},
+	"SE-277": {
+		"url": "SEF/SE-277 [Fore] [50x100] [77-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 77,
+		"uses": {
+			"Bridge": 6,
+			"Briefing": 0,
+			"Sensors": 2,
+			"Staterooms": 24,
+			"Lounge": 10,
+			"Labs": 10,
+			"Cargo": 6,
+			"Vehicle": 6,
+			"Fuel": 13
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "SEF/SE-277 [Fore] [50x100] [Overlay] Air-Raft.png"
+	},
+	"SE-278": {
+		"url": "SEF/SE-278 [Fore] [50x50] [16-dTons] Bridge.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 16,
+		"uses": {
+			"Bridge": 7,
+			"Airlock": 2,
+			"Lounge": 8
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-279": {
+		"url": "SEF/SE-279 [Fore] [50x50] [19-dTons] Bridge, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 19,
+		"uses": {
+			"Bridge": 10,
+			"Fuel": 7,
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-280": {
+		"url": "SEF/SE-280 [Fore] [50x50] [19-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 19,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 8,
+			"Lounge": 5,
+			"Sensors": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1,
+			"RoomDouble": 1
+		}
+	},
+	"SE-281": {
+		"url": "SEF/SE-281 [Fore] [50x50] [35-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Bridge": 5,
+			"Comms": 8,
+			"Staterooms": 8,
+			"Fuel": 13,
+			"Lounge": 1,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-282": {
+		"url": "SEF/SE-282 [Fore] [50x50] [31-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 31,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 8,
+			"Lounge": 2,
+			"Airlock": 2,
+			"Sensors": 2,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-283": {
+		"url": "SEF/SE-283 [Fore] [50x100] [35-dTons] Bridge, Fuel, Missiles.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Bridge": 5,
+			"Fuel": 17,
+			"Weapons": 9,
+			"Comms": 4
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2
+		}
+	},
+	"SE-284": {
+		"url": "SEF/SE-284 [Fore] [50x150] [131-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 131,
+		"uses": {
+			"Bridge": 10,
+			"Briefing": 4,
+			"Weapons": 3,
+			"Staterooms": 16,
+			"Lounge": 13,
+			"Medical": 4,
+			"Low Berths": 1,
+			"Cargo": 40,
+			"Fuel": 40
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"RoomSingle": 8
+		}
+	},
+	"SE-285": {
+		"url": "SEF/SE-285 [Fore] [50x50] [32-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 32,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 16,
+			"Lounge": 0,
+			"Weapons": 1
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"Turrets": 2
+		}
+	},
+	"SE-286": {
+		"url": "SEF/SE-286 [Fore] [50x100] [40-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 40,
+		"uses": {
+			"Bridge": 10,
+			"Comms": 6,
+			"Lounge": 10,
+			"Docking": 8,
+			"Fuel": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-287": {
+		"url": "SEF/SE-287 [Fore] [50x50] [18-dTons] Bridge, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 28,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 16,
+			"Lounge": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-288": {
+		"url": "SEF/SE-288 [Fore] [50x50] [25-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 4,
+			"Airlock": 4,
+			"Briefing": 4,
+			"Lounge": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 1
+		}
+	},
+	"SE-289": {
+		"url": "SEF/SE-289 [Fore] [50x50] [36-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 36,
+		"uses": {
+			"Bridge": 5,
+			"Cargo": 8,
+			"Staterooms": 16,
+			"Lounge": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-289 [Fore] [50x50] [Overlay] Cargo.png"
+	},
+	"SE-290": {
+		"url": "SEF/SE-290 [Fore] [50x150] [70-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 70,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 3,
+			"Drones": 6,
+			"Staterooms": 16,
+			"Lounge": 8,
+			"Cargo": 12,
+			"Fuel": 15
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-290 [Fore] [50x150] [Overlay] Cargo.png"
+	},
+	"SE-291": {
+		"url": "SEF/SE-291 [Fore] [50x100] [46-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 46,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 16,
+			"Lounge": 10,
+			"Medical": 4,
+			"Airlock": 2,
+			"Comms": 4
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"SE-292": {
+		"url": "SEF/SE-292 [Fore] [50x100] [39-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 39,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 2,
+			"Engineering": 10,
+			"Staterooms": 8,
+			"Lounge": 9
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-293": {
+		"url": "SEF/SE-293 [Fore] [50x50] [33-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 33,
+		"uses": {
+			"Bridge": 8,
+			"Staterooms": 22,
+			"Lounge": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4,
+			"RoomHigh": 1
+		}
+	},
+	"SE-294": {
+		"url": "SEF/SE-294 [Fore] [50x100] [47-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Bridge": 8,
+			"Staterooms": 16,
+			"Lounge": 10,
+			"Airlock": 2,
+			"Weapons": 11
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 0,
+			"Barbettes": 3,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-295": {
+		"url": "SEF/SE-295 [Fore] [50x100] [38-dTons] Bridge, Sensors, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 38,
+		"uses": {
+			"Bridge": 5,
+			"Sensors": 12,
+			"Fuel": 15,
+			"Briefing": 4,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Turrets": 1
+		}
+	},
+	"SE-296": {
+		"url": "SEF/SE-296 [Fore] [50x100] [81-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 81,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 40,
+			"Lounge": 19,
+			"Briefing": 0,
+			"Vehicle": 6,
+			"Cargo": 6
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 10
+		},
+		"overlayUrl": "SEF/SE-296 [Fore] [50x100] [Overlay] Air-Raft and Cargo.png"
+	},
+	"SE-297": {
+		"url": "SEF/SE-297 [Fore] [50x100] [50-dTons] Bridge, Probes.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Bridge": 15,
+			"Airlock": 2,
+			"Weapons": 3,
+			"Lounge": 10,
+			"Drones": 20
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 1
+		}
+	},
+	"SE-298": {
+		"url": "SEF/SE-298 [Fore] [50x100] [76-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 76,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 6,
+			"Staterooms": 40,
+			"Lounge": 10,
+			"Airlock": 4
+		},
+		"facilities": {
+			"Airlocks": 2,
+			"Turrets": 2,
+			"Barbettes": 0,
+			"RoomSingle": 10
+		}
+	},
+	"SE-299": {
+		"url": "SEF/SE-299 [Fore] [50x100] [57-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Bridge": 5,
+			"Sensors": 2,
+			"Staterooms": 16,
+			"Medical": 4,
+			"Fuel": 24,
+			"Lounge": 4,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 4
+		}
+	},
+	"SE-300": {
+		"url": "SEF/SE-300 [Fore] [50x200] [137-dTons] Bridge, Staterooms, Vehicles.png",
+		"sizeX": 10,
+		"sizeY": 40,
+		"tons": 137,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 4,
+			"Staterooms": 48,
+			"Docking": 20,
+			"Lounge": 24,
+			"Briefing": 0,
+			"Weapons": 2,
+			"Labs": 4,
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 12,
+			"Turrets": 1
+		},
+		"overlayUrl": "SEF/SE-300 [Fore] [50x200] [Overlay] Escape Pods.png"
+	},
+	"SE-301": {
+		"url": "SEF/SE-301 [Fore] [50x100] [59-dTons] Bridge, Mission Ops, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 59,
+		"uses": {
+			"Bridge": 8,
+			"Sensors": 5,
+			"Staterooms": 24,
+			"Lounge": 10,
+			"Briefing": 10,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"SE-302": {
+		"url": "SEF/SE-302 [Fore] [50x100] [54-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 54,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 28,
+			"Lounge": 19,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 7
+		}
+	},
+	"SE-303": {
+		"url": "SEF/SE-303 [Fore] [50x50] [30-dTons] Bridge, Crew, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 8,
+			"Lounge": 6,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Sensors": 4
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 0,
+			"Barbettes": 2,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-304": {
+		"url": "SEF/SE-304 [Fore] [50x100] [53-dTons] Bridge, Staterooms, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 53,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 2,
+			"Weapons": 2,
+			"Staterooms": 24,
+			"Lounge": 13,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Turrets": 1,
+			"Barbettes": 2,
+			"RoomSingle": 1,
+			"RoomDouble": 5
+		}
+	},
+	"SE-305": {
+		"url": "SEF/SE-305 [Fore] [50x100] [38-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 38,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 20,
+			"Lounge": 6,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "SEF/SE-305 [Fore] [50x100] [Overlay] Bridge-Shuttle.png"
+	},
+	"SE-306": {
+		"url": "SEF/SE-306 [Fore] [70x50] [58-dTons] Bridge, Staterooms, Cargo.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 58,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 16,
+			"Cargo": 20,
+			"Lounge": 10,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		},
+		"overlayUrl": "SEF/SE-306 [Fore] [70x50] [Overlay] Cargo.png"
+	},
+	"SE-307": {
+		"url": "SEF/SE-307 [Fore] [50x150] [159-dTons] Bridge, Staterooms, Cargo Bay.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 159,
+		"uses": {
+			"Bridge": 15,
+			"Sensors": 6,
+			"Staterooms": 44,
+			"Cargo": 30,
+			"Lounge": 13,
+			"Briefing": 4,
+			"Airlock": 2,
+			"Docking": 20,
+			"Fuel": 25
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 11
+		},
+		"overlayUrl": "SEF/SE-307 [Fore] [50x150] [Overlay] Escape Pods.png"
+	},
+	"SE-308": {
+		"url": "SEF/SE-308 [Fore] [50x100] [64-dTons] Bridge, Staterooms, Vehicle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 64,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 24,
+			"Vehicle": 6,
+			"Lounge": 18,
+			"Airlock": 2,
+			"Medical": 4
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "SEF/SE-308 [Fore] [50x100] [Overlay] Air-Raft.png"
+	},
+	"SE-309": {
+		"url": "SEF/SE-309 [Fore] [50x100] [43-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 43,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 16,
+			"Fuel": 20,
+			"Lounge": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-310": {
+		"url": "SEF/SE-310 [Fore] [50x150] [86-dTons] Bridge, Staterooms, Cargo.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 86,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 4,
+			"Staterooms": 28,
+			"Cargo": 38,
+			"Lounge": 6,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 3,
+			"RoomDouble": 4
+		}
+	},
+	"SE-311": {
+		"url": "SEF/SE-311 [Fore] [50x100] [48-dTons] Passenger Seating.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 48,
+		"uses": {
+			"Seating": 21,
+			"Airlock": 2,
+			"Lounge": 6,
+			"Fuel": 19
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"Seats": 82
+		}
+	},
+	"SE-312": {
+		"url": "SEF/SE-312 [Fore] [50x100] [52-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 52,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 28,
+			"Lounge": 12,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 5
+		}
+	},
+	"SE-313": {
+		"url": "SEF/SE-313 [Fore] [50x50] [21-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 21,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 8,
+			"Lounge": 0,
+			"Briefing": 0,
+			"Comms": 3
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-314": {
+		"url": "SEF/SE-314 [Fore] [50x100] [57-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 57,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 24,
+			"Fuel": 5,
+			"Lounge": 11,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Medical": 4,
+			"Low Berths": 1
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 4
+		}
+	},
+	"SE-315": {
+		"url": "SEF/SE-315 [Fore] [90x50] [71-dTons] Bridge, Survey, Staterooms.png",
+		"sizeX": 18,
+		"sizeY": 10,
+		"tons": 71,
+		"uses": {
+			"Bridge": 15,
+			"Staterooms": 24,
+			"Lounge": 6,
+			"Briefing": 4,
+			"Weapons": 4,
+			"Comms": 4,
+			"Drones": 14
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 3,
+			"RoomDouble": 3,
+			"Barbettes": 2
+		}
+	},
+	"SE-316": {
+		"url": "SEF/SE-316 [Fore] [50x100] [61-dTons] Bridge, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 61,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 5,
+			"Briefing": 0,
+			"Staterooms": 8,
+			"Lounge": 8,
+			"Vehicle": 6,
+			"Cargo": 6,
+			"Fuel": 18
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		},
+		"overlayUrl": "SEF/SE-316 [Fore] [50x100] [Overlay] Air-Raft and Cargo.png"
+	},
+	"SE-317": {
+		"url": "SEF/SE-317 [Fore] [50x100] [47-dTons] Bridge, Survey, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 16,
+			"Lounge": 6,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Drones": 18
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 2,
+			"RoomDouble": 2
+		}
+	},
+	"SE-318": {
+		"url": "SEF/SE-318 [Fore] [50x100] [48-dTons] Bridge, Survey, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 48,
+		"uses": {
+			"Bridge": 5,
+			"Sensors": 5,
+			"Labs": 12,
+			"Staterooms": 16,
+			"Lounge": 8,
+			"Briefing": 0,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-319": {
+		"url": "SEF/SE-319 [Fore] [50x100] [63-dTons] Bridge, Staterooms, Sensor Ops.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 63,
+		"uses": {
+			"Bridge": 6,
+			"Staterooms": 16,
+			"Lounge": 4,
+			"Briefing": 0,
+			"Drones": 35,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+
+	"SE-322": {
+		"url": "SEF/SE-322 [Fore] [50x100] [53-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 53,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 24,
+			"Lounge": 8,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Fuel": 9
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 6
+		}
+	},
+	"SE-323": {
+		"url": "SEF/SE-323 [Fore] [50x100] [62-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 62,
+		"uses": {
+			"Bridge": 10,
+			"Staterooms": 32,
+			"Lounge": 15,
+			"Briefing": 0,
+			"Weapons": 3,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 8,
+			"Turrets": 2
+		}
+	},
+
+	"SE-326": {
+		"url": "SEF/SE-326 [Fore] [50x50] [19-dTons] Bridge, Turrets.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 19,
+		"uses": {
+			"Bridge": 10,
+			"Briefing": 0,
+			"Fuel": 6,
+			"Sensors": 1,
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 2,
+			"Barbettes": 0
+		}
+	},
+
+	"SE-329": {
+		"url": "SEF/SE-329 [Fore] [50x50] [26-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 26,
+		"uses": {
+			"Bridge": 5,
+			"Staterooms": 12,
+			"Lounge": 0,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Lounge": 5,
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 3
+		}
+	},
+
+	"SE-331": {
+		"url": "SEF/SE-331 [Fore] [50x100] [37-dTons] Bridge, Shuttle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 37,
+		"uses": {
+			"Bridge": 10,
+			"Docking": 10,
+			"Briefing": 0,
+			"Airlock": 2,
+			"Staterooms": 4,
+			"Lounge": 11
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 1
+		},
+		"overlayUrl": "SEF/SE-331 [Fore] [50x100] [Overlay] Shuttle.png"
+	},
+	"SE-332": {
+		"url": "SEF/SE-332 [Fore] [50x100] [42-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 42,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 2,
+			"Airlock": 2,
+			"Staterooms": 8,
+			"Lounge": 8,
+			"Fuel": 12
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 2
+		}
+	},
+	"SE-333": {
+		"url": "SEF/SE-333 [Fore] [50x50] [35-dTons] Bridge, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Bridge": 5,
+			"Sensors": 5,
+			"Airlock": 2,
+			"Staterooms": 16,
+			"Lounge": 8,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 4
+		}
+	},
+	"SE-334": {
+		"url": "SEF/SE-334 [Fore] [50x150] [78-dTons] Bridge, Staterooms, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 78,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 2,
+			"Airlock": 2,
+			"Staterooms": 28,
+			"Fuel": 16,
+			"Lounge": 20,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 7
+		}
+	},
+	"SE-335": {
+		"url": "SEF/SE-335 [Fore] [50x50] [27-dTons] Mining Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 27,
+		"uses": {
+			"Mining": 2,
+			"Cargo": 25
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-336": {
+		"url": "SEF/SE-336 [Fore] [50x100] [48-dTons] Mining Bay.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 48,
+		"uses": {
+			"Mining": 40,
+			"Engineering": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-337": {
+		"url": "SEF/SE-337 [Fore] [50x100] [46-dTons] Mining or Cargo Bay.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 46,
+		"uses": {
+			"Docking": 4,
+			"Engineering": 4,
+			"Cargo": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-338": {
+		"url": "SEF/SE-338 [Fore] [50x100] [68-dTons] Mining, Mass Driver.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 68,
+		"uses": {
+			"Mining": 56,
+			"Weapons": 12
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-339": {
+		"url": "SEF/SE-339 [Fore] [50x100] [76-dTons] Mining, Processing.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 76,
+		"uses": {
+			"Mining": 76
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-340": {
+		"url": "SEF/SE-340 [Fore] [50x50] [44-dTons] Survey, Sensors.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 44,
+		"uses": {
+			"Sensors": 26,
+			"Lounge": 14,
+			"Briefing": 4
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-341": {
+		"url": "SEF/SE-341 [Fore] [50x50] [17-dTons] Sensors.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 17,
+		"uses": {
+			"Sensors": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-342": {
+		"url": "SEF/SE-342 [Fore] [50x50] [37-dTons] Survey, G-Carrier.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 37,
+		"uses": {
+			"Docking": 17,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-342 [Fore] [50x50] [Overlay] Survey G-Carrier.png"
+	},
+	"SE-343": {
+		"url": "SEF/SE-343 [Fore] [50x50] [48-dTons] Survey, G-Carrier.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 48,
+		"uses": {
+			"Docking": 15,
+			"Fuel": 20,
+			"Sensors": 8,
+			"Drones": 8
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-343 [Fore] [50x50] [Overlay] Survey G-Carrier.png"
+	},
+	"SE-344": {
+		"url": "SEF/SE-344 [Fore] [50x100] [50-dTons] Survey, Drones.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Drones": 42,
+			"Comms": 5,
+			"Weapons": 3
+		},
+		"facilities": {
+			"Turrets": 1
+		}
+	},
+	"SE-345": {
+		"url": "SEF/SE-345 [Fore] [50x100] [63-dTons] Survey, Drone.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 63,
+		"uses": {
+			"Drones": 36,
+			"Comms": 5,
+			"Weapons": 4,
+			"Fuel": 20
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-346": {
+		"url": "SEF/SE-346 [Fore] [50x50] [34-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 34,
+		"uses": {
+			"Labs": 16,
+			"Lounge": 4,
+			"Cargo": 7,
+			"Docking": 7
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-347": {
+		"url": "SEF/SE-347 [Fore] [50x50] [38-dTons] Labs, Shuttle.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 38,
+		"uses": {
+			"Labs": 38
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-347 [Fore] [50x50] [Overlay] Cargo Shuttle.png"
+	},
+	"SE-348": {
+		"url": "SEF/SE-348 [Fore] [50x100] [63-dTons] Xenofauna Labs.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 63,
+		"uses": {
+			"Labs": 20,
+			"Stable": 8,
+			"Staterooms": 16,
+			"Lounge": 4,
+			"Airlock": 2,
+			"Fuel": 13
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 4
+		},
+		"overlayUrl": "SEF/SE-348 [Fore] [50x100] [Overlay] Animals.png"
+	},
+	"SE-349": {
+		"url": "SEF/SE-349 [Fore] [50x50] [18-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Labs": 16,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1
+		}
+	},
+	"SE-350": {
+		"url": "SEF/SE-350 [Fore] [50x50] [18-dTons] Labs.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 18,
+		"uses": {
+			"Labs": 18
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-351": {
+		"url": "SEF/SE-351 [Fore] [50x100] [47-dTons] Labs, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Labs": 16,
+			"Staterooms": 24,
+			"Lounge": 5,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	},
+	"SE-352": {
+		"url": "SEF/SE-352 [Fore] [70x100] [71-dTons] Labs, Staterooms.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 71,
+		"uses": {
+			"Labs": 30,
+			"Lounge": 10,
+			"Airlock": 2,
+			"Low Berths": 5,
+			"Staterooms": 24
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		}
+	},
+	"SE-353": {
+		"url": "SEF/SE-353 [Fore] [50x100] [60-dTons] Military, Multi purpose.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 60,
+		"uses": {
+			"Military": 10,
+			"Cargo": 10,
+			"Staterooms": 4,
+			"Lounge": 19,
+			"Barracks": 15,
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 1,
+			"Seats": 24
+		}
+	},
+	"SE-354": {
+		"url": "SEF/SE-354 [Fore] [70x50] [62-dTons] Military, Multi purpose.png",
+		"sizeX": 14,
+		"sizeY": 10,
+		"tons": 62,
+		"uses": {
+			"Barracks": 15,
+			"Military": 7,
+			"Weapons": 14,
+			"Fuel": 6,
+			"Vehicle": 20
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Seats": 12,
+			"Barbettes": 2
+		},
+		"overlayUrl": "SEF/SE-354 [Fore] [70x50] [Overlay] Wheeled ATV-APC.png"
+	},
+	"SE-355": {
+		"url": "SEF/SE-355 [Fore] [50x100] [47-dTons] Military, Drop Capsules.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 47,
+		"uses": {
+			"Military": 42,
+			"Sensors": 5
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Capsules": 12,
+			"Turrets": 2
+		}
+	},
+	"SE-356": {
+		"url": "SEF/SE-356 [Fore] [50x100] [59-dTons] Military, Grav APC.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 59,
+		"uses": {
+			"Military": 6,
+			"Armory": 4,
+			"Lounge": 10,
+			"Staterooms": 24,
+			"Vehicle": 15
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 6
+		},
+		"overlayUrl": "SEF/SE-356 [Fore] [50x100] [Overlay] Grav APC.png"
+	},
+	"SE-357": {
+		"url": "SEF/SE-357 [Fore] [50x50] [35-dTons] Survey, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 35,
+		"uses": {
+			"Staterooms": 16,
+			"Sensors": 19
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 4
+		}
+	},
+	"SE-358": {
+		"url": "SEF/SE-358 [Fore] [50x50] [41-dTons] Communication, Sensors.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 41,
+		"uses": {
+			"Comms": 35,
+			"Workshop": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-359": {
+		"url": "SEF/SE-359 [Fore] [50x100] [62-dTons] 50 Ton Bay Weapon.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 62,
+		"uses": {
+			"Weapons": 54,
+			"Staterooms": 4,
+			"Workshop": 4
+		},
+		"facilities": {
+			"WeaponBays": 1
+		}
+	},
+	"SE-360": {
+		"url": "SEF/SE-360 [Fore] [70x100] [72-dTons] Bridge, Drop Capsules.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 72,
+		"uses": {
+			"Bridge": 8,
+			"Military": 64
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Capsules": 16
+		}
+	},
+	"SE-361": {
+		"url": "SEF/SE-361 [Fore] [50x50] [16-dTons] Missiles.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 16,
+		"uses": {
+			"Weapons": 16
+		},
+		"facilities": {
+			"Barbettes": 1
+		}
+	},
+	"SE-362": {
+		"url": "SEF/SE-362 [Fore] [50x100] [50-dTons] 50 Ton Bay Weapon.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Staterooms": 4,
+			"Weapons": 46
+		},
+		"facilities": {
+			"WeaponBays": 1,
+			"RoomSingle": 1
+		}
+	},
+	"SE-363": {
+		"url": "SEF/SE-363 [Fore] [50x100] [58-dTons] 50 Ton Bay Weapon.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 58,
+		"uses": {
+			"Staterooms": 4,
+			"Workshop": 4,
+			"Weapons": 50
+		},
+		"facilities": {
+			"WeaponBays": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 1
+		}
+	},
+	"SE-364": {
+		"url": "SEF/SE-364 [Fore] [50x50] [30-dTons] Missiles, Ortillary.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 30,
+		"uses": {
+			"Staterooms": 4,
+			"Workshop": 4,
+			"Weapons": 20,
+			"Airlocks": 2
+		},
+		"facilities": {
+			"Barbettes": 1,
+			"Airlock": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 1
+		}
+	},
+	"SE-365": {
+		"url": "SEF/SE-365 [Fore] [50x100] [35-dTons] Small Craft, Cargo.png",
+		"overlayUrl": "SEF/SE-365-370 [Fore] [50x100] [Overlay] Detachable Cargo Shuttle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Cargo": 18,
+			"Docking": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-366": {
+		"url": "SEF/SE-366 [Fore] [50x100] [35-dTons] Small Craft, Barracks.png",
+		"overlayUrl": "SEF/SE-365-370 [Fore] [50x100] [Overlay] Detachable Troop Transport.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Barracks": 18,
+			"Docking": 17
+		},
+		"facilities": {
+			"Seats": 12
+		}
+	},
+	"SE-367": {
+		"url": "SEF/SE-367 [Fore] [50x100] [35-dTons] Small Craft, Cargo.png",
+		"overlayUrl": "SEF/SE-365-370 [Fore] [50x100] [Overlay] Detachable Cargo Shuttle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Cargo": 35
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-368": {
+		"url": "SEF/SE-368 [Fore] [50x100] [35-dTons] Small Craft, Fuel.png",
+		"overlayUrl": "SEF/SE-365-370 [Fore] [50x100] [Overlay] Detachable Cargo Shuttle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Fuel": 18,
+			"Docking": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-369": {
+		"url": "SEF/SE-369 [Fore] [50x100] [35-dTons] Small Craft, Sensors.png",
+		"overlayUrl": "SEF/SE-365-370 [Fore] [50x100] [Overlay] IISS Survey G-Carrier.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Sensors": 18,
+			"Docking": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-370": {
+		"url": "SEF/SE-370 [Fore] [50x100] [35-dTons] Small Craft, Medical.png",
+		"overlayUrl": "SEF/SE-365-370 [Fore] [50x100] [Overlay] Detachable Cargo Shuttle.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Medical": 16,
+			"Low Berths": 2,
+			"Docking": 17
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-371": {
+		"url": "SEF/SE-371 [Fore] [50x100] [35-dTons] Mining or Cargo Bay.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 35,
+		"uses": {
+			"Cargo": 30,
+			"Engineering": 5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-372": {
+		"url": "SEF/SE-372 [Fore] [50x50] [25-dTons] Mining or Cargo Bay.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 25,
+		"uses": {
+			"Cargo": 20,
+			"Engineering": 5
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-373": {
+		"url": "SEF/SE-373 [Fore] [50x50] [40-dTons] Dining, Lounge.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Lounge": 40
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-374": {
+		"url": "SEF/SE-374 [Fore] [50x50] [13-dTons] Barbettes, Fuel.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 13,
+		"uses": {
+			"Fuel": 5,
+			"Weapons": 8
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"Barbettes": 2
+		}
+	},
+	"SE-375": {
+		"url": "SEF/SE-375 [Fore] [50x100] [52-dTons] Medical.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 52,
+		"uses": {
+			"Medical": 38,
+			"Docking": 8,
+			"Low Berths": 6
+		},
+		"facilities": {
+			"Airlocks": 0
+		},
+		"overlayUrl": "SEF/SE-375 [Fore] [50x100] [Overlay] Medical Pods.png"
+	},
+	"SE-376": {
+		"url": "SEF/SE-376 [Fore] [50x100] [41-dTons] Brig, Prison.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 41,
+		"uses": {
+			"Brig": 30,
+			"Airlock": 2,
+			"Staterooms": 4,
+			"Lounge": 5
+		},
+		"facilities": {
+			"Airlocks": 1,
+			"RoomSingle": 0,
+			"RoomDouble": 1,
+			"Prisoners": 10
+		}
+	},
+	"SE-377": {
+		"url": "SEF/SE-377 [Fore] [70x100] [71-dTons] Arboretum.png",
+		"sizeX": 14,
+		"sizeY": 20,
+		"tons": 71,
+		"uses": {
+			"Biosphere": 71
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+
+	"SE-380": {
+		"url": "SEF/SE-380 [Fore] [50x100] [54-dTons] Dining, Lounge.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 54,
+		"uses": {
+			"Lounge": 54
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-381": {
+		"url": "SEF/SE-381 [Fore] [50x50] [40-dTons] Medical.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 40,
+		"uses": {
+			"Medical": 40
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"SE-382": {
+		"url": "SEF/SE-382 [Fore] [50x100] [50-dTons] Bridge, Sensors, Staterooms.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 50,
+		"uses": {
+			"Bridge": 10,
+			"Sensors": 24,
+			"Staterooms": 16,
+			"Lounge": 0,
+			"Briefing": 0
+		},
+		"facilities": {
+			"Airlocks": 0,
+			"RoomSingle": 0,
+			"RoomDouble": 4
+		}
+	}
+}

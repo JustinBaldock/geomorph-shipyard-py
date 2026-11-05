@@ -1,0 +1,464 @@
+{
+	"AO-001": {
+		"mirrorUrl": "AO/AO-001 [Port] [50x50] [8-dTons] Engineering.png",
+		"url": "AO/AO-001 [Starboard] [50x50] [8-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 8,
+		"uses": {
+			"Engineering": 8,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-002": {
+		"mirrorUrl": "AO/AO-002 [Port] [50x50] [6-dTons] Engineering.png",
+		"url": "AO/AO-002 [Starboard] [50x50] [6-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 6,
+		"uses": {
+			"Engineering": 6,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-003": {
+		"mirrorUrl": "AO/AO-003 [Port] [50x50] [4-dTons] Engineering.png",
+		"url": "AO/AO-003 [Starboard] [50x50] [4-dTons] Engineering.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 4,
+		"uses": {
+			"Engineering": 4,
+			"Workshop": 0
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-004": {
+		"mirrorUrl": "AO/AO-004 [Port] [50x50] [3-dTons] Mine Layer.png",
+		"url": "AO/AO-004 [Starboard] [50x50] [3-dTons] Mine Layer.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 3,
+		"uses": { "Weapons": 3 },
+		"facilities": {
+			"Turret": 1
+		}
+	},
+	"AO-005": {
+		"mirrorUrl": "AO/AO-005 [Port] [50x50] [2-dTons] Sensors.png",
+		"url": "AO/AO-005 [Starboard] [50x50] [2-dTons] Sensors.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": {
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-006": {
+		"mirrorUrl": "AO/AO-006 [Port] [50x50] [2-dTons] Sensors.png",
+		"url": "AO/AO-006 [Starboard] [50x50] [2-dTons] Sensors.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": {
+			"Sensors": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-007": {
+		"mirrorUrl": "AO/AO-007 [Port] [50x50] [2-dTons] Airlock.png",
+		"url": "AO/AO-007 [Starboard] [50x50] [2-dTons] Airlock.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": {
+			"Airlock": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-008": {
+		"mirrorUrl": "AO/AO-008 [Port] [50x50] [2-dTons] Missiles.png",
+		"url": "AO/AO-008 [Starboard] [50x50] [2-dTons] Missiles.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": {
+			"Weapons": 2
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-009": {
+		"mirrorUrl": "AO/AO-009 [Port] [50x50] [3-dTons] Missiles.png",
+		"url": "AO/AO-009 [Starboard] [50x50] [3-dTons] Missiles.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 3,
+		"uses": {
+			"Weapons": 3
+		},
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-010": {
+		"mirrorUrl": "AO/AO-010 [Port] [50x50] [3-dTons] Grappling Arm.png",
+		"url": "AO/AO-010 [Starboard] [50x50] [3-dTons] Grappling Arm.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 3,
+		"uses": { "Engineering": 3 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-011": {
+		"mirrorUrl": "AO/AO-011 [Port] [50x50] [3-dTons] Grappling Arm.png",
+		"url": "AO/AO-011 [Starboard] [50x50] [3-dTons] Grappling Arm.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 3,
+		"uses": { "Engineering": 3 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-012": {
+		"mirrorUrl": "AO/AO-012 [Port] [50x50] [3-dTons] Grappling Arm.png",
+		"url": "AO/AO-012 [Starboard] [50x50] [3-dTons] Grappling Arm.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 3,
+		"uses": { "Engineering": 3 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-013": {
+		"mirrorUrl": "AO/AO-013 [Port] [50x50] [3-dTons] Grappling Arm.png",
+		"url": "AO/AO-013 [Starboard] [50x50] [3-dTons] Grappling Arm.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 3,
+		"uses": { "Engineering": 3 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-014": {
+		"mirrorUrl": "AO/AO-014 [Port] [50x50] [2-dTons] Turret.png",
+		"url": "AO/AO-014 [Starboard] [50x50] [2-dTons] Turret.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": { "Weapons": 2 },
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 0
+		}
+	},
+	"AO-015": {
+		"mirrorUrl": "AO/AO-015 [Port] [50x50] [2-dTons] Turret.png",
+		"url": "AO/AO-015 [Starboard] [50x50] [2-dTons] Turret.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": { "Weapons": 2 },
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 0
+		}
+	},
+	"AO-016": {
+		"mirrorUrl": "AO/AO-016 [Port] [50x50] [2-dTons] Turret.png",
+		"url": "AO/AO-016 [Starboard] [50x50] [2-dTons] Turret.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": { "Weapons": 2 },
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 0
+		}
+	},
+	"AO-017": {
+		"mirrorUrl": "AO/AO-017 [Port] [50x50] [2-dTons] Turret.png",
+		"url": "AO/AO-017 [Starboard] [50x50] [2-dTons] Turret.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": { "Weapons": 2 },
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 0
+		}
+	},
+	"AO-018": {
+		"mirrorUrl": "AO/AO-018 [Port] [50x50] [2-dTons] Turret.png",
+		"url": "AO/AO-018 [Starboard] [50x50] [2-dTons] Turret.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": { "Weapons": 2 },
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 0
+		}
+	},
+	"AO-019": {
+		"mirrorUrl": "AO/AO-019 [Port] [50x50] [2-dTons] Turret.png",
+		"url": "AO/AO-019 [Starboard] [50x50] [2-dTons] Turret.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": { "Weapons": 2 },
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 0
+		}
+	},
+	"AO-020": {
+		"mirrorUrl": "AO/AO-020 [Port] [50x50] [3-dTons] Turret.png",
+		"url": "AO/AO-020 [Starboard] [50x50] [3-dTons] Turret.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 3,
+		"uses": { "Weapons": 3 },
+		"facilities": {
+			"Airlocks": 0,
+			"Turrets": 0,
+			"Barbettes": 0
+		}
+	},
+	"AO-021": {
+		"mirrorUrl": "AO/AO-021 [Port] [50x50] [6-dTons] Grappling Arms.png",
+		"url": "AO/AO-021 [Starboard] [50x50] [6-dTons] Grappling Arms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 6,
+		"uses": { "Weapons": 6 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-022": {
+		"mirrorUrl": "AO/AO-022 [Port] [50x55] [4-dTons] Grappling Arms, Legs.png",
+		"url": "AO/AO-022 [Starboard] [50x55] [4-dTons] Grappling Arms, Legs.png",
+		"sizeX": 10,
+		"sizeY": 11,
+		"tons": 4,
+		"uses": { "Weapons": 4 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-023": {
+		"mirrorUrl": "AO/AO-023 [Port] [50x150] [6-dTons] Grappling Arms, Legs.png",
+		"url": "AO/AO-023 [Starboard] [50x150] [6-dTons] Grappling Arms, Legs.png",
+		"sizeX": 10,
+		"sizeY": 30,
+		"tons": 6,
+		"uses": { "Weapons": 6 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-024": {
+		"mirrorUrl": "AO/AO-024 [Port] [50x50] [3-dTons] Grappling Arms - Retracted.png",
+		"url": "AO/AO-024 [Starboard] [50x50] [3-dTons] Grappling Arms - Retracted.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 3,
+		"uses": { "Engineering": 3 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-025": {
+		"mirrorUrl": "AO/AO-025 [Port] [50x50] [6-dTons] Grappling Arms - Retracted.png",
+		"url": "AO/AO-025 [Starboard] [50x50] [6-dTons] Grappling Arms - Retracted.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 6,
+		"uses": { "Engineering": 6 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-026": {
+		"mirrorUrl": "AO/AO-026 [Port] [50x50] [3-dTons] Grappling Arms.png",
+		"url": "AO/AO-026 [Starboard] [50x50] [3-dTons] Grappling Arms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 3,
+		"uses": { "Engineering": 3 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-027": {
+		"mirrorUrl": "AO/AO-027 [Port] [50x50] [6-dTons] Grappling Arms.png",
+		"url": "AO/AO-027 [Starboard] [50x50] [6-dTons] Grappling Arms.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 6,
+		"uses": { "Engineering": 6 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-028": {
+		"mirrorUrl": "AO/AO-028 [Port] [50x50] [6-dTons] Grappling Arms, Laser.png",
+		"url": "AO/AO-028 [Starboard] [50x50] [6-dTons] Grappling Arms, Laser.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 6,
+		"uses": { "Engineering": 6 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-029": {
+		"mirrorUrl": "AO/AO-029 [Port] [50x50] [2-dTons] Wheels.png",
+		"url": "AO/AO-029 [Starboard] [50x50] [2-dTons] Wheels.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 2,
+		"uses": { "Engineering": 2 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-030": {
+		"mirrorUrl": "AO/AO-030 [Port] [50x50] [4-dTons] Wheels.png",
+		"url": "AO/AO-030 [Starboard] [50x50] [4-dTons] Wheels.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 4,
+		"uses": { "Engineering": 4 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-031": {
+		"mirrorUrl": "AO/AO-031 [Port] [50x50] [6-dTons] Wheels.png",
+		"url": "AO/AO-031 [Starboard] [50x50] [6-dTons] Wheels.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 6,
+		"uses": { "Engineering": 6 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-032": {
+		"mirrorUrl": "AO/AO-032 [Port] [50x50] [5-dTons] Tracks.png",
+		"url": "AO/AO-032 [Starboard] [50x50] [5-dTons] Tracks.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 5,
+		"uses": { "Engineering": 5 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-033": {
+		"mirrorUrl": "AO/AO-033 [Port] [50x50] [9-dTons] Tracks.png",
+		"url": "AO/AO-033 [Starboard] [50x50] [9-dTons] Tracks.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 9,
+		"uses": { "Engineering": 9 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-034": {
+		"mirrorUrl": "AO/AO-034 [Port] [50x50] [3-dTons] Legs, Grapples.png",
+		"url": "AO/AO-034 [Starboard] [50x50] [3-dTons] Legs, Grapples.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 3,
+		"uses": { "Engineering": 3 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-035": {
+		"mirrorUrl": "AO/AO-035 [Port] [50x50] [5-dTons] Legs, Grapples.png",
+		"url": "AO/AO-035 [Starboard] [50x50] [5-dTons] Legs, Grapples.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 5,
+		"uses": { "Engineering": 5 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-036": {
+		"mirrorUrl": "AO/AO-036 [Port] [50x50] [9-dTons] Legs, Grapples.png",
+		"url": "AO/AO-036 [Starboard] [50x50] [9-dTons] Legs, Grapples.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 9,
+		"uses": { "Engineering": 9 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-037": {
+		"mirrorUrl": "AO/AO-037 [Port] [50x50] [10-dTons] Legs, Grapples.png",
+		"url": "AO/AO-037 [Starboard] [50x50] [10-dTons] Legs, Grapples.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 10,
+		"uses": { "Engineering": 10 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-131": {
+		"mirrorUrl": "AO/AO-131 [Port] [50x50] [6-dTons] Wheels.png",
+		"url": "AO/AO-131 [Starboard] [50x50] [6-dTons] Wheels.png",
+		"sizeX": 10,
+		"sizeY": 10,
+		"tons": 6,
+		"uses": { "Engineering": 6 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	},
+	"AO-133": {
+		"mirrorUrl": "AO/AO-133 [Port] [50x100] [19-dTons] Tracks.png",
+		"url": "AO/AO-133 [Starboard] [50x100] [19-dTons] Tracks.png",
+		"sizeX": 10,
+		"sizeY": 20,
+		"tons": 19,
+		"uses": { "Engineering": 19 },
+		"facilities": {
+			"Airlocks": 0
+		}
+	}
+}
