@@ -7,9 +7,10 @@ geomorph tile, so a saved part behaves like any other part in the library.
 
 from __future__ import annotations
 
+import math
 from pathlib import Path
 
-from PySide6.QtCore import QMimeData, QPointF, QRectF, QSize, Qt, Signal
+from PySide6.QtCore import QLineF, QMimeData, QPointF, QRectF, QSize, Qt, Signal
 from PySide6.QtGui import (
     QAction,
     QColor,
@@ -18,6 +19,8 @@ from PySide6.QtGui import (
     QImageReader,
     QKeySequence,
     QPainter,
+    QPainterPath,
+    QPainterPathStroker,
     QPen,
     QPixmap,
     QTransform,
@@ -59,6 +62,24 @@ SNAP_CHOICES = (
     ("1/2 square", SQUARE // 2),
     ("1/4 square", SQUARE // 4),
 )
+PASTE_OFFSET = SQUARE
+
+# Measured from the high-res tiles, in pixels.
+HULL_WALL = 38
+INTERIOR_WALL = 19
+DOOR_GAP = 283
+DOOR_LENGTH = 222
+DOOR_WIDTH = 41
+DOOR_LINE = 6
+# Wide enough to clear a hull wall from behind a door.
+DOOR_CLEARANCE = 46
+DOOR_REACH = 190
+
+BORDER_CHOICES = (("Hull wall", HULL_WALL), ("Interior wall", INTERIOR_WALL))
+# Borders stay above the pieces, and doors stay above the borders.
+BORDER_LAYER = 100_000
+DOOR_LAYER = 200_000
+BRUSH_STEP_PIXELS = 40
 THUMBNAIL_PIXELS = 96
 DEFAULT_SIZE_SQUARES = 10
 MAX_SIZE_SQUARES = 100
@@ -72,6 +93,25 @@ USE_CHOICES = tuple(
 
 def snapped(value: float, step: int) -> int:
     return round(value / step) * step
+
+
+def door_along(value: float, step: int) -> float:
+    """Where a door centres along its wall: mid-square, or on a finer step."""
+    if step == SQUARE:
+        return (value // SQUARE) * SQUARE + SQUARE / 2
+    return snapped(value, step)
+
+
+def door_slot(x: float, y: float, step: int) -> tuple[float, float, bool]:
+    """The door position nearest a point, as (x, y, vertical).
+
+    Doors sit on grid lines, so the nearest line decides which way one faces.
+    """
+    across_x = abs(x - snapped(x, SQUARE))
+    across_y = abs(y - snapped(y, SQUARE))
+    if across_x < across_y:
+        return snapped(x, SQUARE), door_along(y, step), True
+    return door_along(x, step), snapped(y, SQUARE), False
 
 
 def canvas_size(squares_x: int, squares_y: int) -> QSize:
@@ -109,12 +149,36 @@ class SubpartItem(QGraphicsPixmapItem):
         area = turn.mapRect(QRectF(self.pixmap().rect()))
         self.setTransform(turn * QTransform.fromTranslate(-area.x(), -area.y()))
 
+    @staticmethod
+    def _treat_shift_as_multi_select(event) -> None:
+        # Qt adds to a selection with Ctrl (Cmd on a Mac), as in the main app.
+        if event.modifiers() & Qt.ShiftModifier:
+            event.setModifiers(event.modifiers() | Qt.ControlModifier)
+
+    def mousePressEvent(self, event) -> None:
+        self._treat_shift_as_multi_select(event)
+        super().mousePressEvent(event)
+
+    def mouseReleaseEvent(self, event) -> None:
+        self._treat_shift_as_multi_select(event)
+        super().mouseReleaseEvent(event)
+
     def itemChange(self, change, value):
         if change == QGraphicsItem.ItemPositionChange:
             return QPointF(snapped(value.x(), self.step), snapped(value.y(), self.step))
         if change == QGraphicsItem.ItemPositionHasChanged:
             self._moved()
         return super().itemChange(change, value)
+
+    def visible_rect(self) -> QRectF:
+        """The area the subpart covers on the canvas."""
+        return self.transform().mapRect(QRectF(self.pixmap().rect())).translated(
+            self.pos()
+        )
+
+    def draw_flat(self, painter: QPainter) -> None:
+        painter.setTransform(self.transform(), True)
+        painter.drawPixmap(0, 0, self.pixmap())
 
     def to_json(self) -> dict:
         return {
@@ -123,6 +187,162 @@ class SubpartItem(QGraphicsPixmapItem):
             "y": int(self.pos().y()),
             "turns": self.turns,
             "mirror": self.mirror,
+        }
+
+
+class DrawnItem(QGraphicsItem):
+    """Something the editor draws itself, instead of a cut image."""
+
+    def __init__(self, step: int):
+        super().__init__()
+        self.step = step
+        self.setFlags(
+            QGraphicsItem.ItemIsSelectable | QGraphicsItem.ItemSendsGeometryChanges
+        )
+
+    def mousePressEvent(self, event) -> None:
+        SubpartItem._treat_shift_as_multi_select(event)
+        super().mousePressEvent(event)
+
+    def mouseReleaseEvent(self, event) -> None:
+        SubpartItem._treat_shift_as_multi_select(event)
+        super().mouseReleaseEvent(event)
+
+    def paint(self, painter: QPainter, option, widget=None) -> None:
+        painter.save()
+        self.draw_flat(painter)
+        painter.restore()
+        if self.isSelected():
+            pen = QPen(QColor("#2a6fff"), 0, Qt.DashLine)
+            painter.setPen(pen)
+            painter.setBrush(Qt.NoBrush)
+            painter.drawPath(self.shape())
+
+
+class BorderItem(DrawnItem):
+    """A wall around an area. Its position is the area's top left corner."""
+
+    name = "border"
+
+    def __init__(
+        self, step: int, width: int, height: int, thickness: int, follows_part: bool
+    ):
+        super().__init__(step)
+        self.width = width
+        self.height = height
+        self.thickness = thickness
+        self.follows_part = follows_part
+        self.moved = lambda: None
+        self.setFlag(QGraphicsItem.ItemIsMovable)
+
+    def area(self) -> QRectF:
+        return QRectF(self.pos().x(), self.pos().y(), self.width, self.height)
+
+    def set_area(self, area: QRectF) -> None:
+        self.prepareGeometryChange()
+        self.width = int(area.width())
+        self.height = int(area.height())
+        self.setPos(area.topLeft())
+        self.update()
+
+    def boundingRect(self) -> QRectF:
+        margin = self.thickness
+        return QRectF(0, 0, self.width, self.height).adjusted(
+            -margin, -margin, margin, margin
+        )
+
+    def shape(self) -> QPainterPath:
+        # Only the wall is clickable, so pieces inside it can still be reached.
+        path = QPainterPath()
+        path.addRect(QRectF(0, 0, self.width, self.height))
+        stroker = QPainterPathStroker()
+        stroker.setWidth(max(self.thickness, 40))
+        return stroker.createStroke(path)
+
+    def draw_flat(self, painter: QPainter) -> None:
+        pen = QPen(QColor("black"), self.thickness)
+        pen.setJoinStyle(Qt.MiterJoin)
+        painter.setPen(pen)
+        painter.setBrush(Qt.NoBrush)
+        painter.drawRect(QRectF(0, 0, self.width, self.height))
+
+    def lies_on(self, x: float, y: float, vertical: bool) -> bool:
+        """Whether a door at this point would sit in this wall."""
+        area = self.area()
+        if vertical:
+            return x in (area.left(), area.right()) and area.top() <= y <= area.bottom()
+        return y in (area.top(), area.bottom()) and area.left() <= x <= area.right()
+
+    def itemChange(self, change, value):
+        if change == QGraphicsItem.ItemPositionChange:
+            return QPointF(snapped(value.x(), self.step), snapped(value.y(), self.step))
+        if change == QGraphicsItem.ItemPositionHasChanged:
+            self.moved()
+        return super().itemChange(change, value)
+
+    def to_json(self) -> dict:
+        return {
+            "kind": "border",
+            "x": int(self.pos().x()),
+            "y": int(self.pos().y()),
+            "width": self.width,
+            "height": self.height,
+            "thickness": self.thickness,
+            "follows_part": self.follows_part,
+        }
+
+
+class DoorItem(DrawnItem):
+    """A door set into a wall. Its position is the middle of the door."""
+
+    name = "door"
+
+    def __init__(self, step: int, vertical: bool, wall: int):
+        super().__init__(step)
+        self.vertical = vertical
+        self.wall = wall
+
+    def boundingRect(self) -> QRectF:
+        reach = DOOR_REACH
+        side = DOOR_CLEARANCE
+        if self.vertical:
+            return QRectF(-side, -reach, 2 * side, 2 * reach)
+        return QRectF(-reach, -side, 2 * reach, 2 * side)
+
+    def shape(self) -> QPainterPath:
+        path = QPainterPath()
+        path.addRect(self.boundingRect())
+        return path
+
+    def draw_flat(self, painter: QPainter) -> None:
+        painter.setRenderHint(QPainter.Antialiasing)
+        if self.vertical:
+            painter.rotate(90)
+        # The tiles finish a wall with a rounded end on each side of a door,
+        # and the gap is measured between the tips of those ends.
+        radius = self.wall / 2
+        end = DOOR_GAP / 2 + radius
+        painter.fillRect(
+            QRectF(-end, -DOOR_CLEARANCE / 2, 2 * end, DOOR_CLEARANCE),
+            QColor("white"),
+        )
+        painter.setPen(Qt.NoPen)
+        painter.setBrush(QColor("black"))
+        painter.drawEllipse(QPointF(-end, 0), radius, radius)
+        painter.drawEllipse(QPointF(end, 0), radius, radius)
+        painter.setPen(QPen(QColor("black"), DOOR_LINE))
+        painter.setBrush(QColor("white"))
+        painter.drawRect(
+            QRectF(-DOOR_LENGTH / 2, -DOOR_WIDTH / 2, DOOR_LENGTH, DOOR_WIDTH)
+        )
+
+    def to_json(self) -> dict:
+        return {
+            "kind": "door",
+            "x": self.pos().x(),
+            "y": self.pos().y(),
+            "vertical": self.vertical,
+            "wall": self.wall,
         }
 
 
@@ -202,6 +422,8 @@ class CanvasView(QGraphicsView):
     """Accepts subparts dropped from the list. Scroll to zoom."""
 
     dropped = Signal(str, QPointF)
+    # The point, whether it starts a stroke, and whether it erases.
+    brushed = Signal(QPointF, bool, bool)
 
     def __init__(self, scene: QGraphicsScene):
         super().__init__(scene)
@@ -211,6 +433,42 @@ class CanvasView(QGraphicsView):
         self.setTransformationAnchor(QGraphicsView.AnchorUnderMouse)
         self.setViewportUpdateMode(QGraphicsView.FullViewportUpdate)
         self.scale(START_SCALE, START_SCALE)
+        self.brush_on = False
+        self._stroke_point: QPointF | None = None
+        self._stroke_erases = False
+
+    def set_brush(self, on: bool) -> None:
+        self.brush_on = on
+        self.setDragMode(
+            QGraphicsView.NoDrag if on else QGraphicsView.RubberBandDrag
+        )
+        self.viewport().setCursor(Qt.CrossCursor if on else Qt.ArrowCursor)
+
+    def mousePressEvent(self, event) -> None:
+        if not self.brush_on or event.button() != Qt.LeftButton:
+            super().mousePressEvent(event)
+            return
+        self._stroke_point = self.mapToScene(event.position().toPoint())
+        self._stroke_erases = bool(event.modifiers() & Qt.AltModifier)
+        self.brushed.emit(self._stroke_point, True, self._stroke_erases)
+
+    def mouseMoveEvent(self, event) -> None:
+        if self._stroke_point is None:
+            super().mouseMoveEvent(event)
+            return
+        # A fast drag jumps between mouse events, so fill in the points between.
+        point = self.mapToScene(event.position().toPoint())
+        line = QLineF(self._stroke_point, point)
+        steps = max(1, int(line.length() / BRUSH_STEP_PIXELS))
+        for number in range(1, steps + 1):
+            self.brushed.emit(line.pointAt(number / steps), False, self._stroke_erases)
+        self._stroke_point = point
+
+    def mouseReleaseEvent(self, event) -> None:
+        if self._stroke_point is None:
+            super().mouseReleaseEvent(event)
+            return
+        self._stroke_point = None
 
     def dragEnterEvent(self, event) -> None:
         if event.mimeData().hasFormat(SUBPART_MIME):
@@ -235,16 +493,15 @@ class CanvasView(QGraphicsView):
         event.accept()
 
 
-def compose(items: list[SubpartItem], size: QSize) -> QImage:
-    """Flatten subparts into one transparent image, lowest first."""
+def compose(items: list, size: QSize) -> QImage:
+    """Flatten everything on the canvas into one image, lowest first."""
     image = QImage(size, QImage.Format_ARGB32_Premultiplied)
     image.fill(Qt.transparent)
     painter = QPainter(image)
     for item in sorted(items, key=lambda entry: entry.zValue()):
         painter.save()
         painter.translate(item.pos())
-        painter.setTransform(item.transform(), True)
-        painter.drawPixmap(0, 0, item.pixmap())
+        item.draw_flat(painter)
         painter.restore()
     painter.end()
     return image
@@ -267,12 +524,16 @@ class ComponentEditor(QMainWindow):
         self.dirty = False
         self.step = SQUARE
         self.next_z = 0.0
+        self.clipboard: list[dict] = []
+        self.paste_count = 0
         self.setWindowTitle("Component Editor")
 
         self.scene = CanvasScene()
         self.scene.set_size(DEFAULT_SIZE_SQUARES, DEFAULT_SIZE_SQUARES)
         self.view = CanvasView(self.scene)
         self.view.dropped.connect(self.add_subpart)
+        self.view.brushed.connect(self.brush_door)
+        self._stroke: tuple[bool, float] | None = None
         self.scene.selectionChanged.connect(self._refresh_actions)
 
         self._build_actions()
@@ -314,6 +575,26 @@ class ComponentEditor(QMainWindow):
         self.delete_action = a(
             "Delete", self.delete_selected, [Qt.Key_Delete, Qt.Key_Backspace]
         )
+        self.cut_action = a("Cut", self.cut_selected, [QKeySequence.Cut])
+        self.copy_action = a("Copy", self.copy_selected, [QKeySequence.Copy])
+        self.paste_action = a("Paste", self.paste, [QKeySequence.Paste])
+        self.select_all_action = a(
+            "Select all", self.select_all, [QKeySequence.SelectAll]
+        )
+        self.border_action = a("Draw border", self.draw_border, ["B"])
+        self.door_action = QAction("Door brush", self)
+        self.door_action.setCheckable(True)
+        self.door_action.setShortcut("D")
+        self.door_action.setToolTip(
+            "Click or drag along a wall to add doors. Option-click removes one."
+        )
+        self.door_action.toggled.connect(self.view.set_brush)
+        self.addAction(self.door_action)
+        self.brush_off_action = a(
+            "Stop brushing",
+            lambda: self.door_action.setChecked(False),
+            [Qt.Key_Escape],
+        )
         self.save_action = a("Save component", self.save_component, [QKeySequence.Save])
         self.new_action = a("New component", self.new_component, [QKeySequence.New])
 
@@ -329,6 +610,12 @@ class ComponentEditor(QMainWindow):
             self.delete_action,
         ):
             bar.addAction(action)
+        bar.addSeparator()
+        bar.addAction(self.copy_action)
+        bar.addAction(self.paste_action)
+        bar.addSeparator()
+        bar.addAction(self.border_action)
+        bar.addAction(self.door_action)
 
     def _build_subpart_panel(self) -> QWidget:
         self.search = QLineEdit()
@@ -371,6 +658,10 @@ class ComponentEditor(QMainWindow):
         form.addRow("Width (squares)", self.width_spin)
         form.addRow("Height (squares)", self.height_spin)
         form.addRow("Snap to", self.snap_combo)
+        self.border_combo = QComboBox()
+        for label, thickness in BORDER_CHOICES:
+            self.border_combo.addItem(label, thickness)
+        form.addRow("Border", self.border_combo)
 
         self.use_table = QTableWidget(len(USE_CHOICES), 2)
         self.use_table.setHorizontalHeaderLabels(["Use", "dTon"])
@@ -414,10 +705,11 @@ class ComponentEditor(QMainWindow):
 
     # Keeping everything in step
 
-    def items(self) -> list[SubpartItem]:
-        return [item for item in self.scene.items() if isinstance(item, SubpartItem)]
+    def items(self) -> list:
+        kinds = (SubpartItem, BorderItem, DoorItem)
+        return [item for item in self.scene.items() if isinstance(item, kinds)]
 
-    def selected(self) -> list[SubpartItem]:
+    def selected(self) -> list:
         return [item for item in self.items() if item.isSelected()]
 
     def _mark_changed(self) -> None:
@@ -433,11 +725,17 @@ class ComponentEditor(QMainWindow):
             self.front_action,
             self.back_action,
             self.delete_action,
+            self.cut_action,
+            self.copy_action,
         ):
             action.setEnabled(chosen)
+        self.paste_action.setEnabled(bool(self.clipboard))
 
     def _size_changed(self) -> None:
         self.scene.set_size(self.width_spin.value(), self.height_spin.value())
+        for item in self.items():
+            if isinstance(item, BorderItem) and item.follows_part:
+                item.set_area(self.scene.part_rect())
         self._mark_changed()
         self._refresh_tons()
 
@@ -544,15 +842,108 @@ class ComponentEditor(QMainWindow):
         self.scene.addItem(item)
         return item
 
+    def _selected_subparts(self) -> list[SubpartItem]:
+        return [item for item in self.selected() if isinstance(item, SubpartItem)]
+
     def turn_selected(self, turns: int) -> None:
-        for item in self.selected():
+        for item in self._selected_subparts():
             item.set_pose(item.turns + turns, item.mirror)
         self._mark_changed()
 
     def flip_selected(self) -> None:
-        for item in self.selected():
+        for item in self._selected_subparts():
             item.set_pose(item.turns, not item.mirror)
         self._mark_changed()
+
+    def _border_area(self) -> tuple[QRectF, bool]:
+        """Around the selected pieces, or else the whole part."""
+        chosen = self._selected_subparts()
+        if not chosen:
+            return self.scene.part_rect(), True
+        area = chosen[0].visible_rect()
+        for item in chosen[1:]:
+            area = area.united(item.visible_rect())
+        # Each edge snaps outwards, so the pieces always end up inside.
+        step = self.step
+        return (
+            QRectF(
+                QPointF(
+                    math.floor(area.left() / step) * step,
+                    math.floor(area.top() / step) * step,
+                ),
+                QPointF(
+                    math.ceil(area.right() / step) * step,
+                    math.ceil(area.bottom() / step) * step,
+                ),
+            ),
+            False,
+        )
+
+    def _add_border(self, area: QRectF, thickness: int, follows_part: bool) -> BorderItem:
+        item = BorderItem(
+            self.step, int(area.width()), int(area.height()), thickness, follows_part
+        )
+        item.moved = self._mark_changed
+        item.setZValue(BORDER_LAYER + self.next_z)
+        self.next_z += 1
+        self.scene.addItem(item)
+        item.setPos(area.topLeft())
+        return item
+
+    def draw_border(self) -> BorderItem:
+        area, whole_part = self._border_area()
+        item = self._add_border(area, self.border_combo.currentData(), whole_part)
+        self.view.setFocus()
+        self._mark_changed()
+        return item
+
+    def _door_at(self, x: float, y: float, vertical: bool) -> DoorItem | None:
+        for item in self.items():
+            if (
+                isinstance(item, DoorItem)
+                and item.vertical == vertical
+                and item.pos() == QPointF(x, y)
+            ):
+                return item
+        return None
+
+    def _wall_at(self, x: float, y: float, vertical: bool) -> int:
+        """How thick the wall is here, so a door's rounded ends match it."""
+        walls = [
+            item.thickness
+            for item in self.items()
+            if isinstance(item, BorderItem) and item.lies_on(x, y, vertical)
+        ]
+        return max(walls, default=INTERIOR_WALL)
+
+    def _add_door(
+        self, x: float, y: float, vertical: bool, wall: int | None = None
+    ) -> DoorItem:
+        item = DoorItem(self.step, vertical, wall or self._wall_at(x, y, vertical))
+        item.setPos(x, y)
+        item.setZValue(DOOR_LAYER + self.next_z)
+        self.next_z += 1
+        self.scene.addItem(item)
+        return item
+
+    def brush_door(self, point: QPointF, first: bool, erase: bool) -> None:
+        """Paint or erase a door, staying on one wall line for the whole drag."""
+        x, y, vertical = door_slot(point.x(), point.y(), self.step)
+        if first:
+            self._stroke = (vertical, x if vertical else y)
+        vertical, line = self._stroke
+        if vertical:
+            x, y = line, door_along(point.y(), self.step)
+        else:
+            x, y = door_along(point.x(), self.step), line
+
+        door = self._door_at(x, y, vertical)
+        if erase and door is not None:
+            self.scene.removeItem(door)
+            self._mark_changed()
+        elif not erase and door is None:
+            self._add_door(x, y, vertical)
+            self._mark_changed()
 
     def bring_to_front(self) -> None:
         for item in sorted(self.selected(), key=lambda entry: entry.zValue()):
@@ -574,6 +965,45 @@ class ComponentEditor(QMainWindow):
             self.scene.removeItem(item)
         self._mark_changed()
         self._refresh_actions()
+
+    def select_all(self) -> None:
+        for item in self.items():
+            item.setSelected(True)
+
+    def copy_selected(self) -> None:
+        """Keep the selected pieces, lowest layer first, with their pose."""
+        chosen = sorted(self.selected(), key=lambda item: item.zValue())
+        if not chosen:
+            return
+        self.clipboard = [
+            {
+                "data": item.to_json(),
+                "pixmap": item.pixmap() if isinstance(item, SubpartItem) else None,
+            }
+            for item in chosen
+        ]
+        self.paste_count = 0
+        self._refresh_actions()
+
+    def cut_selected(self) -> None:
+        self.copy_selected()
+        self.delete_selected()
+
+    def paste(self) -> None:
+        """Add copies a square away, each paste a square further on."""
+        if not self.clipboard:
+            return
+        self.paste_count += 1
+        offset = self.paste_count * PASTE_OFFSET
+        self.scene.clearSelection()
+        for piece in self.clipboard:
+            item = self._restore(piece["data"], piece["pixmap"])
+            item.setPos(item.pos() + QPointF(offset, offset))
+            if isinstance(item, BorderItem):
+                item.follows_part = False  # a copy stays where it's put
+            item.setSelected(True)
+        self.view.setFocus()
+        self._mark_changed()
 
     def _ok_to_discard(self) -> bool:
         if not self.dirty or not self.items():
@@ -613,6 +1043,19 @@ class ComponentEditor(QMainWindow):
         if code and self._ok_to_discard():
             self.open_component(code)
 
+    def _restore(self, data: dict, pixmap: QPixmap | None):
+        """Rebuild something on the canvas from its saved form."""
+        kind = data.get("kind")
+        if kind == "border":
+            area = QRectF(data["x"], data["y"], data["width"], data["height"])
+            return self._add_border(area, data["thickness"], data["follows_part"])
+        if kind == "door":
+            return self._add_door(data["x"], data["y"], data["vertical"], data["wall"])
+        item = self._place(data["subpart"], pixmap)
+        item.set_pose(data["turns"], data["mirror"])
+        item.setPos(data["x"], data["y"])
+        return item
+
     def open_component(self, code: str) -> bool:
         entry = self._custom_entries().get(code)
         if entry is None:
@@ -627,14 +1070,14 @@ class ComponentEditor(QMainWindow):
 
         missing = []
         for placed in entry.get("layout", []):
-            name = placed["subpart"]
-            pixmap = QPixmap(str(custom.subpart_path(name, self.subpart_folder)))
-            if pixmap.isNull():
-                missing.append(name)
-                continue
-            item = self._place(name, pixmap)
-            item.set_pose(placed["turns"], placed["mirror"])
-            item.setPos(placed["x"], placed["y"])
+            pixmap = None
+            if "subpart" in placed:
+                name = placed["subpart"]
+                pixmap = QPixmap(str(custom.subpart_path(name, self.subpart_folder)))
+                if pixmap.isNull():
+                    missing.append(name)
+                    continue
+            self._restore(placed, pixmap)
         self._set_clean()
         if missing:
             QMessageBox.warning(

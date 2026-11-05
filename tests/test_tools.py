@@ -7,15 +7,26 @@ from pathlib import Path
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
 import pytest
-from PySide6.QtCore import QMimeData, QPoint, QPointF, QRect, QSize, Qt
+from PySide6.QtCore import QMimeData, QPoint, QPointF, QRect, QRectF, QSize, Qt
 from PySide6.QtGui import QColor, QDropEvent, QImage, QPainter, QPixmap
 from PySide6.QtTest import QTest
-from PySide6.QtWidgets import QApplication, QMessageBox
+from PySide6.QtWidgets import QApplication, QMessageBox, QToolBar
 
 from shipyard import custom, model
 from shipyard.app import DATA_DIR, MainWindow
 from shipyard.cutter import CutterWindow, snapped
-from shipyard.editor import SUBPART_MIME, ComponentEditor, canvas_size, compose
+from shipyard.editor import (
+    DOOR_GAP,
+    HULL_WALL,
+    INTERIOR_WALL,
+    SUBPART_MIME,
+    BorderItem,
+    ComponentEditor,
+    DoorItem,
+    canvas_size,
+    compose,
+    door_slot,
+)
 from shipyard.images import HighResStore, ImageStore
 
 SQUARE = 300
@@ -562,6 +573,617 @@ def test_closing_with_unsaved_work_asks(editor, monkeypatch):
     monkeypatch.setattr(QMessageBox, "question", lambda *a: QMessageBox.Cancel)
     assert not editor.close()
     assert editor.isVisible()
+
+
+def click_piece(editor, x, y, modifier=Qt.NoModifier):
+    QTest.mouseClick(
+        editor.view.viewport(),
+        Qt.LeftButton,
+        modifier,
+        editor.view.mapFromScene(QPointF(x, y)),
+    )
+    QApplication.processEvents()
+
+
+def two_pieces(editor):
+    drop(editor, "Room", 900, 900)  # top left at 600, 600
+    drop(editor, "Wall", 2250, 2175)  # top left at 2100, 2100
+    return (
+        next(item for item in editor.items() if item.name == "Room"),
+        next(item for item in editor.items() if item.name == "Wall"),
+    )
+
+
+def test_copy_needs_a_selection_and_paste_needs_a_copy(editor):
+    assert not editor.copy_action.isEnabled()
+    assert not editor.paste_action.isEnabled()
+    drop(editor, "Room", 900, 900)
+    assert editor.copy_action.isEnabled()
+    assert not editor.paste_action.isEnabled()
+    editor.copy_action.trigger()
+    assert editor.paste_action.isEnabled()
+
+
+def test_copy_and_paste_are_on_the_toolbar(editor):
+    bar = editor.findChild(QToolBar)
+    assert editor.copy_action in bar.actions()
+    assert editor.paste_action in bar.actions()
+
+
+def test_paste_adds_a_copy_a_square_away(editor):
+    drop(editor, "Room", 900, 900)
+    original = editor.items()[0]
+    editor.copy_selected()
+    editor.paste()
+
+    assert len(editor.items()) == 2
+    copy = next(item for item in editor.items() if item is not original)
+    assert copy.pos() == original.pos() + QPointF(SQUARE, SQUARE)
+    assert copy.name == "Room"
+    assert editor.selected() == [copy]
+    assert editor.dirty
+
+
+def test_a_copy_keeps_its_rotation_and_flip(editor):
+    drop(editor, "Room", 900, 900)
+    original = editor.items()[0]
+    original.set_pose(1, True)
+    editor.copy_selected()
+    editor.paste()
+    copy = next(item for item in editor.items() if item is not original)
+    assert (copy.turns, copy.mirror) == (1, True)
+    assert copy.transform() == original.transform()
+
+
+def test_each_paste_steps_along_a_square(editor):
+    drop(editor, "Room", 900, 900)
+    editor.copy_selected()
+    editor.paste()
+    editor.paste()
+    editor.paste()
+    spots = sorted(item.pos().x() for item in editor.items())
+    assert spots == [600, 900, 1200, 1500]
+
+
+def test_a_new_copy_starts_the_steps_again(editor):
+    drop(editor, "Room", 900, 900)
+    editor.copy_selected()
+    editor.paste()
+    editor.paste()
+    editor.copy_selected()
+    latest = editor.selected()[0]
+    editor.paste()
+    assert editor.selected()[0].pos() == latest.pos() + QPointF(SQUARE, SQUARE)
+
+
+def test_a_copy_lands_on_top(editor):
+    drop(editor, "Room", 900, 900)
+    original = editor.items()[0]
+    editor.copy_selected()
+    editor.paste()
+    assert editor.selected()[0].zValue() > original.zValue()
+
+
+def test_a_group_copies_with_its_layout_and_layers(editor):
+    room, wall = two_pieces(editor)
+    room.setSelected(True)
+    wall.setSelected(True)
+    editor.copy_selected()
+    editor.paste()
+
+    copies = sorted(editor.selected(), key=lambda item: item.zValue())
+    assert [item.name for item in copies] == ["Room", "Wall"]
+    gap = copies[1].pos() - copies[0].pos()
+    assert gap == wall.pos() - room.pos()
+
+
+def test_cut_removes_and_paste_brings_it_back_nearby(editor):
+    drop(editor, "Room", 900, 900)
+    editor.cut_selected()
+    assert editor.items() == []
+    assert editor.paste_action.isEnabled()
+    editor.paste()
+    assert editor.items()[0].pos() == QPointF(900, 900)
+
+
+def test_changing_a_copy_leaves_the_original_alone(editor):
+    drop(editor, "Room", 900, 900)
+    original = editor.items()[0]
+    editor.copy_selected()
+    editor.paste()
+    editor.turn_selected(1)
+    assert original.turns == 0
+
+
+def test_the_copy_survives_a_new_component(editor):
+    drop(editor, "Room", 900, 900)
+    editor.copy_selected()
+    editor.dirty = False
+    editor.new_component()
+    assert editor.items() == []
+    editor.paste()
+    assert editor.items()[0].name == "Room"
+
+
+def test_pasted_pieces_save_and_reopen(editor):
+    drop(editor, "Room", 1500, 1500)
+    editor.copy_selected()
+    editor.paste()
+    editor.code_edit.setText("CU-020")
+    assert editor.save_component() == "CU-020"
+    before = composed(editor)
+    editor.new_component()
+    assert editor.open_component("CU-020")
+    assert len(editor.items()) == 2
+    assert composed(editor) == before
+
+
+def test_shift_click_adds_a_piece_to_the_selection(editor):
+    room, wall = two_pieces(editor)
+    editor.scene.clearSelection()
+    click_piece(editor, 900, 900)
+    assert editor.selected() == [room]
+    click_piece(editor, 2250, 2175, Qt.ShiftModifier)
+    assert set(editor.selected()) == {room, wall}
+    click_piece(editor, 900, 900, Qt.ShiftModifier)
+    assert editor.selected() == [wall]
+
+
+def test_select_all_takes_every_piece(editor):
+    room, wall = two_pieces(editor)
+    editor.scene.clearSelection()
+    editor.select_all()
+    assert set(editor.selected()) == {room, wall}
+
+
+def test_dragging_a_group_keeps_it_together(editor):
+    room, wall = two_pieces(editor)
+    gap = wall.pos() - room.pos()
+    editor.select_all()
+    viewport = editor.view.viewport()
+    start = editor.view.mapFromScene(QPointF(900, 900))
+    end = editor.view.mapFromScene(QPointF(1500, 1500))
+    QTest.mousePress(viewport, Qt.LeftButton, Qt.NoModifier, start)
+    QTest.mouseMove(viewport, (start + end) / 2)
+    QTest.mouseMove(viewport, end)
+    QTest.mouseRelease(viewport, Qt.LeftButton, Qt.NoModifier, end)
+    QApplication.processEvents()
+    assert room.pos() != QPointF(600, 600)
+    assert wall.pos() - room.pos() == gap
+
+
+def only(editor, kind):
+    return [item for item in editor.items() if isinstance(item, kind)]
+
+
+def scene_click(editor, x, y, modifier=Qt.NoModifier):
+    point = editor.view.mapFromScene(QPointF(x, y))
+    QTest.mouseClick(editor.view.viewport(), Qt.LeftButton, modifier, point)
+    QApplication.processEvents()
+
+
+def paint_stroke(editor, points, modifier=Qt.NoModifier):
+    viewport = editor.view.viewport()
+    spots = [editor.view.mapFromScene(QPointF(*point)) for point in points]
+    QTest.mousePress(viewport, Qt.LeftButton, modifier, spots[0])
+    for spot in spots[1:]:
+        QTest.mouseMove(viewport, spot)
+    QTest.mouseRelease(viewport, Qt.LeftButton, modifier, spots[-1])
+    QApplication.processEvents()
+
+
+def dark(image, x, y):
+    colour = image.pixelColor(x, y)
+    return colour.alpha() > 200 and colour.red() < 80
+
+
+# Borders
+
+
+def test_draw_border_goes_around_the_whole_part(editor):
+    editor.width_spin.setValue(10)
+    editor.height_spin.setValue(6)
+    border = editor.draw_border()
+    assert border.area() == editor.scene.part_rect()
+    assert border.follows_part
+    assert border.thickness == HULL_WALL
+    assert editor.dirty
+
+
+def test_the_border_draws_real_hull_thickness_on_the_edge(editor):
+    editor.draw_border()
+    image = composed(editor)
+    # The wall is centred on the part's edge, at x = 600 here.
+    assert dark(image, 600, 1500)
+    assert dark(image, 600 - 18, 1500) and dark(image, 600 + 18, 1500)
+    assert not dark(image, 600 - 22, 1500) and not dark(image, 600 + 22, 1500)
+
+
+def test_the_interior_thickness_can_be_chosen(editor):
+    editor.border_combo.setCurrentIndex(1)
+    assert editor.draw_border().thickness == INTERIOR_WALL
+
+
+def test_a_border_goes_around_the_selected_pieces(editor):
+    room, wall = two_pieces(editor)
+    editor.scene.clearSelection()
+    room.setSelected(True)
+    border = editor.draw_border()
+    assert border.area() == QRectF(600, 600, 600, 600)
+    assert not border.follows_part
+
+
+def test_a_border_covers_every_selected_piece(editor):
+    room, wall = two_pieces(editor)
+    editor.select_all()
+    # The wall piece ends at 2250, so the border snaps out to the next square.
+    assert editor.draw_border().area() == QRectF(600, 600, 1800, 1800)
+
+
+def test_a_turned_piece_gets_a_border_around_what_you_see(editor):
+    editor.snap_combo.setCurrentIndex(1)
+    drop(editor, "Wall", 1200, 1200)
+    item = editor.items()[0]
+    item.set_pose(1, False)
+    assert editor.draw_border().area().size().toSize() == QSize(150, 300)
+
+
+def test_a_thin_piece_never_collapses_its_border(editor):
+    drop(editor, "Wall", 1200, 1200)
+    item = editor.items()[0]
+    item.set_pose(1, False)
+    area = editor.draw_border().area()
+    assert area.width() >= 150 and area.height() >= 300
+    assert area.contains(item.visible_rect())
+
+
+def test_a_whole_part_border_follows_the_part_size(editor):
+    border = editor.draw_border()
+    editor.width_spin.setValue(20)
+    assert border.area() == editor.scene.part_rect()
+
+
+def test_a_piece_border_ignores_the_part_size(editor):
+    room, _ = two_pieces(editor)
+    editor.scene.clearSelection()
+    room.setSelected(True)
+    border = editor.draw_border()
+    before = border.area()
+    editor.width_spin.setValue(20)
+    assert border.area() == before
+
+
+def test_a_border_can_be_clicked_on_its_wall(editor):
+    border = editor.draw_border()
+    area = border.area()
+    scene_click(editor, area.left(), area.center().y())
+    assert editor.selected() == [border]
+
+
+def test_clicking_inside_a_border_reaches_the_piece(editor):
+    drop(editor, "Room", 1500, 1500)
+    piece = editor.items()[0]
+    border = editor.draw_border()
+    editor.scene.clearSelection()
+    scene_click(editor, 1500, 1500)
+    assert editor.selected() == [piece]
+    assert border not in editor.selected()
+
+
+def test_shift_click_adds_a_border_to_the_selection(editor):
+    drop(editor, "Room", 1500, 1500)
+    piece = editor.items()[0]
+    border = editor.draw_border()
+    editor.scene.clearSelection()
+    piece.setSelected(True)
+    area = border.area()
+    scene_click(editor, area.left(), area.center().y(), Qt.ShiftModifier)
+    assert set(editor.selected()) == {piece, border}
+
+
+def test_a_border_stays_above_pieces_added_later(editor):
+    border = editor.draw_border()
+    drop(editor, "Room", 900, 900)
+    room = next(item for item in editor.items() if item is not border)
+    assert border.zValue() > room.zValue()
+
+
+def test_a_border_can_be_deleted(editor):
+    border = editor.draw_border()
+    border.setSelected(True)
+    editor.delete_selected()
+    assert editor.items() == []
+
+
+def test_rotating_ignores_borders_and_doors(editor):
+    border = editor.draw_border()
+    door = editor._add_door(2100, 600, False)
+    border.setSelected(True)
+    door.setSelected(True)
+    editor.turn_selected(1)
+    editor.flip_selected()
+    assert door.vertical is False
+
+
+# Doors
+
+
+@pytest.mark.parametrize(
+    "x, y, expected",
+    [
+        (1650, 1190, (1650, 1200, False)),  # near a horizontal line
+        (1190, 1650, (1200, 1650, True)),  # near a vertical line
+        (1740, 1210, (1650, 1200, False)),
+        (1210, 1740, (1200, 1650, True)),
+        (1200, 1200, (1350, 1200, False)),  # a tie goes across
+    ],
+)
+def test_door_slots_pick_the_nearest_wall(x, y, expected):
+    assert door_slot(x, y, SQUARE) == expected
+
+
+def test_finer_snapping_moves_doors_along_the_wall(editor):
+    assert door_slot(1540, 1190, 150) == (1500, 1200, False)
+
+
+def test_the_brush_starts_off_and_toggles(editor):
+    assert not editor.door_action.isChecked()
+    editor.door_action.setChecked(True)
+    assert editor.view.brush_on
+    assert editor.view.dragMode() == editor.view.DragMode.NoDrag
+    editor.door_action.setChecked(False)
+    assert not editor.view.brush_on
+    assert editor.view.dragMode() == editor.view.DragMode.RubberBandDrag
+
+
+def test_the_brush_is_on_the_toolbar_with_draw_border(editor):
+    bar = editor.findChild(QToolBar)
+    assert editor.door_action in bar.actions()
+    assert editor.border_action in bar.actions()
+
+
+def test_escape_turns_the_brush_off(editor):
+    editor.door_action.setChecked(True)
+    editor.brush_off_action.trigger()
+    assert not editor.door_action.isChecked()
+
+
+def test_clicking_with_the_brush_adds_a_door(editor):
+    editor.door_action.setChecked(True)
+    scene_click(editor, 1700, 1205)
+    doors = only(editor, DoorItem)
+    assert len(doors) == 1
+    assert doors[0].pos() == QPointF(1650, 1200)
+    assert not doors[0].vertical
+    assert editor.dirty
+
+
+def test_the_brush_does_not_select_or_move_pieces(editor):
+    drop(editor, "Room", 1500, 1500)
+    piece = editor.items()[0]
+    before = piece.pos()
+    editor.scene.clearSelection()
+    editor.door_action.setChecked(True)
+    paint_stroke(editor, [(1500, 1500), (1700, 1500)])
+    assert piece.pos() == before
+    assert piece not in editor.selected()
+
+
+def test_dragging_paints_a_door_in_each_square(editor):
+    editor.door_action.setChecked(True)
+    paint_stroke(editor, [(1320, 1205), (2200, 1205)])
+    spots = sorted(door.pos().x() for door in only(editor, DoorItem))
+    assert spots == [1350, 1650, 1950, 2250]
+
+
+def test_a_fast_drag_leaves_no_gaps(editor):
+    editor.door_action.setChecked(True)
+    paint_stroke(editor, [(750, 1205), (3000, 1205)])
+    spots = sorted(door.pos().x() for door in only(editor, DoorItem))
+    assert spots == [750 + SQUARE * step for step in range(9)]
+
+
+def test_a_wobbly_stroke_stays_on_its_wall(editor):
+    editor.door_action.setChecked(True)
+    paint_stroke(editor, [(1350, 1210), (1500, 1340), (1950, 1190)])
+    doors = only(editor, DoorItem)
+    assert all(not door.vertical and door.pos().y() == 1200 for door in doors)
+
+
+def test_brushing_over_a_door_adds_no_duplicate(editor):
+    editor.door_action.setChecked(True)
+    scene_click(editor, 1700, 1205)
+    scene_click(editor, 1650, 1195)
+    assert len(only(editor, DoorItem)) == 1
+
+
+def test_option_click_removes_a_door(editor):
+    editor.door_action.setChecked(True)
+    scene_click(editor, 1700, 1205)
+    scene_click(editor, 1700, 1205, Qt.AltModifier)
+    assert only(editor, DoorItem) == []
+
+
+def test_option_drag_erases_along_a_wall(editor):
+    editor.door_action.setChecked(True)
+    paint_stroke(editor, [(1320, 1205), (2200, 1205)])
+    paint_stroke(editor, [(1320, 1205), (1700, 1205)], Qt.AltModifier)
+    assert sorted(door.pos().x() for door in only(editor, DoorItem)) == [1950, 2250]
+
+
+def test_a_door_cuts_a_gap_in_a_border(editor):
+    editor.draw_border()
+    area = editor.scene.part_rect()
+    x = area.left() + 1050
+    y = area.top()
+    before = composed(editor)
+    assert dark(before, int(x), int(y))
+
+    editor._add_door(x, y, False)
+    image = composed(editor)
+    # The clear gap runs the full measured width, between the rounded ends.
+    assert image.pixelColor(int(x) + DOOR_GAP // 2 - 4, int(y)).red() == 255
+    assert image.pixelColor(int(x) - DOOR_GAP // 2 + 4, int(y)).red() == 255
+    assert dark(image, int(x) + DOOR_GAP // 2 + 24, int(y))
+    assert dark(image, int(x) - DOOR_GAP // 2 - 24, int(y))
+
+
+def test_a_door_draws_the_tiles_outline(editor):
+    editor._add_door(1650, 1200, False)
+    image = composed(editor)
+    assert dark(image, 1650, 1200 - 20)
+    assert dark(image, 1650, 1200 + 20)
+    assert image.pixelColor(1650, 1200).red() == 255
+
+
+def test_a_vertical_door_runs_down_its_wall(editor):
+    editor._add_door(1200, 1650, True)
+    image = composed(editor)
+    assert dark(image, 1200 - 20, 1650)
+    assert dark(image, 1200 + 20, 1650)
+
+
+def test_a_door_in_a_hull_takes_the_hull_thickness(editor):
+    editor.draw_border()
+    top = editor.scene.part_rect().top()
+    door = editor._add_door(1050, top, False)
+    assert door.wall == HULL_WALL
+
+
+def test_a_door_away_from_borders_takes_the_interior_thickness(editor):
+    assert editor._add_door(1650, 1200, False).wall == INTERIOR_WALL
+
+
+def test_doors_stay_above_borders_and_pieces(editor):
+    door = editor._add_door(1650, 1200, False)
+    border = editor.draw_border()
+    drop(editor, "Room", 1500, 1500)
+    assert door.zValue() > border.zValue()
+    assert door.zValue() > max(
+        item.zValue() for item in editor.items() if item is not door
+    )
+
+
+def test_a_door_can_be_selected_and_deleted(editor):
+    door = editor._add_door(1650, 1200, False)
+    scene_click(editor, 1650, 1200)
+    assert editor.selected() == [door]
+    editor.delete_selected()
+    assert editor.items() == []
+
+
+def test_a_vertical_door_can_be_clicked_along_its_length(editor):
+    door = editor._add_door(1200, 1650, True)
+    scene_click(editor, 1200, 1740)
+    assert editor.selected() == [door]
+
+
+def test_a_door_does_not_drag(editor):
+    door = editor._add_door(1650, 1200, False)
+    door.setSelected(True)
+    viewport = editor.view.viewport()
+    start = editor.view.mapFromScene(QPointF(1650, 1200))
+    end = editor.view.mapFromScene(QPointF(2200, 1500))
+    QTest.mousePress(viewport, Qt.LeftButton, Qt.NoModifier, start)
+    QTest.mouseMove(viewport, end)
+    QTest.mouseRelease(viewport, Qt.LeftButton, Qt.NoModifier, end)
+    assert door.pos() == QPointF(1650, 1200)
+
+
+# Saving what was drawn
+
+
+def build_with_everything(editor):
+    drop(editor, "Room", 1500, 1500)
+    editor.draw_border()
+    editor.border_combo.setCurrentIndex(1)
+    editor.scene.clearSelection()
+    editor.items()[-1].setSelected(True)
+    editor.draw_border()
+    top = editor.scene.part_rect().top()
+    editor._add_door(1050, top, False)
+    editor._add_door(1200, 1650, True)
+
+
+def test_borders_and_doors_save_and_reopen_exactly(editor, folders):
+    build_with_everything(editor)
+    editor.code_edit.setText("CU-030")
+    assert editor.save_component() == "CU-030"
+    before = composed(editor)
+    layout = custom.load_entries(folders[2])["CU-030"]["layout"]
+    assert {entry.get("kind", "subpart") for entry in layout} == {
+        "subpart",
+        "border",
+        "door",
+    }
+
+    editor.new_component()
+    assert editor.open_component("CU-030")
+    assert len(only(editor, BorderItem)) == 2
+    assert len(only(editor, DoorItem)) == 2
+    assert composed(editor) == before
+    assert not editor.dirty
+
+
+def test_a_reopened_part_border_still_follows_the_size(editor):
+    editor.items()
+    drop(editor, "Room", 1500, 1500)
+    editor.scene.clearSelection()
+    editor.draw_border()
+    editor.code_edit.setText("CU-031")
+    editor.save_component()
+    editor.new_component()
+    editor.open_component("CU-031")
+    border = only(editor, BorderItem)[0]
+    editor.width_spin.setValue(14)
+    assert border.area() == editor.scene.part_rect()
+
+
+def test_parts_saved_before_borders_existed_still_open(editor, folders):
+    custom.save_entry(
+        "CU-OLD",
+        {
+            "url": "CU-OLD.png", "sizeX": 10, "sizeY": 10, "tons": 50, "uses": {},
+            "facilities": {},
+            "layout": [{"subpart": "Room", "x": 600, "y": 600, "turns": 0, "mirror": False}],
+        },
+        folders[2],
+    )
+    assert editor.open_component("CU-OLD")
+    assert [item.name for item in editor.items()] == ["Room"]
+
+
+def test_borders_and_doors_copy_and_paste(editor):
+    border = editor.draw_border()
+    door = editor._add_door(1650, 1200, False)
+    editor.scene.clearSelection()
+    border.setSelected(True)
+    door.setSelected(True)
+    editor.copy_selected()
+    editor.paste()
+
+    new_border = next(i for i in only(editor, BorderItem) if i is not border)
+    new_door = next(i for i in only(editor, DoorItem) if i is not door)
+    assert new_border.area() == border.area().translated(SQUARE, SQUARE)
+    assert new_door.pos() == door.pos() + QPointF(SQUARE, SQUARE)
+    assert not new_border.follows_part
+    assert set(editor.selected()) == {new_border, new_door}
+
+
+def test_a_component_can_be_only_borders_and_doors(editor):
+    editor.draw_border()
+    top = editor.scene.part_rect().top()
+    editor._add_door(1050, top, False)
+    editor.code_edit.setText("CU-032")
+    assert editor.save_component() == "CU-032"
+
+
+def test_new_component_clears_borders_and_doors(editor):
+    editor.draw_border()
+    editor._add_door(1650, 1200, False)
+    editor.dirty = False
+    editor.new_component()
+    assert editor.items() == []
 
 
 @pytest.mark.parametrize(
