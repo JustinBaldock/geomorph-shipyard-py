@@ -818,6 +818,10 @@ class MainWindow(QMainWindow):
         bar.addSeparator()
         for action in (self.copy_action, self.paste_action):
             bar.addAction(action)
+        bar.addSeparator()
+        self.map_part_label = QLabel()
+        self.map_part_label.setStyleSheet("font-weight: bold; padding-left: 6px;")
+        bar.addWidget(self.map_part_label)
 
     def _build_map_area(self) -> QWidget:
         self.deck_tabs = QTabBar()
@@ -870,6 +874,14 @@ class MainWindow(QMainWindow):
         self.search.setPlaceholderText("Search part codes")
         self.search.setClearButtonEnabled(True)
         self.search.textChanged.connect(lambda _text: self._refresh_library())
+        self.size_x_combo = self._size_combo("Show parts of this X size")
+        self.size_y_combo = self._size_combo("Show parts of this Y size")
+        search_row = QHBoxLayout()
+        search_row.addWidget(self.search, 1)
+        search_row.addWidget(QLabel("X"))
+        search_row.addWidget(self.size_x_combo)
+        search_row.addWidget(QLabel("Y"))
+        search_row.addWidget(self.size_y_combo)
 
         self.usage_list = checklist(
             [(usage, usage) for usage in model.USAGE_FILTERS],
@@ -918,12 +930,32 @@ class MainWindow(QMainWindow):
 
         tab = QWidget()
         layout = QVBoxLayout(tab)
-        layout.addWidget(self.search)
+        layout.addLayout(search_row)
         layout.addWidget(filters)
         layout.addWidget(self.library_view, 1)
         layout.addLayout(buttons)
         layout.addWidget(self.preview)
+        self._refresh_size_choices()
         return tab
+
+    def _size_combo(self, tip: str) -> QComboBox:
+        combo = QComboBox()
+        combo.setToolTip(tip)
+        combo.currentIndexChanged.connect(lambda _index: self._refresh_library())
+        return combo
+
+    def _refresh_size_choices(self) -> None:
+        """Fill the size lists from the library, keeping any current choice."""
+        choices = model.size_choices(self.library)
+        for combo, sizes in zip((self.size_x_combo, self.size_y_combo), choices):
+            chosen = combo.currentData()
+            combo.blockSignals(True)
+            combo.clear()
+            combo.addItem("Any", None)
+            for size in sizes:
+                combo.addItem(str(size), size)
+            combo.setCurrentIndex(max(combo.findData(chosen), 0))
+            combo.blockSignals(False)
 
     def _build_used_tab(self) -> QWidget:
         self.used_table = table(["Code", "Corner", "Turned", "Cargo", "Flipped"])
@@ -1006,8 +1038,41 @@ class MainWindow(QMainWindow):
         self._refresh_timer.start()
 
     def _selection_changed(self) -> None:
+        self._show_selected_in_library()
         self._refresh_selection()
         self._refresh_used_selection()
+
+    def _library_row(self, code: str) -> int | None:
+        for row, info in enumerate(self.library_model.parts):
+            if info.code == code:
+                return row
+        return None
+
+    def _show_selected_in_library(self) -> None:
+        """Move the library to the part chosen on the map, if it's listed."""
+        item = self.selected_item()
+        if item is None:
+            return
+        row = self._library_row(item.part.code)
+        if row is not None:
+            index = self.library_model.index(row)
+            self.library_view.setCurrentIndex(index)
+            self.library_view.scrollTo(index, QAbstractItemView.EnsureVisible)
+
+    def _refresh_map_part_label(self) -> None:
+        chosen = self.selected_items()
+        text = ""
+        details = ""
+        if len(chosen) > 1:
+            text = f"{len(chosen)} parts selected"
+        elif chosen:
+            info = chosen[0].info
+            hidden = self._library_row(info.code) is None
+            note = " (hidden by the filters)" if hidden else ""
+            text = f"{info.code}{note}"
+            details = info.summary()
+        self.map_part_label.setText(text)
+        self.map_part_label.setToolTip(details)
 
     def _refresh_all(self) -> None:
         self._refresh_title()
@@ -1038,6 +1103,8 @@ class MainWindow(QMainWindow):
             item is not None and self._current_library_part() is not None
         )
         self.move_menu.setEnabled(bool(chosen) and len(self.ship.decks) > 1)
+
+        self._refresh_map_part_label()
 
         outline = QPainterPath()
         for part_item in chosen:
@@ -1134,6 +1201,8 @@ class MainWindow(QMainWindow):
             usages=ticked(self.usage_list),
             shapes=ticked(self.shape_list),
             text=self.search.text(),
+            size_x=self.size_x_combo.currentData(),
+            size_y=self.size_y_combo.currentData(),
         )
         self.library_model.set_parts(parts)
         self.count_label.setText(f"{len(parts)} of {len(self.library)} parts")
@@ -1222,6 +1291,7 @@ class MainWindow(QMainWindow):
         self.deck.parts.extend(parts)
         self.dirty = True
         self._rebuild_items(select=range(first, len(self.deck.parts)))
+        self._show_selected_in_library()
         self.view.setFocus()
 
     def _add_copies(self, parts: list[Part]) -> None:
@@ -1447,6 +1517,7 @@ class MainWindow(QMainWindow):
         self.reload_custom_parts()
         self.images.forget(self.library[code].url)
         self._rebuild_items(select=self.selected_indices())
+        self._refresh_size_choices()
         self._refresh_library()
         self._show_preview()
 

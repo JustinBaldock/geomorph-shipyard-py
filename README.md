@@ -26,12 +26,13 @@ Add `--high-res` to also keep the larger set, about 231 MB, which is used only f
 
 - Choose a part in the Library tab and press Add, or double-click it. The preview shows the high-res image when you have it.
 - Ticking usage filters also reorders the list so the most specialised parts come first. With Engineering ticked, you get Engineering-only parts, then Engineering plus one other type, then plus two, and so on, with each group sorted by those other types. With several filters ticked, parts matching more of them come first. Shape filters and the search box only narrow the list.
-- Click a part on the map to select it, and drag it to move it. Parts snap to the map squares.
+- Use the X and Y dropdowns beside the search box to show only parts of a size. Leave one on Any to filter by the other alone.
+- Click a part on the map to select it, and drag it to move it. Parts snap to the map squares. The library moves to the selected part and shows its preview, and the top bar names it, even if the filters are hiding it. Hover over the name for its size and tonnage.
 - Drag empty space to pan, and scroll to zoom.
 - Shift-click (or `Cmd`-click) parts to select several, and Shift-click a selected part to drop it from the selection. `Cmd`+`a` selects the whole deck.
 - Drag any selected part to move the group. Arrow keys, cut, copy, paste, clone, delete and Move to deck all work on the group too. Rotate, flip, show cargo and replace work on one part at a time.
 - Pasted parts keep their layout, rotation and flip, land at the centre of the map, and stay selected ready to drag. You can paste onto a different deck.
-- Press Replace selected to swap the selected part for the one chosen in the library, in the same place.
+- To swap a part, select it on the map, choose the new part in the library, then press Replace selected. The new part lands in the same place.
 - The Parts used tab lists everything on the ship, which helps when parts overlap.
 - The Tonnage tab adds up the ship in displacement tons. The figures are a rough guide.
 

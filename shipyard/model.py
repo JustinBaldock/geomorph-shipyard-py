@@ -203,10 +203,13 @@ def filter_library(
     usages: set[str] = frozenset(),
     shapes: set[str] = frozenset(),
     text: str = "",
+    size_x: int | None = None,
+    size_y: int | None = None,
 ) -> list[PartInfo]:
-    """Parts matching any ticked usage and any ticked shape.
+    """Parts matching any ticked usage, any ticked shape and the chosen sizes.
 
-    Ticking nothing in a group means no limit from that group. With usages
+    Ticking nothing in a group, or leaving a size as None, means no limit from
+    that filter. With usages
     ticked, the parts most devoted to them come first. Python's sort keeps
     parts that tie in library order.
     """
@@ -217,10 +220,21 @@ def filter_library(
         if (not usages or any(_matches_usage(info, u) for u in usages))
         and (not shapes or info.shape in shapes)
         and (not text or text in info.code.casefold())
+        and (size_x is None or info.size_x == size_x)
+        and (size_y is None or info.size_y == size_y)
     ]
     if usages:
         found.sort(key=lambda info: _specialist_order(info, usages))
     return found
+
+
+def size_choices(library: dict[str, PartInfo]) -> tuple[list[int], list[int]]:
+    """Every X size and every Y size in the library, smallest first."""
+    parts = library.values()
+    return (
+        sorted({info.size_x for info in parts}),
+        sorted({info.size_y for info in parts}),
+    )
 
 
 @dataclass

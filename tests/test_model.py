@@ -14,6 +14,7 @@ from shipyard.model import (
     ShipFileError,
     copies_centred_on,
     sides_for_bow,
+    size_choices,
     turn_bow,
     filter_library,
     group_bounds,
@@ -558,3 +559,57 @@ def test_real_engineering_parts_run_from_specialist_to_general(library):
     ]
     assert counts == sorted(counts)
     assert counts[0] == 0
+
+
+def test_filter_by_x_only(library):
+    found = filter_library(library, size_x=10)
+    assert found and all(part.size_x == 10 for part in found)
+    assert len({part.size_y for part in found}) > 1
+
+
+def test_filter_by_y_only(library):
+    found = filter_library(library, size_y=20)
+    assert found and all(part.size_y == 20 for part in found)
+    assert len({part.size_x for part in found}) > 1
+
+
+def test_filter_by_both_sizes(library):
+    found = filter_library(library, size_x=10, size_y=20)
+    assert found
+    assert all((part.size_x, part.size_y) == (10, 20) for part in found)
+    assert len(found) < len(filter_library(library, size_x=10))
+
+
+def test_size_order_is_x_then_y(library):
+    across = filter_library(library, size_x=20, size_y=10)
+    down = filter_library(library, size_x=10, size_y=20)
+    assert {part.code for part in across}.isdisjoint(part.code for part in down)
+
+
+def test_a_size_that_no_part_has_finds_nothing(library):
+    assert filter_library(library, size_x=7777) == []
+
+
+def test_sizes_combine_with_the_other_filters(library):
+    found = filter_library(library, usages={"Fuel"}, shapes={"SS"}, size_x=10)
+    assert found
+    assert all(
+        part.uses.get("Fuel") and part.shape == "SS" and part.size_x == 10
+        for part in found
+    )
+
+
+def test_the_specialist_sort_still_applies_with_a_size(library):
+    found = filter_library(library, usages={"Engineering"}, size_x=10)
+    counts = [
+        len([use for use, tons in part.uses.items() if tons and use != "Engineering"])
+        for part in found
+    ]
+    assert counts == sorted(counts)
+
+
+def test_size_choices_come_from_the_library_in_order(library):
+    xs, ys = size_choices(library)
+    assert xs == sorted(set(xs)) and ys == sorted(set(ys))
+    assert 10 in xs and 20 in xs and 10 in ys and 20 in ys
+    assert set(xs) == {part.size_x for part in library.values()}
