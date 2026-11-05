@@ -1038,26 +1038,8 @@ class MainWindow(QMainWindow):
         self._refresh_timer.start()
 
     def _selection_changed(self) -> None:
-        self._show_selected_in_library()
         self._refresh_selection()
         self._refresh_used_selection()
-
-    def _library_row(self, code: str) -> int | None:
-        for row, info in enumerate(self.library_model.parts):
-            if info.code == code:
-                return row
-        return None
-
-    def _show_selected_in_library(self) -> None:
-        """Move the library to the part chosen on the map, if it's listed."""
-        item = self.selected_item()
-        if item is None:
-            return
-        row = self._library_row(item.part.code)
-        if row is not None:
-            index = self.library_model.index(row)
-            self.library_view.setCurrentIndex(index)
-            self.library_view.scrollTo(index, QAbstractItemView.EnsureVisible)
 
     def _refresh_map_part_label(self) -> None:
         chosen = self.selected_items()
@@ -1066,11 +1048,8 @@ class MainWindow(QMainWindow):
         if len(chosen) > 1:
             text = f"{len(chosen)} parts selected"
         elif chosen:
-            info = chosen[0].info
-            hidden = self._library_row(info.code) is None
-            note = " (hidden by the filters)" if hidden else ""
-            text = f"{info.code}{note}"
-            details = info.summary()
+            text = chosen[0].info.code
+            details = chosen[0].info.summary()
         self.map_part_label.setText(text)
         self.map_part_label.setToolTip(details)
 
@@ -1291,7 +1270,6 @@ class MainWindow(QMainWindow):
         self.deck.parts.extend(parts)
         self.dirty = True
         self._rebuild_items(select=range(first, len(self.deck.parts)))
-        self._show_selected_in_library()
         self.view.setFocus()
 
     def _add_copies(self, parts: list[Part]) -> None:

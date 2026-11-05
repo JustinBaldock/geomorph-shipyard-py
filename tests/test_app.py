@@ -1356,6 +1356,11 @@ def code_at_current(window):
     return index.data(Qt.UserRole).code
 
 
+def choose_in_library(window, code):
+    row = [part.code for part in window.library_model.parts].index(code)
+    window.library_view.setCurrentIndex(window.library_model.index(row))
+
+
 def place_two(window):
     window.deck.parts.extend([Part("SS-002", (0, 0)), Part("HG-001", (100, 0))])
     window._rebuild_items()
@@ -1365,32 +1370,29 @@ def place_two(window):
     QApplication.processEvents()
 
 
-def test_clicking_a_part_finds_it_in_the_library(window):
-    place_two(window)
-    click(window, 25, 25)
-    assert code_at_current(window) == "SS-002"
-    click(window, 125, 25)
-    assert code_at_current(window) == "HG-001"
-
-
-def test_the_library_scrolls_to_a_far_away_part(window):
-    window.deck.parts.append(Part("SS-001", (0, 0)))
-    last = list(window.library)[-1]
-    window.deck.parts.append(Part(last, (200, 0)))
-    window._rebuild_items()
-    window.library_view.scrollToTop()
-    QApplication.processEvents()
-    window.select_index(1)
-    QApplication.processEvents()
-    area = window.library_view.visualRect(window.library_view.currentIndex())
-    assert window.library_view.viewport().rect().intersects(area)
-    assert window.library_view.verticalScrollBar().value() > 0
-
-
 def test_the_part_name_sits_on_the_top_bar(window):
     bar = window.findChild(QToolBar)
     assert window.map_part_label.parent() is bar
     assert window.map_part_label.isVisible()
+
+
+def test_the_top_bar_names_the_clicked_part(window):
+    place_two(window)
+    click(window, 25, 25)
+    assert window.map_part_label.text() == "SS-002"
+    assert window.map_part_label.toolTip() == window.library["SS-002"].summary()
+    click(window, 125, 25)
+    assert window.map_part_label.text() == "HG-001"
+
+
+def test_the_top_bar_covers_nothing_and_groups(window):
+    place_two(window)
+    assert window.map_part_label.text() == ""
+    window.select_indices([0, 1])
+    assert window.map_part_label.text() == "2 parts selected"
+    assert window.map_part_label.toolTip() == ""
+    window.deselect()
+    assert window.map_part_label.text() == ""
 
 
 def test_the_part_name_shows_whichever_tab_is_open(window):
@@ -1402,89 +1404,51 @@ def test_the_part_name_shows_whichever_tab_is_open(window):
     assert window.map_part_label.text() == "SS-002"
 
 
-def test_the_label_names_the_selected_part(window):
-    place_two(window)
-    window.select_index(0)
-    assert window.map_part_label.text() == "SS-002"
-    assert window.map_part_label.toolTip() == window.library["SS-002"].summary()
-
-
-def test_the_label_covers_nothing_and_groups(window):
-    place_two(window)
-    assert window.map_part_label.text() == ""
-    window.select_indices([0, 1])
-    assert window.map_part_label.text() == "2 parts selected"
-    assert window.map_part_label.toolTip() == ""
-    window.deselect()
-    assert window.map_part_label.text() == ""
-
-
-def test_a_filtered_out_part_is_named_without_changing_the_filters(window):
+def test_a_filtered_out_part_is_named_and_the_filters_stay(window):
     place_two(window)
     tick(window.usage_list, "Fuel")
     before = [part.code for part in window.library_model.parts]
-    assert "SS-002" not in before
-
     window.select_index(0)
-    assert window.map_part_label.text() == "SS-002 (hidden by the filters)"
+    assert window.map_part_label.text() == "SS-002"
     assert [part.code for part in window.library_model.parts] == before
 
 
-def test_the_note_clears_when_the_filter_stops_hiding_the_part(window):
+def test_clicking_a_part_leaves_the_library_alone(window):
     place_two(window)
-    tick(window.usage_list, "Fuel")
-    window.select_index(0)
-    tick(window.usage_list, "Fuel", Qt.Unchecked)
-    assert "hidden" not in window.map_part_label.text()
+    choose_in_library(window, "SS-003")
+    window.library_view.scrollToBottom()
+    QApplication.processEvents()
+    scrolled = window.library_view.verticalScrollBar().value()
 
+    click(window, 25, 25)
+    click(window, 125, 25)
+    window.used_table.selectRow(0)
 
-def test_a_group_leaves_the_library_where_it_is(window):
-    place_two(window)
-    window.library_view.setCurrentIndex(window.library_model.index(5))
-    chosen = code_at_current(window)
-    window.select_indices([0, 1])
-    assert code_at_current(window) == chosen
-
-
-def test_deselecting_leaves_the_library_where_it_is(window):
-    place_two(window)
-    window.select_index(0)
-    window.deselect()
-    assert code_at_current(window) == "SS-002"
-
-
-def test_replace_still_works_after_the_library_jumps(window):
-    place_two(window)
-    window.select_index(0)
-    assert code_at_current(window) == "SS-002"
-    row = window._library_row("SS-003")
-    window.library_view.setCurrentIndex(window.library_model.index(row))
-    assert window.selected_index() == 0
     assert code_at_current(window) == "SS-003"
+    assert window.library_view.verticalScrollBar().value() == scrolled
+
+
+def test_replace_works_with_the_library_chosen_first(window):
+    place_two(window)
+    choose_in_library(window, "SS-003")
+    click(window, 25, 25)
     window.replace_with_current()
     assert window.deck.parts[0].code == "SS-003"
-    assert code_at_current(window) == "SS-003"
+    assert window.map_part_label.text() == "SS-003"
 
 
-def test_moving_a_part_does_not_undo_a_library_choice(window):
+def test_replace_works_with_the_map_part_chosen_first(window):
     place_two(window)
-    window.select_index(0)
-    row = window._library_row("SS-003")
-    window.library_view.setCurrentIndex(window.library_model.index(row))
-    key(window, Qt.Key_Right)
-    assert code_at_current(window) == "SS-003"
+    click(window, 25, 25)
+    choose_in_library(window, "SS-003")
+    window.replace_with_current()
+    assert window.deck.parts[0].code == "SS-003"
 
 
-def test_pasted_and_cloned_parts_show_in_the_library(window):
+def test_pasting_leaves_the_library_alone(window):
     place_two(window)
+    choose_in_library(window, "SS-003")
     window.select_index(1)
     window.copy_selected()
-    window.select_index(0)
     window.paste()
-    assert code_at_current(window) == "HG-001"
-
-
-def test_parts_used_selection_finds_the_part_too(window):
-    place_two(window)
-    window.used_table.selectRow(1)
-    assert code_at_current(window) == "HG-001"
+    assert code_at_current(window) == "SS-003"
