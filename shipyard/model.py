@@ -175,6 +175,20 @@ def _matches_usage(info: PartInfo, usage: str) -> bool:
     return any(info.uses.get(name) for name in names)
 
 
+def _specialist_order(info: PartInfo, usages: set[str]) -> tuple:
+    """Sort key putting the parts most devoted to the ticked usages first.
+
+    Fewest other uses come first, then parts matching more of the ticked
+    usages, then the other uses in alphabetical order.
+    """
+    ticked = set(usages)
+    for usage in usages:
+        ticked.update(_USAGE_ALIASES.get(usage, ()))
+    others = sorted(use for use, tons in info.uses.items() if tons and use not in ticked)
+    matched = sum(_matches_usage(info, usage) for usage in usages)
+    return (len(others), -matched, others)
+
+
 def filter_library(
     library: dict[str, PartInfo],
     usages: set[str] = frozenset(),
@@ -183,16 +197,21 @@ def filter_library(
 ) -> list[PartInfo]:
     """Parts matching any ticked usage and any ticked shape.
 
-    Ticking nothing in a group means no limit from that group.
+    Ticking nothing in a group means no limit from that group. With usages
+    ticked, the parts most devoted to them come first. Python's sort keeps
+    parts that tie in library order.
     """
     text = text.strip().casefold()
-    return [
+    found = [
         info
         for info in library.values()
         if (not usages or any(_matches_usage(info, u) for u in usages))
         and (not shapes or info.shape in shapes)
         and (not text or text in info.code.casefold())
     ]
+    if usages:
+        found.sort(key=lambda info: _specialist_order(info, usages))
+    return found
 
 
 @dataclass

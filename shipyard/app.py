@@ -1080,6 +1080,7 @@ class MainWindow(QMainWindow):
         if current in parts:
             row = parts.index(current)
             self.library_view.setCurrentIndex(self.library_model.index(row))
+        self.library_view.scrollToTop()
         self.add_button.setEnabled(self._current_library_part() is not None)
         self._refresh_selection()
 

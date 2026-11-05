@@ -25,6 +25,7 @@ Add `--high-res` to also keep the larger set, about 231 MB, which is used only f
 ## Using it
 
 - Choose a part in the Library tab and press Add, or double-click it.
+- Ticking usage filters also reorders the list so the most specialised parts come first. With Engineering ticked, you get Engineering-only parts, then Engineering plus one other type, then plus two, and so on, with each group sorted by those other types. With several filters ticked, parts matching more of them come first. Shape filters and the search box only narrow the list.
 - Click a part on the map to select it, and drag it to move it. Parts snap to the map squares.
 - Drag empty space to pan, and scroll to zoom.
 - Shift-click (or `Cmd`-click) parts to select several, and Shift-click a selected part to drop it from the selection. `Cmd`+`a` selects the whole deck.

@@ -482,3 +482,79 @@ def test_starboard_tiles_sit_on_the_starboard_side_of_a_default_ship(library):
         assert "Starboard" in library[plain[0].code].url
         assert plain[0].corner[1] > flipped[0].corner[1]
     assert sides_for_bow(ship.bow)["up"] == "Starboard"
+
+
+def ordering_library():
+    def part(code, **uses):
+        return code, info(code=code, uses=uses)
+
+    return dict(
+        [
+            part("MIX-2", Engineering=5, Cargo=5, Fuel=5),
+            part("AND-LOUNGE", Engineering=5, Lounge=5),
+            part("ONLY-B", Engineering=5),
+            part("AND-CARGO", Engineering=5, Cargo=5),
+            part("FUEL-ONLY", Fuel=5),
+            part("ONLY-A", Engineering=9),
+            part("EMPTY-USE", Engineering=5, Fuel=0),
+            part("BOTH", Engineering=5, Fuel=5),
+        ]
+    )
+
+
+def codes(parts):
+    return [part.code for part in parts]
+
+
+def test_parts_with_only_the_ticked_use_come_first():
+    found = codes(filter_library(ordering_library(), usages={"Engineering"}))
+    assert found[:3] == ["ONLY-B", "ONLY-A", "EMPTY-USE"]
+
+
+def test_then_one_other_type_sorted_by_that_type_then_two():
+    found = codes(filter_library(ordering_library(), usages={"Engineering"}))
+    assert found[3:] == ["AND-CARGO", "BOTH", "AND-LOUNGE", "MIX-2"]
+
+
+def test_a_use_of_zero_tons_does_not_count_as_another_type():
+    found = codes(filter_library(ordering_library(), usages={"Engineering"}))
+    assert found.index("EMPTY-USE") < found.index("AND-CARGO")
+
+
+def test_with_two_filters_neither_counts_as_other():
+    found = codes(
+        filter_library(ordering_library(), usages={"Engineering", "Fuel"})
+    )
+    assert found[0] == "BOTH"
+    assert set(found[1:5]) == {"ONLY-B", "ONLY-A", "EMPTY-USE", "FUEL-ONLY"}
+    assert found.index("MIX-2") < found.index("AND-LOUNGE")
+    assert found.index("AND-CARGO") < found.index("AND-LOUNGE")
+
+
+def test_spelling_variants_are_not_counted_as_other_types():
+    library = {
+        "A": info(code="A", uses={"Stables": 5}),
+        "B": info(code="B", uses={"Stable": 5, "Fuel": 5}),
+    }
+    assert codes(filter_library(library, usages={"Stable"})) == ["A", "B"]
+
+
+def test_shape_and_search_leave_the_order_alone(library):
+    in_order = [part.code for part in library.values() if part.shape == "SS"]
+    assert codes(filter_library(library, shapes={"SS"})) == in_order
+    found = codes(filter_library(library, text="SS-"))
+    assert found == [code for code in library if "ss-" in code.casefold()]
+
+
+def test_turning_filters_off_restores_library_order(library):
+    assert codes(filter_library(library)) == list(library)
+
+
+def test_real_engineering_parts_run_from_specialist_to_general(library):
+    found = filter_library(library, usages={"Engineering"})
+    counts = [
+        len([use for use, tons in part.uses.items() if tons and use != "Engineering"])
+        for part in found
+    ]
+    assert counts == sorted(counts)
+    assert counts[0] == 0

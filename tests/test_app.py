@@ -1260,3 +1260,42 @@ def test_hiding_and_showing_keeps_the_minimised_size(window):
     window.show_orientation_action.setChecked(False)
     window.show_orientation_action.setChecked(True)
     assert window.orientation.compact
+
+
+def tick(checklist_widget, label, state=Qt.Checked):
+    for row in range(checklist_widget.count()):
+        item = checklist_widget.item(row)
+        if item.text() == label:
+            item.setCheckState(state)
+            return
+    raise AssertionError(label)
+
+
+def test_ticking_a_usage_reorders_the_library_list(window):
+    tick(window.usage_list, "Engineering")
+    first = window.library_model.parts[0]
+    assert [use for use, tons in first.uses.items() if tons] == ["Engineering"]
+
+
+def test_unticking_puts_the_list_back(window, library):
+    tick(window.usage_list, "Engineering")
+    tick(window.usage_list, "Engineering", Qt.Unchecked)
+    assert [part.code for part in window.library_model.parts] == list(library)
+
+
+def test_changing_a_filter_returns_the_list_to_the_top(window):
+    window.library_view.scrollToBottom()
+    QApplication.processEvents()
+    assert window.library_view.verticalScrollBar().value() > 0
+    tick(window.usage_list, "Engineering")
+    QApplication.processEvents()
+    assert window.library_view.verticalScrollBar().value() == 0
+
+
+def test_the_chosen_part_survives_a_reorder(window):
+    window.library_view.setCurrentIndex(window.library_model.index(0))
+    chosen = window._current_library_part()
+    uses = [use for use, tons in chosen.uses.items() if tons]
+    tick(window.usage_list, uses[0])
+    assert window._current_library_part() == chosen
+    assert window.add_button.isEnabled()
