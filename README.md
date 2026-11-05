@@ -44,6 +44,8 @@ Two tools build new library parts from pieces of the existing tiles. They are in
 
 **Component Editor.** Find subparts by name or category, then drag them onto the canvas, or double-click them, and they snap to the grid. The inner box is the part, and the outer band is the two-square border every tile has. `r` and `R` rotate, `s` flips, `[` and `]` send a subpart to the back or front, and `delete` removes it. Set the size and tonnage, then save. The part lands in `assets/geomorphs-highres-custom` and appears in the library straight away under the Custom parts filter. Choose it in Open saved part to change it later.
 
+**Label font.** Room labels on the tiles match Century Gothic Regular, so new labels on subparts should use that font where possible. AppleGothic is the stand-in when it isn't installed, but its letters are visibly different. At high resolution, capitals on the tiles stand about 96 pixels tall, a third of a square. That takes a font size of about 130 pixels in Century Gothic, or about 118 pixels in AppleGothic. This is pixels and not points, so set the image to 72 pixels per inch if your editor only offers points.
+
 Anything made from these tiles stays under their CC BY-NC 4.0 licence, so it can't be sold, and credit is due to Robert Pearce and Eric B. Smith. These folders are ignored by git and are not backed up to GitHub, so keep your own copies.
 
 ### Decks
