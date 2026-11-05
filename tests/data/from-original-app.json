@@ -1,0 +1,1 @@
+{"meta":"Traveller Geomorph Ship","name":"YourShipNameGoesHere","parts":[{"code":"SE-212","corner":[-150,-25],"rotation":90},{"code":"HG-035","corner":[-50,-25],"rotation":0},{"code":"SE-588","corner":[50,-25],"rotation":90},{"code":"LS-033","corner":[-50,25],"rotation":90},{"code":"LS-033","corner":[-50,-75],"rotation":90,"mirror":true}]}

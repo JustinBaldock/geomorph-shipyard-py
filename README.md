@@ -2,11 +2,67 @@
 
 A desktop app for creating deck plans of sci-fi spaceships from geomorph tiles, written in Python.
 
-This project is in its early stages and there is nothing to run yet.
+You place geomorph parts on a map, across as many decks as the ship needs, turn and flip them, watch the tonnage add up, then save the ship or export it as an image. It runs on your own computer with no web browser and no account.
+
+## Running it
+
+You need Python 3.10 or newer. On a Mac, double-click `Geomorph Shipyard.command` in Finder. The first run sets everything up. On any system you can also do it by hand.
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m shipyard
+```
+
+The images are a separate download, about 108 MB. Until you have them the app still works, showing each part as a labelled placeholder.
+
+```bash
+python3 tools/fetch_geomorphs.py
+```
+
+Add `--high-res` to also keep the larger set, about 231 MB, which is used only for exported images. The map always shows the low-res set, as it is already sharper than the map can zoom. If you have a clone of the original project next to this folder with its images already populated, the app will find and use those for the map.
+
+## Using it
+
+- Choose a part in the Library tab and press Add, or double-click it.
+- Click a part on the map to select it, and drag it to move it. Parts snap to the map squares.
+- Drag empty space to pan, and scroll to zoom.
+- Press Replace selected to swap the selected part for the one chosen in the library, in the same place.
+- The Parts used tab lists everything on the ship, which helps when parts overlap.
+- The Tonnage tab adds up the ship in displacement tons. The figures are a rough guide.
+
+### Decks
+
+Each deck is a tab above the map, with its own parts.
+
+- Press Add deck or Duplicate deck. Duplicating is a quick way to start a deck with the same hull.
+- Double-click a tab to rename it, and drag a tab to reorder the decks.
+- Use `Page Up` and `Page Down` to step between decks.
+- Choose a deck in Trace over to show it faintly under the one you are editing, which helps with lining up stairs and lifts.
+- Part > Move to deck sends the selected part to another deck.
+- The Tonnage tab shows the whole ship, plus a line for each deck.
+- File > Export this deck saves one deck. File > Export all decks saves them all in one image, lined up one above another.
+
+### Keys
+
+| Key | Action |
+| --- | --- |
+| Arrow keys | Move the part one square |
+| `r` / `R` | Rotate right / left |
+| `s` | Flip the part (wings and similar parts only) |
+| `o` | Show or hide cargo and vehicles (where the part has them) |
+| `c` | Clone the part |
+| `delete` | Delete the part |
+| `Cmd`+`x`, `Cmd`+`c`, `Cmd`+`v` | Cut, copy and paste (`Ctrl` outside macOS) |
+| `escape` | Deselect the part |
+
+Ship files use the same JSON format as the original, so its files open here. A one-deck ship saved here is the same format too. A ship with several decks adds a deck number to each part, and the original will show those decks piled together. Keep your own copies, as nothing is stored inside the app.
+
+This first version covers the deck plan builder only. The original's tonnage calculator, vehicle calculator and random ship button are not included.
 
 ## Based on Geomorph Shipyard
 
-This is a Python conversion of [Geomorph Shipyard](https://gitlab.com/IvanSanchez/geomorph-shipyard) by [Iván Sánchez Ortega](https://ivan.sanchezortega.es/), a web app written in SvelteKit and Leaflet. The idea, the design and the geomorph parts data all come from that project. You can [use the original online](https://ivan.sanchezortega.es/geomorph-shipyard/).
+This is a Python conversion of [Geomorph Shipyard](https://gitlab.com/IvanSanchez/geomorph-shipyard) by [Iván Sánchez Ortega](https://ivan.sanchezortega.es/), a web app written in SvelteKit and Leaflet. The idea, the design and the geomorph parts data in `shipyard/data` all come from that project. You can [use the original online](https://ivan.sanchezortega.es/geomorph-shipyard/).
 
 This version is not affiliated with or endorsed by Iván Sánchez Ortega, so please report problems with it here and not to the original project.
 
