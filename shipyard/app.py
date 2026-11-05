@@ -214,6 +214,8 @@ class PartItem(QGraphicsItem):
             corner = (int(self.pos().x()), int(-self.pos().y()))
             if corner != tuple(self.part.corner):
                 self.part.corner = corner
+                # The drawing is worked out from this, so it has to move too.
+                self._placement = model.place(self.part, self.info)
                 self._moved(self)
         return super().itemChange(change, value)
 
