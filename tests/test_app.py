@@ -529,6 +529,7 @@ def test_a_traced_part_cannot_be_clicked(window):
     two_decks(window)
     window.ship.decks[0].parts[0].corner = (0, 0)
     window.deck.parts.clear()
+    window._rebuild_items()
     window._trace_chosen(window.trace_combo.findText("Deck 1"))
     QTest.mouseClick(
         window.view.viewport(), Qt.LeftButton, pos=view_point(window, 25, 25)
@@ -675,3 +676,356 @@ def test_images_over_qts_default_limit_load(app, tmp_path):
 def test_a_missing_image_is_a_placeholder_not_a_crash(window):
     assert window.images.pixmap("nothing/here.png") is None
     assert window.high_res.pixmap("nothing/here.png") is None
+
+
+def row_of_three(window):
+    """Three parts side by side, nothing selected."""
+    window.deck.parts.extend(
+        [Part("SS-001", (0, 0)), Part("SS-002", (50, 0)), Part("SS-003", (100, 0))]
+    )
+    window._rebuild_items()
+    window.view.resetTransform()
+    window.view.scale(2, 2)
+    window.view.centerOn(75, -25)
+    QApplication.processEvents()
+
+
+def click(window, x, y, modifier=Qt.NoModifier):
+    QTest.mouseClick(
+        window.view.viewport(), Qt.LeftButton, modifier, view_point(window, x, y)
+    )
+    QApplication.processEvents()
+
+
+def drag(window, start, end, modifier=Qt.NoModifier):
+    viewport = window.view.viewport()
+    first = view_point(window, *start)
+    last = view_point(window, *end)
+    QTest.mousePress(viewport, Qt.LeftButton, modifier, first)
+    QTest.mouseMove(viewport, (first + last) / 2)
+    QTest.mouseMove(viewport, last)
+    QTest.mouseRelease(viewport, Qt.LeftButton, modifier, last)
+    QApplication.processEvents()
+
+
+def test_shift_click_adds_to_the_selection(window):
+    row_of_three(window)
+    click(window, 25, 25)
+    click(window, 75, 25, Qt.ShiftModifier)
+    assert window.selected_indices() == [0, 1]
+    click(window, 125, 25, Qt.ShiftModifier)
+    assert window.selected_indices() == [0, 1, 2]
+
+
+def test_shift_click_with_nothing_selected_starts_a_selection(window):
+    row_of_three(window)
+    click(window, 75, 25, Qt.ShiftModifier)
+    assert window.selected_indices() == [1]
+
+
+def test_shift_click_on_a_selected_part_removes_it(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    click(window, 25, 25, Qt.ShiftModifier)
+    assert window.selected_indices() == [1]
+
+
+def test_a_plain_click_goes_back_to_one_part(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    click(window, 125, 25)
+    assert window.selected_indices() == [2]
+
+
+def test_a_plain_click_on_a_group_member_selects_only_it(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    click(window, 25, 25)
+    assert window.selected_indices() == [0]
+
+
+def test_clicking_empty_space_clears_a_group(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    click(window, 75, 120)
+    assert window.selected_indices() == []
+
+
+def test_a_shift_click_that_misses_keeps_the_group(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    click(window, 75, 120, Qt.ShiftModifier)
+    assert window.selected_indices() == [0, 1]
+
+
+def test_escape_action_clears_a_group(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    window.deselect()
+    assert window.selected_indices() == []
+    assert not window.outline.isVisible()
+
+
+def test_select_all_takes_this_deck_only(window):
+    row_of_three(window)
+    window.add_deck()
+    assert window.items == []
+    window.select_all()
+    assert window.selected_indices() == []
+    window.switch_deck(0)
+    window.select_all()
+    assert window.selected_indices() == [0, 1, 2]
+
+
+def test_every_selected_part_gets_an_outline(window):
+    row_of_three(window)
+    window.select_indices([0, 2])
+    rect = window.outline.path().boundingRect()
+    assert rect.width() == 150
+    assert window.outline.path().elementCount() == 10
+
+
+def test_dragging_a_group_moves_it_as_one(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    drag(window, (25, 25), (55, 45))
+    corners = [part.corner for part in window.deck.parts]
+    dx = corners[0][0]
+    dy = corners[0][1]
+    assert (dx, dy) != (0, 0) and dx % 5 == 0 and dy % 5 == 0
+    assert corners[1] == (50 + dx, dy)
+    assert corners[2] == (100, 0)
+    assert window.selected_indices() == [0, 1]
+
+
+def test_shift_dragging_moves_the_group_too(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    drag(window, (25, 25), (55, 45), Qt.ShiftModifier)
+    corners = [part.corner for part in window.deck.parts]
+    assert corners[0] != (0, 0)
+    assert corners[1][0] - corners[0][0] == 50
+    assert corners[2] == (100, 0)
+    assert window.selected_indices() == [0, 1]
+
+
+def test_dragging_a_part_outside_the_group_moves_only_it(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    drag(window, (125, 25), (135, 45))
+    assert window.deck.parts[0].corner == (0, 0)
+    assert window.deck.parts[2].corner != (100, 0)
+    assert window.selected_indices() == [2]
+
+
+def test_the_tables_catch_up_after_a_group_drag(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    drag(window, (25, 25), (55, 45))
+    x, y = window.deck.parts[0].corner
+    assert window.used_table.item(0, 1).text() == f"{x}, {y}"
+    assert window.dirty
+
+
+def test_the_outline_follows_a_group_drag(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    drag(window, (25, 25), (55, 45))
+    rect = window.outline.path().boundingRect()
+    assert rect.left() == window.deck.parts[0].corner[0]
+
+
+def test_arrow_keys_move_a_group(window):
+    row_of_three(window)
+    window.select_indices([0, 2])
+    key(window, Qt.Key_Right)
+    assert [part.corner for part in window.deck.parts] == [
+        (5, 0),
+        (50, 0),
+        (105, 0),
+    ]
+    assert window.selected_indices() == [0, 2]
+
+
+def test_copy_and_paste_a_group_keeps_its_layout(window):
+    row_of_three(window)
+    window.deck.parts[0].rotation = 90
+    window.deck.parts[0].mirror = True
+    window._rebuild_items()
+    window.select_indices([0, 2])
+    window.copy_selected()
+    window.paste()
+
+    parts = window.deck.parts
+    assert len(parts) == 5
+    assert window.selected_indices() == [3, 4]
+    assert parts[3].code == "SS-001" and parts[4].code == "SS-003"
+    assert parts[3].rotation == 90 and parts[3].mirror
+    assert parts[4].corner[0] - parts[3].corner[0] == 100
+    assert parts[4].corner[1] == parts[3].corner[1]
+
+
+def test_pasted_parts_are_independent_of_the_clipboard(window):
+    row_of_three(window)
+    window.select_all()
+    window.copy_selected()
+    window.paste()
+    window.deck.parts[3].rotation = 180
+    window.paste()
+    assert window.deck.parts[6].rotation == 0
+
+
+def test_a_pasted_group_can_be_dragged_straight_away(window):
+    row_of_three(window)
+    window.select_all()
+    window.copy_selected()
+    window.deck.parts.clear()
+    window._rebuild_items()
+    window.paste()
+    before = [part.corner for part in window.deck.parts]
+    key(window, Qt.Key_Up)
+    assert [part.corner[1] for part in window.deck.parts] == [
+        corner[1] + 5 for corner in before
+    ]
+
+
+def test_cut_a_group_and_paste_it_on_another_deck(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    window.cut_selected()
+    assert [part.code for part in window.deck.parts] == ["SS-003"]
+    assert window.selected_indices() == []
+
+    window.add_deck()
+    window.paste()
+    assert [part.code for part in window.deck.parts] == ["SS-001", "SS-002"]
+    assert len(window.ship.decks[0].parts) == 1
+
+
+def test_delete_removes_the_whole_group(window):
+    row_of_three(window)
+    window.select_indices([0, 2])
+    window.delete_selected()
+    assert [part.code for part in window.deck.parts] == ["SS-002"]
+
+
+def test_clone_copies_a_group_without_touching_the_clipboard(window):
+    row_of_three(window)
+    window.select_index(2)
+    window.copy_selected()
+    window.select_indices([0, 1])
+    window.clone_selected()
+    assert len(window.deck.parts) == 5
+    assert window.selected_indices() == [3, 4]
+    assert [part.code for part in window.clipboard] == ["SS-003"]
+
+
+def test_move_a_group_to_another_deck(window):
+    row_of_three(window)
+    window.add_deck()
+    window.switch_deck(0)
+    window.select_indices([0, 2])
+    assert window.move_menu.isEnabled()
+    window.move_selected_to_deck(1)
+    assert [part.code for part in window.ship.decks[0].parts] == ["SS-002"]
+    assert [part.code for part in window.ship.decks[1].parts] == ["SS-001", "SS-003"]
+
+
+def test_single_part_actions_turn_off_for_a_group(window):
+    row_of_three(window)
+    window.select_indices([0, 1])
+    window.library_view.setCurrentIndex(window.library_model.index(0))
+    assert not window.cw_action.isEnabled()
+    assert not window.ccw_action.isEnabled()
+    assert not window.flip_action.isEnabled()
+    assert not window.overlay_action.isEnabled()
+    assert not window.replace_button.isEnabled()
+    for action in (window.cut_action, window.copy_action, window.delete_action):
+        assert action.isEnabled()
+
+    window.rotate_cw()
+    window.toggle_mirror()
+    assert all(part.rotation == 0 for part in window.deck.parts)
+    assert not any(part.mirror for part in window.deck.parts)
+
+
+def test_parts_used_table_shows_a_group(window):
+    row_of_three(window)
+    window.select_indices([0, 2])
+    rows = window.used_table.selectionModel().selectedRows()
+    assert sorted(row.row() for row in rows) == [0, 2]
+
+
+def test_choosing_rows_in_parts_used_selects_a_group(window):
+    row_of_three(window)
+    model = window.used_table.selectionModel()
+    table_model = window.used_table.model()
+    from PySide6.QtCore import QItemSelectionModel
+
+    window.used_table.selectRow(0)
+    model.select(
+        table_model.index(2, 0),
+        QItemSelectionModel.Select | QItemSelectionModel.Rows,
+    )
+    assert window.selected_indices() == [0, 2]
+
+
+def test_a_dragged_part_really_moves_on_screen(window):
+    window.deck.parts.append(Part("SS-001", (0, 0)))
+    window._rebuild_items()
+    item = window.items[0]
+    before = item.sceneBoundingRect()
+    local = item.part_rect()
+
+    drag(window, (25, 25), (55, 45))
+
+    x, y = window.deck.parts[0].corner
+    assert (x, y) != (0, 0)
+    assert item.part_rect() == local
+    assert item.sceneBoundingRect() == before.translated(x, -y)
+
+
+def test_a_dragged_part_can_be_clicked_where_it_landed(window):
+    window.deck.parts.append(Part("SS-001", (0, 0)))
+    window._rebuild_items()
+    drag(window, (25, 25), (65, 25))
+    x, y = window.deck.parts[0].corner
+    assert x >= 30
+
+    window.deselect()
+    click(window, x + 45, y + 25)  # only inside the part if it really moved
+    assert window.selected_indices() == [0]
+    click(window, x / 2, y + 25)  # the old spot is now empty
+    assert window.selected_indices() == []
+
+
+def test_a_dragged_image_is_drawn_in_its_new_place(app, library, tmp_path):
+    folder = tmp_path / "images"
+    image_path = folder / library["SS-001"].url
+    image_path.parent.mkdir(parents=True)
+    solid = QImage(84, 84, QImage.Format_RGB32)
+    solid.fill(QColor("red"))
+    assert solid.save(str(image_path))
+
+    store = ImageStore([folder])
+    window = MainWindow(library, store, HighResStore(store, NO_FOLDER))
+    window.deck.parts.append(Part("SS-001", (0, 0)))
+    window._rebuild_items()
+    window.resize(1000, 800)
+    window.show()
+    window.view.resetTransform()
+    window.view.scale(4, 4)
+    window.view.centerOn(25, -25)
+    QApplication.processEvents()
+
+    drag(window, (25, 25), (50, 25))
+    QApplication.processEvents()
+    x, y = window.deck.parts[0].corner
+    assert x > 0
+
+    picture = window.view.viewport().grab().toImage()
+    inside = view_point(window, x + 40, y + 25)
+    assert picture.pixelColor(inside).red() == 255
+    assert picture.pixelColor(inside).green() == 0
+    window.dirty = False
+    window.close()

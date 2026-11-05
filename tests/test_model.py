@@ -12,7 +12,9 @@ from shipyard.model import (
     PartInfo,
     Ship,
     ShipFileError,
+    copies_centred_on,
     filter_library,
+    group_bounds,
     load_library,
     percent,
     place,
@@ -379,3 +381,29 @@ def test_filename_can_name_a_deck():
         suggested_filename(ship, 8, "2026-11-06", "png", deck="Upper")
         == "geomorph-2026-11-06-8dTon-Boat-Upper.png"
     )
+
+
+def test_group_bounds_cover_every_part(library):
+    parts = [Part("SS-001", (0, 0)), Part("SS-002", (100, 50))]
+    assert group_bounds(parts, library) == (0, 0, 150, 100)
+
+
+def test_copies_keep_their_layout_and_settings(library):
+    parts = [Part("SS-001", (0, 0), 90, True, True), Part("SS-002", (50, 0))]
+    copies = copies_centred_on(parts, library, (200, 300))
+    assert group_bounds(copies, library) == (150, 275, 250, 325)
+    assert copies[1].corner[0] - copies[0].corner[0] == 50
+    assert copies[0].rotation == 90 and copies[0].overlay and copies[0].mirror
+
+
+def test_copies_are_separate_from_the_originals(library):
+    parts = [Part("SS-001", (0, 0))]
+    copies = copies_centred_on(parts, library, (0, 0))
+    copies[0].rotation = 180
+    assert parts[0].rotation == 0
+
+
+def test_copies_land_on_the_grid(library):
+    parts = [Part("SS-001", (0, 0))]
+    copies = copies_centred_on(parts, library, (2, 3))
+    assert copies[0].corner[0] % 5 == 0 and copies[0].corner[1] % 5 == 0

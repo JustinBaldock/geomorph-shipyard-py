@@ -265,6 +265,32 @@ def place(part: Part, info: PartInfo) -> Placement:
     raise ValueError(f"Rotation must be a multiple of 90, got {part.rotation}")
 
 
+def group_bounds(
+    parts: list[Part], library: dict[str, PartInfo]
+) -> tuple[int, int, int, int]:
+    """The box around some parts, as (west, south, east, north)."""
+    boxes = [place(part, library[part.code]).bounds for part in parts]
+    return (
+        min(box[0] for box in boxes),
+        min(box[1] for box in boxes),
+        max(box[2] for box in boxes),
+        max(box[3] for box in boxes),
+    )
+
+
+def copies_centred_on(
+    parts: list[Part], library: dict[str, PartInfo], centre: tuple[int, int]
+) -> list[Part]:
+    """Copies of parts moved as one so the group is centred on a map point."""
+    west, south, east, north = group_bounds(parts, library)
+    dx = snap(centre[0] - (west + east) / 2)
+    dy = snap(centre[1] - (south + north) / 2)
+    return [
+        replace(part, corner=(part.corner[0] + dx, part.corner[1] + dy))
+        for part in parts
+    ]
+
+
 def tonnage(parts: list[Part], library: dict[str, PartInfo]) -> list[tuple[str, float]]:
     """Tons per use, largest first, leaving out uses that come to zero."""
     totals: dict[str, float] = {}

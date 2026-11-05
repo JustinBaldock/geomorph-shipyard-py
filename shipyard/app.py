@@ -5,15 +5,18 @@ from __future__ import annotations
 import datetime
 import math
 import sys
+from dataclasses import replace
 from pathlib import Path
 
 from PySide6.QtCore import (
     QAbstractListModel,
+    QItemSelectionModel,
     QModelIndex,
     QPointF,
     QRectF,
     QSize,
     Qt,
+    QTimer,
     Signal,
 )
 from PySide6.QtGui import (
@@ -34,6 +37,7 @@ from PySide6.QtWidgets import (
     QDockWidget,
     QFileDialog,
     QGraphicsItem,
+    QGraphicsPathItem,
     QGraphicsScene,
     QGraphicsView,
     QGroupBox,
@@ -207,6 +211,21 @@ class PartItem(QGraphicsItem):
             if overlay is not None:
                 self._draw_image(painter, overlay)
 
+    @staticmethod
+    def _treat_shift_as_multi_select(event) -> None:
+        # Qt adds to a selection with Ctrl (Cmd on a Mac), and also handles
+        # dragging a whole selection, so Shift is passed off as that.
+        if event.modifiers() & Qt.ShiftModifier:
+            event.setModifiers(event.modifiers() | Qt.ControlModifier)
+
+    def mousePressEvent(self, event) -> None:
+        self._treat_shift_as_multi_select(event)
+        super().mousePressEvent(event)
+
+    def mouseReleaseEvent(self, event) -> None:
+        self._treat_shift_as_multi_select(event)
+        super().mouseReleaseEvent(event)
+
     def itemChange(self, change, value):
         if change == QGraphicsItem.ItemPositionChange and not self._syncing:
             return QPointF(model.snap(value.x()), model.snap(value.y()))
@@ -268,6 +287,7 @@ class ShipView(QGraphicsView):
         self.setTransformationAnchor(QGraphicsView.AnchorUnderMouse)
         self.setViewportUpdateMode(QGraphicsView.FullViewportUpdate)
         self.setFocusPolicy(Qt.StrongFocus)
+        self._ignoring_click = False
         self.scale(START_SCALE, START_SCALE)
         self.centerOn(25, 0)
 
@@ -278,6 +298,29 @@ class ShipView(QGraphicsView):
         factor = max(MIN_SCALE / current, min(MAX_SCALE / current, factor))
         self.scale(factor, factor)
         event.accept()
+
+    def mousePressEvent(self, event) -> None:
+        # A Shift-click that just misses a part shouldn't lose the selection.
+        self._ignoring_click = False
+        if event.modifiers() & Qt.ShiftModifier:
+            point = self.mapToScene(event.position().toPoint())
+            if not any(type(item) is PartItem for item in self.scene().items(point)):
+                self._ignoring_click = True
+                event.accept()
+                return
+        super().mousePressEvent(event)
+
+    def mouseMoveEvent(self, event) -> None:
+        if not self._ignoring_click:
+            super().mouseMoveEvent(event)
+
+    def mouseReleaseEvent(self, event) -> None:
+        # Qt clears the selection on release in this drag mode, not on press.
+        if self._ignoring_click:
+            self._ignoring_click = False
+            event.accept()
+            return
+        super().mouseReleaseEvent(event)
 
     def keyPressEvent(self, event) -> None:
         moves = {
@@ -373,14 +416,16 @@ class MainWindow(QMainWindow):
         self.trace_deck: Deck | None = None
         self.path: Path | None = None
         self.dirty = False
-        self.clipboard_code: str | None = None
+        self.clipboard: list[Part] = []
         self.items: list[PartItem] = []
         self.trace_items: list[TraceItem] = []
 
         self.scene = ShipScene(self)
         self.view = ShipView(self.scene)
 
-        self.outline = self.scene.addRect(QRectF(), self._outline_pen())
+        self.outline = QGraphicsPathItem()
+        self.outline.setPen(self._outline_pen())
+        self.scene.addItem(self.outline)
         self.outline.setZValue(OUTLINE_Z)
         self.outline.setAcceptedMouseButtons(Qt.NoButton)
         self.outline.hide()
@@ -389,6 +434,13 @@ class MainWindow(QMainWindow):
         self._build_toolbar()
         self.setCentralWidget(self._build_map_area())
         self._build_side_panel()
+
+        # Dragging a group moves every part on every mouse step, so the
+        # tables wait until the event loop is free, and refresh once.
+        self._refresh_timer = QTimer(self)
+        self._refresh_timer.setSingleShot(True)
+        self._refresh_timer.setInterval(0)
+        self._refresh_timer.timeout.connect(self._refresh_all)
 
         self.scene.selectionChanged.connect(self._selection_changed)
         self.view.arrow_pressed.connect(self.move_selected)
@@ -466,13 +518,14 @@ class MainWindow(QMainWindow):
             "Show cargo", self.toggle_overlay, ["O"]
         )
         self.deselect_action = a("Deselect", self.deselect, [Qt.Key_Escape])
+        self.select_all_action = a(
+            "Select all", self.select_all, [QKeySequence.SelectAll]
+        )
         self.cut_action = a("Cut", self.cut_selected, [QKeySequence.Cut])
         self.copy_action = a("Copy", self.copy_selected, [QKeySequence.Copy])
         self.paste_action = a("Paste", self.paste, [QKeySequence.Paste])
 
-        self.part_actions = [
-            self.ccw_action,
-            self.cw_action,
+        self.selection_actions = [
             self.clone_action,
             self.delete_action,
             self.deselect_action,
@@ -493,7 +546,12 @@ class MainWindow(QMainWindow):
             file_menu.addAction(action)
 
         edit_menu = self.menuBar().addMenu("Edit")
-        for action in (self.cut_action, self.copy_action, self.paste_action):
+        for action in (
+            self.cut_action,
+            self.copy_action,
+            self.paste_action,
+            self.select_all_action,
+        ):
             edit_menu.addAction(action)
 
         part_menu = self.menuBar().addMenu("Part")
@@ -646,7 +704,8 @@ class MainWindow(QMainWindow):
 
     def _build_used_tab(self) -> QWidget:
         self.used_table = table(["Code", "Corner", "Turned", "Cargo", "Flipped"])
-        self.used_table.itemSelectionChanged.connect(self._used_row_chosen)
+        self.used_table.setSelectionMode(QAbstractItemView.ExtendedSelection)
+        self.used_table.itemSelectionChanged.connect(self._used_rows_chosen)
         tab = QWidget()
         layout = QVBoxLayout(tab)
         layout.addWidget(self.used_table)
@@ -677,15 +736,23 @@ class MainWindow(QMainWindow):
     def deck(self) -> Deck:
         return self.ship.decks[self.current]
 
+    def selected_items(self) -> list[PartItem]:
+        """The selected parts, in the order they sit on the deck."""
+        return [item for item in self.items if item.isSelected()]
+
+    def selected_indices(self) -> list[int]:
+        return [i for i, item in enumerate(self.items) if item.isSelected()]
+
     def selected_item(self) -> PartItem | None:
-        chosen = self.scene.selectedItems()
-        return chosen[0] if chosen else None
+        """The selected part, if exactly one is selected."""
+        chosen = self.selected_items()
+        return chosen[0] if len(chosen) == 1 else None
 
     def selected_index(self) -> int | None:
-        item = self.selected_item()
-        return self.items.index(item) if item is not None else None
+        chosen = self.selected_indices()
+        return chosen[0] if len(chosen) == 1 else None
 
-    def _rebuild_items(self, select: int | None = None) -> None:
+    def _rebuild_items(self, select: tuple[int, ...] | list[int] = ()) -> None:
         self.scene.blockSignals(True)
         for item in self.items + self.trace_items:
             self.scene.removeItem(item)
@@ -701,8 +768,8 @@ class MainWindow(QMainWindow):
                 item = TraceItem(part, self.library[part.code], self.images)
                 self.scene.addItem(item)
                 self.trace_items.append(item)
-        if select is not None and 0 <= select < len(self.items):
-            self.items[select].setSelected(True)
+        for index in select:
+            self.items[index].setSelected(True)
         self.scene.blockSignals(False)
         self._refresh_all()
 
@@ -711,7 +778,9 @@ class MainWindow(QMainWindow):
         self._refresh_all()
 
     def _part_moved(self, item: PartItem) -> None:
-        self._changed()
+        self.dirty = True
+        self._refresh_selection()
+        self._refresh_timer.start()
 
     def _selection_changed(self) -> None:
         self._refresh_selection()
@@ -729,25 +798,29 @@ class MainWindow(QMainWindow):
         self.setWindowTitle(title + (" *" if self.dirty else ""))
 
     def _refresh_selection(self) -> None:
+        chosen = self.selected_items()
         item = self.selected_item()
-        for action in self.part_actions:
-            action.setEnabled(item is not None)
+        for action in self.selection_actions:
+            action.setEnabled(bool(chosen))
+        self.select_all_action.setEnabled(bool(self.items))
+        self.ccw_action.setEnabled(item is not None)
+        self.cw_action.setEnabled(item is not None)
         self.flip_action.setEnabled(item is not None and item.info.has_mirror)
         self.overlay_action.setEnabled(
             item is not None
             and item.info.overlay_image(item.part.mirror) is not None
         )
-        self.paste_action.setEnabled(self.clipboard_code is not None)
+        self.paste_action.setEnabled(bool(self.clipboard))
         self.replace_button.setEnabled(
             item is not None and self._current_library_part() is not None
         )
-        self.move_menu.setEnabled(item is not None and len(self.ship.decks) > 1)
+        self.move_menu.setEnabled(bool(chosen) and len(self.ship.decks) > 1)
 
-        if item is None:
-            self.outline.hide()
-        else:
-            self.outline.setRect(item.part_rect().translated(item.pos()))
-            self.outline.show()
+        outline = QPainterPath()
+        for part_item in chosen:
+            outline.addRect(part_item.part_rect().translated(part_item.pos()))
+        self.outline.setPath(outline)
+        self.outline.setVisible(bool(chosen))
 
     def _refresh_used(self) -> None:
         turned = {0: "", 90: "90° left", 180: "180°", 270: "90° right"}
@@ -768,17 +841,22 @@ class MainWindow(QMainWindow):
         self._refresh_used_selection()
 
     def _refresh_used_selection(self) -> None:
-        index = self.selected_index()
+        selection = self.used_table.selectionModel()
         self.used_table.blockSignals(True)
+        selection.blockSignals(True)
         self.used_table.clearSelection()
-        if index is not None:
-            self.used_table.selectRow(index)
+        for index in self.selected_indices():
+            selection.select(
+                self.used_table.model().index(index, 0),
+                QItemSelectionModel.Select | QItemSelectionModel.Rows,
+            )
+        selection.blockSignals(False)
         self.used_table.blockSignals(False)
+        self.used_table.viewport().update()
 
-    def _used_row_chosen(self) -> None:
+    def _used_rows_chosen(self) -> None:
         rows = self.used_table.selectionModel().selectedRows()
-        if rows:
-            self.select_index(rows[0].row())
+        self.select_indices([row.row() for row in rows])
 
     def _refresh_tonnage(self) -> None:
         rows = model.tonnage(self.ship.parts, self.library)
@@ -863,18 +941,38 @@ class MainWindow(QMainWindow):
 
     # What the user can do
 
-    def select_index(self, index: int) -> None:
+    def select_indices(self, indices: list[int]) -> None:
+        self.scene.blockSignals(True)
         self.scene.clearSelection()
-        self.items[index].setSelected(True)
+        for index in indices:
+            self.items[index].setSelected(True)
+        self.scene.blockSignals(False)
+        self._selection_changed()
+
+    def select_index(self, index: int) -> None:
+        self.select_indices([index])
+
+    def select_all(self) -> None:
+        self.select_indices(list(range(len(self.items))))
 
     def deselect(self) -> None:
         self.scene.clearSelection()
 
     def add_part(self, code: str) -> None:
-        self.deck.parts.append(Part(code, self.view.map_centre()))
+        self._add_parts([Part(code, self.view.map_centre())])
+
+    def _add_parts(self, parts: list[Part]) -> None:
+        """Add parts to this deck and leave them selected."""
+        first = len(self.deck.parts)
+        self.deck.parts.extend(parts)
         self.dirty = True
-        self._rebuild_items(select=len(self.deck.parts) - 1)
+        self._rebuild_items(select=range(first, len(self.deck.parts)))
         self.view.setFocus()
+
+    def _add_copies(self, parts: list[Part]) -> None:
+        self._add_parts(
+            model.copies_centred_on(parts, self.library, self.view.map_centre())
+        )
 
     def add_current(self) -> None:
         info = self._current_library_part()
@@ -907,7 +1005,10 @@ class MainWindow(QMainWindow):
         self._edit_selected(Part.rotate_counter_clockwise)
 
     def move_selected(self, dx: int, dy: int) -> None:
-        self._edit_selected(lambda part: part.move(dx, dy))
+        for item in self.selected_items():
+            item.part.move(dx, dy)
+            item.sync()
+        self._changed()
 
     def toggle_mirror(self) -> None:
         item = self.selected_item()
@@ -922,22 +1023,23 @@ class MainWindow(QMainWindow):
             )
 
     def clone_selected(self) -> None:
-        item = self.selected_item()
-        if item is not None:
-            self.add_part(item.part.code)
+        chosen = self.selected_items()
+        if chosen:
+            self._add_copies([item.part for item in chosen])
 
     def delete_selected(self) -> None:
-        index = self.selected_index()
-        if index is None:
+        chosen = self.selected_indices()
+        if not chosen:
             return
-        del self.deck.parts[index]
+        for index in reversed(chosen):
+            del self.deck.parts[index]
         self.dirty = True
         self._rebuild_items()
 
     def copy_selected(self) -> None:
-        item = self.selected_item()
-        if item is not None:
-            self.clipboard_code = item.part.code
+        chosen = self.selected_items()
+        if chosen:
+            self.clipboard = [replace(item.part) for item in chosen]
             self._refresh_selection()
 
     def cut_selected(self) -> None:
@@ -945,8 +1047,8 @@ class MainWindow(QMainWindow):
         self.delete_selected()
 
     def paste(self) -> None:
-        if self.clipboard_code:
-            self.add_part(self.clipboard_code)
+        if self.clipboard:
+            self._add_copies(self.clipboard)
 
     def _fill_move_menu(self) -> None:
         self.move_menu.clear()
@@ -958,10 +1060,13 @@ class MainWindow(QMainWindow):
             )
 
     def move_selected_to_deck(self, index: int) -> None:
-        position = self.selected_index()
-        if position is None or index == self.current:
+        chosen = self.selected_indices()
+        if not chosen or index == self.current:
             return
-        self.ship.decks[index].parts.append(self.deck.parts.pop(position))
+        moving = [self.deck.parts[position] for position in chosen]
+        for position in reversed(chosen):
+            del self.deck.parts[position]
+        self.ship.decks[index].parts.extend(moving)
         self.dirty = True
         self._rebuild_items()
 
@@ -1037,7 +1142,7 @@ class MainWindow(QMainWindow):
 
     def _trace_chosen(self, index: int) -> None:
         self.trace_deck = self.trace_combo.itemData(index)
-        self._rebuild_items(select=self.selected_index())
+        self._rebuild_items(select=self.selected_indices())
 
     def _name_edited(self, text: str) -> None:
         self.ship.name = text

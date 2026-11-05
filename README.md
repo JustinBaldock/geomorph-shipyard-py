@@ -27,6 +27,9 @@ Add `--high-res` to also keep the larger set, about 231 MB, which is used only f
 - Choose a part in the Library tab and press Add, or double-click it.
 - Click a part on the map to select it, and drag it to move it. Parts snap to the map squares.
 - Drag empty space to pan, and scroll to zoom.
+- Shift-click (or `Cmd`-click) parts to select several, and Shift-click a selected part to drop it from the selection. `Cmd`+`a` selects the whole deck.
+- Drag any selected part to move the group. Arrow keys, cut, copy, paste, clone, delete and Move to deck all work on the group too. Rotate, flip, show cargo and replace work on one part at a time.
+- Pasted parts keep their layout, rotation and flip, land at the centre of the map, and stay selected ready to drag. You can paste onto a different deck.
 - Press Replace selected to swap the selected part for the one chosen in the library, in the same place.
 - The Parts used tab lists everything on the ship, which helps when parts overlap.
 - The Tonnage tab adds up the ship in displacement tons. The figures are a rough guide.
@@ -47,13 +50,14 @@ Each deck is a tab above the map, with its own parts.
 
 | Key | Action |
 | --- | --- |
-| Arrow keys | Move the part one square |
+| Arrow keys | Move the selected parts one square |
 | `r` / `R` | Rotate right / left |
 | `s` | Flip the part (wings and similar parts only) |
 | `o` | Show or hide cargo and vehicles (where the part has them) |
 | `c` | Clone the part |
 | `delete` | Delete the part |
 | `Cmd`+`x`, `Cmd`+`c`, `Cmd`+`v` | Cut, copy and paste (`Ctrl` outside macOS) |
+| `Cmd`+`a` | Select the whole deck |
 | `escape` | Deselect the part |
 
 Ship files use the same JSON format as the original, so its files open here. A one-deck ship saved here is the same format too. A ship with several decks adds a deck number to each part, and the original will show those decks piled together. Keep your own copies, as nothing is stored inside the app.
