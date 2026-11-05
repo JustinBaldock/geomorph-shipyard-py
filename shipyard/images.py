@@ -18,9 +18,10 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-from PySide6.QtGui import QImageReader, QPixmap
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QImage, QImageReader, QPixmap
 
-from .custom import CUSTOM_FOLDER, LOW_RES_FOLDER_NAME
+from .custom import CUSTOM_FOLDER, IMAGE_FIELDS, LOW_RES_FOLDER_NAME, LOW_RES_SCALE
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HIGH_RES_FOLDER = REPO_ROOT / "assets" / "geomorphs-highres"
@@ -50,6 +51,36 @@ def same_shape(first: Path, second: Path) -> bool:
     ratio_a = size_a.width() / size_a.height()
     ratio_b = size_b.width() / size_b.height()
     return abs(ratio_a - ratio_b) <= SAME_SHAPE_TOLERANCE
+
+
+def refresh_low_res(entries: dict, folder: Path) -> list[str]:
+    """Make low-res copies that are missing, or older than their high-res image.
+
+    Returns the images that changed, so anything cached can be dropped.
+    """
+    QImageReader.setAllocationLimit(IMAGE_MEMORY_LIMIT_MB)
+    changed = []
+    for entry in entries.values():
+        for field in IMAGE_FIELDS:
+            name = entry.get(field)
+            high = Path(folder) / name if name else None
+            if high is None or not high.is_file():
+                continue
+            low = Path(folder) / LOW_RES_FOLDER_NAME / name
+            if low.is_file() and low.stat().st_mtime >= high.stat().st_mtime:
+                continue
+            image = QImage(str(high))
+            if image.isNull():
+                continue
+            low.parent.mkdir(parents=True, exist_ok=True)
+            smaller = image.scaled(
+                image.size() * LOW_RES_SCALE,
+                Qt.IgnoreAspectRatio,
+                Qt.SmoothTransformation,
+            )
+            if smaller.save(str(low), "PNG"):
+                changed.append(name)
+    return changed
 
 
 class ImageStore:

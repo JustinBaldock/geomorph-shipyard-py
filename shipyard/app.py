@@ -73,7 +73,7 @@ from PySide6.QtWidgets import (
 from . import custom, model
 from .cutter import CutterWindow
 from .editor import ComponentEditor
-from .images import HighResStore, ImageStore
+from .images import HighResStore, ImageStore, refresh_low_res
 from .model import Deck, Part, PartInfo, Ship
 
 DATA_DIR = Path(__file__).parent / "data" / "geomorphs"
@@ -1508,27 +1508,37 @@ class MainWindow(QMainWindow):
         self._refresh_library()
         self._show_preview()
 
-    def reload_custom_parts(self) -> None:
-        """Match the library to the files in the custom parts folder."""
+    def reload_custom_parts(self) -> bool:
+        """Match the library to the folder. Returns whether anything changed."""
         problems: list[str] = []
         entries = custom.load_entries(self.custom_folder, problems)
         if problems:
             self.statusBar().showMessage("Could not read: " + ", ".join(problems))
+        changed_images = refresh_low_res(entries, self.custom_folder)
+        for name in changed_images:
+            self.images.forget(name)
+
+        before = {
+            code: info
+            for code, info in self.library.items()
+            if info.shape == model.CUSTOM_SHAPE
+        }
         # A part on the open ship stays until the ship closes, even if its
         # files have gone, so the map and tonnage keep working.
         in_use = {part.code for part in self.ship.parts}
-        for code in [
-            code
-            for code, info in self.library.items()
-            if info.shape == model.CUSTOM_SHAPE
-            and code not in entries
-            and code not in in_use
-        ]:
-            del self.library[code]
+        for code in before:
+            if code not in entries and code not in in_use:
+                del self.library[code]
         for code, entry in entries.items():
             self.library[code] = model.part_from_entry(
                 code, model.CUSTOM_SHAPE, entry
             )
+        now = {
+            code: info
+            for code, info in self.library.items()
+            if info.shape == model.CUSTOM_SHAPE
+        }
+        return bool(changed_images) or now != before
 
     def changeEvent(self, event) -> None:
         # Pick up parts added, changed or deleted while the app was in the
@@ -1537,12 +1547,11 @@ class MainWindow(QMainWindow):
             event.type() == QEvent.ActivationChange
             and self.isActiveWindow()
             and hasattr(self, "library_model")
+            and self.reload_custom_parts()
         ):
-            before = set(self.library)
-            self.reload_custom_parts()
-            if set(self.library) != before:
-                self._refresh_size_choices()
-                self._refresh_library()
+            self._rebuild_items(select=self.selected_indices())
+            self._refresh_size_choices()
+            self._refresh_library()
         super().changeEvent(event)
 
     # Files
@@ -1742,6 +1751,7 @@ def main() -> int:
     app.setApplicationName(APP_NAME)
     problems: list[str] = []
     entries = custom.load_entries(problems=problems)
+    refresh_low_res(entries, custom.CUSTOM_FOLDER)
     window = MainWindow(model.load_library(DATA_DIR, entries))
     if problems:
         window.statusBar().showMessage("Could not read: " + ", ".join(problems))

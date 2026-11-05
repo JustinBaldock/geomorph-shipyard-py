@@ -8,6 +8,7 @@ geomorph tile, so a saved part behaves like any other part in the library.
 from __future__ import annotations
 
 import math
+import shutil
 from pathlib import Path
 
 from PySide6.QtCore import QEvent, QLineF, QMimeData, QPointF, QRectF, QSize, Qt, Signal
@@ -96,6 +97,7 @@ LAYERS = (
 REFERENCE_LAYERS = {CARGO: NORMAL, FLIPPED_CARGO: FLIPPED}
 REFERENCE_OPACITY = 0.35
 REFERENCE_SCALE = 5
+ORIGINALS_FOLDER = "originals"
 THUMBNAIL_PIXELS = 96
 DEFAULT_SIZE_SQUARES = 10
 MAX_SIZE_SQUARES = 100
@@ -199,6 +201,24 @@ class SubpartItem(QGraphicsPixmapItem):
     def to_json(self) -> dict:
         return {
             "subpart": self.name,
+            "x": int(self.pos().x()),
+            "y": int(self.pos().y()),
+            "turns": self.turns,
+            "mirror": self.mirror,
+        }
+
+
+class ImageItem(SubpartItem):
+    """A whole PNG brought in from outside the editor, used as a piece."""
+
+    def __init__(self, file: str, pixmap: QPixmap, step: int, moved):
+        super().__init__(file, pixmap, step, moved)
+        self.file = file
+
+    def to_json(self) -> dict:
+        return {
+            "kind": "image",
+            "file": self.file,
             "x": int(self.pos().x()),
             "y": int(self.pos().y()),
             "turns": self.turns,
@@ -1084,7 +1104,7 @@ class ComponentEditor(QMainWindow):
         was_dirty = self.dirty
         for data in self.layouts[key]:
             if self._restore(data) is None:
-                missing.append(data["subpart"])
+                missing.append(data.get("subpart") or data.get("file"))
         self.dirty = was_dirty
         self._set_layer(key)
         self._refresh_actions()
@@ -1226,12 +1246,17 @@ class ComponentEditor(QMainWindow):
             item = DoorItem(1, data["vertical"], data["wall"])
             item.setPos(data["x"], data["y"])
         else:
-            name = data["subpart"]
-            if pixmap is None:
-                pixmap = QPixmap(str(custom.subpart_path(name, self.subpart_folder)))
+            if kind == "image":
+                path = self.custom_folder / data["file"]
+                pixmap = QPixmap(str(path)) if pixmap is None else pixmap
+                item = ImageItem(data["file"], pixmap, 1, lambda: None)
+            else:
+                name = data["subpart"]
+                if pixmap is None:
+                    pixmap = QPixmap(str(custom.subpart_path(name, self.subpart_folder)))
+                item = SubpartItem(name, pixmap, 1, lambda: None)
             if pixmap.isNull():
                 return None
-            item = SubpartItem(name, pixmap, 1, lambda: None)
             item.set_pose(data["turns"], data["mirror"])
             item.setPos(data["x"], data["y"])
             item._moved = self._mark_changed
@@ -1310,6 +1335,7 @@ class ComponentEditor(QMainWindow):
                 key: self.layouts[key] for key, *_ in LAYERS[1:] if self.layouts[key]
             },
         }
+        self._keep_original_images()
         if not self._save_images(code, entry):
             QMessageBox.warning(self, title, "Could not save the images.")
             return None
@@ -1320,6 +1346,30 @@ class ComponentEditor(QMainWindow):
         self.statusBar().showMessage(f"Saved {code}", 5000)
         self.saved.emit(code)
         return code
+
+    def _keep_original_images(self) -> None:
+        """Copy brought-in images aside before saving replaces them.
+
+        Otherwise the next save would flatten today's pieces into the image,
+        and they could never be moved or deleted.
+        """
+        moved = {}
+        for layout in self.layouts.values():
+            for data in layout:
+                file = data.get("file")
+                if data.get("kind") != "image" or file.startswith(ORIGINALS_FOLDER):
+                    continue
+                kept = f"{ORIGINALS_FOLDER}/{file}"
+                source = self.custom_folder / file
+                target = self.custom_folder / kept
+                if source.is_file() and not target.exists():
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(source, target)
+                data["file"] = kept
+                moved[file] = kept
+        for item in self.items():
+            if isinstance(item, ImageItem) and item.file in moved:
+                item.file = moved[item.file]
 
     def _save_images(self, code: str, entry: dict) -> bool:
         """Write each layer's images, and clear out any layer now empty."""

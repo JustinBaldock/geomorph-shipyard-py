@@ -15,15 +15,17 @@ from the geomorphs is still under their CC BY-NC licence.
                                 original project's parts data
         lowres/                 the same images at the size the map uses
 
-Each part has its own JSON file, and the app finds parts by looking in the
-folder. Deleting a part's high-res PNG removes it from the library, and a JSON
-file with no matching image is ignored.
+The PNG files decide which parts exist. A PNG dropped into the folder becomes
+a part, and gets a JSON file written for it. Deleting a part's PNG removes it,
+and a JSON file with no matching PNG is ignored. Renaming a PNG and its JSON
+together keeps the part working.
 """
 
 from __future__ import annotations
 
 import json
 import re
+import struct
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -32,6 +34,11 @@ CUSTOM_FOLDER = REPO_ROOT / "assets" / "geomorphs-highres-custom"
 # Parts used to share this one file. It is ignored if it is still there.
 OLD_PARTS_FILE_NAME = "custom-parts.json"
 REQUIRED_FIELDS = ("url", "sizeX", "sizeY", "tons", "uses", "facilities")
+EXTRA_IMAGE_FIELDS = ("mirrorUrl", "overlayUrl", "overlayMirrorUrl")
+IMAGE_FIELDS = ("url", *EXTRA_IMAGE_FIELDS)
+# Images that belong to a part, and aren't parts of their own.
+EXTRA_IMAGE_SUFFIXES = ("-flipped-cargo", "-flipped", "-cargo")
+PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 LOW_RES_FOLDER_NAME = "lowres"
 
 # The high-res tiles hold 300 pixels per square, and the low-res ones 60.
@@ -51,31 +58,122 @@ def entry_path(code: str, folder: Path = CUSTOM_FOLDER) -> Path:
     return Path(folder) / f"{code}.json"
 
 
+def png_size(path: Path) -> tuple[int, int] | None:
+    """A PNG's size from its header, or None if it isn't a readable PNG."""
+    try:
+        with open(path, "rb") as file:
+            header = file.read(24)
+    except OSError:
+        return None
+    if len(header) < 24 or not header.startswith(PNG_SIGNATURE):
+        return None
+    return struct.unpack(">II", header[16:24])
+
+
+def squares_for(name: str, width: int, height: int) -> tuple[int, int]:
+    """A new part's size: from a name like CU-003-20x20, or else the image."""
+    named = re.search(r"(?<![\d.])(\d+)x(\d+)(?![\d.])", name)
+    if named and int(named[1]) and int(named[2]):
+        return int(named[1]), int(named[2])
+    border = 2 * GUTTER_SQUARES
+    return (
+        max(1, round(width / PIXELS_PER_SQUARE) - border),
+        max(1, round(height / PIXELS_PER_SQUARE) - border),
+    )
+
+
+def new_entry(path: Path) -> dict | None:
+    """A library entry for a PNG that came from outside the editor."""
+    size = png_size(path)
+    if size is None:
+        return None
+    squares_x, squares_y = squares_for(path.stem, *size)
+    return {
+        "url": path.name,
+        "sizeX": squares_x,
+        "sizeY": squares_y,
+        "tons": squares_x * squares_y // SQUARES_PER_DTON,
+        "uses": {},
+        "facilities": {},
+        "layout": [
+            {"kind": "image", "file": path.name, "x": 0, "y": 0, "turns": 0, "mirror": False}
+        ],
+    }
+
+
+def _read_entry(path: Path) -> dict | None:
+    try:
+        entry = json.loads(path.read_text(encoding="utf-8"))
+        return entry if all(field in entry for field in REQUIRED_FIELDS) else None
+    except (OSError, TypeError, ValueError):
+        return None
+
+
+def _is_extra_image(path: Path, stems: set[str], claimed: set[str]) -> bool:
+    if path.name in claimed:
+        return True
+    return any(
+        path.stem.endswith(suffix) and path.stem[: -len(suffix)] in stems
+        for suffix in EXTRA_IMAGE_SUFFIXES
+    )
+
+
+def _matched_to_files(entry: dict, png: Path) -> dict:
+    """An entry updated to match what's really in the folder."""
+    matched = {**entry, "url": png.name}
+    for field in EXTRA_IMAGE_FIELDS:
+        if field in matched and not (png.parent / matched[field]).is_file():
+            del matched[field]
+    return matched
+
+
 def load_entries(
-    folder: Path = CUSTOM_FOLDER, problems: list[str] | None = None
+    folder: Path = None, problems: list[str] | None = None
 ) -> dict:
     """The custom library entries, by code, from the files in the folder.
 
-    A damaged file only loses its own part. Its name is added to `problems`,
-    so the app can say which file needs attention.
+    Each PNG is a part. One with no JSON file gets one written for it. A
+    damaged file only loses its own part, and is never overwritten. Its name
+    is added to `problems`, so the app can say which file needs attention.
     """
-    folder = Path(folder)
+    folder = Path(CUSTOM_FOLDER if folder is None else folder)
     entries: dict = {}
     if not folder.is_dir():
         return entries
+    problems = [] if problems is None else problems
+
+    saved: dict = {}
+    damaged: set[str] = set()
     for path in sorted(folder.glob("*.json")):
         if path.name == OLD_PARTS_FILE_NAME:
             continue
-        try:
-            entry = json.loads(path.read_text(encoding="utf-8"))
-            if not all(field in entry for field in REQUIRED_FIELDS):
-                raise ValueError
-        except (OSError, TypeError, ValueError):
-            if problems is not None:
-                problems.append(path.name)
+        entry = _read_entry(path)
+        if entry is None:
+            damaged.add(path.stem)
+            problems.append(path.name)
+        else:
+            saved[path.stem] = entry
+
+    pngs = sorted(folder.glob("*.png"))
+    stems = {png.stem for png in pngs}
+    claimed = {
+        entry[field]
+        for entry in saved.values()
+        for field in EXTRA_IMAGE_FIELDS
+        if field in entry
+    }
+    for png in pngs:
+        code = png.stem
+        if code in damaged or _is_extra_image(png, stems, claimed):
             continue
-        if (folder / entry["url"]).is_file():
-            entries[path.stem] = entry
+        entry = saved.get(code)
+        if entry is None:
+            entry = new_entry(png)
+            if entry is None:
+                problems.append(png.name)
+                continue
+            save_entry(code, entry, folder)
+        entries[code] = _matched_to_files(entry, png)
     return entries
 
 
@@ -88,9 +186,10 @@ def _write_json(path: Path, data: dict) -> None:
     temporary.replace(path)
 
 
-def save_entry(code: str, entry: dict, folder: Path = CUSTOM_FOLDER) -> None:
+def save_entry(code: str, entry: dict, folder: Path = None) -> None:
     """Write one part's JSON file, leaving every other part alone."""
-    Path(folder).mkdir(parents=True, exist_ok=True)
+    folder = Path(CUSTOM_FOLDER if folder is None else folder)
+    folder.mkdir(parents=True, exist_ok=True)
     _write_json(entry_path(code, folder), entry)
 
 

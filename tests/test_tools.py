@@ -32,11 +32,12 @@ from shipyard.editor import (
     BorderItem,
     ComponentEditor,
     DoorItem,
+    ImageItem,
     canvas_size,
     compose,
     door_slot,
 )
-from shipyard.images import HighResStore, ImageStore
+from shipyard.images import HighResStore, ImageStore, refresh_low_res
 
 SQUARE = 300
 NO_FOLDER = Path("/nonexistent/geomorphs")
@@ -1166,6 +1167,7 @@ def test_a_json_with_no_high_res_image_is_ignored(tmp_path):
     part_on_disk(tmp_path, "CU-001")
     (tmp_path / "CU-001.png").unlink()
     assert custom.load_entries(tmp_path) == {}
+    assert (tmp_path / "CU-001.json").exists()
 
 
 def test_a_leftover_low_res_image_does_not_keep_a_part(tmp_path):
@@ -1196,6 +1198,215 @@ def test_a_damaged_file_is_reported_and_skipped(tmp_path, text):
 
 def test_no_folder_means_no_parts(tmp_path):
     assert custom.load_entries(tmp_path / "missing") == {}
+
+
+# The PNG files decide what exists
+
+
+def tile(path, squares=(20, 20)):
+    solid(path, (squares[0] + 4) * SQUARE, (squares[1] + 4) * SQUARE, "red", 200)
+
+
+def test_a_dropped_in_png_becomes_a_part_with_its_own_json(tmp_path):
+    tile(tmp_path / "CU-003-20x20 Security.png")
+    entries = custom.load_entries(tmp_path)
+    entry = entries["CU-003-20x20 Security"]
+    assert (entry["sizeX"], entry["sizeY"], entry["tons"]) == (20, 20, 200)
+    assert entry["uses"] == {}
+    saved = json.loads((tmp_path / "CU-003-20x20 Security.json").read_text())
+    assert saved["url"] == "CU-003-20x20 Security.png"
+
+
+def test_a_real_tile_size_is_read_from_a_name_with_no_size(tmp_path):
+    solid(tmp_path / "Plain.png", 4199, 7199, "red")
+    entry = custom.load_entries(tmp_path)["Plain"]
+    assert (entry["sizeX"], entry["sizeY"]) == (10, 20)
+
+
+def test_the_name_beats_the_image_size(tmp_path):
+    solid(tmp_path / "Small 12x6.png", 200, 100, "red")
+    entry = custom.load_entries(tmp_path)["Small 12x6"]
+    assert (entry["sizeX"], entry["sizeY"]) == (12, 6)
+
+
+def test_a_tiny_image_still_gets_a_usable_size(tmp_path):
+    solid(tmp_path / "Tiny.png", 40, 40, "red")
+    entry = custom.load_entries(tmp_path)["Tiny"]
+    assert (entry["sizeX"], entry["sizeY"]) == (1, 1)
+    assert entry["tons"] == 0
+
+
+@pytest.mark.parametrize(
+    "name, expected",
+    [("CU-1-20x10-Bay-6xHalf", (20, 10)), ("A 3x4 B 5x6", (3, 4))],
+)
+def test_size_names(name, expected):
+    assert custom.squares_for(name, 1, 1) == expected
+
+
+def test_a_written_json_is_not_rewritten(tmp_path):
+    tile(tmp_path / "CU-010.png")
+    custom.load_entries(tmp_path)
+    path = tmp_path / "CU-010.json"
+    edited = json.loads(path.read_text())
+    edited["uses"] = {"Fuel": 9}
+    path.write_text(json.dumps(edited))
+    assert custom.load_entries(tmp_path)["CU-010"]["uses"] == {"Fuel": 9}
+
+
+def test_a_damaged_json_is_never_overwritten(tmp_path):
+    tile(tmp_path / "CU-011.png")
+    path = tmp_path / "CU-011.json"
+    path.write_text("not json")
+    problems = []
+    assert custom.load_entries(tmp_path, problems) == {}
+    assert problems == ["CU-011.json"]
+    assert path.read_text() == "not json"
+
+
+def test_a_png_that_is_not_an_image_is_reported(tmp_path):
+    (tmp_path / "Fake.png").write_text("not a picture")
+    problems = []
+    assert custom.load_entries(tmp_path, problems) == {}
+    assert problems == ["Fake.png"]
+    assert not (tmp_path / "Fake.json").exists()
+
+
+def test_extra_images_are_not_parts_of_their_own(editor, folders):
+    part_with_layers(editor)
+    editor.code_edit.setText("CU-012")
+    editor.save_component()
+    assert list(custom.load_entries(folders[2])) == ["CU-012"]
+    assert not (folders[2] / "CU-012-flipped.json").exists()
+
+
+def test_a_dropped_in_name_ending_in_cargo_is_a_part(tmp_path):
+    tile(tmp_path / "Big-cargo.png")
+    assert list(custom.load_entries(tmp_path)) == ["Big-cargo"]
+
+
+def test_extra_images_are_recognised_by_their_json_too(tmp_path):
+    tile(tmp_path / "A.png")
+    tile(tmp_path / "Custom name.png")
+    custom.save_entry("A", entry("A.png", mirrorUrl="Custom name.png"), tmp_path)
+    assert list(custom.load_entries(tmp_path)) == ["A"]
+
+
+def test_a_renamed_png_and_json_keep_working(tmp_path):
+    part_on_disk(tmp_path, "CU-013")
+    (tmp_path / "CU-013.png").rename(tmp_path / "CU-013-Better name.png")
+    (tmp_path / "CU-013.json").rename(tmp_path / "CU-013-Better name.json")
+    entries = custom.load_entries(tmp_path)
+    assert entries["CU-013-Better name"]["url"] == "CU-013-Better name.png"
+
+
+def test_a_missing_extra_image_turns_that_option_off(tmp_path):
+    tile(tmp_path / "A.png")
+    custom.save_entry("A", entry("A.png", mirrorUrl="A-flipped.png"), tmp_path)
+    assert "mirrorUrl" not in custom.load_entries(tmp_path)["A"]
+
+
+def test_missing_low_res_copies_are_made(app, tmp_path):
+    tile(tmp_path / "CU-020.png", (10, 10))
+    entries = custom.load_entries(tmp_path)
+    assert refresh_low_res(entries, tmp_path) == ["CU-020.png"]
+    low = QImage(str(tmp_path / "lowres" / "CU-020.png"))
+    assert (low.width(), low.height()) == (840, 840)
+
+
+def test_an_edited_png_rebuilds_its_low_res_copy(app, tmp_path):
+    tile(tmp_path / "CU-021.png", (10, 10))
+    entries = custom.load_entries(tmp_path)
+    refresh_low_res(entries, tmp_path)
+    assert refresh_low_res(entries, tmp_path) == []
+
+    path = tmp_path / "CU-021.png"
+    solid(path, 4200, 4200, "blue")
+    newer = path.stat().st_mtime + 10
+    os.utime(path, (newer, newer))
+    assert refresh_low_res(entries, tmp_path) == ["CU-021.png"]
+    low = QImage(str(tmp_path / "lowres" / "CU-021.png"))
+    assert low.pixelColor(100, 100) == QColor("blue")
+
+
+def dropped_in(editor, folders, code="CU-022"):
+    quarters(folders[2] / f"{code}.png", 4200)
+    editor._refresh_saved_parts()
+    return code
+
+
+def test_a_dropped_in_part_opens_as_a_movable_image(editor, folders):
+    code = dropped_in(editor, folders)
+    assert editor.saved_combo.findText(code) > 0
+    assert editor.open_component(code)
+    item = editor.items()[0]
+    assert isinstance(item, ImageItem)
+    assert composed(editor).pixelColor(100, 100) == QColor("red")
+
+
+def test_a_dropped_in_part_can_be_built_on(editor, folders, monkeypatch):
+    code = dropped_in(editor, folders)
+    editor.open_component(code)
+    drop(editor, "Wall", 2100, 2100)
+    editor.use_spins["Cargo"].setValue(12)
+    monkeypatch.setattr(QMessageBox, "question", lambda *a: QMessageBox.Yes)
+    assert editor.save_component() == code
+
+    entry = custom.load_entries(folders[2])[code]
+    assert entry["tons"] == 12
+    assert {data.get("kind", "subpart") for data in entry["layout"]} == {
+        "image",
+        "subpart",
+    }
+
+
+def test_saving_twice_never_bakes_pieces_into_the_original(editor, folders, monkeypatch):
+    code = dropped_in(editor, folders)
+    editor.open_component(code)
+    drop(editor, "Wall", 2100, 2100)
+    monkeypatch.setattr(QMessageBox, "question", lambda *a: QMessageBox.Yes)
+    editor.save_component()
+    kept = folders[2] / "originals" / f"{code}.png"
+    original = QImage(str(kept))
+    assert original.pixelColor(2100, 2100) == QColor("yellow")  # no blue piece
+
+    editor.new_component()
+    editor.open_component(code)
+    wall = next(item for item in editor.items() if item.name == "Wall")
+    editor.scene.clearSelection()
+    wall.setSelected(True)
+    editor.delete_selected()
+    editor.save_component()
+
+    final = QImage(str(folders[2] / f"{code}.png"))
+    assert final.pixelColor(2100, 2100) == QColor("yellow")
+    assert QImage(str(kept)) == original
+
+
+def test_a_dropped_in_image_mirrors_with_build_flipped(editor, folders):
+    code = dropped_in(editor, folders)
+    editor.open_component(code)
+    normal = composed(editor)
+    editor.build_flipped()
+    assert composed(editor) == normal.flipped(Qt.Horizontal)
+
+
+def test_a_missing_original_is_named(editor, folders, monkeypatch):
+    code = dropped_in(editor, folders)
+    custom.load_entries(folders[2])
+    (folders[2] / f"{code}.json").write_text(
+        json.dumps(
+            entry(
+                f"{code}.png",
+                layout=[{"kind": "image", "file": "originals/gone.png", "x": 0,
+                         "y": 0, "turns": 0, "mirror": False}],
+            )
+        )
+    )
+    shown = []
+    monkeypatch.setattr(QMessageBox, "warning", lambda *a: shown.append(a[2]))
+    assert editor.open_component(code)
+    assert "originals/gone.png" in shown[0]
 
 
 def test_a_saved_part_does_not_block_reusing_its_code_after_deletion(editor, folders):
@@ -1970,3 +2181,42 @@ def test_resaving_refreshes_flipped_and_cargo_images_on_the_map(window, folders,
     monkeypatch.setattr(QMessageBox, "question", lambda *a: QMessageBox.Yes)
     assert editor.save_component() == "CU-106"
     assert window.images.pixmap(url).toImage() != before
+
+
+def test_a_dropped_in_png_reaches_the_library_and_map(window, folders):
+    tile(folders[2] / "CU-200-10x10 Dropped.png", (10, 10))
+    assert window.reload_custom_parts()
+    window._refresh_library()
+    window.search.setText("CU-200")
+    assert [part.code for part in window.library_model.parts] == ["CU-200-10x10 Dropped"]
+    window.add_part("CU-200-10x10 Dropped")
+    assert window.images.pixmap(window.items[0].info.url).width() == 840
+    assert window.render_image() is not None
+
+
+def test_switching_back_finds_a_new_png(window, folders):
+    window.reload_custom_parts()
+    tile(folders[2] / "CU-201.png", (10, 10))
+    window.isActiveWindow = lambda: True
+    QApplication.sendEvent(window, QEvent(QEvent.ActivationChange))
+    assert "CU-201" in [part.code for part in window.library_model.parts]
+
+
+def test_no_change_in_the_folder_reports_no_change(window, folders):
+    tile(folders[2] / "CU-202.png", (10, 10))
+    assert window.reload_custom_parts()
+    assert not window.reload_custom_parts()
+
+
+def test_an_edited_png_updates_the_map(window, folders):
+    path = folders[2] / "CU-203.png"
+    tile(path, (10, 10))
+    window.reload_custom_parts()
+    window.add_part("CU-203")
+    before = window.images.pixmap("CU-203.png").toImage()
+
+    solid(path, 4200, 4200, "blue")
+    newer = path.stat().st_mtime + 10
+    os.utime(path, (newer, newer))
+    assert window.reload_custom_parts()
+    assert window.images.pixmap("CU-203.png").toImage() != before
