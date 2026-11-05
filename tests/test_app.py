@@ -1061,3 +1061,90 @@ def test_top_bar_buttons_follow_the_selection_and_clipboard(window):
     assert len(window.deck.parts) == 2
     window.cut_action.trigger()
     assert len(window.deck.parts) == 1
+
+
+def test_the_compass_starts_with_the_ship(window):
+    labels = window.orientation.labels()
+    assert labels["left"] == "Bow / Front"
+    assert labels["right"] == "Stern / Back"
+    assert labels["up"] == "Starboard / Right"
+    assert labels["down"] == "Port / Left"
+    assert window.orientation.isVisible()
+
+
+def test_the_compass_buttons_turn_the_ship_bow(window):
+    window.orientation.right_button.click()
+    assert window.ship.bow == "up"
+    assert window.orientation.labels()["up"] == "Bow / Front"
+    assert window.dirty
+
+    window.orientation.left_button.click()
+    assert window.ship.bow == "left"
+
+
+def test_turning_the_compass_leaves_the_parts_alone(window):
+    window.add_part("SS-001")
+    before = (window.deck.parts[0].corner, window.deck.parts[0].rotation)
+    window.turn_bow(1)
+    assert (window.deck.parts[0].corner, window.deck.parts[0].rotation) == before
+
+
+def test_menu_actions_turn_the_bow(window):
+    window.turn_bow_right_action.trigger()
+    assert window.ship.bow == "up"
+    window.turn_bow_left_action.trigger()
+    assert window.ship.bow == "left"
+
+
+def test_the_compass_can_be_hidden(window):
+    window.show_orientation_action.setChecked(False)
+    assert not window.orientation.isVisible()
+    assert not window.turn_bow_right_action.isEnabled()
+    window.show_orientation_action.setChecked(True)
+    assert window.orientation.isVisible()
+
+
+def test_the_compass_stays_put_when_the_map_pans_and_zooms(window):
+    before = window.orientation.geometry()
+    window.view.centerOn(500, 500)
+    window.view.scale(2, 2)
+    QApplication.processEvents()
+    assert window.orientation.geometry() == before
+
+
+def test_clicks_on_the_compass_do_not_reach_the_map(window):
+    window.add_part("SS-001")
+    QTest.mouseClick(window.orientation, Qt.LeftButton, pos=QPoint(98, 98))
+    QApplication.processEvents()
+    assert window.selected_indices() == [0]
+
+
+def test_opening_a_ship_shows_its_saved_direction(window, tmp_path):
+    window.turn_bow(1)
+    window.turn_bow(1)
+    path = tmp_path / "ship.json"
+    assert window.save_to(path)
+    assert json.loads(path.read_text())["bow"] == "right"
+
+    window._set_ship(Ship.empty(), None)
+    assert window.orientation.labels()["left"] == "Bow / Front"
+
+    assert window.open_path(path)
+    assert window.ship.bow == "right"
+    assert window.orientation.labels()["right"] == "Bow / Front"
+    assert not window.dirty
+
+
+def test_a_new_ship_goes_back_to_the_default_direction(window):
+    window.turn_bow(1)
+    window.dirty = False
+    window.new_ship()
+    assert window.ship.bow == "left"
+    assert window.orientation.bow == "left"
+
+
+def test_the_compass_is_not_in_exports(window):
+    window.add_part("SS-001")
+    plain = window.render_image()
+    window.turn_bow(1)
+    assert window.render_image() == plain

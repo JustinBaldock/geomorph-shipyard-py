@@ -23,6 +23,13 @@ SHIP_META = "Traveller Geomorph Ship"
 DEFAULT_SHIP_NAME = "YourShipNameGoesHere"
 FIRST_DECK_NAME = "Deck 1"
 
+# Which way the ship's bow points on the map, in clockwise order.
+BOW_DIRECTIONS = ("up", "right", "down", "left")
+# Ships from the original app have their bow to the left.
+DEFAULT_BOW = "left"
+# The ship's four sides, clockwise from the bow as seen from above.
+SHIP_SIDES = ("Bow", "Starboard", "Stern", "Port")
+
 # Same order as parts_library.js in the original project.
 SHAPES = (
     "HG", "LG", "QG", "Sh", "SEF", "SEFW", "SEA", "SEAW", "LC", "SC", "HC",
@@ -321,6 +328,21 @@ class Deck:
     parts: list[Part] = field(default_factory=list)
 
 
+def turn_bow(bow: str, quarter_turns: int) -> str:
+    """Turn a bow direction. Positive turns are clockwise."""
+    index = BOW_DIRECTIONS.index(bow) + quarter_turns
+    return BOW_DIRECTIONS[index % len(BOW_DIRECTIONS)]
+
+
+def sides_for_bow(bow: str) -> dict[str, str]:
+    """Which side of the ship faces each direction on the map."""
+    start = BOW_DIRECTIONS.index(bow)
+    return {
+        BOW_DIRECTIONS[(start + step) % len(BOW_DIRECTIONS)]: side
+        for step, side in enumerate(SHIP_SIDES)
+    }
+
+
 def _bad_file() -> ShipFileError:
     return ShipFileError("This file does not seem to be a Traveller Geomorph Ship.")
 
@@ -354,11 +376,13 @@ class Ship:
     In a file the parts stay in one flat list, as in the original app, and
     each part carries the number of its deck. The original keeps fields it
     doesn't know, so it can open these ships, showing all the decks at once.
-    A ship with one plain deck is written exactly as the original writes it.
+    A ship with one plain deck is written as the original writes it, plus the
+    `bow` entry, which the original ignores.
     """
 
     name: str
     decks: list[Deck]
+    bow: str = DEFAULT_BOW
 
     @classmethod
     def single(cls, name: str, parts: list[Part]) -> "Ship":
@@ -411,7 +435,7 @@ class Ship:
                     entry["deck"] = number
                 parts.append(entry)
 
-        data = {"meta": SHIP_META, "name": self.name}
+        data = {"meta": SHIP_META, "name": self.name, "bow": self.bow}
         if several or self.decks[0].name != FIRST_DECK_NAME:
             data["decks"] = [{"name": deck.name} for deck in self.decks]
         data["parts"] = parts
@@ -461,6 +485,10 @@ class Ship:
                 + ", ".join(sorted(set(unknown)))
             )
 
+        bow = data.get("bow", DEFAULT_BOW)
+        if bow not in BOW_DIRECTIONS:
+            raise _bad_file()
+
         names = _deck_names(data)
         if names is None:
             # The original drops the deck list when it saves, but keeps the
@@ -476,7 +504,7 @@ class Ship:
             if number not in positions:
                 raise _bad_file()
             decks[positions[number]].parts.append(part)
-        return cls(data.get("name") or DEFAULT_SHIP_NAME, decks)
+        return cls(data.get("name") or DEFAULT_SHIP_NAME, decks, bow)
 
     @classmethod
     def load(cls, path: Path, library: dict[str, PartInfo]) -> "Ship":

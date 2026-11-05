@@ -13,6 +13,8 @@ from shipyard.model import (
     Ship,
     ShipFileError,
     copies_centred_on,
+    sides_for_bow,
+    turn_bow,
     filter_library,
     group_bounds,
     load_library,
@@ -177,6 +179,7 @@ def test_save_uses_the_original_format(tmp_path, library):
     assert json.loads(path.read_text()) == {
         "meta": SHIP_META,
         "name": "Courier",
+        "bow": "left",
         "parts": [
             {
                 "code": "SS-001",
@@ -269,9 +272,9 @@ def two_deck_ship():
     )
 
 
-def test_a_one_deck_ship_is_written_exactly_like_the_original():
+def test_a_one_deck_ship_only_adds_the_bow_to_the_original_format():
     data = Ship.single("Plain", [Part("SS-001", (0, 0))]).to_json()
-    assert set(data) == {"meta", "name", "parts"}
+    assert set(data) == {"meta", "name", "bow", "parts"}
     assert "deck" not in data["parts"][0]
 
 
@@ -407,3 +410,75 @@ def test_copies_land_on_the_grid(library):
     parts = [Part("SS-001", (0, 0))]
     copies = copies_centred_on(parts, library, (2, 3))
     assert copies[0].corner[0] % 5 == 0 and copies[0].corner[1] % 5 == 0
+
+
+@pytest.mark.parametrize(
+    "bow, up, right, down, left",
+    [
+        ("up", "Bow", "Starboard", "Stern", "Port"),
+        ("right", "Port", "Bow", "Starboard", "Stern"),
+        ("down", "Stern", "Port", "Bow", "Starboard"),
+        ("left", "Starboard", "Stern", "Port", "Bow"),
+    ],
+)
+def test_sides_follow_the_bow(bow, up, right, down, left):
+    assert sides_for_bow(bow) == {
+        "up": up,
+        "right": right,
+        "down": down,
+        "left": left,
+    }
+
+
+def test_port_is_on_the_left_when_facing_the_bow():
+    # Facing up the map, port is the left hand, the rule the labels rest on.
+    sides = sides_for_bow("up")
+    assert sides["left"] == "Port"
+    assert sides["right"] == "Starboard"
+
+
+def test_turning_the_bow_wraps_around():
+    assert turn_bow("up", 1) == "right"
+    assert turn_bow("left", 1) == "up"
+    assert turn_bow("up", -1) == "left"
+    assert turn_bow("right", 4) == "right"
+
+
+@pytest.mark.parametrize("bow", ["up", "right", "down", "left"])
+def test_bow_survives_save_and_load(tmp_path, library, bow):
+    ship = Ship("Boat", [Deck("Deck 1", [Part("SS-001", (0, 0))])], bow)
+    path = tmp_path / "ship.json"
+    ship.save(path)
+    assert json.loads(path.read_text())["bow"] == bow
+    assert Ship.load(path, library).bow == bow
+
+
+def test_a_file_from_the_original_gets_the_default_bow(library):
+    path = Path(__file__).parent / "data" / "from-original-app.json"
+    assert "bow" not in json.loads(path.read_text())
+    assert Ship.load(path, library).bow == "left"
+
+
+@pytest.mark.parametrize("bow", ["north", "", 90, None, ["up"]])
+def test_a_bad_bow_is_refused(library, bow):
+    data = Ship.empty().to_json()
+    data["bow"] = bow
+    with pytest.raises(ShipFileError):
+        Ship.from_json(data, library)
+
+
+def test_a_new_ship_has_the_default_bow():
+    assert Ship.empty().bow == "left"
+
+
+def test_starboard_tiles_sit_on_the_starboard_side_of_a_default_ship(library):
+    # The original's ships put the plain tile on top and the flipped one below.
+    # Plain wing images are the starboard ones, so top must read Starboard.
+    path = Path(__file__).parent / "data" / "from-original-app.json"
+    ship = Ship.load(path, library)
+    plain = [p for p in ship.parts if p.code.startswith("LS") and not p.mirror]
+    flipped = [p for p in ship.parts if p.code.startswith("LS") and p.mirror]
+    if plain and flipped:
+        assert "Starboard" in library[plain[0].code].url
+        assert plain[0].corner[1] > flipped[0].corner[1]
+    assert sides_for_bow(ship.bow)["up"] == "Starboard"

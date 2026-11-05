@@ -23,11 +23,13 @@ from PySide6.QtGui import (
     QAction,
     QColor,
     QFont,
+    QFontMetrics,
     QImage,
     QKeySequence,
     QPainter,
     QPainterPath,
     QPen,
+    QPolygonF,
     QTransform,
 )
 from PySide6.QtWidgets import (
@@ -84,6 +86,15 @@ EXPORT_LABEL_PIXELS = 34
 EXPORT_CREDIT_PIXELS = 28
 TRACE_OPACITY = 0.35
 TRACE_Z = -1
+ORIENTATION_SIZE = 196
+ORIENTATION_MARGIN = 10
+SIDE_LABELS = {
+    "Bow": "Front",
+    "Stern": "Back",
+    "Port": "Left",
+    "Starboard": "Right",
+}
+
 EXPORT_CREDIT = (
     "Geomorphs by Robert Pearce and Eric B. Smith, CC BY-NC 4.0. "
     "Traveller is a trademark of Mongoose Publishing."
@@ -340,6 +351,110 @@ class ShipView(QGraphicsView):
         return model.snap(centre.x()), model.snap(-centre.y())
 
 
+class OrientationOverlay(QWidget):
+    """A compass on the map showing which way the ship faces.
+
+    It sits on the view, not in the scene, so it stays in the corner when the
+    map is panned or zoomed. Turning it changes the labels and not the ship.
+    """
+
+    turn_requested = Signal(int)
+
+    def __init__(self, parent: QWidget):
+        super().__init__(parent)
+        self.bow = model.DEFAULT_BOW
+        self.setFixedSize(ORIENTATION_SIZE, ORIENTATION_SIZE)
+        self.setToolTip("Which way the ship faces. Turning this leaves the ship as it is.")
+        self.left_button = self._button("↺", "Turn the bow to the left", -1)
+        self.right_button = self._button("↻", "Turn the bow to the right", 1)
+        self.left_button.move(6, ORIENTATION_SIZE - 32)
+        self.right_button.move(ORIENTATION_SIZE - 32, ORIENTATION_SIZE - 32)
+        self.move(ORIENTATION_MARGIN, ORIENTATION_MARGIN)
+
+    def _button(self, text: str, tip: str, turn: int) -> QToolButton:
+        button = QToolButton(self)
+        button.setText(text)
+        button.setToolTip(tip)
+        button.setFixedSize(26, 26)
+        button.clicked.connect(lambda: self.turn_requested.emit(turn))
+        return button
+
+    def set_bow(self, bow: str) -> None:
+        self.bow = bow
+        self.update()
+
+    def labels(self) -> dict[str, str]:
+        """The text shown on each edge."""
+        return {
+            direction: f"{side} / {SIDE_LABELS[side]}"
+            for direction, side in model.sides_for_bow(self.bow).items()
+        }
+
+    def _text_rect(self, direction: str, width: int, height: int) -> QRectF:
+        size = float(ORIENTATION_SIZE)
+        middle = size / 2
+        spots = {
+            "up": (middle - width / 2, 8),
+            "down": (middle - width / 2, size - 8 - height),
+            "left": (8, middle - height / 2),
+            "right": (size - 8 - width, middle - height / 2),
+        }
+        x, y = spots[direction]
+        return QRectF(x, y, width, height)
+
+    def paintEvent(self, event) -> None:
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.Antialiasing)
+        box = QRectF(self.rect()).adjusted(0.5, 0.5, -0.5, -0.5)
+        painter.setPen(QPen(QColor("#9aa7b4")))
+        painter.setBrush(QColor(255, 255, 255, 225))
+        painter.drawRoundedRect(box, 10, 10)
+
+        bold = QFont()
+        bold.setPixelSize(11)
+        bold.setBold(True)
+        small = QFont()
+        small.setPixelSize(10)
+        sides = model.sides_for_bow(self.bow)
+        for direction, side in sides.items():
+            colour = QColor("#b3261e") if side == "Bow" else QColor("#22303c")
+            width = max(
+                QFontMetrics(bold).horizontalAdvance(side),
+                QFontMetrics(small).horizontalAdvance(SIDE_LABELS[side]),
+            ) + 2
+            rect = self._text_rect(direction, width, 28)
+            painter.setPen(colour)
+            painter.setFont(bold)
+            painter.drawText(rect, Qt.AlignTop | Qt.AlignHCenter, side)
+            painter.setFont(small)
+            painter.drawText(
+                rect, Qt.AlignBottom | Qt.AlignHCenter, SIDE_LABELS[side]
+            )
+
+        # A small hull shape pointing at the bow.
+        turn = model.BOW_DIRECTIONS.index(self.bow) * 90
+        painter.translate(ORIENTATION_SIZE / 2, ORIENTATION_SIZE / 2)
+        painter.rotate(turn)
+        painter.setPen(QPen(QColor("#22303c"), 1.2))
+        painter.setBrush(QColor("#dbe3ea"))
+        painter.drawPolygon(
+            QPolygonF(
+                [
+                    QPointF(0, -24),
+                    QPointF(11, -6),
+                    QPointF(11, 22),
+                    QPointF(-11, 22),
+                    QPointF(-11, -6),
+                ]
+            )
+        )
+        painter.setPen(Qt.NoPen)
+        painter.setBrush(QColor("#b3261e"))
+        painter.drawPolygon(
+            QPolygonF([QPointF(0, -24), QPointF(11, -6), QPointF(-11, -6)])
+        )
+
+
 class LibraryModel(QAbstractListModel):
     def __init__(self):
         super().__init__()
@@ -422,6 +537,9 @@ class MainWindow(QMainWindow):
 
         self.scene = ShipScene(self)
         self.view = ShipView(self.scene)
+        self.orientation = OrientationOverlay(self.view)
+        self.orientation.set_bow(self.ship.bow)
+        self.orientation.turn_requested.connect(self.turn_bow)
 
         self.outline = QGraphicsPathItem()
         self.outline.setPen(self._outline_pen())
@@ -486,6 +604,17 @@ class MainWindow(QMainWindow):
         self.export_all_action = a(
             "Export all decks...", self.export_all_decks, ["Ctrl+Shift+E"]
         )
+
+        self.turn_bow_left_action = a(
+            "Turn bow left", lambda: self.turn_bow(-1), ["["]
+        )
+        self.turn_bow_right_action = a(
+            "Turn bow right", lambda: self.turn_bow(1), ["]"]
+        )
+        self.show_orientation_action = QAction("Show orientation", self)
+        self.show_orientation_action.setCheckable(True)
+        self.show_orientation_action.setChecked(True)
+        self.show_orientation_action.toggled.connect(self._orientation_toggled)
 
         self.high_res_action = QAction("Export in high resolution", self)
         self.high_res_action.setCheckable(True)
@@ -567,6 +696,11 @@ class MainWindow(QMainWindow):
             part_menu.addAction(action)
         self.move_menu = part_menu.addMenu("Move to deck")
         self.move_menu.aboutToShow.connect(self._fill_move_menu)
+
+        ship_menu = self.menuBar().addMenu("Ship")
+        ship_menu.addAction(self.turn_bow_left_action)
+        ship_menu.addAction(self.turn_bow_right_action)
+        ship_menu.addAction(self.show_orientation_action)
 
         deck_menu = self.menuBar().addMenu("Deck")
         for action in (
@@ -1147,6 +1281,17 @@ class MainWindow(QMainWindow):
         self.trace_deck = self.trace_combo.itemData(index)
         self._rebuild_items(select=self.selected_indices())
 
+    def turn_bow(self, quarter_turns: int) -> None:
+        self.ship.bow = model.turn_bow(self.ship.bow, quarter_turns)
+        self.orientation.set_bow(self.ship.bow)
+        self.dirty = True
+        self._refresh_title()
+
+    def _orientation_toggled(self, shown: bool) -> None:
+        self.orientation.setVisible(shown)
+        self.turn_bow_left_action.setEnabled(shown)
+        self.turn_bow_right_action.setEnabled(shown)
+
     def _name_edited(self, text: str) -> None:
         self.ship.name = text
         self._changed()
@@ -1160,6 +1305,7 @@ class MainWindow(QMainWindow):
         self.path = path
         self.dirty = False
         self.name_edit.setText(ship.name)
+        self.orientation.set_bow(ship.bow)
         self._refresh_decks()
         self._rebuild_items()
 

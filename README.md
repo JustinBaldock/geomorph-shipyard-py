@@ -46,6 +46,12 @@ Each deck is a tab above the map, with its own parts.
 - The Tonnage tab shows the whole ship, plus a line for each deck.
 - File > Export this deck saves one deck. File > Export all decks saves them all in one image, lined up one above another.
 
+### Orientation
+
+The compass in the corner of the map shows which way the ship faces, with Bow/Front, Stern/Back, Port/Left and Starboard/Right on its edges. The ↺ and ↻ buttons turn it, as do the `[` and `]` keys, and the Ship menu can hide it. Turning it only changes the labels, the parts stay where they are.
+
+The direction is saved in the ship file as `bow`, which is `up`, `right`, `down` or `left`. Ships from the original don't have it, and open with the bow to the left, which is how its generated ships are laid out.
+
 ### Keys
 
 | Key | Action |
@@ -59,8 +65,9 @@ Each deck is a tab above the map, with its own parts.
 | `Cmd`+`x`, `Cmd`+`c`, `Cmd`+`v` | Cut, copy and paste (`Ctrl` outside macOS) |
 | `Cmd`+`a` | Select the whole deck |
 | `escape` | Deselect the part |
+| `[` / `]` | Turn the orientation compass left / right |
 
-Ship files use the same JSON format as the original, so its files open here. A one-deck ship saved here is the same format too. A ship with several decks adds a deck number to each part, and the original will show those decks piled together. Keep your own copies, as nothing is stored inside the app.
+Ship files use the same JSON format as the original, so its files open here. A one-deck ship saved here is the same format plus the `bow` entry, which the original ignores and drops if it saves the ship again. A ship with several decks adds a deck number to each part, and the original will show those decks piled together. Keep your own copies, as nothing is stored inside the app.
 
 This first version covers the deck plan builder only. The original's tonnage calculator, vehicle calculator and random ship button are not included.
 
