@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Geomorph images are CC BY-NC and are fetched, not stored here.
+assets/
+geomorphs-source/
