@@ -141,55 +141,114 @@ def test_finer_snapping_is_available(cutter):
 def test_saving_writes_the_exact_pixels_and_a_record(cutter, folders):
     _, subparts, _ = folders
     drag_box(cutter, (0, 0), (600, 600))
-    cutter.name_edit.setText("Red corner")
-    assert cutter.save_subpart() == "Red corner"
+    assert cutter.save_subpart() == "2x2"
 
-    image = QImage(str(subparts / "Red corner.png"))
+    image = QImage(str(subparts / "2x2.png"))
     assert (image.width(), image.height()) == (600, 600)
     assert image.pixelColor(10, 10) == QColor("red")
-    record = json.loads((subparts / "Red corner.json").read_text())
+    record = json.loads((subparts / "2x2.json").read_text())
     assert record["source"].endswith("SS-001 [Port] [50x50] Fuel.png")
     assert (record["x"], record["y"], record["width"]) == (0, 0, 600)
     assert "CC BY-NC" in record["licence"]
 
 
-def test_a_name_is_suggested_from_the_tile(cutter):
+def test_the_name_defaults_to_the_size(cutter):
     drag_box(cutter, (300, 600), (900, 900))
-    assert cutter.name_edit.text() == "SS-001 1_2 2x1"
+    assert cutter.name_label.text() == "2x1"
 
 
-def test_a_typed_name_is_not_replaced(cutter):
-    cutter.name_edit.setText("My room")
-    cutter.name_edit.setModified(True)
-    drag_box(cutter, (300, 300), (600, 600))
-    assert cutter.name_edit.text() == "My room"
+def test_half_squares_show_in_the_name(cutter):
+    cutter.snap_combo.setCurrentIndex(1)
+    drag_box(cutter, (0, 0), (750, 150))
+    assert cutter.name_label.text() == "2.5x0.5"
+    assert cutter.save_subpart() == "2.5x0.5"
+    assert custom.subpart_names(cutter.subpart_folder) == ["2.5x0.5"]
 
 
-def test_the_box_clears_after_saving_ready_for_the_next(cutter):
+def test_extra_words_follow_the_size(cutter, folders):
+    drag_box(cutter, (0, 0), (900, 600))
+    cutter.words_edit.setText("Medical bay")
+    assert cutter.name_label.text() == "3x2 Medical bay"
+    assert cutter.save_subpart() == "3x2 Medical bay"
+    assert (folders[1] / "3x2 Medical bay.png").exists()
+
+
+def test_words_can_be_typed_before_the_box_is_drawn(cutter):
+    cutter.words_edit.setText("Airlock")
     drag_box(cutter, (0, 0), (300, 300))
+    assert cutter.name_label.text() == "1x1 Airlock"
+
+
+def test_a_taken_name_gets_a_number_and_overwrites_nothing(cutter, folders):
+    drag_box(cutter, (0, 0), (300, 300))
+    assert cutter.save_subpart() == "1x1"
+    drag_box(cutter, (600, 600), (900, 900))
+    assert cutter.name_label.text() == "1x1 2"
+    assert cutter.save_subpart() == "1x1 2"
+    drag_box(cutter, (0, 600), (300, 900))
+    assert cutter.save_subpart() == "1x1 3"
+    assert QImage(str(folders[1] / "1x1.png")).pixelColor(10, 10) == QColor("red")
+    assert QImage(str(folders[1] / "1x1 2.png")).pixelColor(10, 10) == QColor("yellow")
+
+
+def test_the_box_and_words_clear_after_saving(cutter):
+    drag_box(cutter, (0, 0), (300, 300))
+    cutter.words_edit.setText("Room")
     cutter.save_subpart()
     assert cutter.view.selection().isEmpty()
-    drag_box(cutter, (600, 0), (900, 300))
-    assert cutter.name_edit.text() == "SS-001 2_0 1x1"
+    assert cutter.words_edit.text() == ""
+    assert cutter.name_label.text() == ""
 
 
-def test_replacing_a_subpart_asks_first(cutter, monkeypatch, folders):
+def test_hostile_words_stay_in_the_folder(cutter, folders):
     drag_box(cutter, (0, 0), (300, 300))
-    cutter.name_edit.setText("Room")
+    cutter.words_edit.setText("../../evil")
+    assert cutter.save_subpart() == "1x1 evil"
+    assert (folders[1] / "1x1 evil.png").exists()
+
+
+def tick_category(cutter, label):
+    item = cutter.category_list.findItems(label, Qt.MatchExactly)[0]
+    item.setCheckState(Qt.Checked)
+
+
+def test_categories_match_the_main_app_filters(cutter):
+    labels = [
+        cutter.category_list.item(row).text()
+        for row in range(cutter.category_list.count())
+    ]
+    assert labels == list(model.USAGE_FILTERS)
+
+
+def test_categories_start_unticked_and_can_be_ticked(cutter):
+    assert cutter.categories() == []
+    item = cutter.category_list.item(0)
+    assert item.flags() & Qt.ItemIsUserCheckable
+    tick_category(cutter, "Fuel")
+    assert cutter.categories() == ["Fuel"]
+
+
+def test_categories_are_saved_with_the_source(cutter, folders):
+    drag_box(cutter, (0, 0), (300, 300))
+    tick_category(cutter, "Fuel")
+    tick_category(cutter, "Engineering")
     cutter.save_subpart()
-    drag_box(cutter, (600, 600), (900, 900))
-    cutter.name_edit.setText("Room")
-    monkeypatch.setattr(QMessageBox, "question", lambda *a: QMessageBox.Cancel)
-    assert cutter.save_subpart() is None
-    image = QImage(str(folders[1] / "Room.png"))
-    assert image.pixelColor(10, 10) == QColor("red")
+    record = json.loads((folders[1] / "1x1.json").read_text())
+    assert record["categories"] == ["Engineering", "Fuel"]
+    assert record["source"].endswith("Fuel.png")
 
 
-def test_a_hostile_name_stays_in_the_folder(cutter, folders):
+def test_no_categories_saves_an_empty_list(cutter, folders):
     drag_box(cutter, (0, 0), (300, 300))
-    cutter.name_edit.setText("../../evil")
-    assert cutter.save_subpart() == "evil"
-    assert (folders[1] / "evil.png").exists()
+    cutter.save_subpart()
+    assert json.loads((folders[1] / "1x1.json").read_text())["categories"] == []
+
+
+def test_ticks_clear_after_saving(cutter):
+    drag_box(cutter, (0, 0), (300, 300))
+    tick_category(cutter, "Fuel")
+    cutter.save_subpart()
+    assert cutter.categories() == []
 
 
 # The editor
@@ -230,6 +289,29 @@ def test_editor_lists_subparts_with_thumbnails(editor):
 def test_editor_search_hides_subparts(editor):
     editor.search.setText("wall")
     assert editor.subpart_count.text() == "1 of 2 subparts"
+
+
+def test_editor_search_finds_categories(app, folders, library):
+    _, subparts, custom_folder = folders
+    quarters(subparts / "3x2.png", 600)
+    custom.save_subpart_record("3x2", {"categories": ["Fuel", "Cargo"]}, subparts)
+    solid(subparts / "1x1.png", 300, 300, "blue")
+    window = ComponentEditor(library, subparts, custom_folder)
+    window.search.setText("fuel")
+    assert window.subpart_count.text() == "1 of 2 subparts"
+    found = window.subpart_list.findItems("3x2", Qt.MatchExactly)[0]
+    assert not found.isHidden()
+    assert found.toolTip() == "Fuel, Cargo"
+    window.dirty = False
+    window.close()
+
+
+def test_subparts_without_categories_still_work(tmp_path):
+    assert custom.subpart_categories("none", tmp_path) == []
+    (tmp_path / "old.json").write_text('{"source": "x.png"}')
+    assert custom.subpart_categories("old", tmp_path) == []
+    (tmp_path / "bad.json").write_text("not json")
+    assert custom.subpart_categories("bad", tmp_path) == []
 
 
 def test_the_list_offers_the_subpart_for_dragging(editor):

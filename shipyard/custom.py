@@ -97,6 +97,16 @@ def subpart_path(name: str, folder: Path = SUBPART_FOLDER) -> Path:
     return Path(folder) / f"{name}.png"
 
 
+def subpart_categories(name: str, folder: Path = SUBPART_FOLDER) -> list[str]:
+    """The categories ticked for a subpart. Older cuts don't have any."""
+    path = Path(folder) / f"{name}.json"
+    try:
+        categories = json.loads(path.read_text(encoding="utf-8")).get("categories", [])
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError, AttributeError):
+        return []
+    return categories if isinstance(categories, list) else []
+
+
 def save_subpart_record(name: str, record: dict, folder: Path = SUBPART_FOLDER) -> None:
     """Note where a subpart came from, so its credit can be traced later."""
     _write_json(Path(folder) / f"{name}.json", record)

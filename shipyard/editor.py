@@ -332,7 +332,7 @@ class ComponentEditor(QMainWindow):
 
     def _build_subpart_panel(self) -> QWidget:
         self.search = QLineEdit()
-        self.search.setPlaceholderText("Search subparts")
+        self.search.setPlaceholderText("Search names and categories")
         self.search.setClearButtonEnabled(True)
         self.search.textChanged.connect(self._filter_subparts)
         self.subpart_list = SubpartList()
@@ -478,6 +478,10 @@ class ComponentEditor(QMainWindow):
         for name in custom.subpart_names(self.subpart_folder):
             path = custom.subpart_path(name, self.subpart_folder)
             item = QListWidgetItem(QIcon(self._thumbnail(path)), name)
+            categories = custom.subpart_categories(name, self.subpart_folder)
+            item.setData(Qt.UserRole, " ".join(categories))
+            if categories:
+                item.setToolTip(", ".join(categories))
             self.subpart_list.addItem(item)
         self._filter_subparts(self.search.text())
 
@@ -486,7 +490,8 @@ class ComponentEditor(QMainWindow):
         shown = 0
         for row in range(self.subpart_list.count()):
             item = self.subpart_list.item(row)
-            hide = text not in item.text().casefold()
+            searched = f"{item.text()} {item.data(Qt.UserRole)}".casefold()
+            hide = text not in searched
             item.setHidden(hide)
             shown += not hide
         self.subpart_count.setText(

@@ -24,6 +24,7 @@ from PySide6.QtWidgets import (
     QLabel,
     QLineEdit,
     QListWidget,
+    QListWidgetItem,
     QMainWindow,
     QMessageBox,
     QPushButton,
@@ -31,7 +32,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from . import custom
+from . import custom, model
 from .images import HIGH_RES_FOLDER, ImageStore
 
 SQUARE = custom.PIXELS_PER_SQUARE
@@ -200,8 +201,17 @@ class CutterWindow(QMainWindow):
             self.snap_combo.addItem(label, step)
         self.snap_combo.currentIndexChanged.connect(self._snap_chosen)
         self.size_label = QLabel("Drag a box over the tile")
-        self.name_edit = QLineEdit()
-        self.name_edit.setPlaceholderText("Name for this subpart")
+        self.words_edit = QLineEdit()
+        self.words_edit.setPlaceholderText("Extra words (optional)")
+        self.words_edit.textChanged.connect(lambda _text: self._selection_changed())
+        self.name_label = QLabel()
+        self.name_label.setWordWrap(True)
+        self.category_list = QListWidget()
+        for usage in model.USAGE_FILTERS:
+            item = QListWidgetItem(usage)
+            item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsUserCheckable)
+            item.setCheckState(Qt.Unchecked)
+            self.category_list.addItem(item)
         self.save_button = QPushButton("Save subpart")
         self.save_button.clicked.connect(lambda: self.save_subpart())
         self.fit_button = QPushButton("Fit to window")
@@ -210,14 +220,16 @@ class CutterWindow(QMainWindow):
         form = QFormLayout()
         form.addRow("Snap to", self.snap_combo)
         form.addRow("Selection", self.size_label)
-        form.addRow("Name", self.name_edit)
+        form.addRow("Add to name", self.words_edit)
+        form.addRow("Saves as", self.name_label)
         right = QWidget()
         right.setFixedWidth(300)
         right_layout = QVBoxLayout(right)
         right_layout.addLayout(form)
+        right_layout.addWidget(QLabel("Categories"))
+        right_layout.addWidget(self.category_list, 1)
         right_layout.addWidget(self.save_button)
         right_layout.addWidget(self.fit_button)
-        right_layout.addStretch(1)
 
         central = QWidget()
         layout = QHBoxLayout(central)
@@ -273,43 +285,55 @@ class CutterWindow(QMainWindow):
         has_box = not box.isEmpty()
         self.save_button.setEnabled(has_box)
         if has_box:
-            self.size_label.setText(
-                f"{box.width() / SQUARE:g} × {box.height() / SQUARE:g} squares"
-            )
-            if not self.name_edit.isModified():
-                self.name_edit.setText(self._suggested_name(box))
+            width, height = self._squares(box)
+            self.size_label.setText(f"{width} × {height} squares")
+            self.name_label.setText(self._unique_name(self._name(box)))
         else:
             self.size_label.setText("Drag a box over the tile")
+            self.name_label.clear()
 
-    def _suggested_name(self, box: QRect) -> str:
-        tile = self.current.stem.split(" [")[0] if self.current else "subpart"
-        wide = f"{box.width() / SQUARE:g}"
-        high = f"{box.height() / SQUARE:g}"
-        left = f"{box.x() / SQUARE:g}"
-        top = f"{box.y() / SQUARE:g}"
-        return custom.safe_name(f"{tile} {left}_{top} {wide}x{high}".replace(".", "_"))
+    @staticmethod
+    def _squares(box: QRect) -> tuple[str, str]:
+        """The box size in squares, in the plainest form that's accurate."""
+        return (
+            f"{round(box.width() / SQUARE, 2):g}",
+            f"{round(box.height() / SQUARE, 2):g}",
+        )
+
+    def _name(self, box: QRect) -> str:
+        """The size, plus any words the user added."""
+        width, height = self._squares(box)
+        words = custom.safe_name(self.words_edit.text())
+        return f"{width}x{height} {words}".strip()
+
+    def _unique_name(self, name: str) -> str:
+        """Add a number if the name is taken, so nothing gets overwritten."""
+        if not custom.subpart_path(name, self.subpart_folder).exists():
+            return name
+        number = 2
+        while custom.subpart_path(f"{name} {number}", self.subpart_folder).exists():
+            number += 1
+        return f"{name} {number}"
+
+    def categories(self) -> list[str]:
+        """The ticked categories, in the order the main app lists them."""
+        return [
+            self.category_list.item(row).text()
+            for row in range(self.category_list.count())
+            if self.category_list.item(row).checkState() == Qt.Checked
+        ]
+
+    def _clear_categories(self) -> None:
+        for row in range(self.category_list.count()):
+            self.category_list.item(row).setCheckState(Qt.Unchecked)
 
     def save_subpart(self) -> str | None:
         box = self.view.selection()
         if box.isEmpty() or self.view.pixmap is None:
             return None
-        name = custom.safe_name(self.name_edit.text())
-        if not name:
-            QMessageBox.warning(self, self.windowTitle(), "Give the subpart a name.")
-            return None
 
+        name = self._unique_name(self._name(box))
         path = custom.subpart_path(name, self.subpart_folder)
-        if path.exists():
-            answer = QMessageBox.question(
-                self,
-                self.windowTitle(),
-                f"Replace the subpart {name}?",
-                QMessageBox.Yes | QMessageBox.Cancel,
-                QMessageBox.Cancel,
-            )
-            if answer != QMessageBox.Yes:
-                return None
-
         self.subpart_folder.mkdir(parents=True, exist_ok=True)
         if not self.view.pixmap.copy(box).save(str(path), "PNG"):
             QMessageBox.warning(self, self.windowTitle(), "Could not save the subpart.")
@@ -322,13 +346,14 @@ class CutterWindow(QMainWindow):
                 "y": box.y(),
                 "width": box.width(),
                 "height": box.height(),
+                "categories": self.categories(),
                 "licence": "CC BY-NC 4.0, Robert Pearce and Eric B. Smith",
             },
             self.subpart_folder,
         )
         self.statusBar().showMessage(f"Saved {name}", 5000)
-        self.name_edit.clear()
-        self.name_edit.setModified(False)
+        self.words_edit.clear()
+        self._clear_categories()
         self.view.clear_selection()
         self.saved.emit(name)
         return name

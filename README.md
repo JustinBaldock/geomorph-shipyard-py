@@ -39,9 +39,9 @@ Add `--high-res` to also keep the larger set, about 231 MB, which is used only f
 
 Two tools build new library parts from pieces of the existing tiles. They are in the Tools menu, and on a Mac the Subpart Cutter also opens by double-clicking `Subpart Cutter.command`. You need the high-res images for this.
 
-**Subpart Cutter.** Pick a tile, drag a box over the piece you want, then name it and save it. The box snaps to the tile's squares, or to half or quarter squares. Pieces go to `assets/geomorph-hires-subpart`, each with a small note of the tile it came from.
+**Subpart Cutter.** Pick a tile, drag a box over the piece you want, and save it. The box snaps to the tile's squares, or to half or quarter squares. The name starts as the size, such as `10x5`, and you can add words to it. A name already in use gets a number, so nothing is overwritten. Tick any categories that describe the piece, using the same list as the library filters. Pieces go to `assets/geomorph-hires-subpart`, each with a small JSON note of its source tile and categories.
 
-**Component Editor.** Drag subparts onto the canvas, or double-click them, and they snap to the grid. The inner box is the part, and the outer band is the two-square border every tile has. `r` and `R` rotate, `s` flips, `[` and `]` send a subpart to the back or front, and `delete` removes it. Set the size and tonnage, then save. The part lands in `assets/geomorphs-highres-custom` and appears in the library straight away under the Custom parts filter. Choose it in Open saved part to change it later.
+**Component Editor.** Find subparts by name or category, then drag them onto the canvas, or double-click them, and they snap to the grid. The inner box is the part, and the outer band is the two-square border every tile has. `r` and `R` rotate, `s` flips, `[` and `]` send a subpart to the back or front, and `delete` removes it. Set the size and tonnage, then save. The part lands in `assets/geomorphs-highres-custom` and appears in the library straight away under the Custom parts filter. Choose it in Open saved part to change it later.
 
 Anything made from these tiles stays under their CC BY-NC 4.0 licence, so it can't be sold, and credit is due to Robert Pearce and Eric B. Smith. These folders are ignored by git and are not backed up to GitHub, so keep your own copies.
 
