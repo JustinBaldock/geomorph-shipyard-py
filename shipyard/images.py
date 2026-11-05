@@ -20,6 +20,8 @@ from pathlib import Path
 
 from PySide6.QtGui import QImageReader, QPixmap
 
+from .custom import CUSTOM_FOLDER, LOW_RES_FOLDER_NAME
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HIGH_RES_FOLDER = REPO_ROOT / "assets" / "geomorphs-highres"
 
@@ -35,6 +37,7 @@ def candidate_folders() -> list[Path]:
         folders.append(Path(override))
     folders.append(REPO_ROOT / "assets" / "geomorphs")
     folders.append(REPO_ROOT.parent / "geomorph-shipyard" / "assets" / "geomorphs")
+    folders.append(CUSTOM_FOLDER / LOW_RES_FOLDER_NAME)
     return folders
 
 
@@ -74,6 +77,10 @@ class ImageStore:
             )
         return self._cache[relative_path]
 
+    def forget(self, relative_path: str) -> None:
+        """Drop a cached image, after its file has been replaced."""
+        self._cache.pop(relative_path, None)
+
     def has_any_part_images(self, library) -> bool:
         return any(self.find(info.url) for info in library.values())
 
@@ -86,19 +93,35 @@ class HighResStore:
     low-res image. Nothing is cached, as a ship's tiles wouldn't fit in memory.
     """
 
-    def __init__(self, standard: ImageStore, folder: Path = HIGH_RES_FOLDER):
+    def __init__(
+        self,
+        standard: ImageStore,
+        folder: Path = HIGH_RES_FOLDER,
+        custom_folder: Path = CUSTOM_FOLDER,
+    ):
         self.standard = standard
         self.folder = folder
+        self.custom_folder = custom_folder
 
     def available(self) -> bool:
         return self.folder.is_dir() and any(self.folder.iterdir())
 
+    def find(self, relative_path: str | None) -> Path | None:
+        """The high-res file for an image, if there is one."""
+        if not relative_path:
+            return None
+        for folder in (self.folder, self.custom_folder):
+            path = folder / relative_path
+            if path.is_file():
+                return path
+        return None
+
     def pixmap(self, relative_path: str | None) -> QPixmap | None:
         if not relative_path:
             return None
-        high = self.folder / relative_path
+        high = self.find(relative_path)
         normal = self.standard.find(relative_path)
-        if high.is_file() and (normal is None or same_shape(high, normal)):
+        if high is not None and (normal is None or same_shape(high, normal)):
             pixmap = QPixmap(str(high))
             if not pixmap.isNull():
                 return pixmap

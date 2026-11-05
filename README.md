@@ -24,7 +24,7 @@ Add `--high-res` to also keep the larger set, about 231 MB, which is used only f
 
 ## Using it
 
-- Choose a part in the Library tab and press Add, or double-click it.
+- Choose a part in the Library tab and press Add, or double-click it. The preview shows the high-res image when you have it.
 - Ticking usage filters also reorders the list so the most specialised parts come first. With Engineering ticked, you get Engineering-only parts, then Engineering plus one other type, then plus two, and so on, with each group sorted by those other types. With several filters ticked, parts matching more of them come first. Shape filters and the search box only narrow the list.
 - Click a part on the map to select it, and drag it to move it. Parts snap to the map squares.
 - Drag empty space to pan, and scroll to zoom.
@@ -34,6 +34,16 @@ Add `--high-res` to also keep the larger set, about 231 MB, which is used only f
 - Press Replace selected to swap the selected part for the one chosen in the library, in the same place.
 - The Parts used tab lists everything on the ship, which helps when parts overlap.
 - The Tonnage tab adds up the ship in displacement tons. The figures are a rough guide.
+
+### Making your own parts
+
+Two tools build new library parts from pieces of the existing tiles. They are in the Tools menu, and on a Mac the Subpart Cutter also opens by double-clicking `Subpart Cutter.command`. You need the high-res images for this.
+
+**Subpart Cutter.** Pick a tile, drag a box over the piece you want, then name it and save it. The box snaps to the tile's squares, or to half or quarter squares. Pieces go to `assets/geomorph-hires-subpart`, each with a small note of the tile it came from.
+
+**Component Editor.** Drag subparts onto the canvas, or double-click them, and they snap to the grid. The inner box is the part, and the outer band is the two-square border every tile has. `r` and `R` rotate, `s` flips, `[` and `]` send a subpart to the back or front, and `delete` removes it. Set the size and tonnage, then save. The part lands in `assets/geomorphs-highres-custom` and appears in the library straight away under the Custom parts filter. Choose it in Open saved part to change it later.
+
+Anything made from these tiles stays under their CC BY-NC 4.0 licence, so it can't be sold, and credit is due to Robert Pearce and Eric B. Smith. These folders are ignored by git and are not backed up to GitHub, so keep your own copies.
 
 ### Decks
 

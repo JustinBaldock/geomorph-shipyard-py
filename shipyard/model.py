@@ -37,7 +37,10 @@ SHAPES = (
     "end",
 )
 
+CUSTOM_SHAPE = "Custom"
+
 SHAPE_NAMES = {
+    CUSTOM_SHAPE: "Custom parts",
     "HG": "Half geomorphs",
     "LG": "Long geomorphs",
     "QG": "Quarter geomorphs",
@@ -139,8 +142,24 @@ def _clean_url(url: str | None) -> str | None:
     return url.removeprefix("geomorphs/")
 
 
-def load_library(data_dir: Path) -> dict[str, PartInfo]:
-    """Read the parts data, keeping the original's order.
+def part_from_entry(code: str, shape: str, entry: dict) -> PartInfo:
+    return PartInfo(
+        code=code,
+        shape=shape,
+        size_x=entry["sizeX"],
+        size_y=entry["sizeY"],
+        tons=entry["tons"],
+        uses=entry["uses"],
+        facilities=entry["facilities"],
+        url=_clean_url(entry["url"]),
+        mirror_url=_clean_url(entry.get("mirrorUrl")),
+        overlay_url=_clean_url(entry.get("overlayUrl")),
+        overlay_mirror_url=_clean_url(entry.get("overlayMirrorUrl")),
+    )
+
+
+def load_library(data_dir: Path, custom_entries: dict | None = None) -> dict[str, PartInfo]:
+    """Read the parts data, keeping the original's order, then custom parts.
 
     When a code appears twice the later entry wins, as in the original.
     """
@@ -149,19 +168,9 @@ def load_library(data_dir: Path) -> dict[str, PartInfo]:
         with open(data_dir / f"{shape}.json", encoding="utf-8") as file:
             entries = json.load(file)
         for code, entry in entries.items():
-            parts[code] = PartInfo(
-                code=code,
-                shape=shape,
-                size_x=entry["sizeX"],
-                size_y=entry["sizeY"],
-                tons=entry["tons"],
-                uses=entry["uses"],
-                facilities=entry["facilities"],
-                url=_clean_url(entry["url"]),
-                mirror_url=_clean_url(entry.get("mirrorUrl")),
-                overlay_url=_clean_url(entry.get("overlayUrl")),
-                overlay_mirror_url=_clean_url(entry.get("overlayMirrorUrl")),
-            )
+            parts[code] = part_from_entry(code, shape, entry)
+    for code, entry in (custom_entries or {}).items():
+        parts[code] = part_from_entry(code, CUSTOM_SHAPE, entry)
     return parts
 
 

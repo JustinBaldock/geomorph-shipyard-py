@@ -12,10 +12,13 @@ from PySide6.QtCore import (
     QAbstractListModel,
     QItemSelectionModel,
     QModelIndex,
+    QObject,
     QPointF,
     QRectF,
+    QRunnable,
     QSize,
     Qt,
+    QThreadPool,
     QTimer,
     Signal,
 )
@@ -25,10 +28,12 @@ from PySide6.QtGui import (
     QFont,
     QFontMetrics,
     QImage,
+    QImageReader,
     QKeySequence,
     QPainter,
     QPainterPath,
     QPen,
+    QPixmap,
     QPolygonF,
     QTransform,
 )
@@ -64,7 +69,9 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from . import model
+from . import custom, model
+from .cutter import CutterWindow
+from .editor import ComponentEditor
 from .images import HighResStore, ImageStore
 from .model import Deck, Part, PartInfo, Ship
 
@@ -97,6 +104,12 @@ SIDE_LABELS = {
     "Port": "Left",
     "Starboard": "Right",
 }
+
+WINDOW_HEIGHT = 1040
+PREVIEW_HEIGHT = 440
+PREVIEW_MARGIN = 8
+# How long to wait for the arrow keys to settle before loading a large image.
+PREVIEW_DELAY_MS = 120
 
 EXPORT_CREDIT = (
     "Geomorphs by Robert Pearce and Eric B. Smith, CC BY-NC 4.0. "
@@ -481,6 +494,31 @@ class OrientationOverlay(QWidget):
         )
 
 
+class PreviewLoader(QObject):
+    """Reads high-res previews away from the window, so it never freezes."""
+
+    loaded = Signal(int, QImage)
+
+    def load(self, request: int, path: Path, target: QSize) -> None:
+        QThreadPool.globalInstance().start(_PreviewTask(self, request, path, target))
+
+
+class _PreviewTask(QRunnable):
+    def __init__(self, loader: PreviewLoader, request: int, path: Path, target: QSize):
+        super().__init__()
+        self.loader = loader
+        self.request = request
+        self.path = path
+        self.target = target
+
+    def run(self) -> None:
+        reader = QImageReader(str(self.path))
+        size = reader.size()
+        size.scale(self.target, Qt.KeepAspectRatio)
+        reader.setScaledSize(size)
+        self.loader.loaded.emit(self.request, reader.read())
+
+
 class LibraryModel(QAbstractListModel):
     def __init__(self):
         super().__init__()
@@ -552,6 +590,8 @@ class MainWindow(QMainWindow):
         self.library = library
         self.images = ImageStore() if images is None else images
         self.high_res = high_res or HighResStore(self.images)
+        self.custom_folder = custom.CUSTOM_FOLDER
+        self.tool_windows: list[QMainWindow] = []
         self.ship = Ship.empty()
         self.current = 0
         self.trace_deck: Deck | None = None
@@ -586,10 +626,20 @@ class MainWindow(QMainWindow):
         self._refresh_timer.setInterval(0)
         self._refresh_timer.timeout.connect(self._refresh_all)
 
+        self._preview_request = 0
+        self._preview_timer = QTimer(self)
+        self._preview_timer.setSingleShot(True)
+        self._preview_timer.setInterval(PREVIEW_DELAY_MS)
+        self._preview_timer.timeout.connect(self._load_high_res_preview)
+        self.preview_loader = PreviewLoader(self)
+        self.preview_loader.loaded.connect(self._high_res_preview_ready)
+
         self.scene.selectionChanged.connect(self._selection_changed)
         self.view.arrow_pressed.connect(self.move_selected)
 
-        self.resize(1320, 860)
+        # The doubled preview needs a taller window to leave room for the list.
+        available = QApplication.primaryScreen().availableGeometry().height()
+        self.resize(1320, min(WINDOW_HEIGHT, available))
         self._refresh_decks()
         self._refresh_all()
         self._refresh_library()
@@ -630,6 +680,9 @@ class MainWindow(QMainWindow):
         self.export_all_action = a(
             "Export all decks...", self.export_all_decks, ["Ctrl+Shift+E"]
         )
+
+        self.cutter_action = a("Subpart Cutter...", self.open_cutter)
+        self.editor_action = a("Component Editor...", self.open_editor)
 
         self.turn_bow_left_action = a(
             "Turn bow left", lambda: self.turn_bow(-1), ["["]
@@ -722,6 +775,10 @@ class MainWindow(QMainWindow):
             part_menu.addAction(action)
         self.move_menu = part_menu.addMenu("Move to deck")
         self.move_menu.aboutToShow.connect(self._fill_move_menu)
+
+        tools_menu = self.menuBar().addMenu("Tools")
+        tools_menu.addAction(self.cutter_action)
+        tools_menu.addAction(self.editor_action)
 
         ship_menu = self.menuBar().addMenu("Ship")
         ship_menu.addAction(self.turn_bow_left_action)
@@ -819,7 +876,10 @@ class MainWindow(QMainWindow):
             lambda _item: self._refresh_library(),
         )
         self.shape_list = checklist(
-            [(shape, model.SHAPE_NAMES[shape]) for shape in model.SHAPES],
+            [
+                (shape, model.SHAPE_NAMES[shape])
+                for shape in (model.CUSTOM_SHAPE, *model.SHAPES)
+            ],
             lambda _item: self._refresh_library(),
         )
 
@@ -853,7 +913,7 @@ class MainWindow(QMainWindow):
 
         self.preview = QLabel("Choose a part to preview it")
         self.preview.setAlignment(Qt.AlignCenter)
-        self.preview.setFixedHeight(220)
+        self.preview.setFixedHeight(PREVIEW_HEIGHT)
         self.preview.setStyleSheet("background: #f8f8f8; color: #667;")
 
         tab = QWidget()
@@ -1088,20 +1148,51 @@ class MainWindow(QMainWindow):
         index = self.library_view.currentIndex()
         return index.data(Qt.UserRole) if index.isValid() else None
 
+    def _preview_area(self) -> QSize:
+        margin = QSize(PREVIEW_MARGIN, PREVIEW_MARGIN)
+        return (self.preview.size() - margin) * self.preview.devicePixelRatioF()
+
+    def _set_preview(self, image_or_pixmap) -> None:
+        pixmap = (
+            QPixmap.fromImage(image_or_pixmap)
+            if isinstance(image_or_pixmap, QImage)
+            else image_or_pixmap
+        )
+        scaled = pixmap.scaled(
+            self._preview_area(), Qt.KeepAspectRatio, Qt.SmoothTransformation
+        )
+        scaled.setDevicePixelRatio(self.preview.devicePixelRatioF())
+        self.preview.setPixmap(scaled)
+
     def _show_preview(self) -> None:
+        """Show the low-res image at once, then swap in the high-res one."""
+        self._preview_request += 1
+        self._preview_timer.stop()
         info = self._current_library_part()
         self.add_button.setEnabled(info is not None)
         self._refresh_selection()
         if info is None:
             return
         pixmap = self.images.pixmap(info.url)
-        if pixmap is None:
+        high = self.high_res.find(info.url)
+        if pixmap is None and high is None:
             self.preview.setText(f"{info.code}\n{info.summary()}\n\nNo image on disk")
             return
-        size = self.preview.size() - QSize(8, 8)
-        self.preview.setPixmap(
-            pixmap.scaled(size, Qt.KeepAspectRatio, Qt.SmoothTransformation)
-        )
+        if pixmap is not None:
+            self._set_preview(pixmap)
+        if high is not None:
+            self._preview_timer.start()
+
+    def _load_high_res_preview(self) -> None:
+        info = self._current_library_part()
+        high = self.high_res.find(info.url) if info else None
+        if high is not None:
+            self.preview_loader.load(self._preview_request, high, self._preview_area())
+
+    def _high_res_preview_ready(self, request: int, image: QImage) -> None:
+        # Skip images for a part the user has already moved on from.
+        if request == self._preview_request and not image.isNull():
+            self._set_preview(image)
 
     # What the user can do
 
@@ -1323,6 +1414,59 @@ class MainWindow(QMainWindow):
         self.ship.name = text
         self._changed()
 
+    # Tools
+
+    def _show_tool(self, tool_type: type) -> QMainWindow | None:
+        """Bring a tool forward if it is already open."""
+        for window in self.tool_windows:
+            if isinstance(window, tool_type) and window.isVisible():
+                window.raise_()
+                window.activateWindow()
+                return window
+        return None
+
+    def open_cutter(self) -> QMainWindow:
+        window = self._show_tool(CutterWindow)
+        if window is None:
+            window = CutterWindow()
+            self.tool_windows.append(window)
+            window.show()
+        return window
+
+    def open_editor(self) -> QMainWindow:
+        window = self._show_tool(ComponentEditor)
+        if window is None:
+            window = ComponentEditor(self.library, custom_folder=self.custom_folder)
+            window.saved.connect(self.custom_part_saved)
+            self.tool_windows.append(window)
+            window.show()
+        return window
+
+    def custom_part_saved(self, code: str) -> None:
+        """Bring a part from the editor into the library and onto the map."""
+        self.reload_custom_parts()
+        self.images.forget(self.library[code].url)
+        self._rebuild_items(select=self.selected_indices())
+        self._refresh_library()
+        self._show_preview()
+
+    def reload_custom_parts(self) -> None:
+        try:
+            entries = custom.load_entries(self.custom_folder)
+        except custom.CustomFileError as error:
+            self.statusBar().showMessage(str(error))
+            return
+        for code in [
+            code
+            for code, info in self.library.items()
+            if info.shape == model.CUSTOM_SHAPE and code not in entries
+        ]:
+            del self.library[code]
+        for code, entry in entries.items():
+            self.library[code] = model.part_from_entry(
+                code, model.CUSTOM_SHAPE, entry
+            )
+
     # Files
 
     def _set_ship(self, ship: Ship, path: Path | None) -> None:
@@ -1505,8 +1649,11 @@ class MainWindow(QMainWindow):
         self._export(self.ship.decks, self._default_filename("png"))
 
     def closeEvent(self, event) -> None:
-        if self._ok_to_discard():
+        if self._ok_to_discard() and all(
+            window.close() for window in self.tool_windows
+        ):
             self.scene.selectionChanged.disconnect(self._selection_changed)
+            QThreadPool.globalInstance().waitForDone()
             event.accept()
         else:
             event.ignore()
@@ -1515,6 +1662,11 @@ class MainWindow(QMainWindow):
 def main() -> int:
     app = QApplication(sys.argv)
     app.setApplicationName(APP_NAME)
-    window = MainWindow(model.load_library(DATA_DIR))
+    try:
+        entries = custom.load_entries()
+    except custom.CustomFileError as error:
+        print(error, file=sys.stderr)
+        entries = {}
+    window = MainWindow(model.load_library(DATA_DIR, entries))
     window.show()
     return app.exec()
